@@ -22,8 +22,8 @@ export default function MyPage() {
     <div>
       <FlowbiteNavbar />
       <div className="flex h-screen">
-        <SB />
-        <div className="flex-1 bg-gray-100 dark:bg-gray-800">
+        <SB className="dark:bg-slate-700" />
+        <div className="flex-1 bg-gray-100 dark:bg-gray-700">
         <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/stripe" element={<Stripe />} />
