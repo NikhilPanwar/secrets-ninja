@@ -24,7 +24,7 @@ function FlowbiteNavbar() {
           Keys Checker
         </Navbar.Link>
         <Navbar.Link href="#">Find Your Secrets</Navbar.Link>
-        <Navbar.Link href="#">Get Access To Our Data Feed</Navbar.Link>
+        {/* <Navbar.Link href="#">Get Access To Our Data Feed</Navbar.Link> */}
         <DarkThemeToggle style={toggleStyle} />
       </Navbar.Collapse>
     </Navbar>

@@ -40,7 +40,7 @@ export default function MyPage() {
         </div>
     </div>
   </div>
-  <FT />
+  {/* <FT /> */}
   </Router>
   </Flowbite>
   );
