@@ -15,12 +15,12 @@ export default function Stripe() {
         <div className="mb-2 block">
             <Label htmlFor="secret" value="Enter API Key" />
         </div>
-        <TextInput id="secret" type="text" placeholder="sk_live_xxxx" required className="w-full" /> {/* Add w-full to TextInput */}
+        <TextInput id="secret" type="text" placeholder="sk_live_xxxx" required className="w-full" />
     </div>
     <Button type="submit" className="w-full">Get Balance</Button>
 </form>
             </div>
-            <OutputWindow />
+                <OutputWindow />
         </div>
 
     );
