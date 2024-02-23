@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import FlowbiteNavbar from './components/navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SB from './components/sidebar';
+import FT from './components/footer';
+import Dashboard from './components/dashboard';
+import Stripe from './modules/stripe';
+import Github from './modules/github';
+import Shopify from './modules/shopify';
+import Telegram from './modules/telegram';
+import OpenAI from './modules/openai';
+import Paystack from './modules/paystack';
+import Omnisend from './modules/omnisend';
+import LaunchDarkly from './modules/launchdarkly';
+import Clearbit from './modules/clearbit';
+import Paypal from './modules/paypal';
+import { Flowbite, theme } from 'flowbite-react';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function MyPage() { 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Flowbite>
+    <Router>
+    <div>
+      <FlowbiteNavbar />
+      <div className="flex h-screen">
+        <SB />
+        <div className="flex-1 bg-gray-100 dark:bg-gray-800">
+        <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/stripe" element={<Stripe />} />
+              <Route path="/github" element={<Github />} />
+              <Route path="/shopify" element={<Shopify />} />
+              <Route path="/telegram" element={<Telegram />} />
+              <Route path="/openai" element={<OpenAI />} />
+              <Route path="/paystack" element={<Paystack />} />
+              <Route path="/omnisend" element={<Omnisend />} />
+              <Route path="/launchdarkly" element={<LaunchDarkly />} />
+              <Route path="/clearbit" element={<Clearbit />} />
+              <Route path="/paypal" element={<Paypal />} />
+            </Routes>
+        </div>
+    </div>
+  </div>
+  <FT />
+  </Router>
+  </Flowbite>
+  );
 }
-
-export default App
