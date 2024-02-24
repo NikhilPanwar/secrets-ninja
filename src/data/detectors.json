@@ -1,15 +1,112 @@
 {
     "Stripe": {
         "endpoints": {
-            "account_metadata": "Account Metadata",
-            "balance": "Balance",
-            "customers": "Customers",
-            "orders": "Orders",
-            "payment_intents": "Payment Intents"
+            "account_metadata": {
+                "label": "Account Metadata",
+                "curl": "curl https://api.stripe.com/v1/account -u sk_live_xxxx:",
+                "request_url": "https://api.stripe.com/v1/account",
+                "request_method": "GET",
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Stripe API Key",
+                        "placeholder": "sk_live_xxxx"
+                    }
+                }
+            },
+            "balance": {
+                "label": "Balance",
+                "curl": "curl https://api.stripe.com/v1/balance -u sk_live_xxxx:",
+                "request_url": "https://api.stripe.com/v1/balance",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Stripe API Key",
+                        "placeholder": "sk_live_xxxx"
+                    }
+                }
+            },
+            "customers": {
+                "label": "Customers",
+                "curl": "curl https://api.stripe.com/v1/customers -u sk_live_xxxx:",
+                "request_url": "https://api.stripe.com/v1/customers",
+                "request_method": "GET",
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Stripe API Key",
+                        "placeholder": "sk_live_xxxx"
+                    }
+                }
+            },
+            "orders": {
+                "label": "Orders",
+                "curl": "curl https://api.stripe.com/v1/orders -u sk_live_xxxx:",
+                "request_url": "https://api.stripe.com/v1/orders",
+                "request_method": "GET",
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Stripe API Key",
+                        "placeholder": "sk_live_xxxx"
+                    }
+                }
+            },
+            "payment_intents": {
+                "label": "Payment Intents",
+                "curl": "curl https://api.stripe.com/v1/payment_intents -u sk_live_xxxx:",
+                "request_url": "https://api.stripe.com/v1/payment_intents",
+                "request_method": "GET",
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Stripe API Key",
+                        "placeholder": "sk_live_xxxx"
+                    }
+                }
+            }
         },
-        "curl": {
-            "account_metadata": "curl https://api.stripe.com/v1/account -u sk_live_xxxx:",
-            "balance": "curl https://api.stripe.com/v1/balance -u sk_live_xxxx:"
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Stripe API Key",
+                "placeholder": "sk_live_xxxx"
+            }
+        }
+    },
+    "Paypal": {
+        "endpoints": {
+            "get_balance": {
+                "label": "Get Balance",
+                "curl": "curl -v -X GET https://api.sandbox.paypal.com/v1/balance -H \"Content-Type: application/json\" -H \"Authorization: Bearer A21AAHc",
+                "request_url": "https://api.sandbox.paypal.com/v1/balance",
+                "request_method": "GET",
+                "input_fields": {
+                    "access_token": {
+                        "type": "text",
+                        "label": "Enter Access Token",
+                        "placeholder": "A21AAHc"
+                    }
+                }
+            }
+        },
+        "input_fields": {
+            "access_token": {
+                "type": "text",
+                "label": "Enter Access Token",
+                "placeholder": "A21AAHc"
+            },
+            "access_token_secret": {
+                "type": "text",
+                "label": "Enter Access Token Secret",
+                "placeholder": "A21AAHc"
+            }
+        },
+        "alert": {
+            "alert_message": "Paypal API is not available for now. Please try again later.",
+            "color": "failure"
         }
     }
 }
