@@ -50,7 +50,7 @@ export default function UniversalComponent({ serviceType }) {
     }, [serviceType]); 
 
     return (
-        <div className="p-10">
+        <div className="p-4">
             <h2 className="text-2xl font-semibold dark:text-white">Check {serviceType} Keys</h2>
             <div className="py-10 flex w-full flex-col gap-4">
                 {Object.keys(inputFields).map((key) => (
