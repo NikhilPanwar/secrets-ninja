@@ -1,0 +1,15 @@
+{
+    "Stripe": {
+        "endpoints": {
+            "account_metadata": "Account Metadata",
+            "balance": "Balance",
+            "customers": "Customers",
+            "orders": "Orders",
+            "payment_intents": "Payment Intents"
+        },
+        "curl": {
+            "account_metadata": "curl https://api.stripe.com/v1/account -u sk_live_xxxx:",
+            "balance": "curl https://api.stripe.com/v1/balance -u sk_live_xxxx:"
+        }
+    }
+}
