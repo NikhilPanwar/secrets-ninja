@@ -20,7 +20,7 @@ function MainPageTable() {
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
               {'Stripe'}
             </Table.Cell>
-            <Table.Cell>sk_live_***</Table.Cell>
+            <Table.Cell>{'[rs]k_live_[a-zA-Z0-9]{20,247}'}</Table.Cell>
             <Table.Cell>Balance, Customers, Orders, Payment Intents, Account</Table.Cell>
             <Table.Cell>
               <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
@@ -42,7 +42,7 @@ function MainPageTable() {
           </Table.Row>
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">Shopify</Table.Cell>
-            <Table.Cell>shp**_****</Table.Cell>
+            <Table.Cell>(shppa_|shpat_)([0-9A-Fa-f]{32})</Table.Cell>
             <Table.Cell>Customers, Orders</Table.Cell>
             <Table.Cell>
               <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">

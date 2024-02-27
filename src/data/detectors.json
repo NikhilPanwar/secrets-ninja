@@ -84,7 +84,7 @@
         "endpoints": {
             "organizations": {
                 "label": "Get Organizations",
-                "curl": "curl -X GET https://api.openai.com/v1/organizations",
+                "curl": "curl -X GET 'https://api.openai.com/v1/organizations' -H 'Authorization: Bearer sk-xxxx'",
                 "request_url": "https://api.openai.com/v1/organizations",
                 "request_method": "GET"
             }
@@ -101,13 +101,13 @@
         "endpoints": {
             "transaction": {
                 "label": "Get Transaction",
-                "curl": "curl https://api.paystack.co/transaction",
+                "curl": "curl -X GET https://api.paystack.co/transaction -H 'Authorization: Bearer sk_live'",
                 "request_url": "https://api.paystack.co/transaction",
                 "request_method": "GET"
             },
             "customer": {
                 "label": "Get Customer",
-                "curl": "curl https://api.paystack.co/customer",
+                "curl": "curl -X GET https://api.paystack.co/customer -H 'Authorization: Bearer sk_live",
                 "request_url": "https://api.paystack.co/customer",
                 "request_method": "GET"
             }
@@ -124,13 +124,13 @@
         "endpoints": {
             "user": {
                 "label": "Get User",
-                "curl": "curl https://api.github.com/user",
+                "curl": "curl -X GET https://api.github.com/user -H 'Authorization: token ghp_xxxxx'",
                 "request_url": "https://api.github.com/user",
                 "request_method": "GET"
             },
             "repos": {
                 "label": "Get Repos",
-                "curl": "curl https://api.github.com/user/repos",
+                "curl": "curl -X GET https://api.github.com/user/repos -H 'Authorization: token ghp_xxxxx'",
                 "request_url": "https://api.github.com/user/repos",
                 "request_method": "GET"
             }
@@ -147,7 +147,7 @@
         "endpoints": {
             "projects": {
                 "label": "Get Projects",
-                "curl": "curl -H \"Authorization",
+                "curl": "curl -X GET https://app.launchdarkly.com/api/v2/projects -H 'Authorization: api_key api-xxxx'",
                 "request_url": "https://app.launchdarkly.com/api/v2/projects",
                 "request_method": "GET"
             }
@@ -164,13 +164,13 @@
         "endpoints": {
             "contacts": {
                 "label": "Get Contacts",
-                "curl": "curl -X GET",
+                "curl": "curl -X GET https://api.omnisend.com/v3/contacts?limit=100 -H 'X-API-KEY: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
                 "request_url": "https://api.omnisend.com/v3/contacts?limit=100",
                 "request_method": "GET"
             },
             "orders": {
                 "label": "Get Orders",
-                "curl": "curl -X GET",
+                "curl": "curl -X GET https://api.omnisend.com/v3/orders?limit=100 -H 'X-API-KEY: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
                 "request_url": "https://api.omnisend.com/v3/orders?limit=100",
                 "request_method": "GET"
             },
@@ -193,25 +193,25 @@
         "endpoints": {
             "orders": {
                 "label": "Get Orders",
-                "curl": "curl -X GET",
+                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/orders.json -H 'X-Shopify-Access-Token: shp_12345'",
                 "request_url": "https://shopify.com/admin/api/2023-10/orders.json",
                 "request_method": "GET"
             },
             "customers": {
                 "label": "Get Customers",
-                "curl": "curl -X GET",
+                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/customers.json -H 'X-Shopify-Access-Token: shp_12345'",
                 "request_url": "https://shopify.com/admin/api/2023-10/customers.json",
                 "request_method": "GET"
             },
             "orders_count": {
                 "label": "Get Orders Count",
-                "curl": "curl -X GET",
+                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/orders/count.json -H 'X-Shopify-Access-Token: shp_12345'",
                 "request_url": "https://shopify.com/admin/api/2023-10/orders/count.json",
                 "request_method": "GET"
             },
             "customers_count": {
                 "label": "Get Customers Count",
-                "curl": "curl -X GET",
+                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/customers/count.json -H 'X-Shopify-Access-Token: sh",
                 "request_url": "https://shopify.com/admin/api/2023-10/customers/count.json",
                 "request_method": "GET"
             }
@@ -237,7 +237,7 @@
         "endpoints": {
             "bot_info": {
                 "label": "Get Bot Info",
-                "curl": "curl -X GET https://api.telegram.org/bot<token>/getMe",
+                "curl": "curl -X GET https://api.telegram.org/bot<your-bot-token>/getMe",
                 "request_url": "https://api.telegram.org/bot<token>/getMe",
                 "request_method": "GET"
             }
