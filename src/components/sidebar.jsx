@@ -10,6 +10,8 @@ import { SlPaypal } from "react-icons/sl";
 import { HiArrowSmRight, HiInbox, HiShoppingBag, HiTable, HiUser } from 'react-icons/hi';
 import { FaStripe, FaGithub, FaShopify, FaTelegramPlane   } from "react-icons/fa";
 import { CiCircleInfo } from "react-icons/ci";
+import { SiSendinblue } from "react-icons/si";
+
 
 function SB({ visible }) { // Accept visible as a prop
   if (!visible) return null; // Do not render if not visible
@@ -73,7 +75,7 @@ function SB({ visible }) { // Accept visible as a prop
           </Sidebar.Item>
           </Link>
           <Link to="/sendinblue">
-          <Sidebar.Item href="/sendinblue" icon={SlPaypal}>
+          <Sidebar.Item href="/sendinblue" icon={SiSendinblue}>
             SendInBlue
           </Sidebar.Item>
           </Link>
