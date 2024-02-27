@@ -28,6 +28,8 @@ export default function UniversalComponent({ serviceType }) {
     const handleTestEndpoint = async () => {
         setLoading(true);
         try {
+            console.log("Testing endpoint with input values:", inputValues);
+            console.log("Request URL:", requestURL);
             const { status, data } = await makeUniversalRequest(serviceType, inputValues, requestURL, requestMethod);
             setStatusCode(status);
             setOutputStr(JSON.stringify(data, null, 2));

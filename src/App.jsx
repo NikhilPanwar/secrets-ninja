@@ -36,6 +36,7 @@ export default function MyPage() {
                 <Route path="/paypal" element={<UniversalComponent serviceType="Paypal" />} />
                 <Route path="/telegram" element={<UniversalComponent serviceType="Telegram" />} />
                 <Route path="/clearbit" element={<UniversalComponent serviceType="Clearbit" />} />
+                <Route path="/sendinblue" element={<UniversalComponent serviceType="SendInBlue" />} />
               </Routes>
             </div>
           </div>

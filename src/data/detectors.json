@@ -279,5 +279,34 @@
             "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it.",
             "color": "failure"
         }
+    },
+    "SendInBlue": {
+        "endpoints": {
+            "contacts": {
+                "label": "Get Contacts",
+                "curl": "curl -X GET https://api.sendinblue.com/v3/contacts -H 'api-key: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
+                "request_url": "https://api.sendinblue.com/v3/contacts",
+                "request_method": "GET"
+            },
+            "campaigns": {
+                "label": "Get Campaigns",
+                "curl": "curl -X GET https://api.sendinblue.com/v3/emailCampaigns -H 'api-key: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
+                "request_url": "https://api.sendinblue.com/v3/emailCampaigns",
+                "request_method": "GET"
+            },
+            "account": {
+                "label": "Get Account",
+                "curl": "curl -X GET https://api.sendinblue.com/v3/account -H 'api-key  xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
+                "request_url": "https://api.sendinblue.com/v3/account",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter SendInBlue API Key",
+                "placeholder": "xkeysib-xxx-xxxxx-xxxxx-xxxxx-xxxxx"
+            }
+        }
     }
 }

@@ -72,6 +72,11 @@ function SB({ visible }) { // Accept visible as a prop
             Paypal
           </Sidebar.Item>
           </Link>
+          <Link to="/sendinblue">
+          <Sidebar.Item href="/sendinblue" icon={SlPaypal}>
+            SendInBlue
+          </Sidebar.Item>
+          </Link>
         </Sidebar.ItemGroup>
       </Sidebar.Items>
     </Sidebar>
