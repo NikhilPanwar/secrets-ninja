@@ -74,10 +74,6 @@
                 "label": "Enter Client Secret",
                 "placeholder": "A21AAHc Secret"
             }
-        },
-        "alert": {
-            "alert_message": "Currently only the access scopes endpoint works.",
-            "color": "info"
         }
     },
     "OpenAI": {
@@ -229,7 +225,7 @@
             }
         },
         "alert": {
-            "alert_message": "Shopify API Checker is not available for now. Please try again later.",
+            "alert_message": "Shopify API can't be tested from browser due to CORS. Use the curl command on your machine instead",
             "color": "failure"
         }
     },
