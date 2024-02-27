@@ -80,7 +80,7 @@ function SB({ visible }) { // Accept visible as a prop
             </Sidebar.Item>
           </Link>
           <Link to="/rechargepayments">
-            <Sidebar.Item href="/rechargepayments" icon={SiSendinblue}>
+            <Sidebar.Item href="/rechargepayments" icon={HiInbox}>
               RechargePayments
             </Sidebar.Item>
           </Link>
