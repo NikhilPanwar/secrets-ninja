@@ -1,5 +1,5 @@
 {
   "projects": {
-    "default": "secrets-ninja"
+    "default": "api-keys-checker"
   }
 }

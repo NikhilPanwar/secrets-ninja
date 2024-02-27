@@ -11,7 +11,7 @@ export default function Dashboard() {
                 <span className="font-medium">Note:</span> All the secrets are checked from frontend using your browser. No secrets are sent to our servers.
             </Alert>
             <div>
-                <h1 className="text-2xl font-semibold dark:text-white p-10">Supported Keys</h1>
+                <h1 className="text-2xl font-semibold dark:text-white py-10">Supported Keys</h1>
                 <div >
                     <MainPageTable />
                 </div>
