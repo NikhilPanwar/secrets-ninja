@@ -9,6 +9,7 @@ import { HiOutlineRocketLaunch } from "react-icons/hi2";
 import { SlPaypal } from "react-icons/sl";
 import { HiArrowSmRight, HiInbox, HiShoppingBag, HiTable, HiUser } from 'react-icons/hi';
 import { FaStripe, FaGithub, FaShopify, FaTelegramPlane   } from "react-icons/fa";
+import { CiCircleInfo } from "react-icons/ci";
 
 function SB({ visible }) { // Accept visible as a prop
   if (!visible) return null; // Do not render if not visible
@@ -18,7 +19,7 @@ function SB({ visible }) { // Accept visible as a prop
       <Sidebar.Items>
         <Sidebar.ItemGroup>
             <h2 className="text-lg font-semibold text-gray-800 dark:text-white">Modules</h2>
-          <Sidebar.Item href="/" icon={HiChartPie}>
+          <Sidebar.Item href="/" icon={CiCircleInfo}>
             About
           </Sidebar.Item>
           <Link to="/stripe">

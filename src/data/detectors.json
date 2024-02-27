@@ -50,7 +50,7 @@
     },
     "Paypal": {
         "endpoints": {
-            "get_access_scope" : {
+            "get_access_scope": {
                 "label": "Get Access Scope",
                 "curl": "curl -v -X GET https://api.sandbox.paypal.com/v1/oauth2/token/userinfo?schema=openid -H \"Content-Type: application/json\" -H \"Authorization: Bearer A21AAHc",
                 "request_url": "https://api.sandbox.paypal.com/v1/oauth2/token/userinfo?schema=openid",
@@ -237,7 +237,7 @@
         "endpoints": {
             "bot_info": {
                 "label": "Get Bot Info",
-                "curl": "curl -X GET",
+                "curl": "curl -X GET https://api.telegram.org/bot<token>/getMe",
                 "request_url": "https://api.telegram.org/bot<token>/getMe",
                 "request_method": "GET"
             }
@@ -254,7 +254,7 @@
         "endpoints": {
             "person": {
                 "label": "Get Person",
-                "curl": "curl 'https://person.clearbit.com/v2/people/find?email=test@gmail.com' -u sk_xxx-xxx-xxx:",
+                "curl": "curl 'https://person.clearbit.com/v2/people/find?email=test@test.com' -u sk_xxx-xxx-xxx:",
                 "request_url": "https://person.clearbit.com/v2/people/find?email=",
                 "request_method": "GET",
                 "override_default_input_field": true,
@@ -270,18 +270,18 @@
                         "placeholder": "test@test.com"
                     }
                 }
-            },
-            "input_fields": {
-                "api_key": {
-                    "type": "text",
-                    "label": "Enter Clearbit API Key",
-                    "placeholder": "sk_xxx"
-                }
-            },
-            "alert": {
-                "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it.",
-                "color": "failure"
             }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Clearbit API Key",
+                "placeholder": "sk_xxx"
+            }
+        },
+        "alert": {
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it.",
+            "color": "failure"
         }
     }
 }

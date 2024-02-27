@@ -72,7 +72,7 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
             response = await fetch(endpointURL + inputData.email, {
                 method: requestMethod,
                 headers: {
-                    'Authorization': 'Basic ' + btoa('sk_5eaf8d5c99a337e38b6cd85c01678516:'),
+                    'Authorization': 'Basic ' + btoa(inputData.api_key + ':'),
                 }
             });
             break;

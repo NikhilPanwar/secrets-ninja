@@ -7,6 +7,7 @@ import { Flowbite, theme } from 'flowbite-react';
 import UniversalComponent from './modules/universal';
 import { GoSidebarCollapse } from "react-icons/go";
 import MainPageTable from './components/table';
+import Dashboard from './components/dashboard';
 
 export default function MyPage() {
   const [sidebarVisible, setSidebarVisible] = useState(true);
@@ -24,7 +25,7 @@ export default function MyPage() {
             {sidebarVisible && <SB visible={sidebarVisible} className="dark:bg-slate-700" />}
             <div className={`flex-1 bg-gray-100 dark:bg-gray-700 overflow-auto ${sidebarVisible ? 'ml-[sidebar-width]' : ''}`}> {/* Adjust margin based on sidebar visibility */}
               <Routes>
-                <Route path="/"/> 
+                <Route path="/" element={<Dashboard/>}/> 
                 <Route path="/stripe" element={<UniversalComponent serviceType="Stripe" />} />
                 <Route path="/openai" element={<UniversalComponent serviceType="OpenAI" />} />
                 <Route path="/paystack" element={<UniversalComponent serviceType="Paystack" />} />
