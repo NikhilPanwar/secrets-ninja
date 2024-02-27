@@ -11,9 +11,10 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
             });
             break;
         case 'Paypal':
-            const credentials = `${inputData.access_token}:${inputData.access_token_secret}`;
+            let accessToken;
+            const credentials = `${inputData.client_id}:${inputData.client_secret}`;
             const encodedCredentials = btoa(credentials);
-            response = await fetch('https://api.paypal.com/v1/oauth2/token', {
+            let tokenResponse = await fetch('https://api.paypal.com/v1/oauth2/token', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -22,6 +23,19 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 },
                 body: new URLSearchParams({ 'grant_type': 'client_credentials' })
             });
+            if (endpointURL !== 'https://api.paypal.com/v1/oauth2/token') {
+                const tokenData = await tokenResponse.json();
+                accessToken = tokenData.access_token;
+                response = await fetch(endpointURL, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${accessToken}`,
+                        'Content-Type': 'application/json'
+                    },
+                });
+            } else {
+                response = tokenResponse;
+            }
             break;
         case 'OpenAI':
             response = await fetch(endpointURL, {

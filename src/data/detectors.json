@@ -52,26 +52,26 @@
         "endpoints": {
             "get_access_scope": {
                 "label": "Get Access Scope",
-                "curl": "curl -v -X GET https://api.sandbox.paypal.com/v1/oauth2/token/userinfo?schema=openid -H \"Content-Type: application/json\" -H \"Authorization: Bearer A21AAHc",
-                "request_url": "https://api.sandbox.paypal.com/v1/oauth2/token/userinfo?schema=openid",
+                "curl": "curl -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials'",
+                "request_url": "https://api.paypal.com/v1/oauth2/token",
                 "request_method": "GET"
             },
             "get_payments": {
                 "label": "Get Balance",
-                "curl": "curl -v -X GET https://api.paypal.com/v1/payments/payment -H \"Content-Type: application/json\" -H \"Authorization: Bearer A21AAHc",
+                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/payments/payment' -H 'Authorization: Bearer $access_token'",
                 "request_url": "https://api.paypal.com/v1/payments/payment",
                 "request_method": "GET"
             }
         },
         "input_fields": {
-            "access_token": {
+            "client_id": {
                 "type": "text",
-                "label": "Enter Access Token",
+                "label": "Enter Client ID",
                 "placeholder": "A21AAHc"
             },
-            "access_token_secret": {
+            "client_secret": {
                 "type": "text",
-                "label": "Enter Access Token Secret",
+                "label": "Enter Client Secret",
                 "placeholder": "A21AAHc Secret"
             }
         },
