@@ -1,6 +1,6 @@
 import React from "react";
 import MainPageTable from "./table";
-import { Alert } from 'flowbite-react';
+import { Alert, Button } from 'flowbite-react';
 
 export default function Dashboard() {
     return (

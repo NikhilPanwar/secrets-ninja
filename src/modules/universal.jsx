@@ -5,6 +5,7 @@ import RequestWindow from "../components/request_window";
 import servicesConfig from '../data/detectors.json';
 import { HiInformationCircle } from 'react-icons/hi';
 import makeUniversalRequest from "../components/requests";
+import { AiOutlineLoading } from 'react-icons/ai';
 
 export default function UniversalComponent({ serviceType }) {
     const serviceConfig = servicesConfig[serviceType] || {};
@@ -22,12 +23,21 @@ export default function UniversalComponent({ serviceType }) {
     const [status_code, setStatusCode] = useState(0);
     const [output_str, setOutputStr] = useState('');
     const [inputValues, setInputValues] = useState({});
+    const [loading, setLoading] = useState(false);
 
     const handleTestEndpoint = async () => {
-        const { status, data } = await makeUniversalRequest(serviceType, inputValues, requestURL, requestMethod);
-        setStatusCode(status);
-        setOutputStr(JSON.stringify(data, null, 2));
+        setLoading(true);
+        try {
+            const { status, data } = await makeUniversalRequest(serviceType, inputValues, requestURL, requestMethod);
+            setStatusCode(status);
+            setOutputStr(JSON.stringify(data, null, 2));
+        } catch (error) {
+            console.error("Error:", error);
+        } finally {
+            setLoading(false);
+        }
     };
+    
 
     const handleDropdownChange = (endpointKey) => {
         const endpointConfig = endpoints[endpointKey];
@@ -61,7 +71,7 @@ export default function UniversalComponent({ serviceType }) {
         setRequestURL(firstNewEndpoint.request_url || "");
         setRequestMethod(firstNewEndpoint.request_method || "");
         setInputFields(firstNewEndpoint.override_default_input_field ? firstNewEndpoint.input_fields : newDefaultInputFields);
-    }, [serviceType]); 
+    }, [serviceType]);
 
     return (
         <div className="p-4">
@@ -98,13 +108,15 @@ export default function UniversalComponent({ serviceType }) {
                                 </Dropdown.Item>
                             ))}
                         </Dropdown>
-                        <Button onClick={handleTestEndpoint}>Test Endpoint</Button>
+                        <Button onClick={handleTestEndpoint} size="md" isProcessing={loading} processingSpinner={loading && <AiOutlineLoading className="h-6 w-6 animate-spin" />}>
+                            Test Endpoint
+                        </Button>
                     </div>
                 </div>
             </div>
             <RequestWindow curl={curlCommand} url={requestURL} method={requestMethod} />
             <div className="py-10">
-            <OutputWindow status_code={status_code} output_str={output_str} />
+                <OutputWindow status_code={status_code} output_str={output_str} />
             </div>
         </div>
     );
