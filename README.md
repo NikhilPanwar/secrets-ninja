@@ -14,5 +14,12 @@ Currently, two official plugins are available:
 ```
 npm install
 npm run dev
-npm build
+npm run build
+```
+
+
+# Deploy
+```
+firebase init
+firebase deploy
 ```

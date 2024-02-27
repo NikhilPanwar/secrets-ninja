@@ -20,8 +20,8 @@ function MainPageTable() {
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
               {'Stripe'}
             </Table.Cell>
-            <Table.Cell>Sliver</Table.Cell>
-            <Table.Cell>Laptop</Table.Cell>
+            <Table.Cell>sk_live_***</Table.Cell>
+            <Table.Cell>Balance, Customers, Orders, Payment Intents, Account</Table.Cell>
             <Table.Cell>
               <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
                 Submit Endpoint
@@ -32,8 +32,8 @@ function MainPageTable() {
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
               Github
             </Table.Cell>
-            <Table.Cell>White</Table.Cell>
-            <Table.Cell>Laptop PC</Table.Cell>
+            <Table.Cell>ghp_******</Table.Cell>
+            <Table.Cell>User, Repos</Table.Cell>
             <Table.Cell>
               <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
               Submit Endpoint
@@ -42,8 +42,8 @@ function MainPageTable() {
           </Table.Row>
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">Shopify</Table.Cell>
-            <Table.Cell>Black</Table.Cell>
-            <Table.Cell>Accessories</Table.Cell>
+            <Table.Cell>shp**_****</Table.Cell>
+            <Table.Cell>Customers, Orders</Table.Cell>
             <Table.Cell>
               <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
               Submit Endpoint
