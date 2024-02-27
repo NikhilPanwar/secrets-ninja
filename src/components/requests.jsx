@@ -94,7 +94,7 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
             return { status: 400, data: { message: 'Unsupported service type' } };
     }
 
-    data = await response.json(); // Assuming JSON response; adjust if needed.
+    data = await response.json();
     return { status: response.status, data };
 }
 
