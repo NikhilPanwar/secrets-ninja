@@ -39,7 +39,7 @@ export default function UniversalComponent({ serviceType }) {
             setLoading(false);
         }
     };
-    
+
 
     const handleDropdownChange = (endpointKey) => {
         const endpointConfig = endpoints[endpointKey];
@@ -112,9 +112,16 @@ export default function UniversalComponent({ serviceType }) {
                                 </Dropdown.Item>
                             ))}
                         </Dropdown>
-                        <Button onClick={handleTestEndpoint} size="md" isProcessing={loading} processingSpinner={loading && <AiOutlineLoading className="h-6 w-6 animate-spin" />}>
+                        <Button
+                            onClick={handleTestEndpoint}
+                            size="md"
+                            isProcessing={loading}
+                            processingSpinner={loading && <AiOutlineLoading className="h-6 w-6 animate-spin" />}
+                            disabled={serviceConfig?.alert?.color === 'failure'}>
                             Test Endpoint
                         </Button>
+
+
                     </div>
                 </div>
             </div>

@@ -8,7 +8,7 @@ import { RiOpenaiFill } from "react-icons/ri";
 import { HiOutlineRocketLaunch } from "react-icons/hi2";
 import { SlPaypal } from "react-icons/sl";
 import { HiArrowSmRight, HiInbox, HiShoppingBag, HiTable, HiUser } from 'react-icons/hi';
-import { FaStripe, FaGithub, FaShopify, FaTelegramPlane   } from "react-icons/fa";
+import { FaStripe, FaGithub, FaShopify, FaTelegramPlane } from "react-icons/fa";
 import { CiCircleInfo } from "react-icons/ci";
 import { SiSendinblue } from "react-icons/si";
 
@@ -20,7 +20,7 @@ function SB({ visible }) { // Accept visible as a prop
     <Sidebar>
       <Sidebar.Items>
         <Sidebar.ItemGroup>
-            <h2 className="text-lg font-semibold text-gray-800 dark:text-white">Modules</h2>
+          <h2 className="text-lg font-semibold text-gray-800 dark:text-white">Modules</h2>
           <Sidebar.Item href="/" icon={CiCircleInfo}>
             About
           </Sidebar.Item>
@@ -30,54 +30,59 @@ function SB({ visible }) { // Accept visible as a prop
             </Sidebar.Item>
           </Link>
           <Link to="/github">
-          <Sidebar.Item href="/github" icon={FaGithub}>
-            Github
-          </Sidebar.Item>
+            <Sidebar.Item href="/github" icon={FaGithub}>
+              Github
+            </Sidebar.Item>
           </Link>
           <Link to="/shopify">
-          <Sidebar.Item href="/shopify" icon={FaShopify}>
-            Shopify
-          </Sidebar.Item>
+            <Sidebar.Item href="/shopify" icon={FaShopify}>
+              Shopify
+            </Sidebar.Item>
           </Link>
           <Link to="/telegram">
-          <Sidebar.Item href="/telegram" icon={FaTelegramPlane}>
-            Telegram
-          </Sidebar.Item>
+            <Sidebar.Item href="/telegram" icon={FaTelegramPlane}>
+              Telegram
+            </Sidebar.Item>
           </Link>
           <Link to="/openai">
-          <Sidebar.Item href="/openai" icon={RiOpenaiFill}>
-            OpenAI
-          </Sidebar.Item>
+            <Sidebar.Item href="/openai" icon={RiOpenaiFill}>
+              OpenAI
+            </Sidebar.Item>
           </Link>
           <Link to="/paystack">
-          <Sidebar.Item href="/paystack" icon={HiInbox}>
-            Paystack
-          </Sidebar.Item>
+            <Sidebar.Item href="/paystack" icon={HiInbox}>
+              Paystack
+            </Sidebar.Item>
           </Link>
           <Link to="/omnisend">
-          <Sidebar.Item href="/omnisend" icon={HiInbox}>
-            Omnisend
-          </Sidebar.Item>
+            <Sidebar.Item href="/omnisend" icon={HiInbox}>
+              Omnisend
+            </Sidebar.Item>
           </Link>
           <Link to="/launchdarkly">
-          <Sidebar.Item href="/launchdarkly" icon={HiOutlineRocketLaunch}>
-            LaunchDarkly
-          </Sidebar.Item>
+            <Sidebar.Item href="/launchdarkly" icon={HiOutlineRocketLaunch}>
+              LaunchDarkly
+            </Sidebar.Item>
           </Link>
           <Link to="/clearbit">
-          <Sidebar.Item href="/clearbit" icon={HiInbox}>
-            Clearbit
-          </Sidebar.Item>
+            <Sidebar.Item href="/clearbit" icon={HiInbox}>
+              Clearbit
+            </Sidebar.Item>
           </Link>
           <Link to="/paypal">
-          <Sidebar.Item href="/paypal" icon={SlPaypal}>
-            Paypal
-          </Sidebar.Item>
+            <Sidebar.Item href="/paypal" icon={SlPaypal}>
+              Paypal
+            </Sidebar.Item>
           </Link>
           <Link to="/sendinblue">
-          <Sidebar.Item href="/sendinblue" icon={SiSendinblue}>
-            SendInBlue
-          </Sidebar.Item>
+            <Sidebar.Item href="/sendinblue" icon={SiSendinblue}>
+              SendInBlue
+            </Sidebar.Item>
+          </Link>
+          <Link to="/rechargepayments">
+            <Sidebar.Item href="/rechargepayments" icon={SiSendinblue}>
+              RechargePayments
+            </Sidebar.Item>
           </Link>
         </Sidebar.ItemGroup>
       </Sidebar.Items>

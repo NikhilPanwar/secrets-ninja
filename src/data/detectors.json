@@ -308,5 +308,38 @@
                 "placeholder": "xkeysib-xxx-xxxxx-xxxxx-xxxxx-xxxxx"
             }
         }
+    },
+    "RechargePayments" : {
+        "endpoints" : {
+            "charges" : {
+                "label" : "Get Charges",
+                "curl" : "curl -X GET https://api.rechargeapps.com/charges -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
+                "request_url" : "https://api.rechargeapps.com/charges",
+                "request_method" : "GET"
+            },
+            "orders" : {
+                "label" : "Get Orders",
+                "curl" : "curl -X GET https://api.rechargeapps.com/orders -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
+                "request_url" : "https://api.rechargeapps.com/orders",
+                "request_method" : "GET"
+            },
+            "customers" : {
+                "label" : "Get Customers",
+                "curl" : "curl -X GET https://api.rechargeapps.com/customers -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
+                "request_url" : "https://api.rechargeapps.com/customers",
+                "request_method" : "GET"
+            }
+        },
+        "input_fields" : {
+            "api_key" : {
+                "type" : "text",
+                "label" : "Enter Recharge API Key",
+                "placeholder" : "sk_xxx-xxx-xxx"
+            }
+        },
+        "alert" : {
+            "alert_message" : "Can't work because of CORS. Use the curl on your local machine to test it.",
+            "color" : "failure"
+        }
     }
 }
