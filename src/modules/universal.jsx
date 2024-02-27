@@ -71,6 +71,8 @@ export default function UniversalComponent({ serviceType }) {
         setRequestURL(firstNewEndpoint.request_url || "");
         setRequestMethod(firstNewEndpoint.request_method || "");
         setInputFields(firstNewEndpoint.override_default_input_field ? firstNewEndpoint.input_fields : newDefaultInputFields);
+
+        setStatusCode(0);
     }, [serviceType]);
 
     return (
