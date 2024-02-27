@@ -2,6 +2,7 @@
 
 import { Button, Navbar } from 'flowbite-react';
 import { DarkThemeToggle } from 'flowbite-react';
+import { GoSidebarCollapse } from "react-icons/go";
 
 function FlowbiteNavbar({ toggleSidebar }) { // Accept toggleSidebar as a prop
   const toggleStyle = {

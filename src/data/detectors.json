@@ -101,7 +101,7 @@
             "access_token_secret": {
                 "type": "text",
                 "label": "Enter Access Token Secret",
-                "placeholder": "A21AAHc"
+                "placeholder": "A21AAHc Secret"
             }
         },
         "alert": {

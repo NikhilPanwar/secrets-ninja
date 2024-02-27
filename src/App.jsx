@@ -5,6 +5,7 @@ import SB from './components/sidebar';
 import FT from './components/footer';
 import { Flowbite, theme } from 'flowbite-react';
 import UniversalComponent from './modules/universal';
+import { GoSidebarCollapse } from "react-icons/go";
 
 export default function MyPage() {
   const [sidebarVisible, setSidebarVisible] = useState(true);
