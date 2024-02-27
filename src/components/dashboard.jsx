@@ -1,13 +1,21 @@
 import React from "react";
 import MainPageTable from "./table";
+import { Alert } from 'flowbite-react';
 
 export default function Dashboard() {
     return (
-        <div>
-        <h1 className="text-2xl font-semibold dark:text-white p-10">Supported Keys</h1>
-        <div className="px-10">
-            <MainPageTable />
-        </div>
+        <div className="px-10 py-10">
+            <Alert color="info">
+                <span className="font-medium">Found API Keys, Credentials while Pentesting!</span> Test them using Secrets Ninja ...
+                <br />
+                <span className="font-medium">Note:</span> All the secrets are checked from frontend using your browser. No secrets are sent to our servers.
+            </Alert>
+            <div>
+                <h1 className="text-2xl font-semibold dark:text-white p-10">Supported Keys</h1>
+                <div >
+                    <MainPageTable />
+                </div>
+            </div>
         </div>
     );
-    }
+}
