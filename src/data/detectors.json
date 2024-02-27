@@ -5,14 +5,7 @@
                 "label": "Account Metadata",
                 "curl": "curl https://api.stripe.com/v1/account -u sk_live_xxxx:",
                 "request_url": "https://api.stripe.com/v1/account",
-                "request_method": "GET",
-                "input_fields": {
-                    "api_key": {
-                        "type": "text",
-                        "label": "Enter Stripe API Key",
-                        "placeholder": "sk_live_xxxx"
-                    }
-                }
+                "request_method": "GET"
             },
             "balance": {
                 "label": "Balance",
@@ -32,40 +25,19 @@
                 "label": "Customers",
                 "curl": "curl https://api.stripe.com/v1/customers -u sk_live_xxxx:",
                 "request_url": "https://api.stripe.com/v1/customers",
-                "request_method": "GET",
-                "input_fields": {
-                    "api_key": {
-                        "type": "text",
-                        "label": "Enter Stripe API Key",
-                        "placeholder": "sk_live_xxxx"
-                    }
-                }
+                "request_method": "GET"
             },
             "orders": {
                 "label": "Orders",
                 "curl": "curl https://api.stripe.com/v1/orders -u sk_live_xxxx:",
                 "request_url": "https://api.stripe.com/v1/orders",
-                "request_method": "GET",
-                "input_fields": {
-                    "api_key": {
-                        "type": "text",
-                        "label": "Enter Stripe API Key",
-                        "placeholder": "sk_live_xxxx"
-                    }
-                }
+                "request_method": "GET"
             },
             "payment_intents": {
                 "label": "Payment Intents",
                 "curl": "curl https://api.stripe.com/v1/payment_intents -u sk_live_xxxx:",
                 "request_url": "https://api.stripe.com/v1/payment_intents",
-                "request_method": "GET",
-                "input_fields": {
-                    "api_key": {
-                        "type": "text",
-                        "label": "Enter Stripe API Key",
-                        "placeholder": "sk_live_xxxx"
-                    }
-                }
+                "request_method": "GET"
             }
         },
         "input_fields": {
@@ -78,18 +50,17 @@
     },
     "Paypal": {
         "endpoints": {
-            "get_balance": {
+            "get_access_scope" : {
+                "label": "Get Access Scope",
+                "curl": "curl -v -X GET https://api.sandbox.paypal.com/v1/oauth2/token/userinfo?schema=openid -H \"Content-Type: application/json\" -H \"Authorization: Bearer A21AAHc",
+                "request_url": "https://api.sandbox.paypal.com/v1/oauth2/token/userinfo?schema=openid",
+                "request_method": "GET"
+            },
+            "get_payments": {
                 "label": "Get Balance",
-                "curl": "curl -v -X GET https://api.sandbox.paypal.com/v1/balance -H \"Content-Type: application/json\" -H \"Authorization: Bearer A21AAHc",
-                "request_url": "https://api.sandbox.paypal.com/v1/balance",
-                "request_method": "GET",
-                "input_fields": {
-                    "access_token": {
-                        "type": "text",
-                        "label": "Enter Access Token",
-                        "placeholder": "A21AAHc"
-                    }
-                }
+                "curl": "curl -v -X GET https://api.paypal.com/v1/payments/payment -H \"Content-Type: application/json\" -H \"Authorization: Bearer A21AAHc",
+                "request_url": "https://api.paypal.com/v1/payments/payment",
+                "request_method": "GET"
             }
         },
         "input_fields": {
@@ -105,8 +76,212 @@
             }
         },
         "alert": {
-            "alert_message": "Paypal API is not available for now. Please try again later.",
+            "alert_message": "Currently only the access scopes endpoint works.",
+            "color": "info"
+        }
+    },
+    "OpenAI": {
+        "endpoints": {
+            "organizations": {
+                "label": "Get Organizations",
+                "curl": "curl -X GET https://api.openai.com/v1/organizations",
+                "request_url": "https://api.openai.com/v1/organizations",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter OpenAI API Key",
+                "placeholder": "sk-xxxxx-xxxxx-xxxxx-xxxxx"
+            }
+        }
+    },
+    "Paystack": {
+        "endpoints": {
+            "transaction": {
+                "label": "Get Transaction",
+                "curl": "curl https://api.paystack.co/transaction",
+                "request_url": "https://api.paystack.co/transaction",
+                "request_method": "GET"
+            },
+            "customer": {
+                "label": "Get Customer",
+                "curl": "curl https://api.paystack.co/customer",
+                "request_url": "https://api.paystack.co/customer",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Paystack API Key",
+                "placeholder": "sk_live_xxxx"
+            }
+        }
+    },
+    "Github": {
+        "endpoints": {
+            "user": {
+                "label": "Get User",
+                "curl": "curl https://api.github.com/user",
+                "request_url": "https://api.github.com/user",
+                "request_method": "GET"
+            },
+            "repos": {
+                "label": "Get Repos",
+                "curl": "curl https://api.github.com/user/repos",
+                "request_url": "https://api.github.com/user/repos",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "access_token": {
+                "type": "text",
+                "label": "Enter Github Access Token",
+                "placeholder": "ghp_xxxxx"
+            }
+        }
+    },
+    "LaunchDarkly": {
+        "endpoints": {
+            "projects": {
+                "label": "Get Projects",
+                "curl": "curl -H \"Authorization",
+                "request_url": "https://app.launchdarkly.com/api/v2/projects",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter LaunchDarkly API Key",
+                "placeholder": "api-xxxxx-xxxxx-xxxxx-xxxxx"
+            }
+        }
+    },
+    "Omnisend": {
+        "endpoints": {
+            "contacts": {
+                "label": "Get Contacts",
+                "curl": "curl -X GET",
+                "request_url": "https://api.omnisend.com/v3/contacts?limit=100",
+                "request_method": "GET"
+            },
+            "orders": {
+                "label": "Get Orders",
+                "curl": "curl -X GET",
+                "request_url": "https://api.omnisend.com/v3/orders?limit=100",
+                "request_method": "GET"
+            },
+            "campaigns": {
+                "label": "Get Campaigns",
+                "curl": "curl -X GET",
+                "request_url": "https://api.omnisend.com/v3/campaigns?limit=100",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Omnisend API Key",
+                "placeholder": "xxx-xxxxx-xxxxx-xxxxx-xxxxx"
+            }
+        }
+    },
+    "Shopify": {
+        "endpoints": {
+            "orders": {
+                "label": "Get Orders",
+                "curl": "curl -X GET",
+                "request_url": "https://shopify.com/admin/api/2023-10/orders.json",
+                "request_method": "GET"
+            },
+            "customers": {
+                "label": "Get Customers",
+                "curl": "curl -X GET",
+                "request_url": "https://shopify.com/admin/api/2023-10/customers.json",
+                "request_method": "GET"
+            },
+            "orders_count": {
+                "label": "Get Orders Count",
+                "curl": "curl -X GET",
+                "request_url": "https://shopify.com/admin/api/2023-10/orders/count.json",
+                "request_method": "GET"
+            },
+            "customers_count": {
+                "label": "Get Customers Count",
+                "curl": "curl -X GET",
+                "request_url": "https://shopify.com/admin/api/2023-10/customers/count.json",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Shopify API Key",
+                "placeholder": "shp_12345"
+            },
+            "store_domain": {
+                "type": "text",
+                "label": "Enter Store Domain",
+                "placeholder": "store.myshopify.com"
+            }
+        },
+        "alert": {
+            "alert_message": "Shopify API Checker is not available for now. Please try again later.",
             "color": "failure"
+        }
+    },
+    "Telegram": {
+        "endpoints": {
+            "bot_info": {
+                "label": "Get Bot Info",
+                "curl": "curl -X GET",
+                "request_url": "https://api.telegram.org/bot<token>/getMe",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "bot_token": {
+                "type": "text",
+                "label": "Enter Bot Token",
+                "placeholder": "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"
+            }
+        }
+    },
+    "Clearbit": {
+        "endpoints": {
+            "person": {
+                "label": "Get Person",
+                "curl": "curl 'https://person.clearbit.com/v2/people/find?email=test@gmail.com' -u sk_xxx-xxx-xxx:",
+                "request_url": "https://person.clearbit.com/v2/people/find?email=",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Clearbit API Key",
+                        "placeholder": "sk_xxx"
+                    },
+                    "email": {
+                        "type": "text",
+                        "label": "Enter Email",
+                        "placeholder": "test@test.com"
+                    }
+                }
+            },
+            "input_fields": {
+                "api_key": {
+                    "type": "text",
+                    "label": "Enter Clearbit API Key",
+                    "placeholder": "sk_xxx"
+                }
+            },
+            "alert": {
+                "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it.",
+                "color": "failure"
+            }
         }
     }
 }

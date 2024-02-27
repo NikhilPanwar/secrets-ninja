@@ -4,6 +4,7 @@ import OutputWindow from "../components/output_window";
 import RequestWindow from "../components/request_window";
 import servicesConfig from '../data/detectors.json';
 import { HiInformationCircle } from 'react-icons/hi';
+import makeUniversalRequest from "../components/requests";
 
 export default function UniversalComponent({ serviceType }) {
     const serviceConfig = servicesConfig[serviceType] || {};
@@ -18,6 +19,17 @@ export default function UniversalComponent({ serviceType }) {
     const [requestURL, setRequestURL] = useState(firstEndpoint.request_url || "");
     const [requestMethod, setRequestMethod] = useState(firstEndpoint.request_method || "");
     const [inputFields, setInputFields] = useState(firstEndpoint.override_default_input_field ? firstEndpoint.input_fields : defaultInputFields);
+    const [status_code, setStatusCode] = useState(0);
+    const [output_str, setOutputStr] = useState('');
+    const [inputValues, setInputValues] = useState({});
+
+    const handleTestEndpoint = async () => {
+        console.log(inputValues);
+        console.log(serviceType)
+        const { status, data } = await makeUniversalRequest(serviceType, inputValues, requestURL, requestMethod);
+        setStatusCode(status);
+        setOutputStr(JSON.stringify(data, null, 2));
+    };
 
     const handleDropdownChange = (endpointKey) => {
         const endpointConfig = endpoints[endpointKey];
@@ -31,6 +43,10 @@ export default function UniversalComponent({ serviceType }) {
         } else {
             setInputFields(defaultInputFields);
         }
+    };
+
+    const handleInputChange = (key, value) => {
+        setInputValues(prev => ({ ...prev, [key]: value }));
     };
 
     useEffect(() => {
@@ -62,6 +78,7 @@ export default function UniversalComponent({ serviceType }) {
                             id={key}
                             type={inputFields[key].type}
                             placeholder={inputFields[key].placeholder}
+                            onChange={(e) => handleInputChange(key, e.target.value)}
                             required
                         />
                     </div>
@@ -83,13 +100,13 @@ export default function UniversalComponent({ serviceType }) {
                                 </Dropdown.Item>
                             ))}
                         </Dropdown>
-                        <Button>Test Endpoint</Button>
+                        <Button onClick={handleTestEndpoint}>Test Endpoint</Button>
                     </div>
                 </div>
             </div>
             <RequestWindow curl={curlCommand} url={requestURL} method={requestMethod} />
             <div className="py-10">
-                <OutputWindow />
+            <OutputWindow status_code={status_code} output_str={output_str} />
             </div>
         </div>
     );

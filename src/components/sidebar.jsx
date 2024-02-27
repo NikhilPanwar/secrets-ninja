@@ -19,7 +19,7 @@ function SB({ visible }) { // Accept visible as a prop
         <Sidebar.ItemGroup>
             <h2 className="text-lg font-semibold text-gray-800 dark:text-white">Modules</h2>
           <Sidebar.Item href="/" icon={HiChartPie}>
-            Meta
+            About
           </Sidebar.Item>
           <Link to="/stripe">
             <Sidebar.Item href="/stripe" icon={LiaStripeS}>

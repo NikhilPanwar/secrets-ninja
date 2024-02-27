@@ -3,7 +3,11 @@ import { FaRegClipboard } from "react-icons/fa";
 import JSONPretty from "react-json-pretty";
 import 'react-json-pretty/themes/1337.css';
 
-function OutputWindow({ status_code = 200, output_str = '{ "id": "acct_1AQcm4Hm9UpV3KaX", "object": "account", "business_logo": "https://s3.amazonaws.com/stripe-uploads/acct_1AQcm4Hm9UpV3KaXmerchant-icon-1496743778324-villa_carre.jpg", "business_logo_large": null, "business_name": "Villa Eugene", "business_primary_color": "#fefefe", "business_url": "www.villa-eugene.com", "capabilities": { "bancontact_payments": "inactive", "blik_payments": "inactive", "card_payments": "inactive", "eps_payments": "inactive", "giropay_payments": "inactive", "ideal_payments": "inactive", "klarna_payments": "inactive", "link_payments": "inactive", "p24_payments": "inactive", "platform_payments": "inactive", "sepa_debit_payments": "inactive", "sofort_payments": "inactive" }, "charges_enabled": false, "controller": { "type": "account" }, "country": "FR", "debit_negative_balances": true, "default_currency": "eur", "details_submitted": true, "display_name": "Villa-eugene", "email": "abelrafik@orange.fr", "mcc": null, "payout_schedule": { "delay_days": 7, "interval": "daily" }, "payout_statement_descriptor": null, "payouts_enabled": false, "statement_descriptor": "VILLA EUGENE", "statement_descriptor_kana": "", "statement_descriptor_kanji": "", "support_address": { "city": "EPERNAY", "country": "FR", "line1": "84 avenue de Champagne", "line2": null, "postal_code": "51200", "state": "51" }, "support_email": "abelrafik@orange.fr", "support_phone": "33326324476", "support_url": "", "timezone": "Europe/Paris", "type": "standard" }' }) {
+function OutputWindow({ status_code = 0, output_str = '{}' }) {
+
+  if (status_code === 0) {
+    return null; // or return <></> for an empty fragment
+  }
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(output_str).then(() => {
