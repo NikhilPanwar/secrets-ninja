@@ -1,6 +1,5 @@
 import { Card, Button } from 'flowbite-react';
 import { FaRegClipboard } from "react-icons/fa";
-import JSONPretty from "react-json-pretty";
 import 'react-json-pretty/themes/1337.css';
 import { IoMdSend } from "react-icons/io";
 
