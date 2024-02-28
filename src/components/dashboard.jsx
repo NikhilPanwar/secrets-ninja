@@ -2,7 +2,7 @@ import React from "react";
 import MainPageTable from "./table";
 import { Alert, Button } from 'flowbite-react';
 
-export default function Dashboard() {
+export default function Dashboard({servicesConfig}) {
     return (
         <div className="px-10 py-10">
             <Alert color="info">
@@ -13,7 +13,7 @@ export default function Dashboard() {
             <div>
                 <h1 className="text-2xl font-semibold dark:text-white py-10">Supported Keys</h1>
                 <div >
-                    <MainPageTable />
+                    <MainPageTable servicesConfig={servicesConfig}/>
                 </div>
             </div>
         </div>

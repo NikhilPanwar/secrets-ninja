@@ -10,10 +10,9 @@ import { CiCircleInfo } from "react-icons/ci";
 import { SiSendinblue } from "react-icons/si";
 import { FaTrello } from "react-icons/fa";
 import { IoMdArrowDroprightCircle } from "react-icons/io";
-import serviceConfig from '../data/detectors.json';
 
 
-function SB({ visible }) { // Accept visible as a prop
+function SB({ visible, servicesConfig }) { // Accept visible as a prop
   if (!visible) return null; // Do not render if not visible
 
   let serviceIcons = {
@@ -36,7 +35,7 @@ function SB({ visible }) { // Accept visible as a prop
           <Sidebar.Item href="/" icon={CiCircleInfo}>
             About
           </Sidebar.Item>
-          {Object.keys(serviceConfig).map((service) => (
+          {Object.keys(servicesConfig).map((service) => (
             <Sidebar.Item
               key={service}
               href={`/${service.toLowerCase()}`}

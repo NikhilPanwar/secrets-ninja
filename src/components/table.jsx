@@ -1,9 +1,8 @@
 'use client';
 
 import { Table } from 'flowbite-react';
-import servicesConfig from '../data/detectors.json';
 
-function MainPageTable() {
+function MainPageTable({servicesConfig}) {
   // Helper function to capitalize first letter and replace underscores
   const formatEndpointName = (name) => {
     return name

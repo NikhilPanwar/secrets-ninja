@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Button, Dropdown, Label, TextInput, Alert } from 'flowbite-react';
 import OutputWindow from "../components/output_window";
 import RequestWindow from "../components/request_window";
-import servicesConfig from '../data/detectors.json';
 import { HiInformationCircle } from 'react-icons/hi';
 import makeUniversalRequest from "../components/requests";
 import { AiOutlineLoading } from 'react-icons/ai';
 
-export default function UniversalComponent({ serviceType }) {
+export default function UniversalComponent({ serviceType, servicesConfig }) {
     const serviceConfig = servicesConfig[serviceType] || {};
     const endpoints = serviceConfig.endpoints || {};
     const defaultInputFields = serviceConfig.input_fields || {};
