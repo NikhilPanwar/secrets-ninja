@@ -2,11 +2,9 @@
 
 import { Sidebar } from 'flowbite-react';
 import { LiaStripeS } from "react-icons/lia";
-import { Link } from 'react-router-dom';
 import { RiOpenaiFill } from "react-icons/ri";
 import { HiOutlineRocketLaunch } from "react-icons/hi2";
 import { SlPaypal } from "react-icons/sl";
-import { HiArrowSmRight, HiInbox, HiShoppingBag, HiTable, HiUser } from 'react-icons/hi';
 import { FaGithub, FaShopify, FaTelegramPlane } from "react-icons/fa";
 import { CiCircleInfo } from "react-icons/ci";
 import { SiSendinblue } from "react-icons/si";
