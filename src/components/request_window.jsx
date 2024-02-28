@@ -7,7 +7,7 @@ import { IoMdSend } from "react-icons/io";
 function RequestWindow(curl = 'curl https://api.stripe.com/v1/balance -u sk_live_xxxx:') {
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(curl).then(() => {
+    navigator.clipboard.writeText(curl.curl).then(() => {
       alert("Copied to clipboard!");
     }).catch(err => {
       console.error('Could not copy text: ', err);
