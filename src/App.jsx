@@ -24,7 +24,7 @@ export default function MyPage() {
             {sidebarVisible && <SB visible={sidebarVisible} servicesConfig={servicesConfig} className="dark:bg-slate-700" />}
             <div className={`flex-1 bg-gray-100 dark:bg-gray-700 overflow-auto ${sidebarVisible ? 'ml-[sidebar-width]' : ''}`}> {/* Adjust margin based on sidebar visibility */}
               <Routes>
-                <Route path="/" element={<Dashboard servicesConfig={servicesConfig}/>} />
+                <Route path="/" element={<Dashboard servicesConfig={servicesConfig} />} />
                 {Object.keys(servicesConfig).map((service) => (
                   <Route
                     key={service}

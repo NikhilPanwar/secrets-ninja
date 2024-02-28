@@ -28,7 +28,7 @@ function OutputWindow({ status_code = 0, output_str = '{}' }) {
       </div>
       <div className="overflow-auto" style={{ maxHeight: '58vh' }}>
         <pre className="text-xs md:text-sm font-mono dark:text-white whitespace-pre-wrap">
-          <JSONPretty id="json-pretty" data={output_str}/>
+          <JSONPretty id="json-pretty" data={output_str} />
         </pre>
       </div>
     </Card>

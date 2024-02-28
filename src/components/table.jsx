@@ -2,7 +2,7 @@
 
 import { Table } from 'flowbite-react';
 
-function MainPageTable({servicesConfig}) {
+function MainPageTable({ servicesConfig }) {
   // Helper function to capitalize first letter and replace underscores
   const formatEndpointName = (name) => {
     return name

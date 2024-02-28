@@ -19,12 +19,12 @@ function RequestWindow(curl = 'curl https://api.stripe.com/v1/balance -u sk_live
         <h2 className="text-lg font-semibold dark:text-white">Request</h2>
         <Button.Group>
           <Button color="gray" size="xs" onClick={copyToClipboard}><FaRegClipboard className="mr-2 h-3 w-3" />Copy</Button>
-          <Button color="gray" size="xs"><IoMdSend className="mr-2 h-3 w-3"/>Test</Button>
+          <Button color="gray" size="xs"><IoMdSend className="mr-2 h-3 w-3" />Test</Button>
         </Button.Group>
       </div>
       <div className="overflow-auto" style={{ maxHeight: '58vh' }}>
         <pre className="text-xs md:text-sm font-mono dark:text-white whitespace-pre-wrap">
-        {curl.curl}
+          {curl.curl}
         </pre>
       </div>
     </Card>
