@@ -309,37 +309,110 @@
             }
         }
     },
-    "RechargePayments" : {
-        "endpoints" : {
-            "charges" : {
-                "label" : "Get Charges",
-                "curl" : "curl -X GET https://api.rechargeapps.com/charges -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
-                "request_url" : "https://api.rechargeapps.com/charges",
-                "request_method" : "GET"
+    "RechargePayments": {
+        "endpoints": {
+            "charges": {
+                "label": "Get Charges",
+                "curl": "curl -X GET https://api.rechargeapps.com/charges -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
+                "request_url": "https://api.rechargeapps.com/charges",
+                "request_method": "GET"
             },
-            "orders" : {
-                "label" : "Get Orders",
-                "curl" : "curl -X GET https://api.rechargeapps.com/orders -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
-                "request_url" : "https://api.rechargeapps.com/orders",
-                "request_method" : "GET"
+            "orders": {
+                "label": "Get Orders",
+                "curl": "curl -X GET https://api.rechargeapps.com/orders -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
+                "request_url": "https://api.rechargeapps.com/orders",
+                "request_method": "GET"
             },
-            "customers" : {
-                "label" : "Get Customers",
-                "curl" : "curl -X GET https://api.rechargeapps.com/customers -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
-                "request_url" : "https://api.rechargeapps.com/customers",
-                "request_method" : "GET"
+            "customers": {
+                "label": "Get Customers",
+                "curl": "curl -X GET https://api.rechargeapps.com/customers -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
+                "request_url": "https://api.rechargeapps.com/customers",
+                "request_method": "GET"
             }
         },
-        "input_fields" : {
-            "api_key" : {
-                "type" : "text",
-                "label" : "Enter Recharge API Key",
-                "placeholder" : "sk_xxx-xxx-xxx"
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Recharge API Key",
+                "placeholder": "sk_xxx-xxx-xxx"
             }
         },
-        "alert" : {
-            "alert_message" : "Can't work because of CORS. Use the curl on your local machine to test it.",
-            "color" : "failure"
+        "alert": {
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it.",
+            "color": "failure"
+        }
+    },
+    "MailerLite": {
+        "endpoints": {
+            "subscribers": {
+                "label": "Get Subscribers",
+                "curl": "curl -X GET https://api.mailerlite.com/api/v2/subscribers -H 'X-MailerLite-ApiKey: xxx-xxx-xxx'",
+                "request_url": "https://api.mailerlite.com/api/v2/subscribers",
+                "request_method": "GET"
+            },
+            "campaigns": {
+                "label": "Get Campaigns",
+                "curl": "curl -X GET https://api.mailerlite.com/api/v2/campaigns -H 'X-MailerLite-ApiKey: xxx-xxx-xxx'",
+                "request_url": "https://api.mailerlite.com/api/v2/campaigns",
+                "request_method": "GET"
+            },
+            "groups": {
+                "label": "Get Groups",
+                "curl": "curl -X GET https://api.mailerlite.com/api/v2/groups -H 'X-MailerLite-ApiKey: xxx-xxx-xxx'",
+                "request_url": "https://api.mailerlite.com/api/v2/groups",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter MailerLite API Key",
+                "placeholder": "xxxx-xxx-xxx"
+            }
+        },
+        "alert": {
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it.",
+            "color": "failure"
+        }
+    },
+    "Trello": {
+        "endpoints": {
+            "about_me": {
+                "label": "Get Account Metadata",
+                "curl": "curl -X GET 'https://api.trello.com/1/members/me?key=<key>&token=<token>'",
+                "request_url": "https://api.trello.com/1/members/me?key=<key>&token=<token>",
+                "request_method": "GET"
+            },
+            "boards": {
+                "label": "Get Boards",
+                "curl": "curl -X GET 'https://api.trello.com/1/members/me/boards?key=<key>&token=<token>'",
+                "request_url": "https://api.trello.com/1/members/me/boards?key=<key>&token=<token>",
+                "request_method": "GET"
+            },
+            "organizations": {
+                "label": "Get Organizations",
+                "curl": "curl -X GET 'https://api.trello.com/1/members/me/organizations?key=<key>&token=<token>'",
+                "request_url": "https://api.trello.com/1/members/me/organizations?key=<key>&token=<token>",
+                "request_method": "GET"
+            },
+            "actions": {
+                "label": "Get Actions",
+                "curl": "curl -X GET 'https://api.trello.com/1/members/me/actions?key=<key>&token=<token>'",
+                "request_url": "https://api.trello.com/1/members/me/actions?key=<key>&token=<token>",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "key": {
+                "type": "text",
+                "label": "Enter Trello Key",
+                "placeholder": "xxxx-xxx-xxx"
+            },
+            "token": {
+                "type": "text",
+                "label": "Enter Trello Token",
+                "placeholder": "xxxx-xxx-xxx"
+            }
         }
     }
 }

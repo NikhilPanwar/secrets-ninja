@@ -11,6 +11,7 @@ import { HiArrowSmRight, HiInbox, HiShoppingBag, HiTable, HiUser } from 'react-i
 import { FaStripe, FaGithub, FaShopify, FaTelegramPlane } from "react-icons/fa";
 import { CiCircleInfo } from "react-icons/ci";
 import { SiSendinblue } from "react-icons/si";
+import { FaTrello } from "react-icons/fa";
 
 
 function SB({ visible }) { // Accept visible as a prop
@@ -82,6 +83,16 @@ function SB({ visible }) { // Accept visible as a prop
           <Link to="/rechargepayments">
             <Sidebar.Item href="/rechargepayments" icon={HiInbox}>
               RechargePayments
+            </Sidebar.Item>
+          </Link>
+          <Link to="/mailerlite">
+            <Sidebar.Item href="/mailerlite" icon={HiInbox}>
+              MailerLite
+            </Sidebar.Item>
+          </Link>
+          <Link to="/trello">
+            <Sidebar.Item href="/trello" icon={FaTrello}>
+              Trello
             </Sidebar.Item>
           </Link>
         </Sidebar.ItemGroup>

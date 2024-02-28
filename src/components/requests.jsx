@@ -106,6 +106,19 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'MailerLite':
+            response = await fetch(endpointURL, {
+                method: requestMethod,
+                headers: {
+                    'X-MailerLite-ApiKey': `${inputData.api_key}`,
+                }
+            });
+            break;
+        case 'Trello':
+            response = await fetch(endpointURL.replace('<key>', inputData.key).replace('<token>', inputData.token), {
+                method: requestMethod
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }
