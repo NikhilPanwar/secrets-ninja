@@ -24,7 +24,7 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     Github: FaGithub,
     Shopify: FaShopify,
     Telegram: FaTelegramPlane,
-    Sendinblue: SiSendinblue,
+    SendInBlue: SiSendinblue,
     Trello: FaTrello,
     RazorPay: SiRazorpay
   };
