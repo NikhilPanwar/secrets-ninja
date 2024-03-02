@@ -3,6 +3,7 @@
 
 import { Footer } from 'flowbite-react';
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
+import logo from '../assets/logo-t.png';
 
 function FT() {
   return (
@@ -12,8 +13,8 @@ function FT() {
           <div>
             <Footer.Brand
               href="/"
-              src="https://flowbite.com/docs/images/logo.svg"
-              alt="Flowbite Logo"
+              src={logo}
+              alt="Secrets Ninja"
               name="Secrets Ninja"
             />
           </div>

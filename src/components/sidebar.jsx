@@ -10,6 +10,7 @@ import { CiCircleInfo } from "react-icons/ci";
 import { SiSendinblue } from "react-icons/si";
 import { FaTrello } from "react-icons/fa";
 import { IoMdArrowDroprightCircle } from "react-icons/io";
+import { SiRazorpay } from "react-icons/si";
 
 
 function SB({ visible, servicesConfig }) { // Accept visible as a prop
@@ -24,7 +25,8 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     Shopify: FaShopify,
     Telegram: FaTelegramPlane,
     Sendinblue: SiSendinblue,
-    Trello: FaTrello
+    Trello: FaTrello,
+    RazorPay: SiRazorpay
   };
 
   return (

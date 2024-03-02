@@ -119,6 +119,14 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 method: requestMethod
             });
             break;
+        case 'RazorPay':
+            response = await fetch(endpointURL, {
+                method: requestMethod,
+                headers: {
+                    'Authorization': `Basic ${btoa(inputData.key_id + ':' + inputData.key_secret)}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }

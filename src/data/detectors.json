@@ -414,5 +414,67 @@
                 "placeholder": "xxxx-xxx-xxx"
             }
         }
+    },
+    "RazorPay": {
+        "endpoints": {
+            "payments": {
+                "label": "Get Payments",
+                "curl": "curl -X GET https://api.razorpay.com/v1/payments -u <key_id>:<key_secret>",
+                "request_url": "https://api.razorpay.com/v1/payments",
+                "request_method": "GET"
+            },
+            "customers": {
+                "label": "Get Customers",
+                "curl": "curl -X GET https://api.razorpay.com/v1/customers -u <key_id>:<key_secret>",
+                "request_url": "https://api.razorpay.com/v1/customers",
+                "request_method": "GET"
+            },
+            "orders": {
+                "label": "Get Orders",
+                "curl": "curl -X GET https://api.razorpay.com/v1/orders -u <key_id>:<key_secret>",
+                "request_url": "https://api.razorpay.com/v1/orders",
+                "request_method": "GET"
+            },
+            "invoices": {
+                "label": "Get Invoices",
+                "curl": "curl -X GET https://api.razorpay.com/v1/invoices -u <key_id>:<key_secret>",
+                "request_url": "https://api.razorpay.com/v1/invoices",
+                "request_method": "GET"
+            },
+            "refunds": {
+                "label": "Get Refunds",
+                "curl": "curl -X GET https://api.razorpay.com/v1/refunds -u <key_id>:<key_secret>",
+                "request_url": "https://api.razorpay.com/v1/refunds",
+                "request_method": "GET"
+            },
+            "dispures": {
+                "label": "Get Disputes",
+                "curl": "curl -X GET https://api.razorpay.com/v1/disputes -u <key_id>:<key_secret>",
+                "request_url": "https://api.razorpay.com/v1/disputes",
+                "request_method": "GET"
+            },
+            "contacts": {
+                "label": "Get Contacts",
+                "curl": "curl -X GET https://api.razorpay.com/v1/contacts -u <key_id>:<key_secret>",
+                "request_url": "https://api.razorpay.com/v1/contacts",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "key_id": {
+                "type": "text",
+                "label": "Enter RazorPay API Key",
+                "placeholder": "c2tfxxxxx-xxxxx-xxxxx-xxxxx-xxxxx"
+            },
+            "key_secret": {
+                "type": "text",
+                "label": "Enter RazorPay API Secret",
+                "placeholder": "c2tfxxxxx-xxxxx-xxxxx-xxxxx-xxxxx"
+            }
+        },
+        "alert": {
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it.",
+            "color": "failure"
+        }
     }
 }

@@ -29,23 +29,21 @@ export default function MyPage() {
     setSidebarVisible(!sidebarVisible);
   };
 
-  // Adjust sidebar and main content based on window size
-  const isLargeScreen = width >= 1024; // Adjust this value based on your breakpoint needs
+  const isLargeScreen = width >= 1024;
 
-  // Use React state to manage whether the sidebar is overlayed or not for small screens
-  const overlayStyle = sidebarVisible ? { zIndex: 40, position: 'fixed', width: '100%', height: '90%' } : {};
-
-  // Adjust layout styles based on screen size
-  const containerStyle = isLargeScreen ? 'flex flex-1' : 'flex flex-1 overflow-hidden';
-  const sidebarStyle = isLargeScreen ? {} : overlayStyle;
+  // Adjusted styles to ensure footer is always visible and not overlaid
+  const containerStyle = `flex flex-col h-screen`;
+  const contentContainerStyle = isLargeScreen ? 'flex flex-1' : 'flex flex-1 overflow-hidden';
+  const sidebarStyle = isLargeScreen ? {} : { zIndex: 30, position: 'fixed', width: '100%', height: '100%' };
   const contentStyle = isLargeScreen ? 'flex-1 bg-gray-100 dark:bg-gray-700 overflow-auto' : `flex-1 bg-gray-100 dark:bg-gray-700 overflow-auto ${sidebarVisible ? 'sidebar-overlay' : ''}`;
+  const footerStyle = { zIndex: 50, position: 'relative' }; // Ensure the footer has a higher zIndex
 
   return (
     <Flowbite>
       <Router>
-        <div className="flex flex-col h-screen">
+        <div className={containerStyle}>
           <FlowbiteNavbar toggleSidebar={toggleSidebar} />
-          <div className={containerStyle}>
+          <div className={contentContainerStyle}>
             {sidebarVisible && (
               <div style={sidebarStyle}>
                 <SB visible={sidebarVisible} servicesConfig={servicesConfig} className="dark:bg-slate-700" />
