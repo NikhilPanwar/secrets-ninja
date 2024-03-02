@@ -16,6 +16,48 @@ firebase deploy
 
 ### Contributing Modules
 1. Add the module to `data/detectors.json`
+```
+{
+    "OpenAI": {
+        "endpoints": {
+            "organizations": {
+                "label": "Get Organizations",
+                "curl": "curl -X GET 'https://api.openai.com/v1/organizations' -H 'Authorization: Bearer sk-xxxx'",
+                "request_url": "https://api.openai.com/v1/organizations",
+                "request_method": "GET"
+            },
+            "additional_endpoints" : {....}
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter OpenAI API Key",
+                "placeholder": "sk-xxxxx-xxxxx-xxxxx-xxxxx"
+            },
+            "additional_input_fields" : {.....}
+        }
+    }
+}
+```
 2. update `components/requests.jsx` with the request code
+```
+case 'OpenAI':
+    response = await fetch(endpointURL, {
+        method: requestMethod,
+        headers: {
+            'Authorization': `Bearer ${inputData.api_key}`,
+        }
+    });
+    break;
+```
 - **Optional**
 3. Update the service icon in `components/sidebar.jsx`
+```
+import { RiOpenaiFill } from "react-icons/ri";
+
+let serviceIcons = {
+    ....,
+    OpenAI: RiOpenaiFill,
+    ....
+}
+```
