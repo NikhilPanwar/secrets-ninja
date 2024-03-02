@@ -39,7 +39,7 @@ firebase deploy
     }
 }
 ```
-2. update `components/requests.jsx` with the request code
+2. Update `components/requests.jsx` with the request code for this service
 ```
 case 'OpenAI':
     response = await fetch(endpointURL, {
@@ -51,7 +51,7 @@ case 'OpenAI':
     break;
 ```
 - **Optional**
-3. Update the service icon in `components/sidebar.jsx`
+3. Add the service icon in `components/sidebar.jsx`
 ```
 import { RiOpenaiFill } from "react-icons/ri";
 .....
