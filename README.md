@@ -54,7 +54,7 @@ case 'OpenAI':
 3. Update the service icon in `components/sidebar.jsx`
 ```
 import { RiOpenaiFill } from "react-icons/ri";
-
+.....
 let serviceIcons = {
     ....,
     OpenAI: RiOpenaiFill,
