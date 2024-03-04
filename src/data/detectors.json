@@ -476,5 +476,141 @@
             "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it.",
             "color": "failure"
         }
+    },
+    "Twilio": {
+        "endpoints": {
+            "accounts": {
+                "label": "Get Accounts",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts.json",
+                "request_method": "GET"
+            },
+            "calls": {
+                "label": "Get Calls",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Calls.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Calls.json",
+                "request_method": "GET"
+            },
+            "messages": {
+                "label": "Get Messages",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Messages.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Messages.json",
+                "request_method": "GET"
+            },
+            "recordings": {
+                "label": "Get Recordings",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Recordings.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Recordings.json",
+                "request_method": "GET"
+            },
+            "transcriptions": {
+                "label": "Get Transcriptions",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Transcriptions.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Transcriptions.json",
+                "request_method": "GET"
+            },
+            "usage": {
+                "label": "Get Usage",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Usage.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Usage.json",
+                "request_method": "GET"
+            },
+            "applications": {
+                "label": "Get Applications",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Applications.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Applications.json",
+                "request_method": "GET"
+            },
+            "incoming_phone_numbers": {
+                "label": "Get Incoming Phone Numbers",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/IncomingPhoneNumbers.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/IncomingPhoneNumbers.json",
+                "request_method": "GET"
+            },
+            "outgoing_caller_ids": {
+                "label": "Get Outgoing Caller IDs",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/OutgoingCallerIds.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/OutgoingCallerIds.json",
+                "request_method": "GET"
+            },
+            "queues": {
+                "label": "Get Queues",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Queues.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Queues.json",
+                "request_method": "GET"
+            },
+            "short_codes": {
+                "label": "Get Short Codes",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/ShortCodes.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/ShortCodes.json",
+                "request_method": "GET"
+            },
+            "conferences": {
+                "label": "Get Conferences",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Conferences.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Conferences.json",
+                "request_method": "GET"
+            },
+            "available_phone_numbers" : {
+                "label": "Get Available Phone Numbers",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/AvailablePhoneNumbers.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/AvailablePhoneNumbers.json",
+                "request_method": "GET"
+            },
+            "balance" : {
+                "label": "Get Balance",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Balance.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Balance.json",
+                "request_method": "GET"
+            },
+            "notifications" : {
+                "label": "Get Notifications",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Notifications.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Notifications.json",
+                "request_method": "GET"
+            },
+            "keys" : {
+                "label": "Get Keys",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Keys.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Keys.json",
+                "request_method": "GET"
+            },
+            "authorized_connect_apps" : {
+                "label": "Get Authorized Connect Apps",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/AuthorizedConnectApps.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/AuthorizedConnectApps.json",
+                "request_method": "GET"
+            },
+            "sip" : {
+                "label": "Get SIP",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/SIP.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/SIP.json",
+                "request_method": "GET"
+            },
+            "connect_apps" : {
+                "label": "Get Connect Apps",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/ConnectApps.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/ConnectApps.json",
+                "request_method": "GET"
+            },
+            "addresses" : {
+                "label": "Get Addresses",
+                "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Addresses.json -u <account_sid>:<auth_token>",
+                "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Addresses.json",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "account_sid": {
+                "type": "text",
+                "label": "Enter Twilio Account SID",
+                "placeholder": "ACxxxxx-xxxxx-xxxxx-xxxxx-xxxxx"
+            },
+            "auth_token": {
+                "type": "text",
+                "label": "Enter Twilio Auth Token",
+                "placeholder": "xxxxx-xxxxx-xxxxx-xxxxx-xxxxx"
+            }
+        }
     }
 }

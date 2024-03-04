@@ -127,6 +127,14 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'Twilio':
+            response = await fetch(endpointURL.replace('<account_sid>', inputData.account_sid), {
+                method: requestMethod,
+                headers: {
+                    'Authorization': `Basic ${btoa(inputData.account_sid + ':' + inputData.auth_token)}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }

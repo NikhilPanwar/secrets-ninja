@@ -11,6 +11,7 @@ import { SiSendinblue } from "react-icons/si";
 import { FaTrello } from "react-icons/fa";
 import { IoMdArrowDroprightCircle } from "react-icons/io";
 import { SiRazorpay } from "react-icons/si";
+import { SiTwilio } from "react-icons/si";
 
 
 function SB({ visible, servicesConfig }) { // Accept visible as a prop
@@ -26,7 +27,8 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     Telegram: FaTelegramPlane,
     SendInBlue: SiSendinblue,
     Trello: FaTrello,
-    RazorPay: SiRazorpay
+    RazorPay: SiRazorpay,
+    Twilio: SiTwilio,
   };
 
   return (
