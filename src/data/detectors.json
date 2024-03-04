@@ -225,7 +225,7 @@
             }
         },
         "alert": {
-            "alert_message": "Shopify API can't be tested from browser due to CORS. Use the curl command on your machine instead",
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -276,7 +276,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it.",
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -338,7 +338,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it.",
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -371,7 +371,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it.",
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -473,7 +473,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it.",
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
