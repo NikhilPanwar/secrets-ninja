@@ -9,7 +9,7 @@ function FlowbiteNavbar({ toggleSidebar }) {
 
   // Function to toggle sidebar and hamburger state
   const handleToggle = () => {
-    setIsOpen(!isOpen); // Toggle the state
+    // setIsOpen(!isOpen); // Toggle the state
     toggleSidebar(); // Call the prop function to actually toggle the sidebar
   };
 
