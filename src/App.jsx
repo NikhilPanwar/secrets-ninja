@@ -47,13 +47,17 @@ export default function MyPage() {
           <div className="sticky top-0 z-50">
             <FlowbiteNavbar toggleSidebar={toggleSidebar} />
           </div>
-          <div className={contentContainerStyle}>
+          <div className={contentContainerStyle} onClick={() => {
+    if (!isLargeScreen && sidebarVisible) {
+      toggleSidebar();
+    }
+  }}>
             {sidebarVisible && (
               <div style={sidebarStyle}>
                 <SB visible={sidebarVisible} servicesConfig={servicesConfig} className="dark:bg-slate-700" />
               </div>
             )}
-            <div className={contentStyle}>
+            <div className={contentStyle} >
               <Routes>
                 <Route path="/" element={<Dashboard servicesConfig={servicesConfig} />} />
                 {Object.keys(servicesConfig).map((service) => (
