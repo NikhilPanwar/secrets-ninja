@@ -38,6 +38,12 @@
                 "curl": "curl https://api.stripe.com/v1/payment_intents -u sk_live_xxxx:",
                 "request_url": "https://api.stripe.com/v1/payment_intents",
                 "request_method": "GET"
+            },
+            "charges": {
+                "label": "Charges",
+                "curl": "curl https://api.stripe.com/v1/charges -u sk_live_xxxx:",
+                "request_url": "https://api.stripe.com/v1/charges",
+                "request_method": "GET"
             }
         },
         "input_fields": {
