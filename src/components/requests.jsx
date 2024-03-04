@@ -135,6 +135,14 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'NpmToken':
+            response = await fetch(endpointURL, {
+                method: requestMethod,
+                headers: {
+                    'Authorization': `Bearer ${inputData.token}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }

@@ -12,6 +12,8 @@ import { FaTrello } from "react-icons/fa";
 import { IoMdArrowDroprightCircle } from "react-icons/io";
 import { SiRazorpay } from "react-icons/si";
 import { SiTwilio } from "react-icons/si";
+import { RiNpmjsLine } from "react-icons/ri";
+
 
 
 function SB({ visible, servicesConfig }) { // Accept visible as a prop
@@ -29,6 +31,7 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     Trello: FaTrello,
     RazorPay: SiRazorpay,
     Twilio: SiTwilio,
+    NpmToken: RiNpmjsLine,
   };
 
   return (

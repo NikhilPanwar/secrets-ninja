@@ -231,7 +231,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "alert_message": "Can't work from browser because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -623,6 +623,27 @@
                 "label": "Enter Twilio Auth Token",
                 "placeholder": "xxxxx-xxxxx-xxxxx-xxxxx-xxxxx"
             }
+        }
+    },
+    "NpmToken" : {
+        "endpoints": {
+            "whoami": {
+                "label": "Get User",
+                "curl": "curl -X GET https://registry.npmjs.org/-/whoami -H 'Authorization: Bearer <token>'",
+                "request_url": "https://registry.npmjs.org/-/whoami",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "token": {
+                "type": "text",
+                "label": "Enter NPM Token",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "alert": {
+            "alert_message": "Can't work from browser because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "color": "failure"
         }
     }
 }
