@@ -13,6 +13,7 @@ import { IoMdArrowDroprightCircle } from "react-icons/io";
 import { SiRazorpay } from "react-icons/si";
 import { SiTwilio } from "react-icons/si";
 import { RiNpmjsLine } from "react-icons/ri";
+import { SiMailgun } from "react-icons/si";
 
 
 
@@ -32,6 +33,7 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     RazorPay: SiRazorpay,
     Twilio: SiTwilio,
     NpmToken: RiNpmjsLine,
+    Mailgun: SiMailgun,
   };
 
   return (

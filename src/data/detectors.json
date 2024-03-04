@@ -631,7 +631,7 @@
             }
         }
     },
-    "NpmToken" : {
+    "NpmToken": {
         "endpoints": {
             "whoami": {
                 "label": "Get User",
@@ -650,6 +650,23 @@
         "alert": {
             "alert_message": "Can't work from browser because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
+        }
+    },
+    "Mailgun": {
+        "endpoints": {
+            "domains": {
+                "label": "Get Domains",
+                "curl": "curl -X GET https://api.mailgun.net/v3/domains -u 'api:<api_key>'",
+                "request_url": "https://api.mailgun.net/v3/domains",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Mailgun API Key",
+                "placeholder": "key-xxxx-xxxx-xxxx-xxxx"
+            }
         }
     }
 }
