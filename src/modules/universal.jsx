@@ -105,11 +105,13 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
                     <Label value="Select Endpoint" />
                     <div className="flex gap-2">
                         <Dropdown label={selectedEndpoint}>
+                        <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
                             {Object.keys(endpoints).map((key) => (
                                 <Dropdown.Item key={key} onClick={() => handleDropdownChange(key)}>
                                     {endpoints[key].label}
                                 </Dropdown.Item>
                             ))}
+                        </div>
                         </Dropdown>
                         <Button
                             onClick={handleTestEndpoint}
