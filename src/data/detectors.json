@@ -551,49 +551,49 @@
                 "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Conferences.json",
                 "request_method": "GET"
             },
-            "available_phone_numbers" : {
+            "available_phone_numbers": {
                 "label": "Get Available Phone Numbers",
                 "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/AvailablePhoneNumbers.json -u <account_sid>:<auth_token>",
                 "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/AvailablePhoneNumbers.json",
                 "request_method": "GET"
             },
-            "balance" : {
+            "balance": {
                 "label": "Get Balance",
                 "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Balance.json -u <account_sid>:<auth_token>",
                 "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Balance.json",
                 "request_method": "GET"
             },
-            "notifications" : {
+            "notifications": {
                 "label": "Get Notifications",
                 "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Notifications.json -u <account_sid>:<auth_token>",
                 "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Notifications.json",
                 "request_method": "GET"
             },
-            "keys" : {
+            "keys": {
                 "label": "Get Keys",
                 "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Keys.json -u <account_sid>:<auth_token>",
                 "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Keys.json",
                 "request_method": "GET"
             },
-            "authorized_connect_apps" : {
+            "authorized_connect_apps": {
                 "label": "Get Authorized Connect Apps",
                 "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/AuthorizedConnectApps.json -u <account_sid>:<auth_token>",
                 "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/AuthorizedConnectApps.json",
                 "request_method": "GET"
             },
-            "sip" : {
+            "sip": {
                 "label": "Get SIP",
                 "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/SIP.json -u <account_sid>:<auth_token>",
                 "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/SIP.json",
                 "request_method": "GET"
             },
-            "connect_apps" : {
+            "connect_apps": {
                 "label": "Get Connect Apps",
                 "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/ConnectApps.json -u <account_sid>:<auth_token>",
                 "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/ConnectApps.json",
                 "request_method": "GET"
             },
-            "addresses" : {
+            "addresses": {
                 "label": "Get Addresses",
                 "curl": "curl -X GET https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Addresses.json -u <account_sid>:<auth_token>",
                 "request_url": "https://api.twilio.com/2010-04-01/Accounts/<account_sid>/Addresses.json",

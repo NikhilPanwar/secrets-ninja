@@ -48,10 +48,10 @@ export default function MyPage() {
             <FlowbiteNavbar toggleSidebar={toggleSidebar} />
           </div>
           <div className={contentContainerStyle} onClick={() => {
-    if (!isLargeScreen && sidebarVisible) {
-      toggleSidebar();
-    }
-  }}>
+            if (!isLargeScreen && sidebarVisible) {
+              toggleSidebar();
+            }
+          }}>
             {sidebarVisible && (
               <div style={sidebarStyle}>
                 <SB visible={sidebarVisible} servicesConfig={servicesConfig} className="dark:bg-slate-700" />
