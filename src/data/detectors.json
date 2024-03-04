@@ -225,7 +225,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work. A hack is on the way to make it work.",
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
