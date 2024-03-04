@@ -83,6 +83,12 @@
                 "curl": "curl -X GET 'https://api.openai.com/v1/organizations' -H 'Authorization: Bearer sk-xxxx'",
                 "request_url": "https://api.openai.com/v1/organizations",
                 "request_method": "GET"
+            },
+            "models": {
+                "label": "Get Models",
+                "curl": "curl -X GET 'https://api.openai.com/v1/models' -H 'Authorization: Bearer sk-xxxx'",
+                "request_url": "https://api.openai.com/v1/models",
+                "request_method": "GET"
             }
         },
         "input_fields": {
@@ -235,6 +241,12 @@
                 "label": "Get Bot Info",
                 "curl": "curl -X GET https://api.telegram.org/bot<your-bot-token>/getMe",
                 "request_url": "https://api.telegram.org/bot<token>/getMe",
+                "request_method": "GET"
+            },
+            "get_updates": {
+                "label": "Get Updates",
+                "curl": "curl -X GET https://api.telegram.org/bot<your-bot-token>/getUpdates",
+                "request_url": "https://api.telegram.org/bot<token>/getUpdates",
                 "request_method": "GET"
             }
         },
