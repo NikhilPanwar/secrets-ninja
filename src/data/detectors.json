@@ -659,6 +659,44 @@
                 "curl": "curl -X GET https://api.mailgun.net/v3/domains -u 'api:<api_key>'",
                 "request_url": "https://api.mailgun.net/v3/domains",
                 "request_method": "GET"
+            },
+            "events": {
+                "label": "Get Events",
+                "curl": "curl -X GET https://api.mailgun.net/v3/<domain>/events -u 'api:<api_key>'",
+                "request_url": "https://api.mailgun.net/v3/<domain>/events",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Mailgun API Key",
+                        "placeholder": "key-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "domain": {
+                        "type": "text",
+                        "label": "Enter Domain (fetched from domain endpoint)",
+                        "placeholder": "example.com"
+                    }
+                }
+            },
+            "bounces": {
+                "label": "Get Bounces",
+                "curl": "curl -X GET https://api.mailgun.net/v3/<domain>/bounces -u 'api:<api_key>'",
+                "request_url": "https://api.mailgun.net/v3/<domain>/bounces",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Mailgun API Key",
+                        "placeholder": "key-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "domain": {
+                        "type": "text",
+                        "label": "Enter Domain (fetched from domain endpoint)",
+                        "placeholder": "example.com"
+                    }
+                }
             }
         },
         "input_fields": {

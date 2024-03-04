@@ -144,7 +144,7 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
             });
             break;
         case 'Mailgun':
-            response = await fetch(endpointURL, {
+            response = await fetch(endpointURL.replace('<domain>', inputData.domain), {
                 method: requestMethod,
                 headers: {
                     'Authorization': `Basic ${btoa('api:' + inputData.api_key)}`,
