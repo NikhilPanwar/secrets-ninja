@@ -5,7 +5,7 @@ import logo from '../assets/logo-t.png';
 import Hamburger from 'hamburger-react';
 
 function FlowbiteNavbar({ toggleSidebar }) {
-  const [isOpen, setIsOpen] = useState(false); // State to manage sidebar open/close
+  const [isOpen, setIsOpen] = useState(true); // State to manage sidebar open/close
 
   // Function to toggle sidebar and hamburger state
   const handleToggle = () => {
