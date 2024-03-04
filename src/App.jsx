@@ -35,7 +35,7 @@ export default function MyPage() {
   const containerStyle = `flex flex-col h-screen`;
   const contentContainerStyle = isLargeScreen ? 'flex flex-1' : 'flex flex-1 overflow-hidden';
   const sidebarStyle = isLargeScreen ?
-    { maxHeight: 'calc(100vh - 60px)', overflowY: 'auto' } : // Adjust for navbar height
+    { maxHeight: '100%', overflowY: 'auto' } : // Adjust for navbar height
     { zIndex: 30, position: 'fixed', width: '100%', height: 'calc(100vh - 60px)', overflowY: 'auto' };
   const contentStyle = isLargeScreen ? 'flex-1 bg-gray-100 dark:bg-gray-700 overflow-auto' : `flex-1 bg-gray-100 dark:bg-gray-700 overflow-auto ${sidebarVisible ? 'sidebar-overlay' : ''}`;
   const footerStyle = { zIndex: 50, position: 'relative' }; // Ensure the footer has a higher zIndex
