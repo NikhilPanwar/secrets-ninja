@@ -34,7 +34,9 @@ export default function MyPage() {
   // Adjusted styles to ensure footer is always visible and not overlaid
   const containerStyle = `flex flex-col h-screen`;
   const contentContainerStyle = isLargeScreen ? 'flex flex-1' : 'flex flex-1 overflow-hidden';
-  const sidebarStyle = isLargeScreen ? {} : { zIndex: 30, position: 'fixed', width: '100%', height: '100%' };
+  const sidebarStyle = isLargeScreen ?
+    { maxHeight: 'calc(100vh - 60px)', overflowY: 'auto' } : // Adjust for navbar height
+    { zIndex: 30, position: 'fixed', width: '100%', height: 'calc(100vh - 60px)', overflowY: 'auto' };
   const contentStyle = isLargeScreen ? 'flex-1 bg-gray-100 dark:bg-gray-700 overflow-auto' : `flex-1 bg-gray-100 dark:bg-gray-700 overflow-auto ${sidebarVisible ? 'sidebar-overlay' : ''}`;
   const footerStyle = { zIndex: 50, position: 'relative' }; // Ensure the footer has a higher zIndex
 
@@ -42,7 +44,9 @@ export default function MyPage() {
     <Flowbite>
       <Router>
         <div className={containerStyle}>
-          <FlowbiteNavbar toggleSidebar={toggleSidebar} />
+          <div className="sticky top-0 z-50">
+            <FlowbiteNavbar toggleSidebar={toggleSidebar} />
+          </div>
           <div className={contentContainerStyle}>
             {sidebarVisible && (
               <div style={sidebarStyle}>
