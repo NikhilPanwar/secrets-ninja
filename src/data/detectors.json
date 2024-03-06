@@ -706,5 +706,26 @@
                 "placeholder": "key-xxxx-xxxx-xxxx-xxxx"
             }
         }
+    },
+    "Klaviyo": {
+        "endpoints": {
+            "profiles": {
+                "label": "Get Profiles",
+                "curl": "curl -X GET https://a.klaviyo.com/api/v2/people -H 'Revision: 2023-02-22' -H 'Authorization: Klaviyo-API-Key pk_xxxx-xxxx-xxxx-xxxx-xxxx'",
+                "request_url": "https://a.klaviyo.com/api/v2/people",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Klaviyo API Key",
+                "placeholder": "pk_xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "alert": {
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "color": "failure"
+        }
     }
 }

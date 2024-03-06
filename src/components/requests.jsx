@@ -151,6 +151,15 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'Klaviyo':
+            response = await fetch(endpointURL, {
+                method: requestMethod,
+                headers: {
+                    'Revision': '2023-02-22',
+                    'Authorization' : `Klaviyo-API-Key ${inputData.api_key}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }
