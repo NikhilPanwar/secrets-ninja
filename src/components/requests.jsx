@@ -156,7 +156,15 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 method: requestMethod,
                 headers: {
                     'Revision': '2023-02-22',
-                    'Authorization' : `Klaviyo-API-Key ${inputData.api_key}`,
+                    'Authorization': `Klaviyo-API-Key ${inputData.api_key}`,
+                }
+            });
+            break;
+        case 'DigitalOcean':
+            response = await fetch(endpointURL, {
+                method: requestMethod,
+                headers: {
+                    'Authorization': `Bearer ${inputData.api_key}`,
                 }
             });
             break;

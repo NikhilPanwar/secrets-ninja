@@ -727,5 +727,47 @@
             "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
+    },
+    "DigitalOcean" : {
+        "endpoints" : {
+            "account" : {
+                "label" : "Get Account",
+                "curl" : "curl -X GET 'https://api.digitalocean.com/v2/account' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url" : "https://api.digitalocean.com/v2/account",
+                "request_method" : "GET"
+            },
+            "droplets" : {
+                "label" : "Get Droplets",
+                "curl" : "curl -X GET 'https://api.digitalocean.com/v2/droplets' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url" : "https://api.digitalocean.com/v2/droplets",
+                "request_method" : "GET"
+            },
+            "SSH_keys" : {
+                "label" : "Get SSH Keys",
+                "curl" : "curl -X GET 'https://api.digitalocean.com/v2/account/keys' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url" : "https://api.digitalocean.com/v2/account/keys",
+                "request_method" : "GET"
+            },
+            "database_clusters" : {
+                "label" : "Get Database Clusters",
+                "curl" : "curl -X GET 'https://api.digitalocean.com/v2/databases' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url" : "https://api.digitalocean.com/v2/databases",
+                "request_method" : "GET"
+            },
+            "domains" : {
+                "label" : "Get Domains",
+                "curl" : "curl -X GET 'https://api.digitalocean.com/v2/domains' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url" : "https://api.digitalocean.com/v2/domains",
+                "request_method" : "GET"
+            }
+        },
+        "input_fields" : {
+            "api_key" : {
+                "type" : "text",
+                "label" : "Enter DigitalOcean API Key",
+                "placeholder" : "dop_v1_xxxxx"
+            }
+        },
+        "api_documentation_page" : "https://docs.digitalocean.com/reference/api/api-reference"
     }
 }

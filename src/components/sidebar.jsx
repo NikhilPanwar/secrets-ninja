@@ -14,6 +14,7 @@ import { SiRazorpay } from "react-icons/si";
 import { SiTwilio } from "react-icons/si";
 import { RiNpmjsLine } from "react-icons/ri";
 import { SiMailgun } from "react-icons/si";
+import { FaDigitalOcean } from "react-icons/fa";
 
 
 
@@ -34,6 +35,7 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     Twilio: SiTwilio,
     NpmToken: RiNpmjsLine,
     Mailgun: SiMailgun,
+    DigitalOcean: FaDigitalOcean,
   };
 
   return (
