@@ -15,6 +15,8 @@ import { SiTwilio } from "react-icons/si";
 import { RiNpmjsLine } from "react-icons/ri";
 import { SiMailgun } from "react-icons/si";
 import { FaDigitalOcean } from "react-icons/fa";
+import { GiHoneycomb } from "react-icons/gi";
+import { SiEventbrite } from "react-icons/si";
 
 
 
@@ -36,6 +38,8 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     NpmToken: RiNpmjsLine,
     Mailgun: SiMailgun,
     DigitalOcean: FaDigitalOcean,
+    Honeycomb: GiHoneycomb,
+    Eventbrite: SiEventbrite,
   };
 
   return (

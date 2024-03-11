@@ -728,46 +728,100 @@
             "color": "failure"
         }
     },
-    "DigitalOcean" : {
-        "endpoints" : {
-            "account" : {
-                "label" : "Get Account",
-                "curl" : "curl -X GET 'https://api.digitalocean.com/v2/account' -H 'Authorization: Bearer dop_v1_xxxxx'",
-                "request_url" : "https://api.digitalocean.com/v2/account",
-                "request_method" : "GET"
+    "DigitalOcean": {
+        "endpoints": {
+            "account": {
+                "label": "Get Account",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/account' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url": "https://api.digitalocean.com/v2/account",
+                "request_method": "GET"
             },
-            "droplets" : {
-                "label" : "Get Droplets",
-                "curl" : "curl -X GET 'https://api.digitalocean.com/v2/droplets' -H 'Authorization: Bearer dop_v1_xxxxx'",
-                "request_url" : "https://api.digitalocean.com/v2/droplets",
-                "request_method" : "GET"
+            "droplets": {
+                "label": "Get Droplets",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/droplets' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url": "https://api.digitalocean.com/v2/droplets",
+                "request_method": "GET"
             },
-            "SSH_keys" : {
-                "label" : "Get SSH Keys",
-                "curl" : "curl -X GET 'https://api.digitalocean.com/v2/account/keys' -H 'Authorization: Bearer dop_v1_xxxxx'",
-                "request_url" : "https://api.digitalocean.com/v2/account/keys",
-                "request_method" : "GET"
+            "SSH_keys": {
+                "label": "Get SSH Keys",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/account/keys' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url": "https://api.digitalocean.com/v2/account/keys",
+                "request_method": "GET"
             },
-            "database_clusters" : {
-                "label" : "Get Database Clusters",
-                "curl" : "curl -X GET 'https://api.digitalocean.com/v2/databases' -H 'Authorization: Bearer dop_v1_xxxxx'",
-                "request_url" : "https://api.digitalocean.com/v2/databases",
-                "request_method" : "GET"
+            "database_clusters": {
+                "label": "Get Database Clusters",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/databases' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url": "https://api.digitalocean.com/v2/databases",
+                "request_method": "GET"
             },
-            "domains" : {
-                "label" : "Get Domains",
-                "curl" : "curl -X GET 'https://api.digitalocean.com/v2/domains' -H 'Authorization: Bearer dop_v1_xxxxx'",
-                "request_url" : "https://api.digitalocean.com/v2/domains",
-                "request_method" : "GET"
+            "domains": {
+                "label": "Get Domains",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/domains' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url": "https://api.digitalocean.com/v2/domains",
+                "request_method": "GET"
             }
         },
-        "input_fields" : {
-            "api_key" : {
-                "type" : "text",
-                "label" : "Enter DigitalOcean API Key",
-                "placeholder" : "dop_v1_xxxxx"
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter DigitalOcean API Key",
+                "placeholder": "dop_v1_xxxxx"
             }
         },
-        "api_documentation_page" : "https://docs.digitalocean.com/reference/api/api-reference"
+        "api_documentation_page": "https://docs.digitalocean.com/reference/api/api-reference"
+    },
+    "Honeycomb": {
+        "endpoints": {
+            "auth": {
+                "label": "Get Auth",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/auth' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "request_url": "https://api.honeycomb.io/1/auth",
+                "request_method": "GET"
+            },
+            "boards": {
+                "label": "Get Boards",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/boards' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "request_url": "https://api.honeycomb.io/1/boards",
+                "request_method": "GET"
+            },
+            "datasets": {
+                "label": "Get Datasets",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/datasets' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "request_url": "https://api.honeycomb.io/1/datasets",
+                "request_method": "GET"
+            },
+            "recipients": {
+                "label": "Get Recipients",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/recipients' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "request_url": "https://api.honeycomb.io/1/recipients",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Honeycomb API Key",
+                "placeholder": "xxxxxxxxxx"
+            }
+        },
+        "api_documentation_page": "https://docs.honeycomb.io/api/"
+    },
+    "Eventbrite": {
+        "endpoints": {
+            "account_metadata": {
+                "label": "Get Account Metadata",
+                "curl": "curl -X GET 'https://www.eventbriteapi.com/v3/users/me/?token=xxxxx'",
+                "request_url": "https://www.eventbriteapi.com/v3/users/me/",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "token": {
+                "type": "text",
+                "label": "Enter Eventbrite Token",
+                "placeholder": "xxxxx"
+            }
+        },
+        "api_documentation_page": "https://www.eventbrite.com/platform/api"
     }
 }

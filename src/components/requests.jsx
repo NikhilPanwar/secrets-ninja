@@ -168,6 +168,19 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'Honeycomb':
+            response = await fetch(endpointURL, {
+                method: requestMethod,
+                headers: {
+                    'X-Honeycomb-Team': `${inputData.api_key}`,
+                }
+            });
+            break;
+        case 'Eventbrite':
+            response = await fetch(endpointURL + `?token=${inputData.token}`, {
+                method: requestMethod,
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }
