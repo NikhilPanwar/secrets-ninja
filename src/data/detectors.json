@@ -823,5 +823,29 @@
             }
         },
         "api_documentation_page": "https://www.eventbrite.com/platform/api"
+    },
+    "SendGrid": {
+        "endpoints": {
+            "templates": {
+                "label": "Get Templates",
+                "curl": "curl -X GET https://api.sendgrid.com/v3/templates -H 'Authorization: Bearer SG.xxxxx'",
+                "request_url": "https://api.sendgrid.com/v3/templates",
+                "request_method": "GET"
+            },
+            "customer_accounts" : {
+                "label": "Get Customer Accounts",
+                "curl": "curl -X GET https://api.sendgrid.com/v3/partners/accounts -H 'Authorization: Bearer SG.xxxxx'",
+                "request_url": "https://api.sendgrid.com/v3/partners/accounts",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter SendGrid API Key",
+                "placeholder": "SG.xxxxx"
+            }
+        },
+        "api_documentation_page": "https://docs.sendgrid.com/api-reference"
     }
 }
