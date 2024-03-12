@@ -15,7 +15,7 @@ function FlowbiteNavbar({ toggleSidebar }) {
 
   const toggleStyle = {
     fontSize: "0.8rem",
-    padding: "0px",
+    padding: "10px",
   };
 
   return (
@@ -28,15 +28,17 @@ function FlowbiteNavbar({ toggleSidebar }) {
         </Navbar.Brand>
       </div>
       <div className="flex md:order-2">
-        <Navbar.Toggle />
+        {/* <Navbar.Toggle /> */}
       </div>
-      <Navbar.Collapse>
-        <Navbar.Link href="/" active>
+      {/* <Navbar.Collapse> */}
+      {/* <Navbar.Link href="/" active>
           Keys Checker
-        </Navbar.Link>
-        <Navbar.Link href="#">Find Your Secrets</Navbar.Link>
+        </Navbar.Link> */}
+      {/* <Navbar.Link href="#">Find Your Secrets</Navbar.Link> */}
+      <div className="ml-auto">
         <DarkThemeToggle style={toggleStyle} />
-      </Navbar.Collapse>
+      </div>
+      {/* </Navbar.Collapse> */}
     </Navbar>
   );
 }

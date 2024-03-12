@@ -6,9 +6,14 @@ export default function Dashboard({ servicesConfig }) {
     return (
         <div className="px-10 py-10">
             <Alert color="info">
-                <span className="font-medium">Found API Keys, Credentials while Pentesting!</span> Test them using Secrets Ninja ...
-                <br />
-                <span className="font-medium">Note:</span> All the secrets are checked from frontend using your browser. No secrets are sent to our servers.
+                <ul className="list-disc list-inside">
+                    <li>
+                        <span className="font-medium">Found API Keys, Credentials while Pentesting!</span> Test them using Secrets Ninja ...
+                    </li>
+                    <li>
+                        <span className="font-medium">Note:</span> This webapp checks secrets from frontend using JS in your browser.
+                    </li>
+                </ul>
             </Alert>
             <div>
                 <h1 className="text-2xl font-semibold dark:text-white py-10">Supported Keys</h1>
