@@ -189,6 +189,14 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'MailChimp':
+            response = await fetch(endpointURL.replace('<dc>', inputData.dc), {
+                method: requestMethod,
+                headers: {
+                    'Authorization': `Basic ${btoa('anystring:' + inputData.auth_token)}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }

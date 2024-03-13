@@ -832,7 +832,7 @@
                 "request_url": "https://api.sendgrid.com/v3/templates",
                 "request_method": "GET"
             },
-            "customer_accounts" : {
+            "customer_accounts": {
                 "label": "Get Customer Accounts",
                 "curl": "curl -X GET https://api.sendgrid.com/v3/partners/accounts -H 'Authorization: Bearer SG.xxxxx'",
                 "request_url": "https://api.sendgrid.com/v3/partners/accounts",
@@ -847,5 +847,55 @@
             }
         },
         "api_documentation_page": "https://docs.sendgrid.com/api-reference"
+    },
+    "MailChimp": {
+        "endpoints": {
+            "account": {
+                "label": "Get Account",
+                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/ --user 'anystring:<api_key>'",
+                "request_url": "https://<dc>.api.mailchimp.com/3.0/",
+                "request_method": "GET"
+            },
+            "conversations": {
+                "label": "Get Conversations",
+                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/conversations --user 'anystring:<api_key>'",
+                "request_url": "https://<dc>.api.mailchimp.com/3.0/conversations",
+                "request_method": "GET"
+            },
+            "campaigns": {
+                "label": "Get Campaigns",
+                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/campaigns --user 'anystring:<api_key>'",
+                "request_url": "https://<dc>.api.mailchimp.com/3.0/campaigns",
+                "request_method": "GET"
+            },
+            "automations": {
+                "label": "Get Automations",
+                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/automations --user 'anysting:<api_key>'",
+                "request_url": "https://<dc>.api.mailchimp.com/3.0/automations",
+                "request_method": "GET"
+            },
+            "lists": {
+                "label": "Get Lists",
+                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/lists --user 'anystring:<api_key>'",
+                "request_url": "https://<dc>.api.mailchimp.com/3.0/lists",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter MailChimp API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            },
+            "dc": {
+                "type": "text",
+                "label": "Enter Data Center",
+                "placeholder": "us1"
+            }
+        },
+        "alert": {
+            "alert_message": "Can't work from browser because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "color": "failure"
+        }
     }
 }
