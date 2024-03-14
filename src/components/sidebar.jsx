@@ -19,6 +19,7 @@ import { GiHoneycomb } from "react-icons/gi";
 import { SiEventbrite } from "react-icons/si";
 import { FaMailchimp } from "react-icons/fa";
 import { TbSquareLetterP } from "react-icons/tb";
+import { SiRavelry } from "react-icons/si";
 
 
 
@@ -44,6 +45,7 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     Eventbrite: SiEventbrite,
     MailChimp: FaMailchimp,
     Postmark: TbSquareLetterP,
+    RechargePayments: SiRavelry,
   };
 
   return (
