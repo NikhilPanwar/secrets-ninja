@@ -20,6 +20,8 @@ import { SiEventbrite } from "react-icons/si";
 import { FaMailchimp } from "react-icons/fa";
 import { TbSquareLetterP } from "react-icons/tb";
 import { SiRavelry } from "react-icons/si";
+import { GrTextAlignFull } from "react-icons/gr";
+import { RiFlag2Line } from "react-icons/ri";
 
 
 
@@ -46,6 +48,8 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     MailChimp: FaMailchimp,
     Postmark: TbSquareLetterP,
     RechargePayments: SiRavelry,
+    Paystack: GrTextAlignFull,
+    Klaviyo: RiFlag2Line,
   };
 
   return (
