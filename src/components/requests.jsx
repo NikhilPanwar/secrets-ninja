@@ -197,6 +197,15 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'Postmark':
+            response = await fetch(endpointURL, {
+                method: requestMethod,
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Postmark-Server-Token': `${inputData.server_token}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }

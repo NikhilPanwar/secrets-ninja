@@ -897,5 +897,32 @@
             "alert_message": "Can't work from browser because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
+    },
+    "Postmark": {
+        "endpoints": {
+            "server": {
+                "label": "Get Server",
+                "curl": "curl -X GET https://api.postmarkapp.com/server -H 'X-Postmark-Server-Token: xxx-xxxx-xxxx-xxxx-xxxx'",
+                "request_url": "https://api.postmarkapp.com/server",
+                "request_method": "GET"
+            },
+            "deliverystats" : {
+                "label": "Get Delivery Stats",
+                "curl": "curl -X GET https://api.postmarkapp.com/deliverystats -H 'X-Postmark-Server-Token: xxx-xxxx-xxxx-xxxx-xxxx'",
+                "request_url": "https://api.postmarkapp.com/deliverystats",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "server_token": {
+                "type": "text",
+                "label": "Enter Postmark Server Token",
+                "placeholder": "xxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "alert": {
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "color": "failure"
+        }
     }
 }

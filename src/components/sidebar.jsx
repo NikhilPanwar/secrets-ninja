@@ -18,6 +18,7 @@ import { FaDigitalOcean } from "react-icons/fa";
 import { GiHoneycomb } from "react-icons/gi";
 import { SiEventbrite } from "react-icons/si";
 import { FaMailchimp } from "react-icons/fa";
+import { TbSquareLetterP } from "react-icons/tb";
 
 
 
@@ -41,7 +42,8 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     DigitalOcean: FaDigitalOcean,
     Honeycomb: GiHoneycomb,
     Eventbrite: SiEventbrite,
-    MailChimp: FaMailchimp
+    MailChimp: FaMailchimp,
+    Postmark: TbSquareLetterP,
   };
 
   return (
