@@ -906,7 +906,7 @@
                 "request_url": "https://api.postmarkapp.com/server",
                 "request_method": "GET"
             },
-            "deliverystats" : {
+            "deliverystats": {
                 "label": "Get Delivery Stats",
                 "curl": "curl -X GET https://api.postmarkapp.com/deliverystats -H 'X-Postmark-Server-Token: xxx-xxxx-xxxx-xxxx-xxxx'",
                 "request_url": "https://api.postmarkapp.com/deliverystats",
@@ -923,6 +923,29 @@
         "alert": {
             "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
+        }
+    },
+    "Telnyx": {
+        "endpoints": {
+            "addresses": {
+                "label": "Get Addresses",
+                "curl": "curl -X GET https://api.telnyx.com/v2/addresses -H 'Authorization: Bearer key'",
+                "request_url": "https://api.telnyx.com/v2/addresses",
+                "request_method": "GET"
+            },
+            "notification_events": {
+                "label": "Get Notification Events",
+                "curl": "curl -X GET https://api.telnyx.com/v2/notification_events -H 'Authorization: Bearer key'",
+                "request_url": "https://api.telnyx.com/v2/notification_events",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Telnyx API Key",
+                "placeholder": "key"
+            }
         }
     }
 }
