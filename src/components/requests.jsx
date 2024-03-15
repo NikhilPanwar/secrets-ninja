@@ -214,6 +214,11 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'Pipedrive':
+            response = await fetch(endpointURL + `?api_token=${inputData.api_token}`, {
+                method: requestMethod,
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }
