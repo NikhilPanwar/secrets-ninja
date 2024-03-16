@@ -1044,8 +1044,8 @@
     },
     "Algolia": {
         "endpoints": {
-            "access_scope": {
-                "label": "Access Scope",
+            "keys": {
+                "label": "Keys",
                 "curl": "curl -X 'https://<app_id>-dsn.algolia.net/1/keys' -H 'X-Algolia-API-Key: xxxx' -H 'X-Algolia-Application-Id: xxxx'",
                 "request_url": "https://<app_id>-dsn.algolia.net/1/keys",
                 "request_method": "GET"
