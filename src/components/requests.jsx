@@ -235,6 +235,15 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'Algolia':
+            response = await fetch(endpointURL.replace('<app_id>', inputData.app_id), {
+                method: requestMethod,
+                headers: {
+                    'X-Algolia-API-Key': `${inputData.api_key}`,
+                    'X-Algolia-Application-Id': `${inputData.app_id}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }

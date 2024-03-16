@@ -25,7 +25,7 @@ import { RiFlag2Line } from "react-icons/ri";
 import { TbCircleLetterP } from "react-icons/tb";
 import { IoLogoVercel } from "react-icons/io5";
 import { SiBitly } from "react-icons/si";
-
+import { SiAlgolia } from "react-icons/si";
 
 
 
@@ -57,6 +57,7 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     Pipedrive: TbCircleLetterP,
     Vercel: IoLogoVercel,
     Bitly: SiBitly,
+    Algolia: SiAlgolia,
   };
 
   return (
