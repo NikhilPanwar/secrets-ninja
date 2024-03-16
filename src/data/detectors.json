@@ -1011,5 +1011,35 @@
                 "placeholder": "xxxx"
             }
         }
+    },
+    "Bitly": {
+        "endpoints": {
+            "user": {
+                "label": "Get User",
+                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/user' -H 'Authorization: Bearer xxxx'",
+                "request_url": "https://api-ssl.bitly.com/v4/user",
+                "request_method": "GET"
+            },
+            "organizations": {
+                "label": "Get Organizations",
+                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/organizations' -H 'Authorization: Bearer xxxx'",
+                "request_url": "https://api-ssl.bitly.com/v4/organizations",
+                "request_method": "GET"
+            },
+            "groups": {
+                "label": "Get Groups",
+                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/groups' -H 'Authorization: Bearer xxxx'",
+                "request_url": "https://api-ssl.bitly.com/v4/groups",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_token": {
+                "type": "text",
+                "label": "Enter Bitly API Token",
+                "placeholder": "xxxx"
+            }
+        },
+        "api_documentation_page": "https://dev.bitly.com/api-reference"
     }
 }

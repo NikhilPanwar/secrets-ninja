@@ -24,6 +24,7 @@ import { GrTextAlignFull } from "react-icons/gr";
 import { RiFlag2Line } from "react-icons/ri";
 import { TbCircleLetterP } from "react-icons/tb";
 import { IoLogoVercel } from "react-icons/io5";
+import { SiBitly } from "react-icons/si";
 
 
 
@@ -55,6 +56,7 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     Klaviyo: RiFlag2Line,
     Pipedrive: TbCircleLetterP,
     Vercel: IoLogoVercel,
+    Bitly: SiBitly,
   };
 
   return (
