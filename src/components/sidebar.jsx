@@ -23,6 +23,8 @@ import { SiRavelry } from "react-icons/si";
 import { GrTextAlignFull } from "react-icons/gr";
 import { RiFlag2Line } from "react-icons/ri";
 import { TbCircleLetterP } from "react-icons/tb";
+import { IoLogoVercel } from "react-icons/io5";
+
 
 
 
@@ -52,6 +54,7 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     Paystack: GrTextAlignFull,
     Klaviyo: RiFlag2Line,
     Pipedrive: TbCircleLetterP,
+    Vercel: IoLogoVercel,
   };
 
   return (

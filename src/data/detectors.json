@@ -948,50 +948,67 @@
             }
         }
     },
-    "Pipedrive" : {
-        "endpoints" : {
-            "deals" : {
-                "label" : "Get Deals",
-                "curl" : "curl -X GET 'https://api.pipedrive.com/v1/deals?api_token=xxxxx'",
-                "request_url" : "https://api.pipedrive.com/v1/deals",
-                "request_method" : "GET"
+    "Pipedrive": {
+        "endpoints": {
+            "deals": {
+                "label": "Get Deals",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/deals?api_token=xxxxx'",
+                "request_url": "https://api.pipedrive.com/v1/deals",
+                "request_method": "GET"
             },
-            "persons" : {
-                "label" : "Get Persons",
-                "curl" : "curl -X GET 'https://api.pipedrive.com/v1/persons?api_token=xxxxx'",
-                "request_url" : "https://api.pipedrive.com/v1/persons",
-                "request_method" : "GET"
+            "persons": {
+                "label": "Get Persons",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/persons?api_token=xxxxx'",
+                "request_url": "https://api.pipedrive.com/v1/persons",
+                "request_method": "GET"
             },
-            "organizations" : {
-                "label" : "Get Organizations",
-                "curl" : "curl -X GET 'https://api.pipedrive.com/v1/organizations?api_token=xxxxx'",
-                "request_url" : "https://api.pipedrive.com/v1/organizations",
-                "request_method" : "GET"
+            "organizations": {
+                "label": "Get Organizations",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/organizations?api_token=xxxxx'",
+                "request_url": "https://api.pipedrive.com/v1/organizations",
+                "request_method": "GET"
             },
-            "activities" : {
-                "label" : "Get Activities",
-                "curl" : "curl -X GET 'https://api.pipedrive.com/v1/activities?api_token=xxxxx'",
-                "request_url" : "https://api.pipedrive.com/v1/activities",
-                "request_method" : "GET"
+            "activities": {
+                "label": "Get Activities",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/activities?api_token=xxxxx'",
+                "request_url": "https://api.pipedrive.com/v1/activities",
+                "request_method": "GET"
             },
-            "notes" : {
-                "label" : "Get Notes",
-                "curl" : "curl -X GET 'https://api.pipedrive.com/v1/notes?api_token=xxxxx'",
-                "request_url" : "https://api.pipedrive.com/v1/notes",
-                "request_method" : "GET"
+            "notes": {
+                "label": "Get Notes",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/notes?api_token=xxxxx'",
+                "request_url": "https://api.pipedrive.com/v1/notes",
+                "request_method": "GET"
             },
-            "users" : {
-                "label" : "Get Users",
-                "curl" : "curl -X GET 'https://api.pipedrive.com/v1/users?api_token=xxxxx'",
-                "request_url" : "https://api.pipedrive.com/v1/users",
-                "request_method" : "GET"
+            "users": {
+                "label": "Get Users",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/users?api_token=xxxxx'",
+                "request_url": "https://api.pipedrive.com/v1/users",
+                "request_method": "GET"
             }
         },
-        "input_fields" : {
-            "api_token" : {
-                "type" : "text",
-                "label" : "Enter Pipedrive API Token",
-                "placeholder" : "xxxxx"
+        "input_fields": {
+            "api_token": {
+                "type": "text",
+                "label": "Enter Pipedrive API Token",
+                "placeholder": "xxxxx"
+            }
+        }
+    },
+    "Vercel": {
+        "endpoints": {
+            "user": {
+                "label": "Get User",
+                "curl": "curl -X GET 'https://api.vercel.com/www/user' -H 'Authorization: Brearer xxxx'",
+                "request_url": "https://api.vercel.com/www/user",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_token": {
+                "type": "text",
+                "label": "Enter Vercel API Token",
+                "placeholder": "xxxx"
             }
         }
     }
