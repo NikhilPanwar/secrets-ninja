@@ -26,8 +26,7 @@ import { TbCircleLetterP } from "react-icons/tb";
 import { IoLogoVercel } from "react-icons/io5";
 import { SiBitly } from "react-icons/si";
 import { SiAlgolia } from "react-icons/si";
-
-
+import { SiPosthog } from "react-icons/si";
 
 function SB({ visible, servicesConfig }) { // Accept visible as a prop
   if (!visible) return null; // Do not render if not visible
@@ -58,6 +57,7 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     Vercel: IoLogoVercel,
     Bitly: SiBitly,
     Algolia: SiAlgolia,
+    Posthog: SiPosthog,
   };
 
   return (
