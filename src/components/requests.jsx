@@ -244,6 +244,16 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'Posthog':
+            response = await fetch(endpointURL.replace('<api_key>', inputData.api_key), {
+                method: requestMethod,
+            });
+            if (response.status === 401) {
+                response = await fetch(endpointURL.replace('<api_key>', inputData.api_key).replace('https://app.', 'https://eu.'), {
+                    method: requestMethod,
+                });
+            };
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }

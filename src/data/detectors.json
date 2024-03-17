@@ -1076,5 +1076,27 @@
             }
         },
         "api_documentation_page": "https://www.algolia.com/doc/rest-api/search/"
+    },
+    "Posthog" : {
+        "endpoints" : {
+            "Account" : {
+                "label" : "Account",
+                "curl" : "curl -X GET 'https://app.posthog.com/api/users/@me/?personal_api_key=<api_key>' -H 'Content-Type: application/json' \n OR curl -X GET 'https://eu.posthog.com/api/users/@me/?personal_api_key=<api_key>' -H 'Content-Type: application/json'",
+                "request_url" : "https://app.posthog.com/api/users/@me/?personal_api_key=<api_key>",
+                "request_method" : "GET"
+            }
+        },
+        "input_fields" : {
+            "api_key" : {
+                "type" : "text",
+                "label" : "Enter Posthog API Key",
+                "placeholder" : "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page" : "https://posthog.com/docs/api",
+        "alert" : {
+            "alert_message" : "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "color" : "failure"
+        }
     }
 }
