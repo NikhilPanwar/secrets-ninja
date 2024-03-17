@@ -67,6 +67,12 @@
                 "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X 'https://api.paypal.com/v1/payments/payment' -H 'Authorization: Bearer $access_token'",
                 "request_url": "https://api.paypal.com/v1/payments/payment",
                 "request_method": "GET"
+            },
+            "webhooks" : {
+                "label": "Webhooks",
+                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X 'https://api.paypal.com/v1/notifications/webhooks' -H 'Authorization: Bearer $access_token'",
+                "request_url": "https://api.paypal.com/v1/notifications/webhooks",
+                "request_method": "GET"
             }
         },
         "input_fields": {
