@@ -68,7 +68,7 @@
                 "request_url": "https://api.paypal.com/v1/payments/payment",
                 "request_method": "GET"
             },
-            "webhooks" : {
+            "webhooks": {
                 "label": "Webhooks",
                 "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X 'https://api.paypal.com/v1/notifications/webhooks' -H 'Authorization: Bearer $access_token'",
                 "request_url": "https://api.paypal.com/v1/notifications/webhooks",
@@ -1077,26 +1077,54 @@
         },
         "api_documentation_page": "https://www.algolia.com/doc/rest-api/search/"
     },
-    "Posthog" : {
-        "endpoints" : {
-            "Account" : {
-                "label" : "Account",
-                "curl" : "curl -X GET 'https://app.posthog.com/api/users/@me/?personal_api_key=<api_key>' -H 'Content-Type: application/json' \n OR curl -X GET 'https://eu.posthog.com/api/users/@me/?personal_api_key=<api_key>' -H 'Content-Type: application/json'",
-                "request_url" : "https://app.posthog.com/api/users/@me/?personal_api_key=<api_key>",
-                "request_method" : "GET"
+    "Posthog": {
+        "endpoints": {
+            "Account": {
+                "label": "Account",
+                "curl": "curl -X GET 'https://app.posthog.com/api/users/@me/?personal_api_key=<api_key>' -H 'Content-Type: application/json' \n OR curl -X GET 'https://eu.posthog.com/api/users/@me/?personal_api_key=<api_key>' -H 'Content-Type: application/json'",
+                "request_url": "https://app.posthog.com/api/users/@me/?personal_api_key=<api_key>",
+                "request_method": "GET"
             }
         },
-        "input_fields" : {
-            "api_key" : {
-                "type" : "text",
-                "label" : "Enter Posthog API Key",
-                "placeholder" : "xxxx-xxxx-xxxx-xxxx-xxxx"
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Posthog API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
             }
         },
-        "api_documentation_page" : "https://posthog.com/docs/api",
-        "alert" : {
-            "alert_message" : "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
-            "color" : "failure"
+        "api_documentation_page": "https://posthog.com/docs/api",
+        "alert": {
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "color": "failure"
+        }
+    },
+    "Opsgenie": {
+        "endpoints": {
+            "Alerts": {
+                "label": "Alerts",
+                "curl": "curl -X GET 'https://api.opsgenie.com/v2/alerts' -H 'Authorization: GenieKey <api_key>'",
+                "request_url": "https://api.opsgenie.com/v2/alerts",
+                "request_method": "GET"
+            },
+            "AlertsCount": {
+                "label": "Alerts Count",
+                "curl": "curl -X GET 'https://api.opsgenie.com/v2/alerts/count' -H 'Authorization: GenieKey <api_key>'",
+                "request_url": "https://api.opsgenie.com/v2/alerts/count",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Opsgenie API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://docs.opsgenie.com/docs/service-api",
+        "alert": {
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "color": "failure"
         }
     }
 }

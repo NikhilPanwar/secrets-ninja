@@ -254,6 +254,14 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 });
             };
             break;
+        case 'Opsgenie':
+            response = await fetch(endpointURL, {
+                method: requestMethod,
+                headers: {
+                    'Authorization': `GenieKey ${inputData.api_key}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }
