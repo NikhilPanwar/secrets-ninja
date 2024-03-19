@@ -1230,5 +1230,35 @@
             "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
+    },
+    "YouSign": {
+        "endpoints": {
+            "users": {
+                "label": "Users",
+                "curl": "curl -X GET 'https://staging-api.yousign.com/users' -H 'Authorization: Bearer <api_key>'",
+                "request_url": "https://staging-api.yousign.com/users",
+                "request_method": "GET"
+            },
+            "files": {
+                "label": "Files",
+                "curl": "curl -X GET 'https://staging-api.yousign.com/files' -H 'Authorization: Bearer <api_key>'",
+                "request_url": "https://staging-api.yousign.com/files",
+                "request_method": "GET"
+            },
+            "signature_requests": {
+                "label": "Signature Requests",
+                "curl": "curl -X GET 'https://api.yousign.app/v3/signature-requests' -H 'Authorization: Bearer <api_key>'",
+                "request_url": "https://api.yousign.app/v3/signature-requests",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter YouSign API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://dev.yousign.com/"
     }
 }
