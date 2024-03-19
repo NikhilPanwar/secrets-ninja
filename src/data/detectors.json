@@ -1127,28 +1127,62 @@
             "color": "failure"
         }
     },
-    "Helpscout" : {
-        "endpoints" : {
-            "collections" : {
-                "label" : "Article Collections",
-                "curl" : "curl -X GET 'https://docsapi.helpscout.net/v1/collections' -u <api_key>:X",
-                "request_url" : "https://docsapi.helpscout.net/v1/collections",
-                "request_method" : "GET"
+    "Helpscout": {
+        "endpoints": {
+            "collections": {
+                "label": "Article Collections",
+                "curl": "curl -X GET 'https://docsapi.helpscout.net/v1/collections' -u <api_key>:X",
+                "request_url": "https://docsapi.helpscout.net/v1/collections",
+                "request_method": "GET"
             },
-            "sites" : {
-                "label" : "Sites",
-                "curl" : "curl -X GET 'https://docsapi.helpscout.net/v1/sites' -u <api_key>:X",
-                "request_url" : "https://docsapi.helpscout.net/v1/sites",
-                "request_method" : "GET"
+            "sites": {
+                "label": "Sites",
+                "curl": "curl -X GET 'https://docsapi.helpscout.net/v1/sites' -u <api_key>:X",
+                "request_url": "https://docsapi.helpscout.net/v1/sites",
+                "request_method": "GET"
             }
         },
-        "input_fields" : {
-            "api_key" : {
-                "type" : "text",
-                "label" : "Enter Helpscout API Key",
-                "placeholder" : "xxxx-xxxx-xxxx-xxxx-xxxx"
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Helpscout API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
             }
         },
-        "api_documentation_page" : "https://developer.helpscout.com/docs-api/"
+        "api_documentation_page": "https://developer.helpscout.com/docs-api/"
+    },
+    "Typeform": {
+        "endpoints": {
+            "forms": {
+                "label": "Forms",
+                "curl": "curl -X GET 'https://api.typeform.com/forms' -H 'Authorization: Bearer <api_key>'",
+                "request_url": "https://api.typeform.com/forms",
+                "request_method": "GET"
+            },
+            "workspaces": {
+                "label": "Workspaces",
+                "curl": "curl -X GET 'https://api.typeform.com/workspaces' -H 'Authorization: Bearer <api_key>'",
+                "request_url": "https://api.typeform.com/workspaces",
+                "request_method": "GET"
+            },
+            "account": {
+                "label": "Account",
+                "curl": "curl -X GET 'https://api.typeform.com/me' -H 'Authorization: Bearer <api_key>'",
+                "request_url": "https://api.typeform.com/me",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Typeform API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://www.typeform.com/developers/create",
+        "alert": {
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "color": "failure"
+        }
     }
 }
