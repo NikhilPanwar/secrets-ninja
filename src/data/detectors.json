@@ -1260,5 +1260,27 @@
             }
         },
         "api_documentation_page": "https://dev.yousign.com/"
+    },
+    "Notion": {
+        "endpoints": {
+            "users": {
+                "label": "Users",
+                "curl": "curl -X GET 'https://api.notion.com/v1/users' -H 'Notion-Version: 2022-06-28' -H 'Authorization: Bearer <api_key>'",
+                "request_url": "https://api.notion.com/v1/users",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Notion API Key",
+                "placeholder": "secret_xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://developers.notion.com/reference/",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "color": "failure"
+        }
     }
 }

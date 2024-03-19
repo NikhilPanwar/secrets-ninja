@@ -30,6 +30,8 @@ import { SiPosthog } from "react-icons/si";
 import { SiOpsgenie } from "react-icons/si";
 import { SiHelpscout } from "react-icons/si";
 import { SiTypeform } from "react-icons/si";
+import { SiNotion } from "react-icons/si";
+
 
 function SB({ visible, servicesConfig }) { // Accept visible as a prop
   if (!visible) return null; // Do not render if not visible
@@ -64,6 +66,7 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     Opsgenie: SiOpsgenie,
     Helpscout: SiHelpscout,
     Typeform: SiTypeform,
+    Notion: SiNotion,
   };
 
   return (
