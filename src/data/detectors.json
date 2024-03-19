@@ -243,7 +243,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work from browser because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -300,7 +300,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -362,7 +362,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -395,7 +395,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -497,7 +497,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -654,7 +654,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work from browser because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -730,7 +730,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -900,7 +900,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work from browser because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -927,7 +927,7 @@
             }
         },
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -1095,7 +1095,7 @@
         },
         "api_documentation_page": "https://posthog.com/docs/api",
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -1123,7 +1123,7 @@
         },
         "api_documentation_page": "https://docs.opsgenie.com/docs/service-api",
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -1181,7 +1181,7 @@
         },
         "api_documentation_page": "https://www.typeform.com/developers/create",
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
@@ -1227,7 +1227,7 @@
         },
         "api_documentation_page": "https://apidocs.getresponse.com/v3",
         "alert": {
-            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
     },
