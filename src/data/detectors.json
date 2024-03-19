@@ -717,7 +717,7 @@
         "endpoints": {
             "profiles": {
                 "label": "Profiles",
-                "curl": "curl -X https://a.klaviyo.com/api/profiles -H 'Revision: 2023-02-22' -H 'Authorization: Klaviyo-API-Key pk_xxxx-xxxx-xxxx-xxxx-xxxx'",
+                "curl": "curl https://a.klaviyo.com/api/profiles -H 'Revision: 2023-02-22' -H 'Authorization: Klaviyo-API-Key pk_xxxx-xxxx-xxxx-xxxx-xxxx'",
                 "request_url": "https://a.klaviyo.com/api/profiles",
                 "request_method": "GET"
             }
