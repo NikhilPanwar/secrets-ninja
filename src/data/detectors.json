@@ -1225,6 +1225,10 @@
                 "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
             }
         },
-        "api_documentation_page": "https://apidocs.getresponse.com/v3"
+        "api_documentation_page": "https://apidocs.getresponse.com/v3",
+        "alert": {
+            "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "color": "failure"
+        }
     }
 }
