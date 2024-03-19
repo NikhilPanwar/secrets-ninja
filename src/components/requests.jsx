@@ -278,6 +278,14 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'GetResponse':
+            response = await fetch(endpointURL, {
+                method: requestMethod,
+                headers: {
+                    'X-Auth-Token': `api-key ${inputData.api_key}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }
