@@ -28,6 +28,7 @@ import { SiBitly } from "react-icons/si";
 import { SiAlgolia } from "react-icons/si";
 import { SiPosthog } from "react-icons/si";
 import { SiOpsgenie } from "react-icons/si";
+import { SiHelpscout } from "react-icons/si";
 
 function SB({ visible, servicesConfig }) { // Accept visible as a prop
   if (!visible) return null; // Do not render if not visible
@@ -59,7 +60,8 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     Bitly: SiBitly,
     Algolia: SiAlgolia,
     Posthog: SiPosthog,
-    Opsgenie: SiOpsgenie
+    Opsgenie: SiOpsgenie,
+    Helpscout: SiHelpscout
   };
 
   return (

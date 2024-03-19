@@ -1126,5 +1126,29 @@
             "alert_message": "Can't work because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
+    },
+    "Helpscout" : {
+        "endpoints" : {
+            "collections" : {
+                "label" : "Article Collections",
+                "curl" : "curl -X GET 'https://docsapi.helpscout.net/v1/collections' -u <api_key>:X",
+                "request_url" : "https://docsapi.helpscout.net/v1/collections",
+                "request_method" : "GET"
+            },
+            "sites" : {
+                "label" : "Sites",
+                "curl" : "curl -X GET 'https://docsapi.helpscout.net/v1/sites' -u <api_key>:X",
+                "request_url" : "https://docsapi.helpscout.net/v1/sites",
+                "request_method" : "GET"
+            }
+        },
+        "input_fields" : {
+            "api_key" : {
+                "type" : "text",
+                "label" : "Enter Helpscout API Key",
+                "placeholder" : "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page" : "https://developer.helpscout.com/docs-api/"
     }
 }
