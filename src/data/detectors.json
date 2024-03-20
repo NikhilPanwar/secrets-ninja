@@ -1282,5 +1282,33 @@
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
+    },
+    "MadKudu" : {
+        "endpoints" : {
+            "domain_lookup" : {
+                "label" : "Domain Lookup",
+                "curl" : "curl -X GET 'https://api.madkudu.com/v1/companies?domain=madkudu.com' --user <api_key>:",
+                "request_url" : "https://api.madkudu.com/v1/companies?domain=madkudu.com",
+                "request_method" : "GET"
+            },
+            "person_lookup" : {
+                "label" : "Person Lookup",
+                "curl" : "curl -X GET 'https://api.madkudu.com/v1/persons?email=paul@madkudu.com' --user <api_key>:",
+                "request_url" : "https://api.madkudu.com/v1/persons?email=paul@madkudu.com",
+                "request_method" : "GET"
+            }
+        },
+        "input_fields" : {
+            "api_key" : {
+                "type" : "text",
+                "label" : "Enter MadKudu API Key",
+                "placeholder" : "xxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page" : "https://developers.madkudu.com/",
+        "alert" : {
+            "alert_message" : "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
+            "color" : "failure"
+        }
     }
 }
