@@ -1310,5 +1310,29 @@
             "alert_message" : "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color" : "failure"
         }
+    },
+    "Autopilot" : {
+        "endpoints" : {
+            "contacts" : {
+                "label" : "Contacts",
+                "curl" : "curl -X GET 'https://api2.autopilothq.com/v1/contacts' -H 'autopilotapikey: <api_key>'",
+                "request_url" : "https://api2.autopilothq.com/v1/contacts",
+                "request_method" : "GET"
+            },
+            "account" : {
+                "label" : "Account",
+                "curl" : "curl -X GET 'https://api2.autopilothq.com/v1/account' -H 'autopilotapikey: <api_key>'",
+                "request_url" : "https://api2.autopilothq.com/v1/account",
+                "request_method" : "GET"
+            }
+        },
+        "input_fields" : {
+            "api_key" : {
+                "type" : "text",
+                "label" : "Enter Autopilot API Key",
+                "placeholder" : "xxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page" : "https://autopilot.docs.apiary.io/#"
     }
 }
