@@ -62,16 +62,28 @@
                 "request_url": "https://api.paypal.com/v1/oauth2/token",
                 "request_method": "GET"
             },
+            "get_account" : {
+                "label": "Account",
+                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/identity/openidconnect/userinfo/?schema=openid' -H 'Authorization: Bearer $access_token'",
+                "request_url": "https://api.paypal.com/v1/identity/openidconnect/userinfo/?schema=openid",
+                "request_method": "GET"
+            },
             "get_payments": {
                 "label": "Payments",
-                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X 'https://api.paypal.com/v1/payments/payment' -H 'Authorization: Bearer $access_token'",
+                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/payments/payment' -H 'Authorization: Bearer $access_token'",
                 "request_url": "https://api.paypal.com/v1/payments/payment",
                 "request_method": "GET"
             },
             "webhooks": {
                 "label": "Webhooks",
-                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X 'https://api.paypal.com/v1/notifications/webhooks' -H 'Authorization: Bearer $access_token'",
+                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/notifications/webhooks' -H 'Authorization: Bearer $access_token'",
                 "request_url": "https://api.paypal.com/v1/notifications/webhooks",
+                "request_method": "GET"
+            },
+            "balance" : {
+                "label": "Balance",
+                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/reporting/balances' -H 'Authorization: Bearer $access_token'",
+                "request_url": "https://api.paypal.com/v1/reporting/balances",
                 "request_method": "GET"
             }
         },
@@ -92,13 +104,13 @@
         "endpoints": {
             "organizations": {
                 "label": "Organizations",
-                "curl": "curl -X 'https://api.openai.com/v1/organizations' -H 'Authorization: Bearer sk-xxxx'",
+                "curl": "curl -X GET 'https://api.openai.com/v1/organizations' -H 'Authorization: Bearer sk-xxxx'",
                 "request_url": "https://api.openai.com/v1/organizations",
                 "request_method": "GET"
             },
             "models": {
                 "label": "Models",
-                "curl": "curl -X 'https://api.openai.com/v1/models' -H 'Authorization: Bearer sk-xxxx'",
+                "curl": "curl -X GET 'https://api.openai.com/v1/models' -H 'Authorization: Bearer sk-xxxx'",
                 "request_url": "https://api.openai.com/v1/models",
                 "request_method": "GET"
             }
@@ -138,14 +150,14 @@
         "endpoints": {
             "user": {
                 "label": "User",
-                "curl": "curl -X https://api.github.com/user -H 'Authorization: token ghp_xxxxx'",
+                "curl": "curl -X GET 'https://api.github.com/user' -H 'Authorization: token ghp_xxxxx'",
                 "request_url": "https://api.github.com/user",
                 "request_method": "GET"
             },
             "repos": {
                 "label": "Repos",
-                "curl": "curl -X https://api.github.com/user/repos -H 'Authorization: token ghp_xxxxx'",
-                "request_url": "https://api.github.com/user/repos",
+                "curl": "curl -X GET 'https://api.github.com/user/repos' -H 'Authorization: token ghp_xxxxx'",
+                "request_url": "https://api.github.com/user/repos?per_page=100&page=1",
                 "request_method": "GET"
             }
         },
@@ -403,25 +415,25 @@
         "endpoints": {
             "about_me": {
                 "label": "Account Metadata",
-                "curl": "curl -X 'https://api.trello.com/1/members/me?key=<key>&token=<token>'",
+                "curl": "curl -X GET 'https://api.trello.com/1/members/me?key=<key>&token=<token>'",
                 "request_url": "https://api.trello.com/1/members/me?key=<key>&token=<token>",
                 "request_method": "GET"
             },
             "boards": {
                 "label": "Boards",
-                "curl": "curl -X 'https://api.trello.com/1/members/me/boards?key=<key>&token=<token>'",
+                "curl": "curl -X GET 'https://api.trello.com/1/members/me/boards?key=<key>&token=<token>'",
                 "request_url": "https://api.trello.com/1/members/me/boards?key=<key>&token=<token>",
                 "request_method": "GET"
             },
             "organizations": {
                 "label": "Organizations",
-                "curl": "curl -X 'https://api.trello.com/1/members/me/organizations?key=<key>&token=<token>'",
+                "curl": "curl -X GET 'https://api.trello.com/1/members/me/organizations?key=<key>&token=<token>'",
                 "request_url": "https://api.trello.com/1/members/me/organizations?key=<key>&token=<token>",
                 "request_method": "GET"
             },
             "actions": {
                 "label": "Actions",
-                "curl": "curl -X 'https://api.trello.com/1/members/me/actions?key=<key>&token=<token>'",
+                "curl": "curl -X GET 'https://api.trello.com/1/members/me/actions?key=<key>&token=<token>'",
                 "request_url": "https://api.trello.com/1/members/me/actions?key=<key>&token=<token>",
                 "request_method": "GET"
             }
@@ -738,31 +750,31 @@
         "endpoints": {
             "account": {
                 "label": "Account",
-                "curl": "curl -X 'https://api.digitalocean.com/v2/account' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/account' -H 'Authorization: Bearer dop_v1_xxxxx'",
                 "request_url": "https://api.digitalocean.com/v2/account",
                 "request_method": "GET"
             },
             "droplets": {
                 "label": "Droplets",
-                "curl": "curl -X 'https://api.digitalocean.com/v2/droplets' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/droplets' -H 'Authorization: Bearer dop_v1_xxxxx'",
                 "request_url": "https://api.digitalocean.com/v2/droplets",
                 "request_method": "GET"
             },
             "SSH_keys": {
                 "label": "SSH Keys",
-                "curl": "curl -X 'https://api.digitalocean.com/v2/account/keys' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/account/keys' -H 'Authorization: Bearer dop_v1_xxxxx'",
                 "request_url": "https://api.digitalocean.com/v2/account/keys",
                 "request_method": "GET"
             },
             "database_clusters": {
                 "label": "Database Clusters",
-                "curl": "curl -X 'https://api.digitalocean.com/v2/databases' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/databases' -H 'Authorization: Bearer dop_v1_xxxxx'",
                 "request_url": "https://api.digitalocean.com/v2/databases",
                 "request_method": "GET"
             },
             "domains": {
                 "label": "Domains",
-                "curl": "curl -X 'https://api.digitalocean.com/v2/domains' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/domains' -H 'Authorization: Bearer dop_v1_xxxxx'",
                 "request_url": "https://api.digitalocean.com/v2/domains",
                 "request_method": "GET"
             }
@@ -780,25 +792,25 @@
         "endpoints": {
             "auth": {
                 "label": "Auth",
-                "curl": "curl -X 'https://api.honeycomb.io/1/auth' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/auth' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
                 "request_url": "https://api.honeycomb.io/1/auth",
                 "request_method": "GET"
             },
             "boards": {
                 "label": "Boards",
-                "curl": "curl -X 'https://api.honeycomb.io/1/boards' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/boards' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
                 "request_url": "https://api.honeycomb.io/1/boards",
                 "request_method": "GET"
             },
             "datasets": {
                 "label": "Datasets",
-                "curl": "curl -X 'https://api.honeycomb.io/1/datasets' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/datasets' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
                 "request_url": "https://api.honeycomb.io/1/datasets",
                 "request_method": "GET"
             },
             "recipients": {
                 "label": "Recipients",
-                "curl": "curl -X 'https://api.honeycomb.io/1/recipients' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/recipients' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
                 "request_url": "https://api.honeycomb.io/1/recipients",
                 "request_method": "GET"
             }
@@ -816,7 +828,7 @@
         "endpoints": {
             "account_metadata": {
                 "label": "Account Metadata",
-                "curl": "curl -X 'https://www.eventbriteapi.com/v3/users/me/?token=xxxxx'",
+                "curl": "curl -X GET 'https://www.eventbriteapi.com/v3/users/me/?token=xxxxx'",
                 "request_url": "https://www.eventbriteapi.com/v3/users/me/",
                 "request_method": "GET"
             }
@@ -958,37 +970,37 @@
         "endpoints": {
             "deals": {
                 "label": "Deals",
-                "curl": "curl -X 'https://api.pipedrive.com/v1/deals?api_token=xxxxx'",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/deals?api_token=xxxxx'",
                 "request_url": "https://api.pipedrive.com/v1/deals",
                 "request_method": "GET"
             },
             "persons": {
                 "label": "Persons",
-                "curl": "curl -X 'https://api.pipedrive.com/v1/persons?api_token=xxxxx'",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/persons?api_token=xxxxx'",
                 "request_url": "https://api.pipedrive.com/v1/persons",
                 "request_method": "GET"
             },
             "organizations": {
                 "label": "Organizations",
-                "curl": "curl -X 'https://api.pipedrive.com/v1/organizations?api_token=xxxxx'",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/organizations?api_token=xxxxx'",
                 "request_url": "https://api.pipedrive.com/v1/organizations",
                 "request_method": "GET"
             },
             "activities": {
                 "label": "Activities",
-                "curl": "curl -X 'https://api.pipedrive.com/v1/activities?api_token=xxxxx'",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/activities?api_token=xxxxx'",
                 "request_url": "https://api.pipedrive.com/v1/activities",
                 "request_method": "GET"
             },
             "notes": {
                 "label": "Notes",
-                "curl": "curl -X 'https://api.pipedrive.com/v1/notes?api_token=xxxxx'",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/notes?api_token=xxxxx'",
                 "request_url": "https://api.pipedrive.com/v1/notes",
                 "request_method": "GET"
             },
             "users": {
                 "label": "Users",
-                "curl": "curl -X 'https://api.pipedrive.com/v1/users?api_token=xxxxx'",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/users?api_token=xxxxx'",
                 "request_url": "https://api.pipedrive.com/v1/users",
                 "request_method": "GET"
             }
@@ -1005,7 +1017,7 @@
         "endpoints": {
             "user": {
                 "label": "User",
-                "curl": "curl -X 'https://api.vercel.com/www/user' -H 'Authorization: Brearer xxxx'",
+                "curl": "curl -X GET 'https://api.vercel.com/www/user' -H 'Authorization: Brearer xxxx'",
                 "request_url": "https://api.vercel.com/www/user",
                 "request_method": "GET"
             }
@@ -1022,19 +1034,19 @@
         "endpoints": {
             "user": {
                 "label": "User",
-                "curl": "curl -X 'https://api-ssl.bitly.com/v4/user' -H 'Authorization: Bearer xxxx'",
+                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/user' -H 'Authorization: Bearer xxxx'",
                 "request_url": "https://api-ssl.bitly.com/v4/user",
                 "request_method": "GET"
             },
             "organizations": {
                 "label": "Organizations",
-                "curl": "curl -X 'https://api-ssl.bitly.com/v4/organizations' -H 'Authorization: Bearer xxxx'",
+                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/organizations' -H 'Authorization: Bearer xxxx'",
                 "request_url": "https://api-ssl.bitly.com/v4/organizations",
                 "request_method": "GET"
             },
             "groups": {
                 "label": "Groups",
-                "curl": "curl -X 'https://api-ssl.bitly.com/v4/groups' -H 'Authorization: Bearer xxxx'",
+                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/groups' -H 'Authorization: Bearer xxxx'",
                 "request_url": "https://api-ssl.bitly.com/v4/groups",
                 "request_method": "GET"
             }
@@ -1052,13 +1064,13 @@
         "endpoints": {
             "keys": {
                 "label": "Keys",
-                "curl": "curl -X 'https://<app_id>-dsn.algolia.net/1/keys' -H 'X-Algolia-API-Key: xxxx' -H 'X-Algolia-Application-Id: xxxx'",
+                "curl": "curl -X GET 'https://<app_id>-dsn.algolia.net/1/keys' -H 'X-Algolia-API-Key: xxxx' -H 'X-Algolia-Application-Id: xxxx'",
                 "request_url": "https://<app_id>-dsn.algolia.net/1/keys",
                 "request_method": "GET"
             },
             "indexes": {
                 "label": "Indexes",
-                "curl": "curl -X 'https://<app_id>-dsn.algolia.net/1/indexes' -H 'X-Algolia-API-Key: xxxx' -H 'X-Algolia-Application-Id: xxxx'",
+                "curl": "curl -X GET 'https://<app_id>-dsn.algolia.net/1/indexes' -H 'X-Algolia-API-Key: xxxx' -H 'X-Algolia-Application-Id: xxxx'",
                 "request_url": "https://<app_id>-dsn.algolia.net/1/indexes",
                 "request_method": "GET"
             }
