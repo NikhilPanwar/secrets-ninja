@@ -7,8 +7,11 @@ npm run dev
 
 # Deploy
 ```
+Install firebase tools to deploy
+- npm install -g firebase-tools
+
 npm run build
-firebase init
+firebase login
 firebase deploy
 ```
 

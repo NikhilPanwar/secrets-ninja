@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.github/dependabot.yml
+.firebase/hosting.ZGlzdA.cache
+.devcontainer/devcontainer.json
