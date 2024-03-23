@@ -24,4 +24,3 @@ dist-ssr
 *.sw?
 .github/dependabot.yml
 .firebase/hosting.ZGlzdA.cache
-.devcontainer/devcontainer.json
