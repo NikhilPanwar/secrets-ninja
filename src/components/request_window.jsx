@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Card } from 'flowbite-react';
 import CopyButton from './copy_button';
-import 'react-json-pretty/themes/1337.css';
+import '../css/json_theme.css';
 
-function RequestWindow({ curl = 'curl https://api.stripe.com/v1/balance -u sk_live_xxxx:' }) {
+function RequestWindow({ curl = '' }) {
 
   return (
     <Card className="w-full">

@@ -1,6 +1,6 @@
 import { Card, Button } from 'flowbite-react';
 import JSONPretty from "react-json-pretty";
-import 'react-json-pretty/themes/1337.css';
+import '../css/json_theme.css';
 import CopyButton from './copy_button';
 
 function OutputWindow({ status_code = 0, output_str = '{}' }) {
