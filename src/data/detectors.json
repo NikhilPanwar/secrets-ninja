@@ -133,7 +133,7 @@
             },
             "customer": {
                 "label": "Customer",
-                "curl": "curl -X GET https://api.paystack.co/customer -H 'Authorization: Bearer sk_live",
+                "curl": "curl -X GET https://api.paystack.co/customer -H 'Authorization: Bearer sk_live'",
                 "request_url": "https://api.paystack.co/customer",
                 "request_method": "GET"
             }
@@ -237,7 +237,7 @@
             },
             "customers_count": {
                 "label": "Customers Count",
-                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/customers/count.json -H 'X-Shopify-Access-Token: sh",
+                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/customers/count.json -H 'X-Shopify-Access-Token: shp_12345'",
                 "request_url": "https://shopify.com/admin/api/2023-10/customers/count.json",
                 "request_method": "GET"
             }
