@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { Button, Dropdown, Label, TextInput, Alert } from 'flowbite-react';
+import { Button, Dropdown, Label, TextInput, Alert, Tooltip } from 'flowbite-react';
 import OutputWindow from "../components/output_window";
 import RequestWindow from "../components/request_window";
 import { HiInformationCircle } from 'react-icons/hi';
 import makeUniversalRequest from "../components/requests";
 import { AiOutlineLoading } from 'react-icons/ai';
+import { ImNewTab } from "react-icons/im";
+
+
 
 export default function UniversalComponent({ serviceType, servicesConfig }) {
     const serviceConfig = servicesConfig[serviceType] || {};
+    const apiDocumentationPage = serviceConfig.api_documentation_page;
     const endpoints = serviceConfig.endpoints || {};
     const defaultInputFields = serviceConfig.input_fields || {};
 
@@ -38,7 +42,6 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
             setLoading(false);
         }
     };
-
 
     const handleDropdownChange = (endpointKey) => {
         const endpointConfig = endpoints[endpointKey];
@@ -78,7 +81,17 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
 
     return (
         <div className="p-4">
-            <h2 className="text-2xl font-semibold dark:text-white">Check {serviceType} Keys</h2>
+            {apiDocumentationPage ? (
+                <Tooltip content={<span>Click to View Official API Documentation <ImNewTab className="inline-block ml-1 text-sm"/></span>} placement="right">
+                    <a href={apiDocumentationPage} target="_blank" rel="noopener noreferrer" className="text-2xl font-semibold dark:text-white hover:underline">
+                        Check {serviceType} Keys
+                    </a>
+                </Tooltip>
+            ) : (
+                <h2 className="text-2xl font-semibold dark:text-white">
+                    Check {serviceType} Keys
+                </h2>
+            )}
             <div className="py-10 flex w-full flex-col gap-4">
                 {Object.keys(inputFields).map((key) => (
                     <div key={key} className="w-full">
@@ -105,13 +118,13 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
                     <Label value="Select Endpoint" />
                     <div className="flex gap-2">
                         <Dropdown label={selectedEndpoint}>
-                        <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
-                            {Object.keys(endpoints).map((key) => (
-                                <Dropdown.Item key={key} onClick={() => handleDropdownChange(key)}>
-                                    {endpoints[key].label}
-                                </Dropdown.Item>
-                            ))}
-                        </div>
+                            <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
+                                {Object.keys(endpoints).map((key) => (
+                                    <Dropdown.Item key={key} onClick={() => handleDropdownChange(key)}>
+                                        {endpoints[key].label}
+                                    </Dropdown.Item>
+                                ))}
+                            </div>
                         </Dropdown>
                         <Button
                             onClick={handleTestEndpoint}
