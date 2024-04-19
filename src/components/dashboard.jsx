@@ -14,7 +14,7 @@ export default function Dashboard({ servicesConfig }) {
                         <span className="font-medium">Note:</span> This webapp checks secrets from frontend using JS in your browser.
                     </li>
                     <li>
-                        <span className="font-medium">Source Code :</span> https://github.com/NikhilPanwar/secrets-ninja
+                        <span className="font-medium">By:</span> <a href="https://twitter.com/cybersecdawg">@cybersecdawg</a>
                     </li>
                 </ul>
             </Alert>

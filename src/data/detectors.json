@@ -91,12 +91,12 @@
             "client_id": {
                 "type": "text",
                 "label": "Enter Client ID",
-                "placeholder": "A21AAHc"
+                "placeholder": "Axxxx-xxxxx-xxxxx-xxxxxx"
             },
             "client_secret": {
                 "type": "text",
                 "label": "Enter Client Secret",
-                "placeholder": "A21AAHc Secret"
+                "placeholder": "Exxxx-xxxxx-xxxxx-xxxxxx"
             }
         }
     },
