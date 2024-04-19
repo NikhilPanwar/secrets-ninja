@@ -52,7 +52,8 @@
                 "label": "Enter Stripe API Key",
                 "placeholder": "sk_live_xxxx"
             }
-        }
+        },
+        "api_documentation_page" : "https://stripe.com/docs/api"
     },
     "Paypal": {
         "endpoints": {
@@ -98,7 +99,8 @@
                 "label": "Enter Client Secret",
                 "placeholder": "Exxxx-xxxxx-xxxxx-xxxxxx"
             }
-        }
+        },
+        "api_documentation_page" : "https://developer.paypal.com/docs/api/overview/"
     },
     "OpenAI": {
         "endpoints": {
@@ -121,7 +123,8 @@
                 "label": "Enter OpenAI API Key",
                 "placeholder": "sk-xxxxx-xxxxx-xxxxx-xxxxx"
             }
-        }
+        },
+        "api_documentation_page" : "https://platform.openai.com/docs/api-reference/"
     },
     "Paystack": {
         "endpoints": {
@@ -144,7 +147,8 @@
                 "label": "Enter Paystack API Key",
                 "placeholder": "sk_live_xxxx"
             }
-        }
+        },
+        "api_documentation_page" : "https://paystack.com/docs/api/"
     },
     "Github": {
         "endpoints": {
@@ -167,7 +171,8 @@
                 "label": "Enter Github Access Token",
                 "placeholder": "ghp_xxxxx"
             }
-        }
+        },
+        "api_documentation_page" : "https://docs.github.com/en/rest"
     },
     "LaunchDarkly": {
         "endpoints": {
@@ -184,7 +189,8 @@
                 "label": "Enter LaunchDarkly API Key",
                 "placeholder": "api-xxxxx-xxxxx-xxxxx-xxxxx"
             }
-        }
+        },
+        "api_documentation_page" : "https://apidocs.launchdarkly.com/"
     },
     "Omnisend": {
         "endpoints": {
@@ -213,7 +219,8 @@
                 "label": "Enter Omnisend API Key",
                 "placeholder": "xxx-xxxxx-xxxxx-xxxxx-xxxxx"
             }
-        }
+        },
+        "api_documentation_page" : "https://api-docs.omnisend.com/reference/"
     },
     "Shopify": {
         "endpoints": {
@@ -254,6 +261,7 @@
                 "placeholder": "store.myshopify.com"
             }
         },
+        "api_documentation_page" : "https://shopify.dev/docs/api/admin-rest",
         "alert": {
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
@@ -280,7 +288,8 @@
                 "label": "Enter Bot Token",
                 "placeholder": "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"
             }
-        }
+        },
+        "api_documentation_page" : "https://core.telegram.org/bots/api"
     },
     "Clearbit": {
         "endpoints": {
@@ -311,6 +320,7 @@
                 "placeholder": "sk_xxx"
             }
         },
+        "api_documentation_page" : "https://clearbit.com/docs",
         "alert": {
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
@@ -343,7 +353,8 @@
                 "label": "Enter SendInBlue API Key",
                 "placeholder": "xkeysib-xxx-xxxxx-xxxxx-xxxxx-xxxxx"
             }
-        }
+        },
+        "api_documentation_page" : "https://developers.sendinblue.com/reference"
     },
     "RechargePayments": {
         "endpoints": {
@@ -373,6 +384,7 @@
                 "placeholder": "sk_xxx-xxx-xxx"
             }
         },
+        "api_documentation_page" : "https://developer.rechargepayments.com/",
         "alert": {
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
@@ -406,6 +418,7 @@
                 "placeholder": "xxxx-xxx-xxx"
             }
         },
+        "api_documentation_page" : "https://developers.mailerlite.com/docs/#mailerlite-api",
         "alert": {
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
@@ -449,7 +462,8 @@
                 "label": "Enter Trello Token",
                 "placeholder": "xxxx-xxx-xxx"
             }
-        }
+        },
+        "api_documentation_page" : "https://developer.atlassian.com/cloud/trello/rest/api-group-actions/"
     },
     "RazorPay": {
         "endpoints": {
@@ -508,6 +522,7 @@
                 "placeholder": "c2tfxxxxx-xxxxx-xxxxx-xxxxx-xxxxx"
             }
         },
+        "api_documentation_page" : "https://razorpay.com/docs/api/",
         "alert": {
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
@@ -647,7 +662,8 @@
                 "label": "Enter Twilio Auth Token",
                 "placeholder": "xxxxx-xxxxx-xxxxx-xxxxx-xxxxx"
             }
-        }
+        },
+        "api_documentation_page" : "https://www.twilio.com/docs/usage/api"
     },
     "NpmToken": {
         "endpoints": {
@@ -665,6 +681,7 @@
                 "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
             }
         },
+        "api_documentation_page" : "https://docs.npmjs.com/cli/v7/commands/npm-token",
         "alert": {
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
@@ -723,7 +740,8 @@
                 "label": "Enter Mailgun API Key",
                 "placeholder": "key-xxxx-xxxx-xxxx-xxxx"
             }
-        }
+        },
+        "api_documentation_page" : "https://documentation.mailgun.com/en/latest/api_reference.html"
     },
     "Klaviyo": {
         "endpoints": {
@@ -741,6 +759,7 @@
                 "placeholder": "pk_xxxx-xxxx-xxxx-xxxx-xxxx"
             }
         },
+        "api_documentation_page" : "https://developers.klaviyo.com/en/reference/api_overview",
         "alert": {
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
@@ -911,6 +930,7 @@
                 "placeholder": "us1"
             }
         },
+        "api_documentation_page": "https://mailchimp.com/developer/marketing/api/",
         "alert": {
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
@@ -938,6 +958,7 @@
                 "placeholder": "xxx-xxxx-xxxx-xxxx-xxxx"
             }
         },
+        "api_documentation_page": "https://postmarkapp.com/developer/api/email-api",
         "alert": {
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
@@ -964,7 +985,8 @@
                 "label": "Enter Telnyx API Key",
                 "placeholder": "key"
             }
-        }
+        },
+        "api_documentation_page": "https://developers.telnyx.com/api"
     },
     "Pipedrive": {
         "endpoints": {
@@ -1011,7 +1033,8 @@
                 "label": "Enter Pipedrive API Token",
                 "placeholder": "xxxxx"
             }
-        }
+        },
+        "api_documentation_page": "https://developers.pipedrive.com/docs/api/v1/"
     },
     "Vercel": {
         "endpoints": {
@@ -1028,7 +1051,8 @@
                 "label": "Enter Vercel API Token",
                 "placeholder": "xxxx"
             }
-        }
+        },
+        "api_documentation_page": "https://vercel.com/docs/api"
     },
     "Bitly": {
         "endpoints": {
