@@ -6,6 +6,7 @@ import { HiInformationCircle } from 'react-icons/hi';
 import makeUniversalRequest from "../components/requests";
 import { AiOutlineLoading } from 'react-icons/ai';
 import { ImNewTab } from "react-icons/im";
+import { FaHandPointLeft } from "react-icons/fa";
 
 
 
@@ -82,7 +83,7 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
     return (
         <div className="p-4">
             {apiDocumentationPage ? (
-                <Tooltip content={<span>👈 Click to View Official API Documentation <ImNewTab className="inline-block ml-1 text-sm"/></span>} placement="right">
+                <Tooltip content={<span> 👈🏻 Click to View Official API Documentation</span>} placement="right">
                     <a href={apiDocumentationPage} target="_blank" rel="noopener noreferrer" className="text-2xl font-semibold dark:text-white hover:underline">
                         Check {serviceType} Keys
                     </a>
