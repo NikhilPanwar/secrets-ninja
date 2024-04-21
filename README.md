@@ -55,6 +55,8 @@ case 'OpenAI':
 ```
 - **Optional**
 3. Add the service icon in `components/sidebar.jsx`
+- Icon for services can be discovered at https://react-icons.github.io/react-icons/
+- Adding Icon is optional as services with no specified icons already use a placeholder icon
 ```
 import { RiOpenaiFill } from "react-icons/ri";
 .....
