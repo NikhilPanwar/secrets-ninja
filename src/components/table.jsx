@@ -16,7 +16,7 @@ function MainPageTable({ servicesConfig }) {
     return Object.entries(servicesConfig).map(([serviceName, serviceDetails]) => (
       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800" key={serviceName}>
         <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-          <a href={serviceDetails.api_documentation_page || '#'} target="_blank" rel="noopener noreferrer" className="text-cyan-500 dark:text-cyan-500">
+          <a href={serviceName} className="text-cyan-500 dark:text-cyan-500">
             {serviceName}
           </a>
         </Table.Cell>
