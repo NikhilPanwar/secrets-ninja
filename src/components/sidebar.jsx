@@ -32,6 +32,7 @@ import { SiHelpscout } from "react-icons/si";
 import { SiTypeform } from "react-icons/si";
 import { SiNotion } from "react-icons/si";
 import { FaSlack } from "react-icons/fa";
+import { FaSquareGitlab } from "react-icons/fa6";
 
 
 function SB({ visible, servicesConfig }) { // Accept visible as a prop
@@ -69,6 +70,7 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     Typeform: SiTypeform,
     Notion: SiNotion,
     Slack: FaSlack,
+    Gitlab: FaSquareGitlab,
   };
 
   return (

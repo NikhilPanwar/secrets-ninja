@@ -327,6 +327,14 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'Gitlab':
+            response = await fetch(endpointURL, {
+                method: requestMethod,
+                headers: {
+                    'Authorization': `Bearer ${inputData.access_token}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }
