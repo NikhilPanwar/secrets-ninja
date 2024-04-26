@@ -1483,5 +1483,23 @@
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. A hack is on the way to make it work.",
             "color": "failure"
         }
+    },
+    "HuggingFace": {
+        "endpoints": {
+            "whoami":{
+                "label": "Who Am I",
+                "curl": "curl -X GET https://huggingface.co/api/whoami-v2 -H 'authorization: Bearer <api_token>'",
+                "request_url": "https://huggingface.co/api/whoami-v2",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_token": {
+                "type": "text",
+                "label": "Enter Hugging Face API Token",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://huggingface.co/docs/hub/api"
     }
 }

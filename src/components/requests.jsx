@@ -335,6 +335,22 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'BitBucket':
+            response = await fetch(endpointURL, {
+                method: requestMethod,
+                headers: {
+                    'Authorization': `Basic ${btoa(inputData.username + ':' + inputData.password)}`,
+                }
+            });
+            break;
+        case 'HuggingFace':
+            response = await fetch(endpointURL, {
+                method: requestMethod,
+                headers: {
+                    'authorization': `Bearer ${inputData.api_token}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }
