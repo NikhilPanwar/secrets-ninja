@@ -78,9 +78,9 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
       <Sidebar.Items>
         <Sidebar.ItemGroup>
           <h2 className="text-lg font-semibold text-gray-800 dark:text-white">Modules</h2>
-          <Sidebar.Item href="/" icon={CiCircleInfo}>
+          {/* <Sidebar.Item href="/" icon={CiCircleInfo}>
             About
-          </Sidebar.Item>
+          </Sidebar.Item> */}
           {Object.keys(servicesConfig).map((service) => (
             <Sidebar.Item
               key={service}

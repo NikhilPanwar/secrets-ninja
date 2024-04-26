@@ -1487,7 +1487,7 @@
     "HuggingFace": {
         "endpoints": {
             "whoami":{
-                "label": "Who Am I",
+                "label": "WhoAmI",
                 "curl": "curl -X GET https://huggingface.co/api/whoami-v2 -H 'authorization: Bearer <api_token>'",
                 "request_url": "https://huggingface.co/api/whoami-v2",
                 "request_method": "GET"

@@ -22,10 +22,12 @@ function FlowbiteNavbar({ toggleSidebar }) {
     <Navbar fluid>
       <div className="flex items-center">
         <Hamburger toggled={!isOpen} toggle={handleToggle} className="mr-3" size={20} direction="left" color='#9CA3AF' hideOutline={false} distance="lg" />
-        <Navbar.Brand>
+        <Navbar.Brand href="/">
           <img src={logo} className="h-10 sm:h-10" alt="Secrets Ninja Logo" />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Secrets Ninja</span>
         </Navbar.Brand>
+
+
       </div>
       <div className="flex md:order-2">
         {/* <Navbar.Toggle /> */}
