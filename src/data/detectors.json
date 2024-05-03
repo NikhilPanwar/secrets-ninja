@@ -196,25 +196,25 @@
         "endpoints": {
             "user": {
                 "label": "User",
-                "curl": "curl -X GET 'https://gitlab.com/api/v4/user' -H 'Authorization Bearer glpat_xxxxx'",
+                "curl": "curl -X GET 'https://gitlab.com/api/v4/user' -H 'Authorization: Bearer glpat_xxxxx'",
                 "request_url": "https://gitlab.com/api/v4/user",
                 "request_method": "GET"
             },
             "projects": {
                 "label": "Projects",
-                "curl": "curl -X GET 'https://gitlab.com/api/v4/projects' -H 'Authorization Bearer glpat_xxxxx'",
+                "curl": "curl -X GET 'https://gitlab.com/api/v4/projects' -H 'Authorization: Bearer glpat_xxxxx'",
                 "request_url": "https://gitlab.com/api/v4/projects",
                 "request_method": "GET"
             },
             "groups": {
                 "label": "Groups",
-                "curl": "curl -X GET 'https://gitlab.com/api/v4/groups' -H 'Authorization Bearer glpat_xxxxx'",
+                "curl": "curl -X GET 'https://gitlab.com/api/v4/groups' -H 'Authorization: Bearer glpat_xxxxx'",
                 "request_url": "https://gitlab.com/api/v4/groups",
                 "request_method": "GET"
             },
             "issues": {
                 "label": "Issues",
-                "curl": "curl -X GET 'https://gitlab.com/api/v4/issues' -H 'Authorization Bearer glpat_xxxxx'",
+                "curl": "curl -X GET 'https://gitlab.com/api/v4/issues' -H 'Authorization: Bearer glpat_xxxxx'",
                 "request_url": "https://gitlab.com/api/v4/issues",
                 "request_method": "GET"
             }
@@ -396,7 +396,7 @@
             },
             "account": {
                 "label": "Account",
-                "curl": "curl -X GET https://api.sendinblue.com/v3/account -H 'api-key  xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
+                "curl": "curl -X GET https://api.sendinblue.com/v3/account -H 'api-key:  xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
                 "request_url": "https://api.sendinblue.com/v3/account",
                 "request_method": "GET"
             }
@@ -1127,6 +1127,44 @@
                 "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/groups' -H 'Authorization: Bearer xxxx'",
                 "request_url": "https://api-ssl.bitly.com/v4/groups",
                 "request_method": "GET"
+            },
+            "get_campaigns": {
+                "label": "Get Campaigns",
+                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/campaigns?group_guid=<group_guid>' -H 'Authorization: Bearer xxxx'",
+                "request_url": "https://api-ssl.bitly.com/v4/campaigns?group_guid=<group_guid>",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_token": {
+                        "type": "text",
+                        "label": "Enter Bitly API Token",
+                        "placeholder": "xxxx"
+                    },
+                    "group_guid": {
+                        "type": "text",
+                        "label": "Enter Group GUID (fetched from groups endpoint)",
+                        "placeholder": "xxxx"
+                    }
+                }
+            },
+            "get_click_metric": {
+                "label": "Get Click Metric",
+                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/groups/<group_guid>/countries?unit=month&units=1&size=10&unit_reference=2006-01-02T15%3A04%3A05-0700' -H 'Authorization : Bearer xxxx'",
+                "request_url": "https://api-ssl.bitly.com/v4/groups/Bm4khURQ6e8/countries?unit=month&units=1&size=10&unit_reference=2006-01-02T15%3A04%3A05-0700",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_token": {
+                        "type": "text",
+                        "label": "Enter Bitly API Token",
+                        "placeholder": "xxxx"
+                    },
+                    "group_guid": {
+                        "type": "text",
+                        "label": "Enter Group GUID (fetched from groups endpoint)",
+                        "placeholder": "xxxx"
+                    }
+                }
             }
         },
         "input_fields": {
