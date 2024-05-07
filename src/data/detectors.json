@@ -1589,12 +1589,6 @@
                 "curl": "curl -X GET 'https://api.getpostman.com/environments' -H 'X-Api-Key: <api_key>'",
                 "request_url": "https://api.getpostman.com/environments",
                 "request_method": "GET"
-            },
-            "requests": {
-                "label": "Requests",
-                "curl": "curl -X GET 'https://api.getpostman.com/requests' -H 'X-Api-Key: <api_key>'",
-                "request_url": "https://api.getpostman.com/requests",
-                "request_method": "GET"
             }
         },
         "input_fields": {
