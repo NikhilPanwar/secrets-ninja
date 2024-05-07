@@ -356,6 +356,14 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 method: requestMethod
             });
             break;
+        case 'Postman':
+            response = await fetch(endpointURL, {
+                method: requestMethod,
+                headers: {
+                    'X-Api-Key': `${inputData.api_key}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }

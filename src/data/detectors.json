@@ -1563,5 +1563,47 @@
             }
         },
         "api_documentation_page": "https://developer.shodan.io/api"
+    },
+    "Postman": {
+        "endpoints": {
+            "profile": {
+                "label": "Profile",
+                "curl": "curl -X GET 'https://api.getpostman.com/me' -H 'X-Api-Key: <api_key>'",
+                "request_url": "https://api.getpostman.com/me",
+                "request_method": "GET"
+            },
+            "collections": {
+                "label": "Collections",
+                "curl": "curl -X GET 'https://api.getpostman.com/collections' -H 'X-Api-Key: <api_key>'",
+                "request_url": "https://api.getpostman.com/collections",
+                "request_method": "GET"
+            },
+            "workspaces": {
+                "label": "Workspaces",
+                "curl": "curl -X GET 'https://api.getpostman.com/workspaces' -H 'X-Api-Key: <api_key>'",
+                "request_url": "https://api.getpostman.com/workspaces",
+                "request_method": "GET"
+            },
+            "environments": {
+                "label": "Environments",
+                "curl": "curl -X GET 'https://api.getpostman.com/environments' -H 'X-Api-Key: <api_key>'",
+                "request_url": "https://api.getpostman.com/environments",
+                "request_method": "GET"
+            },
+            "requests": {
+                "label": "Requests",
+                "curl": "curl -X GET 'https://api.getpostman.com/requests' -H 'X-Api-Key: <api_key>'",
+                "request_url": "https://api.getpostman.com/requests",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Postman API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://docs.api.getpostman.com/"
     }
 }
