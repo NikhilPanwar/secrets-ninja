@@ -1572,6 +1572,12 @@
                 "request_url": "https://api.getpostman.com/me",
                 "request_method": "GET"
             },
+            "accounts" : {
+                "label": "Accounts",
+                "curl": "curl -X GET 'https://api.getpostman.com/accounts' -H 'X-Api-Key: <api_key>'",
+                "request_url": "https://api.getpostman.com/accounts",
+                "request_method": "GET"
+            },
             "collections": {
                 "label": "Collections",
                 "curl": "curl -X GET 'https://api.getpostman.com/collections' -H 'X-Api-Key: <api_key>'",
