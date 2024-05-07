@@ -1524,7 +1524,7 @@
     },
     "HuggingFace": {
         "endpoints": {
-            "whoami":{
+            "whoami": {
                 "label": "WhoAmI",
                 "curl": "curl -X GET https://huggingface.co/api/whoami-v2 -H 'authorization: Bearer <api_token>'",
                 "request_url": "https://huggingface.co/api/whoami-v2",
@@ -1539,5 +1539,29 @@
             }
         },
         "api_documentation_page": "https://huggingface.co/docs/hub/api"
+    },
+    "Shodan": {
+        "endpoints": {
+            "profile": {
+                "label": "Profile",
+                "curl": "curl -X GET 'https://api.shodan.io/account/profile?key=<api_key>'",
+                "request_url": "https://api.shodan.io/account/profile?key=<api_key>",
+                "request_method": "GET"
+            },
+            "organization": {
+                "label": "Organization",
+                "curl": "curl -X GET 'https://api.shodan.io/org?key=<api_key>'",
+                "request_url": "https://api.shodan.io/org?key=<api_key>",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Shodan API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://developer.shodan.io/api"
     }
 }

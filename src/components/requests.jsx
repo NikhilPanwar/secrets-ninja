@@ -351,6 +351,11 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'Shodan':
+            response = await fetch(endpointURL.replace('<api_key>', inputData.api_key), {
+                method: requestMethod
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }
