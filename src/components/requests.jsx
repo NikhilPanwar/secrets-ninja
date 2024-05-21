@@ -1,6 +1,9 @@
+/* eslint-disable no-case-declarations */
 async function makeUniversalRequest(serviceType, inputData, endpointURL, requestMethod) {
     let response, data;
 
+    // endpointURL = 'http://localhost:8000?endpoint=' + encodeURIComponent(endpointURL) + '&method=' + requestMethod;
+    // endpointURL = 'https://corsproxy.io/?' + endpointURL ;
     switch (serviceType) {
         case 'Stripe':
             response = await fetch(endpointURL, {
@@ -252,7 +255,7 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 response = await fetch(endpointURL.replace('<api_key>', inputData.api_key).replace('https://app.', 'https://eu.'), {
                     method: requestMethod,
                 });
-            };
+            }
             break;
         case 'Opsgenie':
             response = await fetch(endpointURL, {

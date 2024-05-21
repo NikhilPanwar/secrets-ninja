@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Dropdown, Label, TextInput, Alert, Tooltip } from 'flowbite-react';
+import { Button, Dropdown, Label, TextInput, Alert, Tooltip, Checkbox } from 'flowbite-react';
 import OutputWindow from "../components/output_window";
 import RequestWindow from "../components/request_window";
 import { HiInformationCircle } from 'react-icons/hi';
@@ -28,13 +28,17 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
     const [output_str, setOutputStr] = useState('');
     const [inputValues, setInputValues] = useState({});
     const [loading, setLoading] = useState(false);
+    const [isChecked, setIsChecked] = useState(false);
+    const colorIsFailure = serviceConfig?.alert?.color === 'failure';
+    const enableButton = !colorIsFailure || (colorIsFailure && isChecked);
 
     const handleTestEndpoint = async () => {
         setLoading(true);
         try {
+            const updatedRequestURL = isChecked ? `https://corsproxy.io/?` + encodeURIComponent(requestURL) : requestURL;
             console.log("Testing endpoint with input values:", inputValues);
-            console.log("Request URL:", requestURL);
-            const { status, data } = await makeUniversalRequest(serviceType, inputValues, requestURL, requestMethod);
+            console.log("Request URL:", updatedRequestURL);
+            const { status, data } = await makeUniversalRequest(serviceType, inputValues, updatedRequestURL, requestMethod);
             setStatusCode(status);
             setOutputStr(JSON.stringify(data, null, 2));
         } catch (error) {
@@ -61,6 +65,10 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
     const handleInputChange = (key, value) => {
         setInputValues(prev => ({ ...prev, [key]: value }));
     };
+
+    const handleCheckboxChange = (e) => {
+        setIsChecked(e.target.checked);
+      };    
 
     useEffect(() => {
         // Resetting the state variables when serviceType changes
@@ -116,6 +124,19 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
                 )}
 
                 <div className="flex flex-col gap-2">
+                    {serviceConfig?.alert?.color === 'failure' && (
+                        <div className="flex items-center space-x-4">
+                            <Checkbox
+                                id="corsProxyCheckbox"
+                                label="Use corsproxy.io to bypass CORS"
+                                checked={isChecked}
+                                onChange={handleCheckboxChange}
+                            />
+                            <Label htmlFor="corsProxyCheckbox">Use corsproxy.io to bypass CORS</Label>
+                        </div>
+                    )}
+
+
                     <Label value="Select Endpoint" />
                     <div className="flex gap-2">
                         <Dropdown label={selectedEndpoint}>
@@ -132,7 +153,7 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
                             size="md"
                             isProcessing={loading}
                             processingSpinner={loading && <AiOutlineLoading className="h-6 w-6 animate-spin" />}
-                            disabled={serviceConfig?.alert?.color === 'failure'}>
+                            disabled={!enableButton}>
                             Test Endpoint
                         </Button>
 
