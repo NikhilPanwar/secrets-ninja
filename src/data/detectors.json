@@ -1572,7 +1572,7 @@
                 "request_url": "https://api.getpostman.com/me",
                 "request_method": "GET"
             },
-            "accounts" : {
+            "accounts": {
                 "label": "Accounts",
                 "curl": "curl -X GET 'https://api.getpostman.com/accounts' -H 'X-Api-Key: <api_key>'",
                 "request_url": "https://api.getpostman.com/accounts",
@@ -1605,5 +1605,27 @@
             }
         },
         "api_documentation_page": "https://docs.api.getpostman.com/"
+    },
+    "Terraform": {
+        "endpoints": {
+            "account": {
+                "label": "Account",
+                "curl": "curl -X GET 'https://app.terraform.io/api/v2/account/details' -H 'Authorization : Bearer <api_token>'",
+                "request_url": "https://app.terraform.io/api/v2/account/details",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_token": {
+                "type": "text",
+                "label": "Enter Terraform Personal Token",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://developer.hashicorp.com/terraform/cloud-docs/api-docs",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
     }
 }
