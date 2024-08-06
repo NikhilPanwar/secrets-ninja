@@ -1627,5 +1627,119 @@
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
             "color": "failure"
         }
+    },
+    "Doppler": {
+        "endpoints": {
+            "me": {
+                "label": "Me",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/me' -H 'Authorization : Bearer <api_key>'",
+                "request_url": "https://api.doppler.com/v3/me",
+                "request_method": "GET"
+            },
+            "projects": {
+                "label": "Projects",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/projects' -H 'Authorization : Bearer <api_key>'",
+                "request_url": "https://api.doppler.com/v3/projects",
+                "request_method": "GET"
+            },
+            "project_members": {
+                "label": "Project Members",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/projects/project/members?project=<project_id>' -H 'Authorization : Bearer <api_key>'",
+                "request_url": "https://api.doppler.com/v3/projects/project/members?project=<project_id>",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Doppler API Key",
+                        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "project_id": {
+                        "type": "text",
+                        "label": "Enter Project ID (fetched from projects endpoint)",
+                        "placeholder": "xxxx"
+                    }
+                }
+            },
+            "environments" : {
+                "label": "Environments",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/environments?project=<project_id>' -H 'Authorization : Bearer <api_key>'",
+                "request_url": "https://api.doppler.com/v3/environments?project=<project_id>",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Doppler API Key",
+                        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "project_id": {
+                        "type": "text",
+                        "label": "Enter Project ID (fetched from projects endpoint)",
+                        "placeholder": "xxxx"
+                    }
+                }
+            },
+            "configs" : {
+                "label": "Configs",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/configs?project=<project_id>&environment=<environment_id>' -H 'Authorization : Bearer <api_key>'",
+                "request_url": "https://api.doppler.com/v3/configs?project=<project_id>&environment=<environment_id>",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Doppler API Key",
+                        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "project_id": {
+                        "type": "text",
+                        "label": "Enter Project ID (fetched from projects endpoint)",
+                        "placeholder": "xxxx"
+                    },
+                    "environment_id": {
+                        "type": "text",
+                        "label": "Enter Environment ID (fetched from environments endpoint)",
+                        "placeholder": "xxxx"
+                    }
+                }
+            },
+            "secrets" : {
+                "label": "Secrets",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/secrets?project=<project_id>&config=<config_id>' -H 'Authorization : Bearer <api_key>'",
+                "request_url": "https://api.doppler.com/v3/secrets?project=<project_id>&config=<config_id>",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Doppler API Key",
+                        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "project_id": {
+                        "type": "text",
+                        "label": "Enter Project ID (fetched from projects endpoint)",
+                        "placeholder": "xxxx"
+                    },
+                    "config_id": {
+                        "type": "text",
+                        "label": "Enter Config ID (fetched from configs endpoint)",
+                        "placeholder": "xxxx"
+                    }
+                }
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Doppler API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://docs.doppler.com/docs/start",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
     }
 }
