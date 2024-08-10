@@ -994,13 +994,13 @@
         "endpoints": {
             "server": {
                 "label": "Server",
-                "curl": "curl -X GET https://api.postmarkapp.com/server -H 'X-Postmark-Server-Token: xxx-xxxx-xxxx-xxxx-xxxx'",
+                "curl": "curl -X GET https://api.postmarkapp.com/server -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'X-Postmark-Server-Token: xxx-xxxx-xxxx-xxxx-xxxx'",
                 "request_url": "https://api.postmarkapp.com/server",
                 "request_method": "GET"
             },
             "deliverystats": {
                 "label": "Delivery Stats",
-                "curl": "curl -X GET https://api.postmarkapp.com/deliverystats -H 'X-Postmark-Server-Token: xxx-xxxx-xxxx-xxxx-xxxx'",
+                "curl": "curl -X GET https://api.postmarkapp.com/deliverystats -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'X-Postmark-Server-Token: xxx-xxxx-xxxx-xxxx-xxxx'",
                 "request_url": "https://api.postmarkapp.com/deliverystats",
                 "request_method": "GET"
             }
