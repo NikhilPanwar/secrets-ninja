@@ -57,7 +57,7 @@ let serviceIcons = {
 }
 ```
 
-- **Additional Workarounds**
+- **CORS Error Workarounds**
 
 If the api can't be accessed from browser due to CORS, add the following to the `data/detectors.json`. This will auto enable the corsproxy.io checkbox
 ```
