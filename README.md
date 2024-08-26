@@ -5,17 +5,6 @@ npm run dev
 ```
 
 
-# Deploy
-```
-Install firebase tools to deploy
-- npm install -g firebase-tools
-
-npm run build
-firebase login
-firebase deploy
-```
-
-
 
 ### Contributing Modules
 1. Add the module to `data/detectors.json`
@@ -42,6 +31,7 @@ firebase deploy
     }
 }
 ```
+
 2. Update `components/requests.jsx` with the request code for this service
 ```
 case 'OpenAI':
@@ -65,4 +55,14 @@ let serviceIcons = {
     OpenAI: RiOpenaiFill,
     ....
 }
+```
+
+- **Additional Workarounds**
+
+If the api can't be accessed from browser due to CORS, add the following to the `data/detectors.json`. This will auto enable the corsproxy.io checkbox
+```
+"alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
 ```
