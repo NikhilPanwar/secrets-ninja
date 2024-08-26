@@ -8,6 +8,14 @@ import UniversalComponent from './modules/universal';
 import Dashboard from './components/dashboard';
 import servicesConfig from './data/detectors.json';
 
+// Sort servicesConfig by keys alphabetically
+const sortedServicesConfig = Object.keys(servicesConfig)
+  .sort()
+  .reduce((result, key) => {
+    result[key] = servicesConfig[key];
+    return result;
+  }, {});
+
 // Custom hook to listen to window resize events
 const useWindowSize = () => {
   const [size, setSize] = useState([window.innerWidth, window.innerHeight]);
@@ -54,17 +62,17 @@ export default function MyPage() {
           }}>
             {sidebarVisible && (
               <div style={sidebarStyle}>
-                <SB visible={sidebarVisible} servicesConfig={servicesConfig} className="dark:bg-slate-700" />
+                <SB visible={sidebarVisible} servicesConfig={sortedServicesConfig} className="dark:bg-slate-700" />
               </div>
             )}
             <div className={contentStyle} >
               <Routes>
-                <Route path="/" element={<Dashboard servicesConfig={servicesConfig} />} />
-                {Object.keys(servicesConfig).map((service) => (
+                <Route path="/" element={<Dashboard servicesConfig={sortedServicesConfig} />} />
+                {Object.keys(sortedServicesConfig).map((service) => (
                   <Route
                     key={service}
                     path={`/${service.toLowerCase()}`}
-                    element={<UniversalComponent serviceType={service} servicesConfig={servicesConfig} />}
+                    element={<UniversalComponent serviceType={service} servicesConfig={sortedServicesConfig} />}
                   />
                 ))}
               </Routes>

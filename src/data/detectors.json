@@ -1,379 +1,154 @@
 {
-    "Algolia": {
-        "endpoints": {
-            "keys": {
-                "label": "Keys",
-                "curl": "curl -X GET 'https://<app_id>-dsn.algolia.net/1/keys' -H 'X-Algolia-API-Key: xxxx' -H 'X-Algolia-Application-Id: xxxx'",
-                "request_url": "https://<app_id>-dsn.algolia.net/1/keys",
-                "request_method": "GET"
-            },
-            "indexes": {
-                "label": "Indexes",
-                "curl": "curl -X GET 'https://<app_id>-dsn.algolia.net/1/indexes' -H 'X-Algolia-API-Key: xxxx' -H 'X-Algolia-Application-Id: xxxx'",
-                "request_url": "https://<app_id>-dsn.algolia.net/1/indexes",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Algolia API Key",
-                "placeholder": "xxxx"
-            },
-            "app_id": {
-                "type": "text",
-                "label": "Enter Algolia Application ID",
-                "placeholder": "xxxx"
-            }
-        },
-        "api_documentation_page": "https://www.algolia.com/doc/rest-api/search/"
-    },
-    "Autopilot": {
-        "endpoints": {
-            "contacts": {
-                "label": "Contacts",
-                "curl": "curl -X GET 'https://api2.autopilothq.com/v1/contacts' -H 'autopilotapikey: <api_key>'",
-                "request_url": "https://api2.autopilothq.com/v1/contacts",
-                "request_method": "GET"
-            },
-            "account": {
-                "label": "Account",
-                "curl": "curl -X GET 'https://api2.autopilothq.com/v1/account' -H 'autopilotapikey: <api_key>'",
-                "request_url": "https://api2.autopilothq.com/v1/account",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Autopilot API Key",
-                "placeholder": "xxx-xxxx-xxxx-xxxx-xxxx"
-            }
-        },
-        "api_documentation_page": "https://autopilot.docs.apiary.io/#"
-    },
-    "Bitly": {
-        "endpoints": {
-            "user": {
-                "label": "User",
-                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/user' -H 'Authorization: Bearer xxxx'",
-                "request_url": "https://api-ssl.bitly.com/v4/user",
-                "request_method": "GET"
-            },
-            "organizations": {
-                "label": "Organizations",
-                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/organizations' -H 'Authorization: Bearer xxxx'",
-                "request_url": "https://api-ssl.bitly.com/v4/organizations",
-                "request_method": "GET"
-            },
-            "groups": {
-                "label": "Groups",
-                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/groups' -H 'Authorization: Bearer xxxx'",
-                "request_url": "https://api-ssl.bitly.com/v4/groups",
-                "request_method": "GET"
-            },
-            "get_campaigns": {
-                "label": "Get Campaigns",
-                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/campaigns?group_guid=<group_guid>' -H 'Authorization: Bearer xxxx'",
-                "request_url": "https://api-ssl.bitly.com/v4/campaigns?group_guid=<group_guid>",
-                "request_method": "GET",
-                "override_default_input_field": true,
-                "input_fields": {
-                    "api_token": {
-                        "type": "text",
-                        "label": "Enter Bitly API Token",
-                        "placeholder": "xxxx"
-                    },
-                    "group_guid": {
-                        "type": "text",
-                        "label": "Enter Group GUID (fetched from groups endpoint)",
-                        "placeholder": "xxxx"
-                    }
-                }
-            },
-            "get_click_metric": {
-                "label": "Get Click Metric",
-                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/groups/<group_guid>/countries?unit=month&units=1&size=10&unit_reference=2006-01-02T15%3A04%3A05-0700' -H 'Authorization : Bearer xxxx'",
-                "request_url": "https://api-ssl.bitly.com/v4/groups/Bm4khURQ6e8/countries?unit=month&units=1&size=10&unit_reference=2006-01-02T15%3A04%3A05-0700",
-                "request_method": "GET",
-                "override_default_input_field": true,
-                "input_fields": {
-                    "api_token": {
-                        "type": "text",
-                        "label": "Enter Bitly API Token",
-                        "placeholder": "xxxx"
-                    },
-                    "group_guid": {
-                        "type": "text",
-                        "label": "Enter Group GUID (fetched from groups endpoint)",
-                        "placeholder": "xxxx"
-                    }
-                }
-            }
-        },
-        "input_fields": {
-            "api_token": {
-                "type": "text",
-                "label": "Enter Bitly API Token",
-                "placeholder": "xxxx"
-            }
-        },
-        "api_documentation_page": "https://dev.bitly.com/api-reference"
-    },
-    "Clearbit": {
-        "endpoints": {
-            "person": {
-                "label": "Person",
-                "curl": "curl 'https://person.clearbit.com/v2/people/find?email=test@test.com' -u sk_xxx-xxx-xxx:",
-                "request_url": "https://person.clearbit.com/v2/people/find?email=",
-                "request_method": "GET",
-                "override_default_input_field": true,
-                "input_fields": {
-                    "api_key": {
-                        "type": "text",
-                        "label": "Enter Clearbit API Key",
-                        "placeholder": "sk_xxx"
-                    },
-                    "email": {
-                        "type": "text",
-                        "label": "Enter Email",
-                        "placeholder": "test@test.com"
-                    }
-                }
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Clearbit API Key",
-                "placeholder": "sk_xxx"
-            }
-        },
-        "api_documentation_page": "https://clearbit.com/docs",
-        "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
-            "color": "failure"
-        }
-    },
-    "DigitalOcean": {
-        "endpoints": {
-            "account": {
-                "label": "Account",
-                "curl": "curl -X GET 'https://api.digitalocean.com/v2/account' -H 'Authorization: Bearer dop_v1_xxxxx'",
-                "request_url": "https://api.digitalocean.com/v2/account",
-                "request_method": "GET"
-            },
-            "droplets": {
-                "label": "Droplets",
-                "curl": "curl -X GET 'https://api.digitalocean.com/v2/droplets' -H 'Authorization: Bearer dop_v1_xxxxx'",
-                "request_url": "https://api.digitalocean.com/v2/droplets",
-                "request_method": "GET"
-            },
-            "SSH_keys": {
-                "label": "SSH Keys",
-                "curl": "curl -X GET 'https://api.digitalocean.com/v2/account/keys' -H 'Authorization: Bearer dop_v1_xxxxx'",
-                "request_url": "https://api.digitalocean.com/v2/account/keys",
-                "request_method": "GET"
-            },
-            "database_clusters": {
-                "label": "Database Clusters",
-                "curl": "curl -X GET 'https://api.digitalocean.com/v2/databases' -H 'Authorization: Bearer dop_v1_xxxxx'",
-                "request_url": "https://api.digitalocean.com/v2/databases",
-                "request_method": "GET"
-            },
-            "domains": {
-                "label": "Domains",
-                "curl": "curl -X GET 'https://api.digitalocean.com/v2/domains' -H 'Authorization: Bearer dop_v1_xxxxx'",
-                "request_url": "https://api.digitalocean.com/v2/domains",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter DigitalOcean API Key",
-                "placeholder": "dop_v1_xxxxx"
-            }
-        },
-        "api_documentation_page": "https://docs.digitalocean.com/reference/api/api-reference"
-    },
-    "Doppler": {
-        "endpoints": {
-            "me": {
-                "label": "Me",
-                "curl": "curl -X GET 'https://api.doppler.com/v3/me' -H 'Authorization : Bearer <api_key>'",
-                "request_url": "https://api.doppler.com/v3/me",
-                "request_method": "GET"
-            },
-            "projects": {
-                "label": "Projects",
-                "curl": "curl -X GET 'https://api.doppler.com/v3/projects' -H 'Authorization : Bearer <api_key>'",
-                "request_url": "https://api.doppler.com/v3/projects",
-                "request_method": "GET"
-            },
-            "project_members": {
-                "label": "Project Members",
-                "curl": "curl -X GET 'https://api.doppler.com/v3/projects/project/members?project=<project_id>' -H 'Authorization : Bearer <api_key>'",
-                "request_url": "https://api.doppler.com/v3/projects/project/members?project=<project_id>",
-                "request_method": "GET",
-                "override_default_input_field": true,
-                "input_fields": {
-                    "api_key": {
-                        "type": "text",
-                        "label": "Enter Doppler API Key",
-                        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
-                    },
-                    "project_id": {
-                        "type": "text",
-                        "label": "Enter Project ID (fetched from projects endpoint)",
-                        "placeholder": "xxxx"
-                    }
-                }
-            },
-            "environments": {
-                "label": "Environments",
-                "curl": "curl -X GET 'https://api.doppler.com/v3/environments?project=<project_id>' -H 'Authorization : Bearer <api_key>'",
-                "request_url": "https://api.doppler.com/v3/environments?project=<project_id>",
-                "request_method": "GET",
-                "override_default_input_field": true,
-                "input_fields": {
-                    "api_key": {
-                        "type": "text",
-                        "label": "Enter Doppler API Key",
-                        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
-                    },
-                    "project_id": {
-                        "type": "text",
-                        "label": "Enter Project ID (fetched from projects endpoint)",
-                        "placeholder": "xxxx"
-                    }
-                }
-            },
-            "configs": {
-                "label": "Configs",
-                "curl": "curl -X GET 'https://api.doppler.com/v3/configs?project=<project_id>&environment=<environment_id>' -H 'Authorization : Bearer <api_key>'",
-                "request_url": "https://api.doppler.com/v3/configs?project=<project_id>&environment=<environment_id>",
-                "request_method": "GET",
-                "override_default_input_field": true,
-                "input_fields": {
-                    "api_key": {
-                        "type": "text",
-                        "label": "Enter Doppler API Key",
-                        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
-                    },
-                    "project_id": {
-                        "type": "text",
-                        "label": "Enter Project ID (fetched from projects endpoint)",
-                        "placeholder": "xxxx"
-                    },
-                    "environment_id": {
-                        "type": "text",
-                        "label": "Enter Environment ID (fetched from environments endpoint)",
-                        "placeholder": "xxxx"
-                    }
-                }
-            },
-            "secrets": {
-                "label": "Secrets",
-                "curl": "curl -X GET 'https://api.doppler.com/v3/secrets?project=<project_id>&config=<config_id>' -H 'Authorization : Bearer <api_key>'",
-                "request_url": "https://api.doppler.com/v3/secrets?project=<project_id>&config=<config_id>",
-                "request_method": "GET",
-                "override_default_input_field": true,
-                "input_fields": {
-                    "api_key": {
-                        "type": "text",
-                        "label": "Enter Doppler API Key",
-                        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
-                    },
-                    "project_id": {
-                        "type": "text",
-                        "label": "Enter Project ID (fetched from projects endpoint)",
-                        "placeholder": "xxxx"
-                    },
-                    "config_id": {
-                        "type": "text",
-                        "label": "Enter Config ID (fetched from configs endpoint)",
-                        "placeholder": "xxxx"
-                    }
-                }
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Doppler API Key",
-                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
-            }
-        },
-        "api_documentation_page": "https://docs.doppler.com/docs/start",
-        "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
-            "color": "failure"
-        }
-    },
-    "Eventbrite": {
+    "Stripe": {
         "endpoints": {
             "account_metadata": {
                 "label": "Account Metadata",
-                "curl": "curl -X GET 'https://www.eventbriteapi.com/v3/users/me/?token=xxxxx'",
-                "request_url": "https://www.eventbriteapi.com/v3/users/me/",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "token": {
-                "type": "text",
-                "label": "Enter Eventbrite Token",
-                "placeholder": "xxxxx"
-            }
-        },
-        "api_documentation_page": "https://www.eventbrite.com/platform/api"
-    },
-    "GetResponse": {
-        "endpoints": {
-            "accounts": {
-                "label": "Accounts",
-                "curl": "curl -X GET 'https://api.getresponse.com/v3/accounts' -H 'X-Auth-Token: api-key <api_key>'",
-                "request_url": "https://api.getresponse.com/v3/accounts",
+                "curl": "curl https://api.stripe.com/v1/account -u sk_live_xxxx:",
+                "request_url": "https://api.stripe.com/v1/account",
                 "request_method": "GET"
             },
-            "campaigns": {
-                "label": "Campaigns",
-                "curl": "curl -X GET 'https://api.getresponse.com/v3/campaigns' -H 'X-Auth-Token: api-key <api_key>'",
-                "request_url": "https://api.getresponse.com/v3/campaigns",
+            "balance": {
+                "label": "Balance",
+                "curl": "curl https://api.stripe.com/v1/balance -u sk_live_xxxx:",
+                "request_url": "https://api.stripe.com/v1/balance",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Stripe API Key",
+                        "placeholder": "sk_live_xxxx"
+                    }
+                }
+            },
+            "customers": {
+                "label": "Customers",
+                "curl": "curl https://api.stripe.com/v1/customers -u sk_live_xxxx:",
+                "request_url": "https://api.stripe.com/v1/customers",
                 "request_method": "GET"
             },
-            "contacts": {
-                "label": "Contacts",
-                "curl": "curl -X GET 'https://api.getresponse.com/v3/contacts' -H 'X-Auth-Token: api-key <api_key>'",
-                "request_url": "https://api.getresponse.com/v3/contacts",
+            "orders": {
+                "label": "Orders",
+                "curl": "curl https://api.stripe.com/v1/orders -u sk_live_xxxx:",
+                "request_url": "https://api.stripe.com/v1/orders",
                 "request_method": "GET"
             },
-            "webforms": {
-                "label": "Webforms",
-                "curl": "curl -X GET 'https://api.getresponse.com/v3/webforms' -H 'X-Auth-Token: api-key <api_key>'",
-                "request_url": "https://api.getresponse.com/v3/webforms",
+            "payment_intents": {
+                "label": "Payment Intents",
+                "curl": "curl https://api.stripe.com/v1/payment_intents -u sk_live_xxxx:",
+                "request_url": "https://api.stripe.com/v1/payment_intents",
                 "request_method": "GET"
             },
-            "newsletters": {
-                "label": "Newsletters",
-                "curl": "curl -X GET 'https://api.getresponse.com/v3/newsletters' -H 'X-Auth-Token: api-key <api_key>'",
-                "request_url": "https://api.getresponse.com/v3/newsletters",
+            "charges": {
+                "label": "Charges",
+                "curl": "curl https://api.stripe.com/v1/charges -u sk_live_xxxx:",
+                "request_url": "https://api.stripe.com/v1/charges",
                 "request_method": "GET"
             }
         },
         "input_fields": {
             "api_key": {
                 "type": "text",
-                "label": "Enter GetResponse API Key",
-                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+                "label": "Enter Stripe API Key",
+                "placeholder": "sk_live_xxxx"
             }
         },
-        "api_documentation_page": "https://apidocs.getresponse.com/v3",
-        "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
-            "color": "failure"
-        }
+        "api_documentation_page": "https://stripe.com/docs/api"
+    },
+    "Paypal": {
+        "endpoints": {
+            "get_access_scope": {
+                "label": "Access Scope",
+                "curl": "curl -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials'",
+                "request_url": "https://api.paypal.com/v1/oauth2/token",
+                "request_method": "GET"
+            },
+            "get_account": {
+                "label": "Account",
+                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/identity/openidconnect/userinfo/?schema=openid' -H 'Authorization: Bearer $access_token'",
+                "request_url": "https://api.paypal.com/v1/identity/openidconnect/userinfo/?schema=openid",
+                "request_method": "GET"
+            },
+            "get_payments": {
+                "label": "Payments",
+                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/payments/payment' -H 'Authorization: Bearer $access_token'",
+                "request_url": "https://api.paypal.com/v1/payments/payment",
+                "request_method": "GET"
+            },
+            "webhooks": {
+                "label": "Webhooks",
+                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/notifications/webhooks' -H 'Authorization: Bearer $access_token'",
+                "request_url": "https://api.paypal.com/v1/notifications/webhooks",
+                "request_method": "GET"
+            },
+            "balance": {
+                "label": "Balance",
+                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/reporting/balances' -H 'Authorization: Bearer $access_token'",
+                "request_url": "https://api.paypal.com/v1/reporting/balances",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "client_id": {
+                "type": "text",
+                "label": "Enter Client ID",
+                "placeholder": "Axxxx-xxxxx-xxxxx-xxxxxx"
+            },
+            "client_secret": {
+                "type": "text",
+                "label": "Enter Client Secret",
+                "placeholder": "Exxxx-xxxxx-xxxxx-xxxxxx"
+            }
+        },
+        "api_documentation_page": "https://developer.paypal.com/docs/api/overview/"
+    },
+    "OpenAI": {
+        "endpoints": {
+            "organizations": {
+                "label": "Organizations",
+                "curl": "curl -X GET 'https://api.openai.com/v1/organizations' -H 'Authorization: Bearer sk-xxxx'",
+                "request_url": "https://api.openai.com/v1/organizations",
+                "request_method": "GET"
+            },
+            "models": {
+                "label": "Models",
+                "curl": "curl -X GET 'https://api.openai.com/v1/models' -H 'Authorization: Bearer sk-xxxx'",
+                "request_url": "https://api.openai.com/v1/models",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter OpenAI API Key",
+                "placeholder": "sk-xxxxx-xxxxx-xxxxx-xxxxx"
+            }
+        },
+        "api_documentation_page": "https://platform.openai.com/docs/api-reference/"
+    },
+    "Paystack": {
+        "endpoints": {
+            "transaction": {
+                "label": "Transaction",
+                "curl": "curl -X GET https://api.paystack.co/transaction -H 'Authorization: Bearer sk_live'",
+                "request_url": "https://api.paystack.co/transaction",
+                "request_method": "GET"
+            },
+            "customer": {
+                "label": "Customer",
+                "curl": "curl -X GET https://api.paystack.co/customer -H 'Authorization: Bearer sk_live'",
+                "request_url": "https://api.paystack.co/customer",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Paystack API Key",
+                "placeholder": "sk_live_xxxx"
+            }
+        },
+        "api_documentation_page": "https://paystack.com/docs/api/"
     },
     "Github": {
         "endpoints": {
@@ -453,106 +228,6 @@
         },
         "api_documentation_page": "https://docs.gitlab.com/ee/api/api_resources.html"
     },
-    "Helpscout": {
-        "endpoints": {
-            "collections": {
-                "label": "Article Collections",
-                "curl": "curl -X GET 'https://docsapi.helpscout.net/v1/collections' -u <api_key>:X",
-                "request_url": "https://docsapi.helpscout.net/v1/collections",
-                "request_method": "GET"
-            },
-            "sites": {
-                "label": "Sites",
-                "curl": "curl -X GET 'https://docsapi.helpscout.net/v1/sites' -u <api_key>:X",
-                "request_url": "https://docsapi.helpscout.net/v1/sites",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Helpscout API Key",
-                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
-            }
-        },
-        "api_documentation_page": "https://developer.helpscout.com/docs-api/"
-    },
-    "Honeycomb": {
-        "endpoints": {
-            "auth": {
-                "label": "Auth",
-                "curl": "curl -X GET 'https://api.honeycomb.io/1/auth' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
-                "request_url": "https://api.honeycomb.io/1/auth",
-                "request_method": "GET"
-            },
-            "boards": {
-                "label": "Boards",
-                "curl": "curl -X GET 'https://api.honeycomb.io/1/boards' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
-                "request_url": "https://api.honeycomb.io/1/boards",
-                "request_method": "GET"
-            },
-            "datasets": {
-                "label": "Datasets",
-                "curl": "curl -X GET 'https://api.honeycomb.io/1/datasets' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
-                "request_url": "https://api.honeycomb.io/1/datasets",
-                "request_method": "GET"
-            },
-            "recipients": {
-                "label": "Recipients",
-                "curl": "curl -X GET 'https://api.honeycomb.io/1/recipients' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
-                "request_url": "https://api.honeycomb.io/1/recipients",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Honeycomb API Key",
-                "placeholder": "xxxxxxxxxx"
-            }
-        },
-        "api_documentation_page": "https://docs.honeycomb.io/api/"
-    },
-    "HuggingFace": {
-        "endpoints": {
-            "whoami": {
-                "label": "WhoAmI",
-                "curl": "curl -X GET https://huggingface.co/api/whoami-v2 -H 'authorization: Bearer <api_token>'",
-                "request_url": "https://huggingface.co/api/whoami-v2",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_token": {
-                "type": "text",
-                "label": "Enter Hugging Face API Token",
-                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
-            }
-        },
-        "api_documentation_page": "https://huggingface.co/docs/hub/api"
-    },
-    "Klaviyo": {
-        "endpoints": {
-            "profiles": {
-                "label": "Profiles",
-                "curl": "curl https://a.klaviyo.com/api/profiles -H 'Revision: 2023-02-22' -H 'Authorization: Klaviyo-API-Key pk_xxxx-xxxx-xxxx-xxxx-xxxx'",
-                "request_url": "https://a.klaviyo.com/api/profiles",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Klaviyo API Key",
-                "placeholder": "pk_xxxx-xxxx-xxxx-xxxx-xxxx"
-            }
-        },
-        "api_documentation_page": "https://developers.klaviyo.com/en/reference/api_overview",
-        "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
-            "color": "failure"
-        }
-    },
     "LaunchDarkly": {
         "endpoints": {
             "projects": {
@@ -571,80 +246,199 @@
         },
         "api_documentation_page": "https://apidocs.launchdarkly.com/"
     },
-    "MadKudu": {
+    "Omnisend": {
         "endpoints": {
-            "domain_lookup": {
-                "label": "Domain Lookup",
-                "curl": "curl -X GET 'https://api.madkudu.com/v1/companies?domain=madkudu.com' --user <api_key>:",
-                "request_url": "https://api.madkudu.com/v1/companies?domain=madkudu.com",
+            "contacts": {
+                "label": "Contacts",
+                "curl": "curl -X GET https://api.omnisend.com/v3/contacts?limit=100 -H 'X-API-KEY: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
+                "request_url": "https://api.omnisend.com/v3/contacts?limit=100",
                 "request_method": "GET"
             },
-            "person_lookup": {
-                "label": "Person Lookup",
-                "curl": "curl -X GET 'https://api.madkudu.com/v1/persons?email=paul@madkudu.com' --user <api_key>:",
-                "request_url": "https://api.madkudu.com/v1/persons?email=paul@madkudu.com",
+            "orders": {
+                "label": "Orders",
+                "curl": "curl -X GET https://api.omnisend.com/v3/orders?limit=100 -H 'X-API-KEY: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
+                "request_url": "https://api.omnisend.com/v3/orders?limit=100",
+                "request_method": "GET"
+            },
+            "campaigns": {
+                "label": "Campaigns",
+                "curl": "curl -X GET",
+                "request_url": "https://api.omnisend.com/v3/campaigns?limit=100",
                 "request_method": "GET"
             }
         },
         "input_fields": {
             "api_key": {
                 "type": "text",
-                "label": "Enter MadKudu API Key",
-                "placeholder": "xxx-xxxx-xxxx-xxxx-xxxx"
+                "label": "Enter Omnisend API Key",
+                "placeholder": "xxx-xxxxx-xxxxx-xxxxx-xxxxx"
             }
         },
-        "api_documentation_page": "https://developers.madkudu.com/",
+        "api_documentation_page": "https://api-docs.omnisend.com/reference/"
+    },
+    "Shopify": {
+        "endpoints": {
+            "orders": {
+                "label": "Orders",
+                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/orders.json -H 'X-Shopify-Access-Token: shp_12345'",
+                "request_url": "https://shopify.com/admin/api/2023-10/orders.json",
+                "request_method": "GET"
+            },
+            "customers": {
+                "label": "Customers",
+                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/customers.json -H 'X-Shopify-Access-Token: shp_12345'",
+                "request_url": "https://shopify.com/admin/api/2023-10/customers.json",
+                "request_method": "GET"
+            },
+            "orders_count": {
+                "label": "Orders Count",
+                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/orders/count.json -H 'X-Shopify-Access-Token: shp_12345'",
+                "request_url": "https://shopify.com/admin/api/2023-10/orders/count.json",
+                "request_method": "GET"
+            },
+            "customers_count": {
+                "label": "Customers Count",
+                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/customers/count.json -H 'X-Shopify-Access-Token: shp_12345'",
+                "request_url": "https://shopify.com/admin/api/2023-10/customers/count.json",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Shopify API Key",
+                "placeholder": "shp_12345"
+            },
+            "store_domain": {
+                "type": "text",
+                "label": "Enter Store Domain",
+                "placeholder": "store.myshopify.com"
+            }
+        },
+        "api_documentation_page": "https://shopify.dev/docs/api/admin-rest",
         "alert": {
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
             "color": "failure"
         }
     },
-    "MailChimp": {
+    "Telegram": {
         "endpoints": {
-            "account": {
-                "label": "Account",
-                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/ --user 'anystring:<api_key>'",
-                "request_url": "https://<dc>.api.mailchimp.com/3.0/",
+            "bot_info": {
+                "label": "Bot Info",
+                "curl": "curl -X GET https://api.telegram.org/bot<your-bot-token>/getMe",
+                "request_url": "https://api.telegram.org/bot<token>/getMe",
                 "request_method": "GET"
             },
-            "conversations": {
-                "label": "Conversations",
-                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/conversations --user 'anystring:<api_key>'",
-                "request_url": "https://<dc>.api.mailchimp.com/3.0/conversations",
+            "get_updates": {
+                "label": "Updates",
+                "curl": "curl -X GET https://api.telegram.org/bot<your-bot-token>/getUpdates",
+                "request_url": "https://api.telegram.org/bot<token>/getUpdates",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "bot_token": {
+                "type": "text",
+                "label": "Enter Bot Token",
+                "placeholder": "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"
+            }
+        },
+        "api_documentation_page": "https://core.telegram.org/bots/api"
+    },
+    "Clearbit": {
+        "endpoints": {
+            "person": {
+                "label": "Person",
+                "curl": "curl 'https://person.clearbit.com/v2/people/find?email=test@test.com' -u sk_xxx-xxx-xxx:",
+                "request_url": "https://person.clearbit.com/v2/people/find?email=",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Clearbit API Key",
+                        "placeholder": "sk_xxx"
+                    },
+                    "email": {
+                        "type": "text",
+                        "label": "Enter Email",
+                        "placeholder": "test@test.com"
+                    }
+                }
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Clearbit API Key",
+                "placeholder": "sk_xxx"
+            }
+        },
+        "api_documentation_page": "https://clearbit.com/docs",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
+    },
+    "SendInBlue": {
+        "endpoints": {
+            "contacts": {
+                "label": "Contacts",
+                "curl": "curl -X GET https://api.sendinblue.com/v3/contacts -H 'api-key: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
+                "request_url": "https://api.sendinblue.com/v3/contacts",
                 "request_method": "GET"
             },
             "campaigns": {
                 "label": "Campaigns",
-                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/campaigns --user 'anystring:<api_key>'",
-                "request_url": "https://<dc>.api.mailchimp.com/3.0/campaigns",
+                "curl": "curl -X GET https://api.sendinblue.com/v3/emailCampaigns -H 'api-key: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
+                "request_url": "https://api.sendinblue.com/v3/emailCampaigns",
                 "request_method": "GET"
             },
-            "automations": {
-                "label": "Automations",
-                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/automations --user 'anysting:<api_key>'",
-                "request_url": "https://<dc>.api.mailchimp.com/3.0/automations",
-                "request_method": "GET"
-            },
-            "lists": {
-                "label": "Lists",
-                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/lists --user 'anystring:<api_key>'",
-                "request_url": "https://<dc>.api.mailchimp.com/3.0/lists",
+            "account": {
+                "label": "Account",
+                "curl": "curl -X GET https://api.sendinblue.com/v3/account -H 'api-key:  xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
+                "request_url": "https://api.sendinblue.com/v3/account",
                 "request_method": "GET"
             }
         },
         "input_fields": {
             "api_key": {
                 "type": "text",
-                "label": "Enter MailChimp API Key",
-                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
-            },
-            "dc": {
-                "type": "text",
-                "label": "Enter Data Center",
-                "placeholder": "us1"
+                "label": "Enter SendInBlue API Key",
+                "placeholder": "xkeysib-xxx-xxxxx-xxxxx-xxxxx-xxxxx"
             }
         },
-        "api_documentation_page": "https://mailchimp.com/developer/marketing/api/",
+        "api_documentation_page": "https://developers.sendinblue.com/reference"
+    },
+    "RechargePayments": {
+        "endpoints": {
+            "charges": {
+                "label": "Charges",
+                "curl": "curl -X GET https://api.rechargeapps.com/charges -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
+                "request_url": "https://api.rechargeapps.com/charges",
+                "request_method": "GET"
+            },
+            "orders": {
+                "label": "Orders",
+                "curl": "curl -X GET https://api.rechargeapps.com/orders -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
+                "request_url": "https://api.rechargeapps.com/orders",
+                "request_method": "GET"
+            },
+            "customers": {
+                "label": "Customers",
+                "curl": "curl -X GET https://api.rechargeapps.com/customers -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
+                "request_url": "https://api.rechargeapps.com/customers",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Recharge API Key",
+                "placeholder": "sk_xxx-xxx-xxx"
+            }
+        },
+        "api_documentation_page": "https://developer.rechargepayments.com/",
         "alert": {
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
             "color": "failure"
@@ -684,398 +478,46 @@
             "color": "failure"
         }
     },
-    "Mailgun": {
+    "Trello": {
         "endpoints": {
-            "domains": {
-                "label": "Domains",
-                "curl": "curl -X GET https://api.mailgun.net/v3/domains -u 'api:<api_key>'",
-                "request_url": "https://api.mailgun.net/v3/domains",
+            "about_me": {
+                "label": "Account Metadata",
+                "curl": "curl -X GET 'https://api.trello.com/1/members/me?key=<key>&token=<token>'",
+                "request_url": "https://api.trello.com/1/members/me?key=<key>&token=<token>",
                 "request_method": "GET"
             },
-            "events": {
-                "label": "Events",
-                "curl": "curl -X GET https://api.mailgun.net/v3/<domain>/events -u 'api:<api_key>'",
-                "request_url": "https://api.mailgun.net/v3/<domain>/events",
-                "request_method": "GET",
-                "override_default_input_field": true,
-                "input_fields": {
-                    "api_key": {
-                        "type": "text",
-                        "label": "Enter Mailgun API Key",
-                        "placeholder": "key-xxxx-xxxx-xxxx-xxxx"
-                    },
-                    "domain": {
-                        "type": "text",
-                        "label": "Enter Domain (fetched from domain endpoint)",
-                        "placeholder": "example.com"
-                    }
-                }
+            "boards": {
+                "label": "Boards",
+                "curl": "curl -X GET 'https://api.trello.com/1/members/me/boards?key=<key>&token=<token>'",
+                "request_url": "https://api.trello.com/1/members/me/boards?key=<key>&token=<token>",
+                "request_method": "GET"
             },
-            "bounces": {
-                "label": "Bounces",
-                "curl": "curl -X GET https://api.mailgun.net/v3/<domain>/bounces -u 'api:<api_key>'",
-                "request_url": "https://api.mailgun.net/v3/<domain>/bounces",
-                "request_method": "GET",
-                "override_default_input_field": true,
-                "input_fields": {
-                    "api_key": {
-                        "type": "text",
-                        "label": "Enter Mailgun API Key",
-                        "placeholder": "key-xxxx-xxxx-xxxx-xxxx"
-                    },
-                    "domain": {
-                        "type": "text",
-                        "label": "Enter Domain (fetched from domain endpoint)",
-                        "placeholder": "example.com"
-                    }
-                }
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Mailgun API Key",
-                "placeholder": "key-xxxx-xxxx-xxxx-xxxx"
-            }
-        },
-        "api_documentation_page": "https://documentation.mailgun.com/en/latest/api_reference.html"
-    },
-    "Notion": {
-        "endpoints": {
-            "users": {
-                "label": "Users",
-                "curl": "curl -X GET 'https://api.notion.com/v1/users' -H 'Notion-Version: 2022-06-28' -H 'Authorization: Bearer <api_key>'",
-                "request_url": "https://api.notion.com/v1/users",
+            "organizations": {
+                "label": "Organizations",
+                "curl": "curl -X GET 'https://api.trello.com/1/members/me/organizations?key=<key>&token=<token>'",
+                "request_url": "https://api.trello.com/1/members/me/organizations?key=<key>&token=<token>",
+                "request_method": "GET"
+            },
+            "actions": {
+                "label": "Actions",
+                "curl": "curl -X GET 'https://api.trello.com/1/members/me/actions?key=<key>&token=<token>'",
+                "request_url": "https://api.trello.com/1/members/me/actions?key=<key>&token=<token>",
                 "request_method": "GET"
             }
         },
         "input_fields": {
-            "api_key": {
+            "key": {
                 "type": "text",
-                "label": "Enter Notion API Key",
-                "placeholder": "secret_xxxx-xxxx-xxxx-xxxx-xxxx"
-            }
-        },
-        "api_documentation_page": "https://developers.notion.com/reference/",
-        "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
-            "color": "failure"
-        }
-    },
-    "NpmToken": {
-        "endpoints": {
-            "whoami": {
-                "label": "User",
-                "curl": "curl -X GET https://registry.npmjs.org/-/whoami -H 'Authorization: Bearer <token>'",
-                "request_url": "https://registry.npmjs.org/-/whoami",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
+                "label": "Enter Trello Key",
+                "placeholder": "xxxx-xxx-xxx"
+            },
             "token": {
                 "type": "text",
-                "label": "Enter NPM Token",
-                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+                "label": "Enter Trello Token",
+                "placeholder": "xxxx-xxx-xxx"
             }
         },
-        "api_documentation_page": "https://docs.npmjs.com/cli/v7/commands/npm-token",
-        "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
-            "color": "failure"
-        }
-    },
-    "Omnisend": {
-        "endpoints": {
-            "contacts": {
-                "label": "Contacts",
-                "curl": "curl -X GET https://api.omnisend.com/v3/contacts?limit=100 -H 'X-API-KEY: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
-                "request_url": "https://api.omnisend.com/v3/contacts?limit=100",
-                "request_method": "GET"
-            },
-            "orders": {
-                "label": "Orders",
-                "curl": "curl -X GET https://api.omnisend.com/v3/orders?limit=100 -H 'X-API-KEY: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
-                "request_url": "https://api.omnisend.com/v3/orders?limit=100",
-                "request_method": "GET"
-            },
-            "campaigns": {
-                "label": "Campaigns",
-                "curl": "curl -X GET",
-                "request_url": "https://api.omnisend.com/v3/campaigns?limit=100",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Omnisend API Key",
-                "placeholder": "xxx-xxxxx-xxxxx-xxxxx-xxxxx"
-            }
-        },
-        "api_documentation_page": "https://api-docs.omnisend.com/reference/"
-    },
-    "OpenAI": {
-        "endpoints": {
-            "organizations": {
-                "label": "Organizations",
-                "curl": "curl -X GET 'https://api.openai.com/v1/organizations' -H 'Authorization: Bearer sk-xxxx'",
-                "request_url": "https://api.openai.com/v1/organizations",
-                "request_method": "GET"
-            },
-            "models": {
-                "label": "Models",
-                "curl": "curl -X GET 'https://api.openai.com/v1/models' -H 'Authorization: Bearer sk-xxxx'",
-                "request_url": "https://api.openai.com/v1/models",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter OpenAI API Key",
-                "placeholder": "sk-xxxxx-xxxxx-xxxxx-xxxxx"
-            }
-        },
-        "api_documentation_page": "https://platform.openai.com/docs/api-reference/"
-    },
-    "Opsgenie": {
-        "endpoints": {
-            "Alerts": {
-                "label": "Alerts",
-                "curl": "curl -X GET 'https://api.opsgenie.com/v2/alerts' -H 'Authorization: GenieKey <api_key>'",
-                "request_url": "https://api.opsgenie.com/v2/alerts",
-                "request_method": "GET"
-            },
-            "AlertsCount": {
-                "label": "Alerts Count",
-                "curl": "curl -X GET 'https://api.opsgenie.com/v2/alerts/count' -H 'Authorization: GenieKey <api_key>'",
-                "request_url": "https://api.opsgenie.com/v2/alerts/count",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Opsgenie API Key",
-                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
-            }
-        },
-        "api_documentation_page": "https://docs.opsgenie.com/docs/service-api",
-        "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
-            "color": "failure"
-        }
-    },
-    "Paypal": {
-        "endpoints": {
-            "get_access_scope": {
-                "label": "Access Scope",
-                "curl": "curl -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials'",
-                "request_url": "https://api.paypal.com/v1/oauth2/token",
-                "request_method": "GET"
-            },
-            "get_account": {
-                "label": "Account",
-                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/identity/openidconnect/userinfo/?schema=openid' -H 'Authorization: Bearer $access_token'",
-                "request_url": "https://api.paypal.com/v1/identity/openidconnect/userinfo/?schema=openid",
-                "request_method": "GET"
-            },
-            "get_payments": {
-                "label": "Payments",
-                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/payments/payment' -H 'Authorization: Bearer $access_token'",
-                "request_url": "https://api.paypal.com/v1/payments/payment",
-                "request_method": "GET"
-            },
-            "webhooks": {
-                "label": "Webhooks",
-                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/notifications/webhooks' -H 'Authorization: Bearer $access_token'",
-                "request_url": "https://api.paypal.com/v1/notifications/webhooks",
-                "request_method": "GET"
-            },
-            "balance": {
-                "label": "Balance",
-                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/reporting/balances' -H 'Authorization: Bearer $access_token'",
-                "request_url": "https://api.paypal.com/v1/reporting/balances",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "client_id": {
-                "type": "text",
-                "label": "Enter Client ID",
-                "placeholder": "Axxxx-xxxxx-xxxxx-xxxxxx"
-            },
-            "client_secret": {
-                "type": "text",
-                "label": "Enter Client Secret",
-                "placeholder": "Exxxx-xxxxx-xxxxx-xxxxxx"
-            }
-        },
-        "api_documentation_page": "https://developer.paypal.com/docs/api/overview/"
-    },
-    "Paystack": {
-        "endpoints": {
-            "transaction": {
-                "label": "Transaction",
-                "curl": "curl -X GET https://api.paystack.co/transaction -H 'Authorization: Bearer sk_live'",
-                "request_url": "https://api.paystack.co/transaction",
-                "request_method": "GET"
-            },
-            "customer": {
-                "label": "Customer",
-                "curl": "curl -X GET https://api.paystack.co/customer -H 'Authorization: Bearer sk_live'",
-                "request_url": "https://api.paystack.co/customer",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Paystack API Key",
-                "placeholder": "sk_live_xxxx"
-            }
-        },
-        "api_documentation_page": "https://paystack.com/docs/api/"
-    },
-    "Pipedrive": {
-        "endpoints": {
-            "deals": {
-                "label": "Deals",
-                "curl": "curl -X GET 'https://api.pipedrive.com/v1/deals?api_token=xxxxx'",
-                "request_url": "https://api.pipedrive.com/v1/deals",
-                "request_method": "GET"
-            },
-            "persons": {
-                "label": "Persons",
-                "curl": "curl -X GET 'https://api.pipedrive.com/v1/persons?api_token=xxxxx'",
-                "request_url": "https://api.pipedrive.com/v1/persons",
-                "request_method": "GET"
-            },
-            "organizations": {
-                "label": "Organizations",
-                "curl": "curl -X GET 'https://api.pipedrive.com/v1/organizations?api_token=xxxxx'",
-                "request_url": "https://api.pipedrive.com/v1/organizations",
-                "request_method": "GET"
-            },
-            "activities": {
-                "label": "Activities",
-                "curl": "curl -X GET 'https://api.pipedrive.com/v1/activities?api_token=xxxxx'",
-                "request_url": "https://api.pipedrive.com/v1/activities",
-                "request_method": "GET"
-            },
-            "notes": {
-                "label": "Notes",
-                "curl": "curl -X GET 'https://api.pipedrive.com/v1/notes?api_token=xxxxx'",
-                "request_url": "https://api.pipedrive.com/v1/notes",
-                "request_method": "GET"
-            },
-            "users": {
-                "label": "Users",
-                "curl": "curl -X GET 'https://api.pipedrive.com/v1/users?api_token=xxxxx'",
-                "request_url": "https://api.pipedrive.com/v1/users",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_token": {
-                "type": "text",
-                "label": "Enter Pipedrive API Token",
-                "placeholder": "xxxxx"
-            }
-        },
-        "api_documentation_page": "https://developers.pipedrive.com/docs/api/v1/"
-    },
-    "Posthog": {
-        "endpoints": {
-            "Account": {
-                "label": "Account",
-                "curl": "curl -X GET 'https://app.posthog.com/api/users/@me/?personal_api_key=<api_key>' -H 'Content-Type: application/json' \n OR curl -X GET 'https://eu.posthog.com/api/users/@me/?personal_api_key=<api_key>' -H 'Content-Type: application/json'",
-                "request_url": "https://app.posthog.com/api/users/@me/?personal_api_key=<api_key>",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Posthog API Key",
-                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
-            }
-        },
-        "api_documentation_page": "https://posthog.com/docs/api",
-        "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
-            "color": "failure"
-        }
-    },
-    "Postman": {
-        "endpoints": {
-            "profile": {
-                "label": "Profile",
-                "curl": "curl -X GET 'https://api.getpostman.com/me' -H 'X-Api-Key: <api_key>'",
-                "request_url": "https://api.getpostman.com/me",
-                "request_method": "GET"
-            },
-            "accounts": {
-                "label": "Accounts",
-                "curl": "curl -X GET 'https://api.getpostman.com/accounts' -H 'X-Api-Key: <api_key>'",
-                "request_url": "https://api.getpostman.com/accounts",
-                "request_method": "GET"
-            },
-            "collections": {
-                "label": "Collections",
-                "curl": "curl -X GET 'https://api.getpostman.com/collections' -H 'X-Api-Key: <api_key>'",
-                "request_url": "https://api.getpostman.com/collections",
-                "request_method": "GET"
-            },
-            "workspaces": {
-                "label": "Workspaces",
-                "curl": "curl -X GET 'https://api.getpostman.com/workspaces' -H 'X-Api-Key: <api_key>'",
-                "request_url": "https://api.getpostman.com/workspaces",
-                "request_method": "GET"
-            },
-            "environments": {
-                "label": "Environments",
-                "curl": "curl -X GET 'https://api.getpostman.com/environments' -H 'X-Api-Key: <api_key>'",
-                "request_url": "https://api.getpostman.com/environments",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Postman API Key",
-                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
-            }
-        },
-        "api_documentation_page": "https://docs.api.getpostman.com/"
-    },
-    "Postmark": {
-        "endpoints": {
-            "server": {
-                "label": "Server",
-                "curl": "curl -X GET https://api.postmarkapp.com/server -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'X-Postmark-Server-Token: xxx-xxxx-xxxx-xxxx-xxxx'",
-                "request_url": "https://api.postmarkapp.com/server",
-                "request_method": "GET"
-            },
-            "deliverystats": {
-                "label": "Delivery Stats",
-                "curl": "curl -X GET https://api.postmarkapp.com/deliverystats -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'X-Postmark-Server-Token: xxx-xxxx-xxxx-xxxx-xxxx'",
-                "request_url": "https://api.postmarkapp.com/deliverystats",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "server_token": {
-                "type": "text",
-                "label": "Enter Postmark Server Token",
-                "placeholder": "xxx-xxxx-xxxx-xxxx-xxxx"
-            }
-        },
-        "api_documentation_page": "https://postmarkapp.com/developer/api/email-api",
-        "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
-            "color": "failure"
-        }
+        "api_documentation_page": "https://developer.atlassian.com/cloud/trello/rest/api-group-actions/"
     },
     "RazorPay": {
         "endpoints": {
@@ -1139,389 +581,6 @@
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
             "color": "failure"
         }
-    },
-    "RechargePayments": {
-        "endpoints": {
-            "charges": {
-                "label": "Charges",
-                "curl": "curl -X GET https://api.rechargeapps.com/charges -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
-                "request_url": "https://api.rechargeapps.com/charges",
-                "request_method": "GET"
-            },
-            "orders": {
-                "label": "Orders",
-                "curl": "curl -X GET https://api.rechargeapps.com/orders -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
-                "request_url": "https://api.rechargeapps.com/orders",
-                "request_method": "GET"
-            },
-            "customers": {
-                "label": "Customers",
-                "curl": "curl -X GET https://api.rechargeapps.com/customers -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
-                "request_url": "https://api.rechargeapps.com/customers",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Recharge API Key",
-                "placeholder": "sk_xxx-xxx-xxx"
-            }
-        },
-        "api_documentation_page": "https://developer.rechargepayments.com/",
-        "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
-            "color": "failure"
-        }
-    },
-    "SendGrid": {
-        "endpoints": {
-            "templates": {
-                "label": "Templates",
-                "curl": "curl -X GET https://api.sendgrid.com/v3/templates -H 'Authorization: Bearer SG.xxxxx'",
-                "request_url": "https://api.sendgrid.com/v3/templates",
-                "request_method": "GET"
-            },
-            "customer_accounts": {
-                "label": "Customer Accounts",
-                "curl": "curl -X GET https://api.sendgrid.com/v3/partners/accounts -H 'Authorization: Bearer SG.xxxxx'",
-                "request_url": "https://api.sendgrid.com/v3/partners/accounts",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter SendGrid API Key",
-                "placeholder": "SG.xxxxx"
-            }
-        },
-        "api_documentation_page": "https://docs.sendgrid.com/api-reference"
-    },
-    "SendInBlue": {
-        "endpoints": {
-            "contacts": {
-                "label": "Contacts",
-                "curl": "curl -X GET https://api.sendinblue.com/v3/contacts -H 'api-key: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
-                "request_url": "https://api.sendinblue.com/v3/contacts",
-                "request_method": "GET"
-            },
-            "campaigns": {
-                "label": "Campaigns",
-                "curl": "curl -X GET https://api.sendinblue.com/v3/emailCampaigns -H 'api-key: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
-                "request_url": "https://api.sendinblue.com/v3/emailCampaigns",
-                "request_method": "GET"
-            },
-            "account": {
-                "label": "Account",
-                "curl": "curl -X GET https://api.sendinblue.com/v3/account -H 'api-key:  xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
-                "request_url": "https://api.sendinblue.com/v3/account",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter SendInBlue API Key",
-                "placeholder": "xkeysib-xxx-xxxxx-xxxxx-xxxxx-xxxxx"
-            }
-        },
-        "api_documentation_page": "https://developers.sendinblue.com/reference"
-    },
-    "Shodan": {
-        "endpoints": {
-            "profile": {
-                "label": "Profile",
-                "curl": "curl -X GET 'https://api.shodan.io/account/profile?key=<api_key>'",
-                "request_url": "https://api.shodan.io/account/profile?key=<api_key>",
-                "request_method": "GET"
-            },
-            "organization": {
-                "label": "Organization",
-                "curl": "curl -X GET 'https://api.shodan.io/org?key=<api_key>'",
-                "request_url": "https://api.shodan.io/org?key=<api_key>",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Shodan API Key",
-                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
-            }
-        },
-        "api_documentation_page": "https://developer.shodan.io/api"
-    },
-    "Shopify": {
-        "endpoints": {
-            "orders": {
-                "label": "Orders",
-                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/orders.json -H 'X-Shopify-Access-Token: shp_12345'",
-                "request_url": "https://shopify.com/admin/api/2023-10/orders.json",
-                "request_method": "GET"
-            },
-            "customers": {
-                "label": "Customers",
-                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/customers.json -H 'X-Shopify-Access-Token: shp_12345'",
-                "request_url": "https://shopify.com/admin/api/2023-10/customers.json",
-                "request_method": "GET"
-            },
-            "orders_count": {
-                "label": "Orders Count",
-                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/orders/count.json -H 'X-Shopify-Access-Token: shp_12345'",
-                "request_url": "https://shopify.com/admin/api/2023-10/orders/count.json",
-                "request_method": "GET"
-            },
-            "customers_count": {
-                "label": "Customers Count",
-                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/customers/count.json -H 'X-Shopify-Access-Token: shp_12345'",
-                "request_url": "https://shopify.com/admin/api/2023-10/customers/count.json",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Shopify API Key",
-                "placeholder": "shp_12345"
-            },
-            "store_domain": {
-                "type": "text",
-                "label": "Enter Store Domain",
-                "placeholder": "store.myshopify.com"
-            }
-        },
-        "api_documentation_page": "https://shopify.dev/docs/api/admin-rest",
-        "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
-            "color": "failure"
-        }
-    },
-    "Slack": {
-        "endpoints": {
-            "auth.test": {
-                "label": "Auth Test",
-                "curl": "curl -X GET 'https://slack.com/api/auth.test' -H 'Authorization: Bearer <api_token>'",
-                "request_url": "https://slack.com/api/auth.test",
-                "request_method": "GET"
-            },
-            "users": {
-                "label": "Users",
-                "curl": "curl -X GET 'https://slack.com/api/users.list' -H 'Authorization: Bearer <api_token>'",
-                "request_url": "https://slack.com/api/users.list",
-                "request_method": "GET"
-            },
-            "channels": {
-                "label": "Channels",
-                "curl": "curl -X GET 'https://slack.com/api/conversations.list' -H 'Authorization : Bearer <api_token>'",
-                "request_url": "https://slack.com/api/conversations.list",
-                "request_method": "GET"
-            },
-            "messages": {
-                "label": "Messages",
-                "curl": "curl -X GET 'https://slack.com/api/conversations.history?channel=<channel_id>' -H 'Authorization : Bearer <api_token>'",
-                "request_url": "https://slack.com/api/conversations.history?channel=<channel_id>",
-                "request_method": "GET",
-                "override_default_input_field": true,
-                "input_fields": {
-                    "api_token": {
-                        "type": "text",
-                        "label": "Enter Slack API Token",
-                        "placeholder": "xoxp-xxxx-xxxx-xxxx-xxxx"
-                    },
-                    "channel_id": {
-                        "type": "text",
-                        "label": "Enter Channel ID (fetched from channels endpoint)",
-                        "placeholder": "Cxxxxx"
-                    }
-                }
-            },
-            "Reminders": {
-                "label": "Notifications",
-                "curl": "curl -X GET 'https://slack.com/api/reminders.list' -H 'Authorization : Bearer <api_token>'",
-                "request_url": "https://slack.com/api/reminders.list",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_token": {
-                "type": "text",
-                "label": "Enter Slack API Token",
-                "placeholder": "xoxp-xxxx-xxxx-xxxx-xxxx"
-            }
-        },
-        "api_documentation_page": "https://api.slack.com/",
-        "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
-            "color": "failure"
-        }
-    },
-    "Stripe": {
-        "endpoints": {
-            "account_metadata": {
-                "label": "Account Metadata",
-                "curl": "curl https://api.stripe.com/v1/account -u sk_live_xxxx:",
-                "request_url": "https://api.stripe.com/v1/account",
-                "request_method": "GET"
-            },
-            "balance": {
-                "label": "Balance",
-                "curl": "curl https://api.stripe.com/v1/balance -u sk_live_xxxx:",
-                "request_url": "https://api.stripe.com/v1/balance",
-                "request_method": "GET",
-                "override_default_input_field": true,
-                "input_fields": {
-                    "api_key": {
-                        "type": "text",
-                        "label": "Enter Stripe API Key",
-                        "placeholder": "sk_live_xxxx"
-                    }
-                }
-            },
-            "customers": {
-                "label": "Customers",
-                "curl": "curl https://api.stripe.com/v1/customers -u sk_live_xxxx:",
-                "request_url": "https://api.stripe.com/v1/customers",
-                "request_method": "GET"
-            },
-            "orders": {
-                "label": "Orders",
-                "curl": "curl https://api.stripe.com/v1/orders -u sk_live_xxxx:",
-                "request_url": "https://api.stripe.com/v1/orders",
-                "request_method": "GET"
-            },
-            "payment_intents": {
-                "label": "Payment Intents",
-                "curl": "curl https://api.stripe.com/v1/payment_intents -u sk_live_xxxx:",
-                "request_url": "https://api.stripe.com/v1/payment_intents",
-                "request_method": "GET"
-            },
-            "charges": {
-                "label": "Charges",
-                "curl": "curl https://api.stripe.com/v1/charges -u sk_live_xxxx:",
-                "request_url": "https://api.stripe.com/v1/charges",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Stripe API Key",
-                "placeholder": "sk_live_xxxx"
-            }
-        },
-        "api_documentation_page": "https://stripe.com/docs/api"
-    },
-    "Telegram": {
-        "endpoints": {
-            "bot_info": {
-                "label": "Bot Info",
-                "curl": "curl -X GET https://api.telegram.org/bot<your-bot-token>/getMe",
-                "request_url": "https://api.telegram.org/bot<token>/getMe",
-                "request_method": "GET"
-            },
-            "get_updates": {
-                "label": "Updates",
-                "curl": "curl -X GET https://api.telegram.org/bot<your-bot-token>/getUpdates",
-                "request_url": "https://api.telegram.org/bot<token>/getUpdates",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "bot_token": {
-                "type": "text",
-                "label": "Enter Bot Token",
-                "placeholder": "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"
-            }
-        },
-        "api_documentation_page": "https://core.telegram.org/bots/api"
-    },
-    "Telnyx": {
-        "endpoints": {
-            "addresses": {
-                "label": "Addresses",
-                "curl": "curl -X GET https://api.telnyx.com/v2/addresses -H 'Authorization: Bearer key'",
-                "request_url": "https://api.telnyx.com/v2/addresses",
-                "request_method": "GET"
-            },
-            "notification_events": {
-                "label": "Notification Events",
-                "curl": "curl -X GET https://api.telnyx.com/v2/notification_events -H 'Authorization: Bearer key'",
-                "request_url": "https://api.telnyx.com/v2/notification_events",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter Telnyx API Key",
-                "placeholder": "key"
-            }
-        },
-        "api_documentation_page": "https://developers.telnyx.com/api"
-    },
-    "Terraform": {
-        "endpoints": {
-            "account": {
-                "label": "Account",
-                "curl": "curl -X GET 'https://app.terraform.io/api/v2/account/details' -H 'Authorization : Bearer <api_token>'",
-                "request_url": "https://app.terraform.io/api/v2/account/details",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "api_token": {
-                "type": "text",
-                "label": "Enter Terraform Personal Token",
-                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
-            }
-        },
-        "api_documentation_page": "https://developer.hashicorp.com/terraform/cloud-docs/api-docs",
-        "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
-            "color": "failure"
-        }
-    },
-    "Trello": {
-        "endpoints": {
-            "about_me": {
-                "label": "Account Metadata",
-                "curl": "curl -X GET 'https://api.trello.com/1/members/me?key=<key>&token=<token>'",
-                "request_url": "https://api.trello.com/1/members/me?key=<key>&token=<token>",
-                "request_method": "GET"
-            },
-            "boards": {
-                "label": "Boards",
-                "curl": "curl -X GET 'https://api.trello.com/1/members/me/boards?key=<key>&token=<token>'",
-                "request_url": "https://api.trello.com/1/members/me/boards?key=<key>&token=<token>",
-                "request_method": "GET"
-            },
-            "organizations": {
-                "label": "Organizations",
-                "curl": "curl -X GET 'https://api.trello.com/1/members/me/organizations?key=<key>&token=<token>'",
-                "request_url": "https://api.trello.com/1/members/me/organizations?key=<key>&token=<token>",
-                "request_method": "GET"
-            },
-            "actions": {
-                "label": "Actions",
-                "curl": "curl -X GET 'https://api.trello.com/1/members/me/actions?key=<key>&token=<token>'",
-                "request_url": "https://api.trello.com/1/members/me/actions?key=<key>&token=<token>",
-                "request_method": "GET"
-            }
-        },
-        "input_fields": {
-            "key": {
-                "type": "text",
-                "label": "Enter Trello Key",
-                "placeholder": "xxxx-xxx-xxx"
-            },
-            "token": {
-                "type": "text",
-                "label": "Enter Trello Token",
-                "placeholder": "xxxx-xxx-xxx"
-            }
-        },
-        "api_documentation_page": "https://developer.atlassian.com/cloud/trello/rest/api-group-actions/"
     },
     "Twilio": {
         "endpoints": {
@@ -1660,6 +719,566 @@
         },
         "api_documentation_page": "https://www.twilio.com/docs/usage/api"
     },
+    "NpmToken": {
+        "endpoints": {
+            "whoami": {
+                "label": "User",
+                "curl": "curl -X GET https://registry.npmjs.org/-/whoami -H 'Authorization: Bearer <token>'",
+                "request_url": "https://registry.npmjs.org/-/whoami",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "token": {
+                "type": "text",
+                "label": "Enter NPM Token",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://docs.npmjs.com/cli/v7/commands/npm-token",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
+    },
+    "Mailgun": {
+        "endpoints": {
+            "domains": {
+                "label": "Domains",
+                "curl": "curl -X GET https://api.mailgun.net/v3/domains -u 'api:<api_key>'",
+                "request_url": "https://api.mailgun.net/v3/domains",
+                "request_method": "GET"
+            },
+            "events": {
+                "label": "Events",
+                "curl": "curl -X GET https://api.mailgun.net/v3/<domain>/events -u 'api:<api_key>'",
+                "request_url": "https://api.mailgun.net/v3/<domain>/events",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Mailgun API Key",
+                        "placeholder": "key-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "domain": {
+                        "type": "text",
+                        "label": "Enter Domain (fetched from domain endpoint)",
+                        "placeholder": "example.com"
+                    }
+                }
+            },
+            "bounces": {
+                "label": "Bounces",
+                "curl": "curl -X GET https://api.mailgun.net/v3/<domain>/bounces -u 'api:<api_key>'",
+                "request_url": "https://api.mailgun.net/v3/<domain>/bounces",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Mailgun API Key",
+                        "placeholder": "key-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "domain": {
+                        "type": "text",
+                        "label": "Enter Domain (fetched from domain endpoint)",
+                        "placeholder": "example.com"
+                    }
+                }
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Mailgun API Key",
+                "placeholder": "key-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://documentation.mailgun.com/en/latest/api_reference.html"
+    },
+    "Klaviyo": {
+        "endpoints": {
+            "profiles": {
+                "label": "Profiles",
+                "curl": "curl https://a.klaviyo.com/api/profiles -H 'Revision: 2023-02-22' -H 'Authorization: Klaviyo-API-Key pk_xxxx-xxxx-xxxx-xxxx-xxxx'",
+                "request_url": "https://a.klaviyo.com/api/profiles",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Klaviyo API Key",
+                "placeholder": "pk_xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://developers.klaviyo.com/en/reference/api_overview",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
+    },
+    "DigitalOcean": {
+        "endpoints": {
+            "account": {
+                "label": "Account",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/account' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url": "https://api.digitalocean.com/v2/account",
+                "request_method": "GET"
+            },
+            "droplets": {
+                "label": "Droplets",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/droplets' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url": "https://api.digitalocean.com/v2/droplets",
+                "request_method": "GET"
+            },
+            "SSH_keys": {
+                "label": "SSH Keys",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/account/keys' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url": "https://api.digitalocean.com/v2/account/keys",
+                "request_method": "GET"
+            },
+            "database_clusters": {
+                "label": "Database Clusters",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/databases' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url": "https://api.digitalocean.com/v2/databases",
+                "request_method": "GET"
+            },
+            "domains": {
+                "label": "Domains",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/domains' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "request_url": "https://api.digitalocean.com/v2/domains",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter DigitalOcean API Key",
+                "placeholder": "dop_v1_xxxxx"
+            }
+        },
+        "api_documentation_page": "https://docs.digitalocean.com/reference/api/api-reference"
+    },
+    "Honeycomb": {
+        "endpoints": {
+            "auth": {
+                "label": "Auth",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/auth' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "request_url": "https://api.honeycomb.io/1/auth",
+                "request_method": "GET"
+            },
+            "boards": {
+                "label": "Boards",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/boards' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "request_url": "https://api.honeycomb.io/1/boards",
+                "request_method": "GET"
+            },
+            "datasets": {
+                "label": "Datasets",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/datasets' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "request_url": "https://api.honeycomb.io/1/datasets",
+                "request_method": "GET"
+            },
+            "recipients": {
+                "label": "Recipients",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/recipients' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "request_url": "https://api.honeycomb.io/1/recipients",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Honeycomb API Key",
+                "placeholder": "xxxxxxxxxx"
+            }
+        },
+        "api_documentation_page": "https://docs.honeycomb.io/api/"
+    },
+    "Eventbrite": {
+        "endpoints": {
+            "account_metadata": {
+                "label": "Account Metadata",
+                "curl": "curl -X GET 'https://www.eventbriteapi.com/v3/users/me/?token=xxxxx'",
+                "request_url": "https://www.eventbriteapi.com/v3/users/me/",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "token": {
+                "type": "text",
+                "label": "Enter Eventbrite Token",
+                "placeholder": "xxxxx"
+            }
+        },
+        "api_documentation_page": "https://www.eventbrite.com/platform/api"
+    },
+    "SendGrid": {
+        "endpoints": {
+            "templates": {
+                "label": "Templates",
+                "curl": "curl -X GET https://api.sendgrid.com/v3/templates -H 'Authorization: Bearer SG.xxxxx'",
+                "request_url": "https://api.sendgrid.com/v3/templates",
+                "request_method": "GET"
+            },
+            "customer_accounts": {
+                "label": "Customer Accounts",
+                "curl": "curl -X GET https://api.sendgrid.com/v3/partners/accounts -H 'Authorization: Bearer SG.xxxxx'",
+                "request_url": "https://api.sendgrid.com/v3/partners/accounts",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter SendGrid API Key",
+                "placeholder": "SG.xxxxx"
+            }
+        },
+        "api_documentation_page": "https://docs.sendgrid.com/api-reference"
+    },
+    "MailChimp": {
+        "endpoints": {
+            "account": {
+                "label": "Account",
+                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/ --user 'anystring:<api_key>'",
+                "request_url": "https://<dc>.api.mailchimp.com/3.0/",
+                "request_method": "GET"
+            },
+            "conversations": {
+                "label": "Conversations",
+                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/conversations --user 'anystring:<api_key>'",
+                "request_url": "https://<dc>.api.mailchimp.com/3.0/conversations",
+                "request_method": "GET"
+            },
+            "campaigns": {
+                "label": "Campaigns",
+                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/campaigns --user 'anystring:<api_key>'",
+                "request_url": "https://<dc>.api.mailchimp.com/3.0/campaigns",
+                "request_method": "GET"
+            },
+            "automations": {
+                "label": "Automations",
+                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/automations --user 'anysting:<api_key>'",
+                "request_url": "https://<dc>.api.mailchimp.com/3.0/automations",
+                "request_method": "GET"
+            },
+            "lists": {
+                "label": "Lists",
+                "curl": "curl -X GET https://<dc>.api.mailchimp.com/3.0/lists --user 'anystring:<api_key>'",
+                "request_url": "https://<dc>.api.mailchimp.com/3.0/lists",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter MailChimp API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            },
+            "dc": {
+                "type": "text",
+                "label": "Enter Data Center",
+                "placeholder": "us1"
+            }
+        },
+        "api_documentation_page": "https://mailchimp.com/developer/marketing/api/",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
+    },
+    "Postmark": {
+        "endpoints": {
+            "server": {
+                "label": "Server",
+                "curl": "curl -X GET https://api.postmarkapp.com/server -H 'X-Postmark-Server-Token: xxx-xxxx-xxxx-xxxx-xxxx'",
+                "request_url": "https://api.postmarkapp.com/server",
+                "request_method": "GET"
+            },
+            "deliverystats": {
+                "label": "Delivery Stats",
+                "curl": "curl -X GET https://api.postmarkapp.com/deliverystats -H 'X-Postmark-Server-Token: xxx-xxxx-xxxx-xxxx-xxxx'",
+                "request_url": "https://api.postmarkapp.com/deliverystats",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "server_token": {
+                "type": "text",
+                "label": "Enter Postmark Server Token",
+                "placeholder": "xxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://postmarkapp.com/developer/api/email-api",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
+    },
+    "Telnyx": {
+        "endpoints": {
+            "addresses": {
+                "label": "Addresses",
+                "curl": "curl -X GET https://api.telnyx.com/v2/addresses -H 'Authorization: Bearer key'",
+                "request_url": "https://api.telnyx.com/v2/addresses",
+                "request_method": "GET"
+            },
+            "notification_events": {
+                "label": "Notification Events",
+                "curl": "curl -X GET https://api.telnyx.com/v2/notification_events -H 'Authorization: Bearer key'",
+                "request_url": "https://api.telnyx.com/v2/notification_events",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Telnyx API Key",
+                "placeholder": "key"
+            }
+        },
+        "api_documentation_page": "https://developers.telnyx.com/api"
+    },
+    "Pipedrive": {
+        "endpoints": {
+            "deals": {
+                "label": "Deals",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/deals?api_token=xxxxx'",
+                "request_url": "https://api.pipedrive.com/v1/deals",
+                "request_method": "GET"
+            },
+            "persons": {
+                "label": "Persons",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/persons?api_token=xxxxx'",
+                "request_url": "https://api.pipedrive.com/v1/persons",
+                "request_method": "GET"
+            },
+            "organizations": {
+                "label": "Organizations",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/organizations?api_token=xxxxx'",
+                "request_url": "https://api.pipedrive.com/v1/organizations",
+                "request_method": "GET"
+            },
+            "activities": {
+                "label": "Activities",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/activities?api_token=xxxxx'",
+                "request_url": "https://api.pipedrive.com/v1/activities",
+                "request_method": "GET"
+            },
+            "notes": {
+                "label": "Notes",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/notes?api_token=xxxxx'",
+                "request_url": "https://api.pipedrive.com/v1/notes",
+                "request_method": "GET"
+            },
+            "users": {
+                "label": "Users",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/users?api_token=xxxxx'",
+                "request_url": "https://api.pipedrive.com/v1/users",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_token": {
+                "type": "text",
+                "label": "Enter Pipedrive API Token",
+                "placeholder": "xxxxx"
+            }
+        },
+        "api_documentation_page": "https://developers.pipedrive.com/docs/api/v1/"
+    },
+    "Vercel": {
+        "endpoints": {
+            "user": {
+                "label": "User",
+                "curl": "curl -X GET 'https://api.vercel.com/www/user' -H 'Authorization: Brearer xxxx'",
+                "request_url": "https://api.vercel.com/www/user",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_token": {
+                "type": "text",
+                "label": "Enter Vercel API Token",
+                "placeholder": "xxxx"
+            }
+        },
+        "api_documentation_page": "https://vercel.com/docs/api"
+    },
+    "Bitly": {
+        "endpoints": {
+            "user": {
+                "label": "User",
+                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/user' -H 'Authorization: Bearer xxxx'",
+                "request_url": "https://api-ssl.bitly.com/v4/user",
+                "request_method": "GET"
+            },
+            "organizations": {
+                "label": "Organizations",
+                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/organizations' -H 'Authorization: Bearer xxxx'",
+                "request_url": "https://api-ssl.bitly.com/v4/organizations",
+                "request_method": "GET"
+            },
+            "groups": {
+                "label": "Groups",
+                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/groups' -H 'Authorization: Bearer xxxx'",
+                "request_url": "https://api-ssl.bitly.com/v4/groups",
+                "request_method": "GET"
+            },
+            "get_campaigns": {
+                "label": "Get Campaigns",
+                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/campaigns?group_guid=<group_guid>' -H 'Authorization: Bearer xxxx'",
+                "request_url": "https://api-ssl.bitly.com/v4/campaigns?group_guid=<group_guid>",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_token": {
+                        "type": "text",
+                        "label": "Enter Bitly API Token",
+                        "placeholder": "xxxx"
+                    },
+                    "group_guid": {
+                        "type": "text",
+                        "label": "Enter Group GUID (fetched from groups endpoint)",
+                        "placeholder": "xxxx"
+                    }
+                }
+            },
+            "get_click_metric": {
+                "label": "Get Click Metric",
+                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/groups/<group_guid>/countries?unit=month&units=1&size=10&unit_reference=2006-01-02T15%3A04%3A05-0700' -H 'Authorization : Bearer xxxx'",
+                "request_url": "https://api-ssl.bitly.com/v4/groups/Bm4khURQ6e8/countries?unit=month&units=1&size=10&unit_reference=2006-01-02T15%3A04%3A05-0700",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_token": {
+                        "type": "text",
+                        "label": "Enter Bitly API Token",
+                        "placeholder": "xxxx"
+                    },
+                    "group_guid": {
+                        "type": "text",
+                        "label": "Enter Group GUID (fetched from groups endpoint)",
+                        "placeholder": "xxxx"
+                    }
+                }
+            }
+        },
+        "input_fields": {
+            "api_token": {
+                "type": "text",
+                "label": "Enter Bitly API Token",
+                "placeholder": "xxxx"
+            }
+        },
+        "api_documentation_page": "https://dev.bitly.com/api-reference"
+    },
+    "Algolia": {
+        "endpoints": {
+            "keys": {
+                "label": "Keys",
+                "curl": "curl -X GET 'https://<app_id>-dsn.algolia.net/1/keys' -H 'X-Algolia-API-Key: xxxx' -H 'X-Algolia-Application-Id: xxxx'",
+                "request_url": "https://<app_id>-dsn.algolia.net/1/keys",
+                "request_method": "GET"
+            },
+            "indexes": {
+                "label": "Indexes",
+                "curl": "curl -X GET 'https://<app_id>-dsn.algolia.net/1/indexes' -H 'X-Algolia-API-Key: xxxx' -H 'X-Algolia-Application-Id: xxxx'",
+                "request_url": "https://<app_id>-dsn.algolia.net/1/indexes",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Algolia API Key",
+                "placeholder": "xxxx"
+            },
+            "app_id": {
+                "type": "text",
+                "label": "Enter Algolia Application ID",
+                "placeholder": "xxxx"
+            }
+        },
+        "api_documentation_page": "https://www.algolia.com/doc/rest-api/search/"
+    },
+    "Posthog": {
+        "endpoints": {
+            "Account": {
+                "label": "Account",
+                "curl": "curl -X GET 'https://app.posthog.com/api/users/@me/?personal_api_key=<api_key>' -H 'Content-Type: application/json' \n OR curl -X GET 'https://eu.posthog.com/api/users/@me/?personal_api_key=<api_key>' -H 'Content-Type: application/json'",
+                "request_url": "https://app.posthog.com/api/users/@me/?personal_api_key=<api_key>",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Posthog API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://posthog.com/docs/api",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
+    },
+    "Opsgenie": {
+        "endpoints": {
+            "Alerts": {
+                "label": "Alerts",
+                "curl": "curl -X GET 'https://api.opsgenie.com/v2/alerts' -H 'Authorization: GenieKey <api_key>'",
+                "request_url": "https://api.opsgenie.com/v2/alerts",
+                "request_method": "GET"
+            },
+            "AlertsCount": {
+                "label": "Alerts Count",
+                "curl": "curl -X GET 'https://api.opsgenie.com/v2/alerts/count' -H 'Authorization: GenieKey <api_key>'",
+                "request_url": "https://api.opsgenie.com/v2/alerts/count",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Opsgenie API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://docs.opsgenie.com/docs/service-api",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
+    },
+    "Helpscout": {
+        "endpoints": {
+            "collections": {
+                "label": "Article Collections",
+                "curl": "curl -X GET 'https://docsapi.helpscout.net/v1/collections' -u <api_key>:X",
+                "request_url": "https://docsapi.helpscout.net/v1/collections",
+                "request_method": "GET"
+            },
+            "sites": {
+                "label": "Sites",
+                "curl": "curl -X GET 'https://docsapi.helpscout.net/v1/sites' -u <api_key>:X",
+                "request_url": "https://docsapi.helpscout.net/v1/sites",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Helpscout API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://developer.helpscout.com/docs-api/"
+    },
     "Typeform": {
         "endpoints": {
             "forms": {
@@ -1694,23 +1313,51 @@
             "color": "failure"
         }
     },
-    "Vercel": {
+    "GetResponse": {
         "endpoints": {
-            "user": {
-                "label": "User",
-                "curl": "curl -X GET 'https://api.vercel.com/www/user' -H 'Authorization: Brearer xxxx'",
-                "request_url": "https://api.vercel.com/www/user",
+            "accounts": {
+                "label": "Accounts",
+                "curl": "curl -X GET 'https://api.getresponse.com/v3/accounts' -H 'X-Auth-Token: api-key <api_key>'",
+                "request_url": "https://api.getresponse.com/v3/accounts",
+                "request_method": "GET"
+            },
+            "campaigns": {
+                "label": "Campaigns",
+                "curl": "curl -X GET 'https://api.getresponse.com/v3/campaigns' -H 'X-Auth-Token: api-key <api_key>'",
+                "request_url": "https://api.getresponse.com/v3/campaigns",
+                "request_method": "GET"
+            },
+            "contacts": {
+                "label": "Contacts",
+                "curl": "curl -X GET 'https://api.getresponse.com/v3/contacts' -H 'X-Auth-Token: api-key <api_key>'",
+                "request_url": "https://api.getresponse.com/v3/contacts",
+                "request_method": "GET"
+            },
+            "webforms": {
+                "label": "Webforms",
+                "curl": "curl -X GET 'https://api.getresponse.com/v3/webforms' -H 'X-Auth-Token: api-key <api_key>'",
+                "request_url": "https://api.getresponse.com/v3/webforms",
+                "request_method": "GET"
+            },
+            "newsletters": {
+                "label": "Newsletters",
+                "curl": "curl -X GET 'https://api.getresponse.com/v3/newsletters' -H 'X-Auth-Token: api-key <api_key>'",
+                "request_url": "https://api.getresponse.com/v3/newsletters",
                 "request_method": "GET"
             }
         },
         "input_fields": {
-            "api_token": {
+            "api_key": {
                 "type": "text",
-                "label": "Enter Vercel API Token",
-                "placeholder": "xxxx"
+                "label": "Enter GetResponse API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
             }
         },
-        "api_documentation_page": "https://vercel.com/docs/api"
+        "api_documentation_page": "https://apidocs.getresponse.com/v3",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
     },
     "YouSign": {
         "endpoints": {
@@ -1741,5 +1388,358 @@
             }
         },
         "api_documentation_page": "https://dev.yousign.com/"
+    },
+    "Notion": {
+        "endpoints": {
+            "users": {
+                "label": "Users",
+                "curl": "curl -X GET 'https://api.notion.com/v1/users' -H 'Notion-Version: 2022-06-28' -H 'Authorization: Bearer <api_key>'",
+                "request_url": "https://api.notion.com/v1/users",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Notion API Key",
+                "placeholder": "secret_xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://developers.notion.com/reference/",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
+    },
+    "MadKudu": {
+        "endpoints": {
+            "domain_lookup": {
+                "label": "Domain Lookup",
+                "curl": "curl -X GET 'https://api.madkudu.com/v1/companies?domain=madkudu.com' --user <api_key>:",
+                "request_url": "https://api.madkudu.com/v1/companies?domain=madkudu.com",
+                "request_method": "GET"
+            },
+            "person_lookup": {
+                "label": "Person Lookup",
+                "curl": "curl -X GET 'https://api.madkudu.com/v1/persons?email=paul@madkudu.com' --user <api_key>:",
+                "request_url": "https://api.madkudu.com/v1/persons?email=paul@madkudu.com",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter MadKudu API Key",
+                "placeholder": "xxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://developers.madkudu.com/",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
+    },
+    "Autopilot": {
+        "endpoints": {
+            "contacts": {
+                "label": "Contacts",
+                "curl": "curl -X GET 'https://api2.autopilothq.com/v1/contacts' -H 'autopilotapikey: <api_key>'",
+                "request_url": "https://api2.autopilothq.com/v1/contacts",
+                "request_method": "GET"
+            },
+            "account": {
+                "label": "Account",
+                "curl": "curl -X GET 'https://api2.autopilothq.com/v1/account' -H 'autopilotapikey: <api_key>'",
+                "request_url": "https://api2.autopilothq.com/v1/account",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Autopilot API Key",
+                "placeholder": "xxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://autopilot.docs.apiary.io/#"
+    },
+    "Slack": {
+        "endpoints": {
+            "auth.test": {
+                "label": "Auth Test",
+                "curl": "curl -X GET 'https://slack.com/api/auth.test' -H 'Authorization: Bearer <api_token>'",
+                "request_url": "https://slack.com/api/auth.test",
+                "request_method": "GET"
+            },
+            "users": {
+                "label": "Users",
+                "curl": "curl -X GET 'https://slack.com/api/users.list' -H 'Authorization: Bearer <api_token>'",
+                "request_url": "https://slack.com/api/users.list",
+                "request_method": "GET"
+            },
+            "channels": {
+                "label": "Channels",
+                "curl": "curl -X GET 'https://slack.com/api/conversations.list' -H 'Authorization : Bearer <api_token>'",
+                "request_url": "https://slack.com/api/conversations.list",
+                "request_method": "GET"
+            },
+            "messages": {
+                "label": "Messages",
+                "curl": "curl -X GET 'https://slack.com/api/conversations.history?channel=<channel_id>' -H 'Authorization : Bearer <api_token>'",
+                "request_url": "https://slack.com/api/conversations.history?channel=<channel_id>",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_token": {
+                        "type": "text",
+                        "label": "Enter Slack API Token",
+                        "placeholder": "xoxp-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "channel_id": {
+                        "type": "text",
+                        "label": "Enter Channel ID (fetched from channels endpoint)",
+                        "placeholder": "Cxxxxx"
+                    }
+                }
+            },
+            "Reminders": {
+                "label": "Notifications",
+                "curl": "curl -X GET 'https://slack.com/api/reminders.list' -H 'Authorization : Bearer <api_token>'",
+                "request_url": "https://slack.com/api/reminders.list",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_token": {
+                "type": "text",
+                "label": "Enter Slack API Token",
+                "placeholder": "xoxp-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://api.slack.com/",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
+    },
+    "HuggingFace": {
+        "endpoints": {
+            "whoami": {
+                "label": "WhoAmI",
+                "curl": "curl -X GET https://huggingface.co/api/whoami-v2 -H 'authorization: Bearer <api_token>'",
+                "request_url": "https://huggingface.co/api/whoami-v2",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_token": {
+                "type": "text",
+                "label": "Enter Hugging Face API Token",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://huggingface.co/docs/hub/api"
+    },
+    "Shodan": {
+        "endpoints": {
+            "profile": {
+                "label": "Profile",
+                "curl": "curl -X GET 'https://api.shodan.io/account/profile?key=<api_key>'",
+                "request_url": "https://api.shodan.io/account/profile?key=<api_key>",
+                "request_method": "GET"
+            },
+            "organization": {
+                "label": "Organization",
+                "curl": "curl -X GET 'https://api.shodan.io/org?key=<api_key>'",
+                "request_url": "https://api.shodan.io/org?key=<api_key>",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Shodan API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://developer.shodan.io/api"
+    },
+    "Postman": {
+        "endpoints": {
+            "profile": {
+                "label": "Profile",
+                "curl": "curl -X GET 'https://api.getpostman.com/me' -H 'X-Api-Key: <api_key>'",
+                "request_url": "https://api.getpostman.com/me",
+                "request_method": "GET"
+            },
+            "accounts": {
+                "label": "Accounts",
+                "curl": "curl -X GET 'https://api.getpostman.com/accounts' -H 'X-Api-Key: <api_key>'",
+                "request_url": "https://api.getpostman.com/accounts",
+                "request_method": "GET"
+            },
+            "collections": {
+                "label": "Collections",
+                "curl": "curl -X GET 'https://api.getpostman.com/collections' -H 'X-Api-Key: <api_key>'",
+                "request_url": "https://api.getpostman.com/collections",
+                "request_method": "GET"
+            },
+            "workspaces": {
+                "label": "Workspaces",
+                "curl": "curl -X GET 'https://api.getpostman.com/workspaces' -H 'X-Api-Key: <api_key>'",
+                "request_url": "https://api.getpostman.com/workspaces",
+                "request_method": "GET"
+            },
+            "environments": {
+                "label": "Environments",
+                "curl": "curl -X GET 'https://api.getpostman.com/environments' -H 'X-Api-Key: <api_key>'",
+                "request_url": "https://api.getpostman.com/environments",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Postman API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://docs.api.getpostman.com/"
+    },
+    "Terraform": {
+        "endpoints": {
+            "account": {
+                "label": "Account",
+                "curl": "curl -X GET 'https://app.terraform.io/api/v2/account/details' -H 'Authorization : Bearer <api_token>'",
+                "request_url": "https://app.terraform.io/api/v2/account/details",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_token": {
+                "type": "text",
+                "label": "Enter Terraform Personal Token",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://developer.hashicorp.com/terraform/cloud-docs/api-docs",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
+    },
+    "Doppler": {
+        "endpoints": {
+            "me": {
+                "label": "Me",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/me' -H 'Authorization : Bearer <api_key>'",
+                "request_url": "https://api.doppler.com/v3/me",
+                "request_method": "GET"
+            },
+            "projects": {
+                "label": "Projects",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/projects' -H 'Authorization : Bearer <api_key>'",
+                "request_url": "https://api.doppler.com/v3/projects",
+                "request_method": "GET"
+            },
+            "project_members": {
+                "label": "Project Members",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/projects/project/members?project=<project_id>' -H 'Authorization : Bearer <api_key>'",
+                "request_url": "https://api.doppler.com/v3/projects/project/members?project=<project_id>",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Doppler API Key",
+                        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "project_id": {
+                        "type": "text",
+                        "label": "Enter Project ID (fetched from projects endpoint)",
+                        "placeholder": "xxxx"
+                    }
+                }
+            },
+            "environments" : {
+                "label": "Environments",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/environments?project=<project_id>' -H 'Authorization : Bearer <api_key>'",
+                "request_url": "https://api.doppler.com/v3/environments?project=<project_id>",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Doppler API Key",
+                        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "project_id": {
+                        "type": "text",
+                        "label": "Enter Project ID (fetched from projects endpoint)",
+                        "placeholder": "xxxx"
+                    }
+                }
+            },
+            "configs" : {
+                "label": "Configs",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/configs?project=<project_id>&environment=<environment_id>' -H 'Authorization : Bearer <api_key>'",
+                "request_url": "https://api.doppler.com/v3/configs?project=<project_id>&environment=<environment_id>",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Doppler API Key",
+                        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "project_id": {
+                        "type": "text",
+                        "label": "Enter Project ID (fetched from projects endpoint)",
+                        "placeholder": "xxxx"
+                    },
+                    "environment_id": {
+                        "type": "text",
+                        "label": "Enter Environment ID (fetched from environments endpoint)",
+                        "placeholder": "xxxx"
+                    }
+                }
+            },
+            "secrets" : {
+                "label": "Secrets",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/secrets?project=<project_id>&config=<config_id>' -H 'Authorization : Bearer <api_key>'",
+                "request_url": "https://api.doppler.com/v3/secrets?project=<project_id>&config=<config_id>",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Doppler API Key",
+                        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "project_id": {
+                        "type": "text",
+                        "label": "Enter Project ID (fetched from projects endpoint)",
+                        "placeholder": "xxxx"
+                    },
+                    "config_id": {
+                        "type": "text",
+                        "label": "Enter Config ID (fetched from configs endpoint)",
+                        "placeholder": "xxxx"
+                    }
+                }
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Doppler API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://docs.doppler.com/docs/start",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
     }
 }
