@@ -7,7 +7,7 @@ npm run dev
 
 
 ### Contributing Modules
-1. Add the module to `data/detectors.json`
+1. Add the module to `src/data/detectors.json`
 ```
 {
     "OpenAI": {
@@ -32,7 +32,7 @@ npm run dev
 }
 ```
 
-2. Update `components/requests.jsx` with the request code for this service
+2. Update `src/components/requests.jsx` with the request code for this service
 ```
 case 'OpenAI':
     response = await fetch(endpointURL, {
@@ -44,7 +44,7 @@ case 'OpenAI':
     break;
 ```
 - **Optional**
-3. Add the service icon in `components/sidebar.jsx`
+3. Add the service icon in `src/components/sidebar.jsx`
 - Icon for services can be discovered at https://react-icons.github.io/react-icons/
 - Adding Icon is optional as services with no specified icons already use a placeholder icon
 ```
@@ -59,7 +59,7 @@ let serviceIcons = {
 
 - **CORS Error Workarounds**
 
-If the api can't be accessed from browser due to CORS, add the following to the `data/detectors.json`. This will auto enable the corsproxy.io checkbox
+If the api can't be accessed from browser due to CORS, add the following to the `src/data/detectors.json`. This will auto enable the corsproxy.io checkbox
 ```
 "alert": {
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
