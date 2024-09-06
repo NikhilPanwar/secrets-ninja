@@ -66,3 +66,7 @@ If the api can't be accessed from browser due to CORS, add the following to the 
             "color": "failure"
         }
 ```
+### Note
+- I understand that the size of `src/data/detectors.json` is getting big, in future will be moving it to database or having individual JSON for each service.
+- I understand that creating a different switch case of each service is redundant, and a universal function can be created for most of these, but i wanted the code to be easily contributable as it can be. 
+- **You can add new APIs, endpoints freely, but in order to do make any major refactoring/architecture changes to the project, please discuss this with project owner first**
