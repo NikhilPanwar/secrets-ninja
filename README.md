@@ -6,7 +6,7 @@ It proivdes a unified interface for testing these keys across services
 
 ## Setup and Run
 
-- Instal dependencies using below command
+- Install dependencies using below command
 
 ```bash
 npm install
