@@ -1,11 +1,8 @@
-<div align="center">
 
-<img src='https://github.com/NikhilPanwar/secrets-ninja/raw/master/public/logo.jpg' height="80">
+# secrets.ninja
 
 [secrets.ninja](https://secrets.ninja) is a robust tool for validating API keys and credentials discovered during pentesting. 
 It proivdes a unified interface for testing these keys across services
-
-</div>
 
 ## Setup and Run
 
