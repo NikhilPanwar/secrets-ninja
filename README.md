@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src='https://github.com/arshadkazmi42/ak-cli/blob/public/logo.jpg' height="80">
+<img src='https://github.com/NikhilPanwar/secrets-ninja/blob/public/logo.jpg' height="80">
 
 # secrets.ninja
 
