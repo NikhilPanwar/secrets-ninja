@@ -1,7 +1,7 @@
 
 # secrets.ninja
 
-secrets.ninja is a robust tool for validating API keys and credentials discovered during pentesting. 
+[secrets.ninja](https://secrets.ninja) is a robust tool for validating API keys and credentials discovered during pentesting. 
 It proivdes a unified interface for testing these keys across services
 
 ## Setup and Run
