@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src='https://github.com/NikhilPanwar/secrets-ninja/blob/master/src/assets/secrets-ninja-new-logo.png' height="80">
+  <img src='https://github.com/NikhilPanwar/secrets-ninja/blob/master/src/assets/secrets-ninja-new-logo.png' height="160">
 
   <h1>Secrets Ninja</h1>
 
