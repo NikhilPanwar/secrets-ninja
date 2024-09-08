@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Button, Dropdown, Label, TextInput, Alert, Tooltip, Checkbox } from 'flowbite-react';
 import OutputWindow from "../components/output_window";
 import RequestWindow from "../components/request_window";
 import { HiInformationCircle } from 'react-icons/hi';
 import makeUniversalRequest from "../components/requests";
 import { AiOutlineLoading } from 'react-icons/ai';
-import { ImNewTab } from "react-icons/im";
-import { FaHandPointLeft } from "react-icons/fa";
 
 
 
@@ -23,6 +21,7 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
     const [curlCommand, setCurlCommand] = useState(firstEndpoint.curl || "");
     const [requestURL, setRequestURL] = useState(firstEndpoint.request_url || "");
     const [requestMethod, setRequestMethod] = useState(firstEndpoint.request_method || "");
+    const [requestHeaders, setRequestHeaders] = useState(firstEndpoint.headers || {});
     const [inputFields, setInputFields] = useState(firstEndpoint.override_default_input_field ? firstEndpoint.input_fields : defaultInputFields);
     const [status_code, setStatusCode] = useState(0);
     const [output_str, setOutputStr] = useState('');
@@ -38,7 +37,7 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
             const updatedRequestURL = isChecked ? `https://corsproxy.io/?` + encodeURIComponent(requestURL) : requestURL;
             console.log("Testing endpoint with input values:", inputValues);
             console.log("Request URL:", updatedRequestURL);
-            const { status, data } = await makeUniversalRequest(serviceType, inputValues, updatedRequestURL, requestMethod);
+            const { status, data } = await makeUniversalRequest(serviceType, inputValues, updatedRequestURL, requestMethod, requestHeaders);
             setStatusCode(status);
             setOutputStr(JSON.stringify(data, null, 2));
         } catch (error) {
@@ -54,6 +53,7 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
         setCurlCommand(endpointConfig.curl);
         setRequestURL(endpointConfig.request_url);
         setRequestMethod(endpointConfig.request_method);
+        setRequestHeaders(endpointConfig.headers);
 
         if (endpointConfig.override_default_input_field) {
             setInputFields(endpointConfig.input_fields || {});

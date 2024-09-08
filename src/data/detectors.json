@@ -5,7 +5,10 @@
                 "label": "Account Metadata",
                 "curl": "curl https://api.stripe.com/v1/account -u sk_live_xxxx:",
                 "request_url": "https://api.stripe.com/v1/account",
-                "request_method": "GET"
+                "request_method": "GET",
+                "headers": {
+                    "Authorization": "Bearer {api_key}"
+                } 
             },
             "balance": {
                 "label": "Balance",

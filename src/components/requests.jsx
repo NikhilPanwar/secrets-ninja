@@ -1,16 +1,18 @@
 /* eslint-disable no-case-declarations */
-async function makeUniversalRequest(serviceType, inputData, endpointURL, requestMethod) {
+async function makeUniversalRequest(serviceType, inputData, endpointURL, requestMethod, requestHeaders) {
     let response, data;
 
     // endpointURL = 'http://localhost:8000?endpoint=' + encodeURIComponent(endpointURL) + '&method=' + requestMethod;
     // endpointURL = 'https://corsproxy.io/?' + endpointURL ;
     switch (serviceType) {
         case 'Stripe':
-            response = await fetch(endpointURL, {
+            let url = endpointURL.replace(/{(\w+)}/g, (_, key) => data[key] || '');
+            for (let [key, value] of Object.entries(requestHeaders)) {
+              requestHeaders[key] = value.replace(/{(\w+)}/g, (_, key) => inputData[key] || '');
+            }
+            response = await fetch(url, {
                 method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${inputData.api_key}`,
-                },
+                headers: requestHeaders,
             });
             break;
         case 'Paypal':
