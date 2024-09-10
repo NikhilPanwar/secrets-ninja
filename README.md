@@ -4,10 +4,10 @@
 
   <h1>Secrets Ninja</h1>
 
-</div>
+  [secrets.ninja](https://secrets.ninja) is a robust tool for validating API keys and credentials discovered during pentesting. 
+  <br>It proivdes a unified interface for testing these keys across services
 
-[secrets.ninja](https://secrets.ninja) is a robust tool for validating API keys and credentials discovered during pentesting. 
-It proivdes a unified interface for testing these keys across services
+</div>
 
 ## Setup and Run
 
