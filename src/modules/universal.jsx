@@ -48,10 +48,19 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
         }
     };
 
+    const generateDynamicCurl = (curlCommandTemplate, inputs) => {
+        let dynamicCurl = curlCommandTemplate;
+        Object.keys(inputs).forEach(key => {
+            dynamicCurl = dynamicCurl.replace(`<${key}>`, inputs[key]);
+        });
+        return dynamicCurl;
+    };
+
     const handleDropdownChange = (endpointKey) => {
         const endpointConfig = endpoints[endpointKey];
         setSelectedEndpoint(endpointConfig.label);
-        setCurlCommand(endpointConfig.curl);
+        const updatedCurl = generateDynamicCurl(endpointConfig.curl, inputValues);
+        setCurlCommand(updatedCurl);
         setRequestURL(endpointConfig.request_url);
         setRequestMethod(endpointConfig.request_method);
 
@@ -63,8 +72,14 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
     };
 
     const handleInputChange = (key, value) => {
-        setInputValues(prev => ({ ...prev, [key]: value }));
+        setInputValues(prev => {
+            const updatedInputs = { ...prev, [key]: value };
+            const updatedCurl = generateDynamicCurl(curlCommand, updatedInputs); // Assuming curlCommand holds the template
+            setCurlCommand(updatedCurl);
+            return updatedInputs;
+        });
     };
+    
 
     const handleCheckboxChange = (e) => {
         setIsChecked(e.target.checked);
@@ -80,13 +95,14 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
         const firstNewEndpoint = newEndpoints[firstNewEndpointKey] || {};
 
         setSelectedEndpoint(firstNewEndpoint.label || "Select Endpoint");
-        setCurlCommand(firstNewEndpoint.curl || "");
+        const updatedCurl = generateDynamicCurl(firstNewEndpoint.curl, inputValues);
+        setCurlCommand(updatedCurl);
         setRequestURL(firstNewEndpoint.request_url || "");
         setRequestMethod(firstNewEndpoint.request_method || "");
         setInputFields(firstNewEndpoint.override_default_input_field ? firstNewEndpoint.input_fields : newDefaultInputFields);
 
         setStatusCode(0);
-    }, [serviceType]);
+    }, [serviceType, inputValues]);
 
     return (
         <div className="p-4">

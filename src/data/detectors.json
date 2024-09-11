@@ -3,13 +3,13 @@
         "endpoints": {
             "account_metadata": {
                 "label": "Account Metadata",
-                "curl": "curl https://api.stripe.com/v1/account -u sk_live_xxxx:",
+                "curl": "curl https://api.stripe.com/v1/account -u <api_key>:",
                 "request_url": "https://api.stripe.com/v1/account",
                 "request_method": "GET"
             },
             "balance": {
                 "label": "Balance",
-                "curl": "curl https://api.stripe.com/v1/balance -u sk_live_xxxx:",
+                "curl": "curl https://api.stripe.com/v1/balance -u <api_key>:",
                 "request_url": "https://api.stripe.com/v1/balance",
                 "request_method": "GET",
                 "override_default_input_field": true,
@@ -106,13 +106,13 @@
         "endpoints": {
             "organizations": {
                 "label": "Organizations",
-                "curl": "curl -X GET 'https://api.openai.com/v1/organizations' -H 'Authorization: Bearer sk-xxxx'",
+                "curl": "curl -X GET 'https://api.openai.com/v1/organizations' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.openai.com/v1/organizations",
                 "request_method": "GET"
             },
             "models": {
                 "label": "Models",
-                "curl": "curl -X GET 'https://api.openai.com/v1/models' -H 'Authorization: Bearer sk-xxxx'",
+                "curl": "curl -X GET 'https://api.openai.com/v1/models' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.openai.com/v1/models",
                 "request_method": "GET"
             }
@@ -130,13 +130,13 @@
         "endpoints": {
             "transaction": {
                 "label": "Transaction",
-                "curl": "curl -X GET https://api.paystack.co/transaction -H 'Authorization: Bearer sk_live'",
+                "curl": "curl -X GET https://api.paystack.co/transaction -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.paystack.co/transaction",
                 "request_method": "GET"
             },
             "customer": {
                 "label": "Customer",
-                "curl": "curl -X GET https://api.paystack.co/customer -H 'Authorization: Bearer sk_live'",
+                "curl": "curl -X GET https://api.paystack.co/customer -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.paystack.co/customer",
                 "request_method": "GET"
             }
@@ -154,31 +154,31 @@
         "endpoints": {
             "user": {
                 "label": "User",
-                "curl": "curl -X GET 'https://api.github.com/user' -H 'Authorization: token ghp_xxxxx'",
+                "curl": "curl -X GET 'https://api.github.com/user' -H 'Authorization: token <access_token>'",
                 "request_url": "https://api.github.com/user",
                 "request_method": "GET"
             },
             "repos": {
                 "label": "Repos",
-                "curl": "curl -X GET 'https://api.github.com/user/repos?per_page=100&page=1' -H 'Authorization: token ghp_xxxxx'",
+                "curl": "curl -X GET 'https://api.github.com/user/repos?per_page=100&page=1' -H 'Authorization: token <access_token>'",
                 "request_url": "https://api.github.com/user/repos?per_page=100&page=1",
                 "request_method": "GET"
             },
             "organizations": {
                 "label": "Organizations",
-                "curl": "curl -X GET 'https://api.github.com/user/orgs' -H 'Authorization: token ghp_xxxxx'",
+                "curl": "curl -X GET 'https://api.github.com/user/orgs' -H 'Authorization: token <access_token>'",
                 "request_url": "https://api.github.com/user/orgs",
                 "request_method": "GET"
             },
             "gists": {
                 "label": "Gists",
-                "curl": "curl -X GET 'https://api.github.com/gists' -H 'Authorization: token ghp_xxxxx'",
+                "curl": "curl -X GET 'https://api.github.com/gists' -H 'Authorization: token <access_token>'",
                 "request_url": "https://api.github.com/gists",
                 "request_method": "GET"
             },
             "notifications": {
                 "label": "Notifications",
-                "curl": "curl -X GET 'https://api.github.com/notifications' -H 'Authorization token ghp_xxxxx'",
+                "curl": "curl -X GET 'https://api.github.com/notifications' -H 'Authorization token <access_token>'",
                 "request_url": "https://api.github.com/notifications",
                 "request_method": "GET"
             }
@@ -196,25 +196,25 @@
         "endpoints": {
             "user": {
                 "label": "User",
-                "curl": "curl -X GET 'https://gitlab.com/api/v4/user' -H 'Authorization: Bearer glpat_xxxxx'",
+                "curl": "curl -X GET 'https://gitlab.com/api/v4/user' -H 'Authorization: Bearer <access_token>'",
                 "request_url": "https://gitlab.com/api/v4/user",
                 "request_method": "GET"
             },
             "projects": {
                 "label": "Projects",
-                "curl": "curl -X GET 'https://gitlab.com/api/v4/projects' -H 'Authorization: Bearer glpat_xxxxx'",
+                "curl": "curl -X GET 'https://gitlab.com/api/v4/projects' -H 'Authorization: Bearer <access_token>'",
                 "request_url": "https://gitlab.com/api/v4/projects",
                 "request_method": "GET"
             },
             "groups": {
                 "label": "Groups",
-                "curl": "curl -X GET 'https://gitlab.com/api/v4/groups' -H 'Authorization: Bearer glpat_xxxxx'",
+                "curl": "curl -X GET 'https://gitlab.com/api/v4/groups' -H 'Authorization: Bearer <access_token>'",
                 "request_url": "https://gitlab.com/api/v4/groups",
                 "request_method": "GET"
             },
             "issues": {
                 "label": "Issues",
-                "curl": "curl -X GET 'https://gitlab.com/api/v4/issues' -H 'Authorization: Bearer glpat_xxxxx'",
+                "curl": "curl -X GET 'https://gitlab.com/api/v4/issues' -H 'Authorization: Bearer <access_token>'",
                 "request_url": "https://gitlab.com/api/v4/issues",
                 "request_method": "GET"
             }
@@ -232,7 +232,7 @@
         "endpoints": {
             "projects": {
                 "label": "Projects",
-                "curl": "curl -X GET https://app.launchdarkly.com/api/v2/projects -H 'Authorization: api_key api-xxxx'",
+                "curl": "curl -X GET https://app.launchdarkly.com/api/v2/projects -H 'Authorization: api_key <api_key>'",
                 "request_url": "https://app.launchdarkly.com/api/v2/projects",
                 "request_method": "GET"
             }
@@ -250,13 +250,13 @@
         "endpoints": {
             "contacts": {
                 "label": "Contacts",
-                "curl": "curl -X GET https://api.omnisend.com/v3/contacts?limit=100 -H 'X-API-KEY: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
+                "curl": "curl -X GET https://api.omnisend.com/v3/contacts?limit=100 -H 'X-API-KEY: <api_key>'",
                 "request_url": "https://api.omnisend.com/v3/contacts?limit=100",
                 "request_method": "GET"
             },
             "orders": {
                 "label": "Orders",
-                "curl": "curl -X GET https://api.omnisend.com/v3/orders?limit=100 -H 'X-API-KEY: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
+                "curl": "curl -X GET https://api.omnisend.com/v3/orders?limit=100 -H 'X-API-KEY: <api_key>'",
                 "request_url": "https://api.omnisend.com/v3/orders?limit=100",
                 "request_method": "GET"
             },
@@ -349,7 +349,7 @@
         "endpoints": {
             "person": {
                 "label": "Person",
-                "curl": "curl 'https://person.clearbit.com/v2/people/find?email=test@test.com' -u sk_xxx-xxx-xxx:",
+                "curl": "curl 'https://person.clearbit.com/v2/people/find?email=<email>' -u <api_key>:",
                 "request_url": "https://person.clearbit.com/v2/people/find?email=",
                 "request_method": "GET",
                 "override_default_input_field": true,
@@ -384,19 +384,19 @@
         "endpoints": {
             "contacts": {
                 "label": "Contacts",
-                "curl": "curl -X GET https://api.sendinblue.com/v3/contacts -H 'api-key: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
+                "curl": "curl -X GET https://api.sendinblue.com/v3/contacts -H 'api-key: <api_key>'",
                 "request_url": "https://api.sendinblue.com/v3/contacts",
                 "request_method": "GET"
             },
             "campaigns": {
                 "label": "Campaigns",
-                "curl": "curl -X GET https://api.sendinblue.com/v3/emailCampaigns -H 'api-key: xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
+                "curl": "curl -X GET https://api.sendinblue.com/v3/emailCampaigns -H 'api-key: <api_key>'",
                 "request_url": "https://api.sendinblue.com/v3/emailCampaigns",
                 "request_method": "GET"
             },
             "account": {
                 "label": "Account",
-                "curl": "curl -X GET https://api.sendinblue.com/v3/account -H 'api-key:  xxx-xxxxx-xxxxx-xxxxx-xxxxx'",
+                "curl": "curl -X GET https://api.sendinblue.com/v3/account -H 'api-key:  <api_key>'",
                 "request_url": "https://api.sendinblue.com/v3/account",
                 "request_method": "GET"
             }
