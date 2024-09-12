@@ -1149,7 +1149,7 @@
             },
             "get_click_metric": {
                 "label": "Get Click Metric",
-                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/groups/<group_guid>/countries?unit=month&units=1&size=10&unit_reference=2006-01-02T15%3A04%3A05-0700' -H 'Authorization : Bearer xxxx'",
+                "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/groups/<group_guid>/countries?unit=month&units=1&size=10&unit_reference=2006-01-02T15%3A04%3A05-0700' -H 'Authorization: Bearer xxxx'",
                 "request_url": "https://api-ssl.bitly.com/v4/groups/Bm4khURQ6e8/countries?unit=month&units=1&size=10&unit_reference=2006-01-02T15%3A04%3A05-0700",
                 "request_method": "GET",
                 "override_default_input_field": true,
@@ -1479,13 +1479,13 @@
             },
             "channels": {
                 "label": "Channels",
-                "curl": "curl -X GET 'https://slack.com/api/conversations.list' -H 'Authorization : Bearer <api_token>'",
+                "curl": "curl -X GET 'https://slack.com/api/conversations.list' -H 'Authorization: Bearer <api_token>'",
                 "request_url": "https://slack.com/api/conversations.list",
                 "request_method": "GET"
             },
             "messages": {
                 "label": "Messages",
-                "curl": "curl -X GET 'https://slack.com/api/conversations.history?channel=<channel_id>' -H 'Authorization : Bearer <api_token>'",
+                "curl": "curl -X GET 'https://slack.com/api/conversations.history?channel=<channel_id>' -H 'Authorization: Bearer <api_token>'",
                 "request_url": "https://slack.com/api/conversations.history?channel=<channel_id>",
                 "request_method": "GET",
                 "override_default_input_field": true,
@@ -1504,7 +1504,7 @@
             },
             "Reminders": {
                 "label": "Notifications",
-                "curl": "curl -X GET 'https://slack.com/api/reminders.list' -H 'Authorization : Bearer <api_token>'",
+                "curl": "curl -X GET 'https://slack.com/api/reminders.list' -H 'Authorization: Bearer <api_token>'",
                 "request_url": "https://slack.com/api/reminders.list",
                 "request_method": "GET"
             }
@@ -1610,7 +1610,7 @@
         "endpoints": {
             "account": {
                 "label": "Account",
-                "curl": "curl -X GET 'https://app.terraform.io/api/v2/account/details' -H 'Authorization : Bearer <api_token>'",
+                "curl": "curl -X GET 'https://app.terraform.io/api/v2/account/details' -H 'Authorization: Bearer <api_token>'",
                 "request_url": "https://app.terraform.io/api/v2/account/details",
                 "request_method": "GET"
             }
@@ -1632,19 +1632,19 @@
         "endpoints": {
             "me": {
                 "label": "Me",
-                "curl": "curl -X GET 'https://api.doppler.com/v3/me' -H 'Authorization : Bearer <api_key>'",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/me' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.doppler.com/v3/me",
                 "request_method": "GET"
             },
             "projects": {
                 "label": "Projects",
-                "curl": "curl -X GET 'https://api.doppler.com/v3/projects' -H 'Authorization : Bearer <api_key>'",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/projects' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.doppler.com/v3/projects",
                 "request_method": "GET"
             },
             "project_members": {
                 "label": "Project Members",
-                "curl": "curl -X GET 'https://api.doppler.com/v3/projects/project/members?project=<project_id>' -H 'Authorization : Bearer <api_key>'",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/projects/project/members?project=<project_id>' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.doppler.com/v3/projects/project/members?project=<project_id>",
                 "request_method": "GET",
                 "override_default_input_field": true,
@@ -1663,7 +1663,7 @@
             },
             "environments" : {
                 "label": "Environments",
-                "curl": "curl -X GET 'https://api.doppler.com/v3/environments?project=<project_id>' -H 'Authorization : Bearer <api_key>'",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/environments?project=<project_id>' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.doppler.com/v3/environments?project=<project_id>",
                 "request_method": "GET",
                 "override_default_input_field": true,
@@ -1682,7 +1682,7 @@
             },
             "configs" : {
                 "label": "Configs",
-                "curl": "curl -X GET 'https://api.doppler.com/v3/configs?project=<project_id>&environment=<environment_id>' -H 'Authorization : Bearer <api_key>'",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/configs?project=<project_id>&environment=<environment_id>' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.doppler.com/v3/configs?project=<project_id>&environment=<environment_id>",
                 "request_method": "GET",
                 "override_default_input_field": true,
@@ -1706,7 +1706,7 @@
             },
             "secrets" : {
                 "label": "Secrets",
-                "curl": "curl -X GET 'https://api.doppler.com/v3/secrets?project=<project_id>&config=<config_id>' -H 'Authorization : Bearer <api_key>'",
+                "curl": "curl -X GET 'https://api.doppler.com/v3/secrets?project=<project_id>&config=<config_id>' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.doppler.com/v3/secrets?project=<project_id>&config=<config_id>",
                 "request_method": "GET",
                 "override_default_input_field": true,
