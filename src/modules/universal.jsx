@@ -72,7 +72,7 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
     const handleInputChange = (key, value) => {
         setInputValues(prev => {
             const updatedInputs = { ...prev, [key]: value };
-            const updatedCurl = generateDynamicCurl(curlCommand, updatedInputs); // Assuming curlCommand holds the template
+            const updatedCurl = generateDynamicCurl(curlCommand, updatedInputs);
             setCurlCommand(updatedCurl);
             return updatedInputs;
         });
