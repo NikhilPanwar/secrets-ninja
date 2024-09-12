@@ -281,25 +281,25 @@
             "orders": {
                 "label": "Orders",
                 "curl": "curl -X GET https://<store_domain>/admin/api/2023-10/orders.json -H 'X-Shopify-Access-Token: <api_key>'",
-                "request_url": "https://shopify.com/admin/api/2023-10/orders.json",
+                "request_url": "https://<store_domain>/admin/api/2023-10/orders.json",
                 "request_method": "GET"
             },
             "customers": {
                 "label": "Customers",
                 "curl": "curl -X GET https://<store_domain>/admin/api/2023-10/customers.json -H 'X-Shopify-Access-Token: <api_key>'",
-                "request_url": "https://shopify.com/admin/api/2023-10/customers.json",
+                "request_url": "https://<store_domain>/admin/api/2023-10/customers.json",
                 "request_method": "GET"
             },
             "orders_count": {
                 "label": "Orders Count",
                 "curl": "curl -X GET https://<store_domain>/admin/api/2023-10/orders/count.json -H 'X-Shopify-Access-Token: <api_key>'",
-                "request_url": "https://shopify.com/admin/api/2023-10/orders/count.json",
+                "request_url": "https://<store_domain>/admin/api/2023-10/orders/count.json",
                 "request_method": "GET"
             },
             "customers_count": {
                 "label": "Customers Count",
                 "curl": "curl -X GET https://<store_domain>/admin/api/2023-10/customers/count.json -H 'X-Shopify-Access-Token: <api_key>'",
-                "request_url": "https://shopify.com/admin/api/2023-10/customers/count.json",
+                "request_url": "https://<store_domain>/admin/api/2023-10/customers/count.json",
                 "request_method": "GET"
             }
         },
