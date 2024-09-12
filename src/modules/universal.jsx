@@ -85,24 +85,38 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
         setIsChecked(e.target.checked);
       };    
 
-    useEffect(() => {
-        // Resetting the state variables when serviceType changes
+      useEffect(() => {
+        // Only reset state variables when serviceType changes
         const newServiceConfig = servicesConfig[serviceType] || {};
         const newEndpoints = newServiceConfig.endpoints || {};
         const newDefaultInputFields = newServiceConfig.input_fields || {};
-
+    
         const firstNewEndpointKey = Object.keys(newEndpoints)[0];
         const firstNewEndpoint = newEndpoints[firstNewEndpointKey] || {};
-
+    
+        // Reset the selected endpoint and input fields only when serviceType changes
         setSelectedEndpoint(firstNewEndpoint.label || "Select Endpoint");
-        const updatedCurl = generateDynamicCurl(firstNewEndpoint.curl, inputValues);
-        setCurlCommand(updatedCurl);
         setRequestURL(firstNewEndpoint.request_url || "");
         setRequestMethod(firstNewEndpoint.request_method || "");
         setInputFields(firstNewEndpoint.override_default_input_field ? firstNewEndpoint.input_fields : newDefaultInputFields);
-
+    
+        // Reset status code when serviceType changes
         setStatusCode(0);
-    }, [serviceType, inputValues]);
+    }, [serviceType]); // Only depend on serviceType
+    
+    useEffect(() => {
+        // Update the curl content dynamically based on inputValues but don't reset the endpoint
+        const newServiceConfig = servicesConfig[serviceType] || {};
+        const newEndpoints = newServiceConfig.endpoints || {};
+    
+        // Get the currently selected endpoint
+        const selectedEndpointData = Object.values(newEndpoints).find(endpoint => endpoint.label === selectedEndpoint) || {};
+    
+        // Generate the updated cURL command based on the selected endpoint and current input values
+        const updatedCurl = generateDynamicCurl(selectedEndpointData.curl, inputValues);
+        setCurlCommand(updatedCurl);
+    }, [inputValues, selectedEndpoint, serviceType]); // Depend on inputValues, selectedEndpoint, and serviceType
+    
 
     return (
         <div className="p-4">
