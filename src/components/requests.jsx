@@ -383,6 +383,14 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'Shopify':
+            response = await fetch(endpointURL.replace(encodeURIComponent('<store_domain>'), inputData.store_domain), {
+                method: requestMethod,
+                headers: {
+                    'X-Shopify-Access-Token': `${inputData.api_key}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }
