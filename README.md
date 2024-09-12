@@ -35,8 +35,17 @@ $ npm run dev
 
 Access the development server at [http://localhost:5173/](http://localhost:5173/)
 
-## Contributing Modules
+## Contributing
 
 Contributions are welcome, particularly new modules for validating API keys on additional services. Please note that due to CORS restrictions, some APIs may not be accessible from the browser. In such cases, the project provides workarounds and clear instructions on how to proceed.
 
 Interested in contributing to the project? [Here's](CONTRIBUTING.md) how you can get started.
+
+## Disclaimer
+
+This tool is intended for ethical use only. It is the user's responsibility to comply with all applicable laws and terms of service when using this tool.
+
+## License
+
+Secrets Ninja is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
