@@ -1741,5 +1741,37 @@
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
             "color": "failure"
         }
+    },
+    "Jfrog": {
+        "endpoints": {
+            "repositories": {
+                "label": "Me",
+                "curl": "curl -u <username>:<password> https://<domain>/artifactory/api/repositories",
+                "request_url": "https://<domain>/artifactory/api/repositories",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "domain": {
+                "type": "text",
+                "label": "Enter Jfrog Domain",
+                "placeholder": "domain"
+            },
+            "username": {
+                "type": "text",
+                "label": "Enter Jfrog Username",
+                "placeholder": "username"
+            },
+            "password": {
+                "type": "text",
+                "label": "Enter Jfrog Password",
+                "placeholder": "password"
+            }
+        },
+        "api_documentation_page": "https://jfrog.com/help/r/jfrog-rest-apis/artifactory-rest-apis",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "color": "failure"
+        }
     }
 }
