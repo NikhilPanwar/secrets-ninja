@@ -1661,7 +1661,7 @@
                     }
                 }
             },
-            "environments" : {
+            "environments": {
                 "label": "Environments",
                 "curl": "curl -X GET 'https://api.doppler.com/v3/environments?project=<project_id>' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.doppler.com/v3/environments?project=<project_id>",
@@ -1680,7 +1680,7 @@
                     }
                 }
             },
-            "configs" : {
+            "configs": {
                 "label": "Configs",
                 "curl": "curl -X GET 'https://api.doppler.com/v3/configs?project=<project_id>&environment=<environment_id>' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.doppler.com/v3/configs?project=<project_id>&environment=<environment_id>",
@@ -1704,7 +1704,7 @@
                     }
                 }
             },
-            "secrets" : {
+            "secrets": {
                 "label": "Secrets",
                 "curl": "curl -X GET 'https://api.doppler.com/v3/secrets?project=<project_id>&config=<config_id>' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.doppler.com/v3/secrets?project=<project_id>&config=<config_id>",
