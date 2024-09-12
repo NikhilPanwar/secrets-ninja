@@ -391,6 +391,15 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'Jfrog':
+            response = await fetch(endpointURL.replace(encodeURIComponent('<domain>'), inputData.domain), {
+                method: requestMethod,
+                headers: {
+                    'Authorization': `Basic ${btoa(`${inputData.username}:${inputData.password}`)}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }
