@@ -34,8 +34,6 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
         setLoading(true);
         try {
             const updatedRequestURL = isChecked ? `https://corsproxy.io/?` + encodeURIComponent(requestURL) : requestURL;
-            console.log("Testing endpoint with input values:", inputValues);
-            console.log("Request URL:", updatedRequestURL);
             const { status, data } = await makeUniversalRequest(serviceType, inputValues, updatedRequestURL, requestMethod);
             setStatusCode(status);
             setOutputStr(JSON.stringify(data, null, 2));
