@@ -1745,7 +1745,7 @@
     "Jfrog": {
         "endpoints": {
             "repositories": {
-                "label": "Me",
+                "label": "Repositories",
                 "curl": "curl -u <username>:<password> https://<domain>/artifactory/api/repositories",
                 "request_url": "https://<domain>/artifactory/api/repositories",
                 "request_method": "GET"
