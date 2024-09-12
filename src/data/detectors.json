@@ -23,25 +23,25 @@
             },
             "customers": {
                 "label": "Customers",
-                "curl": "curl https://api.stripe.com/v1/customers -u sk_live_xxxx:",
+                "curl": "curl https://api.stripe.com/v1/customers -u <api_key>:",
                 "request_url": "https://api.stripe.com/v1/customers",
                 "request_method": "GET"
             },
             "orders": {
                 "label": "Orders",
-                "curl": "curl https://api.stripe.com/v1/orders -u sk_live_xxxx:",
+                "curl": "curl https://api.stripe.com/v1/orders -u <api_key>:",
                 "request_url": "https://api.stripe.com/v1/orders",
                 "request_method": "GET"
             },
             "payment_intents": {
                 "label": "Payment Intents",
-                "curl": "curl https://api.stripe.com/v1/payment_intents -u sk_live_xxxx:",
+                "curl": "curl https://api.stripe.com/v1/payment_intents -u <api_key>:",
                 "request_url": "https://api.stripe.com/v1/payment_intents",
                 "request_method": "GET"
             },
             "charges": {
                 "label": "Charges",
-                "curl": "curl https://api.stripe.com/v1/charges -u sk_live_xxxx:",
+                "curl": "curl https://api.stripe.com/v1/charges -u <api_key>:",
                 "request_url": "https://api.stripe.com/v1/charges",
                 "request_method": "GET"
             }
@@ -59,31 +59,31 @@
         "endpoints": {
             "get_access_scope": {
                 "label": "Access Scope",
-                "curl": "curl -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials'",
+                "curl": "curl -X POST 'https://api.paypal.com/v1/oauth2/token' -u '<client_id>:<client_secret>' -d 'grant_type=client_credentials'",
                 "request_url": "https://api.paypal.com/v1/oauth2/token",
                 "request_method": "GET"
             },
             "get_account": {
                 "label": "Account",
-                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/identity/openidconnect/userinfo/?schema=openid' -H 'Authorization: Bearer $access_token'",
+                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u '<client_id>:<client_secret>' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/identity/openidconnect/userinfo/?schema=openid' -H 'Authorization: Bearer $access_token'",
                 "request_url": "https://api.paypal.com/v1/identity/openidconnect/userinfo/?schema=openid",
                 "request_method": "GET"
             },
             "get_payments": {
                 "label": "Payments",
-                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/payments/payment' -H 'Authorization: Bearer $access_token'",
+                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u '<client_id>:<client_secret>' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/payments/payment' -H 'Authorization: Bearer $access_token'",
                 "request_url": "https://api.paypal.com/v1/payments/payment",
                 "request_method": "GET"
             },
             "webhooks": {
                 "label": "Webhooks",
-                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/notifications/webhooks' -H 'Authorization: Bearer $access_token'",
+                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u '<client_id>:<client_secret>' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/notifications/webhooks' -H 'Authorization: Bearer $access_token'",
                 "request_url": "https://api.paypal.com/v1/notifications/webhooks",
                 "request_method": "GET"
             },
             "balance": {
                 "label": "Balance",
-                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u 'access_token:access_secret' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/reporting/balances' -H 'Authorization: Bearer $access_token'",
+                "curl": "access_token=$(curl -s -X POST 'https://api.paypal.com/v1/oauth2/token' -u '<client_id>:<client_secret>' -d 'grant_type=client_credentials' | jq -r '.access_token') && curl -X GET 'https://api.paypal.com/v1/reporting/balances' -H 'Authorization: Bearer $access_token'",
                 "request_url": "https://api.paypal.com/v1/reporting/balances",
                 "request_method": "GET"
             }
@@ -262,7 +262,7 @@
             },
             "campaigns": {
                 "label": "Campaigns",
-                "curl": "curl -X GET",
+                "curl": "curl -X GET https://api.omnisend.com/v3/campaigns?limit=100 -H 'X-API-KEY: <api_key>'",
                 "request_url": "https://api.omnisend.com/v3/campaigns?limit=100",
                 "request_method": "GET"
             }
@@ -280,25 +280,25 @@
         "endpoints": {
             "orders": {
                 "label": "Orders",
-                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/orders.json -H 'X-Shopify-Access-Token: shp_12345'",
+                "curl": "curl -X GET https://<store_domain>/admin/api/2023-10/orders.json -H 'X-Shopify-Access-Token: <api_key>'",
                 "request_url": "https://shopify.com/admin/api/2023-10/orders.json",
                 "request_method": "GET"
             },
             "customers": {
                 "label": "Customers",
-                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/customers.json -H 'X-Shopify-Access-Token: shp_12345'",
+                "curl": "curl -X GET https://<store_domain>/admin/api/2023-10/customers.json -H 'X-Shopify-Access-Token: <api_key>'",
                 "request_url": "https://shopify.com/admin/api/2023-10/customers.json",
                 "request_method": "GET"
             },
             "orders_count": {
                 "label": "Orders Count",
-                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/orders/count.json -H 'X-Shopify-Access-Token: shp_12345'",
+                "curl": "curl -X GET https://<store_domain>/admin/api/2023-10/orders/count.json -H 'X-Shopify-Access-Token: <api_key>'",
                 "request_url": "https://shopify.com/admin/api/2023-10/orders/count.json",
                 "request_method": "GET"
             },
             "customers_count": {
                 "label": "Customers Count",
-                "curl": "curl -X GET https://target_store.myshopify.com/admin/api/2023-10/customers/count.json -H 'X-Shopify-Access-Token: shp_12345'",
+                "curl": "curl -X GET https://<store_domain>/admin/api/2023-10/customers/count.json -H 'X-Shopify-Access-Token: <api_key>'",
                 "request_url": "https://shopify.com/admin/api/2023-10/customers/count.json",
                 "request_method": "GET"
             }
@@ -325,13 +325,13 @@
         "endpoints": {
             "bot_info": {
                 "label": "Bot Info",
-                "curl": "curl -X GET https://api.telegram.org/bot<your-bot-token>/getMe",
+                "curl": "curl -X GET https://api.telegram.org/bot<bot_token>/getMe",
                 "request_url": "https://api.telegram.org/bot<token>/getMe",
                 "request_method": "GET"
             },
             "get_updates": {
                 "label": "Updates",
-                "curl": "curl -X GET https://api.telegram.org/bot<your-bot-token>/getUpdates",
+                "curl": "curl -X GET https://api.telegram.org/bot<bot_token>/getUpdates",
                 "request_url": "https://api.telegram.org/bot<token>/getUpdates",
                 "request_method": "GET"
             }
@@ -414,19 +414,19 @@
         "endpoints": {
             "charges": {
                 "label": "Charges",
-                "curl": "curl -X GET https://api.rechargeapps.com/charges -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
+                "curl": "curl -X GET https://api.rechargeapps.com/charges -H 'X-Recharge-Access-Token: <api_key>'",
                 "request_url": "https://api.rechargeapps.com/charges",
                 "request_method": "GET"
             },
             "orders": {
                 "label": "Orders",
-                "curl": "curl -X GET https://api.rechargeapps.com/orders -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
+                "curl": "curl -X GET https://api.rechargeapps.com/orders -H 'X-Recharge-Access-Token: <api_key>'",
                 "request_url": "https://api.rechargeapps.com/orders",
                 "request_method": "GET"
             },
             "customers": {
                 "label": "Customers",
-                "curl": "curl -X GET https://api.rechargeapps.com/customers -H 'X-Recharge-Access-Token: sk_xxx-xxx-xxx'",
+                "curl": "curl -X GET https://api.rechargeapps.com/customers -H 'X-Recharge-Access-Token: <api_key>'",
                 "request_url": "https://api.rechargeapps.com/customers",
                 "request_method": "GET"
             }
@@ -448,19 +448,19 @@
         "endpoints": {
             "subscribers": {
                 "label": "Subscribers",
-                "curl": "curl -X GET https://api.mailerlite.com/api/v2/subscribers -H 'X-MailerLite-ApiKey: xxx-xxx-xxx'",
+                "curl": "curl -X GET https://api.mailerlite.com/api/v2/subscribers -H 'X-MailerLite-ApiKey: <api_key>'",
                 "request_url": "https://api.mailerlite.com/api/v2/subscribers",
                 "request_method": "GET"
             },
             "campaigns": {
                 "label": "Campaigns",
-                "curl": "curl -X GET https://api.mailerlite.com/api/v2/campaigns -H 'X-MailerLite-ApiKey: xxx-xxx-xxx'",
+                "curl": "curl -X GET https://api.mailerlite.com/api/v2/campaigns -H 'X-MailerLite-ApiKey: <api_key>'",
                 "request_url": "https://api.mailerlite.com/api/v2/campaigns",
                 "request_method": "GET"
             },
             "groups": {
                 "label": "Groups",
-                "curl": "curl -X GET https://api.mailerlite.com/api/v2/groups -H 'X-MailerLite-ApiKey: xxx-xxx-xxx'",
+                "curl": "curl -X GET https://api.mailerlite.com/api/v2/groups -H 'X-MailerLite-ApiKey: <api_key>'",
                 "request_url": "https://api.mailerlite.com/api/v2/groups",
                 "request_method": "GET"
             }
@@ -801,7 +801,7 @@
         "endpoints": {
             "profiles": {
                 "label": "Profiles",
-                "curl": "curl https://a.klaviyo.com/api/profiles -H 'Revision: 2023-02-22' -H 'Authorization: Klaviyo-API-Key pk_xxxx-xxxx-xxxx-xxxx-xxxx'",
+                "curl": "curl https://a.klaviyo.com/api/profiles -H 'Revision: 2023-02-22' -H 'Authorization: Klaviyo-API-Key <api_key>'",
                 "request_url": "https://a.klaviyo.com/api/profiles",
                 "request_method": "GET"
             }
@@ -823,31 +823,31 @@
         "endpoints": {
             "account": {
                 "label": "Account",
-                "curl": "curl -X GET 'https://api.digitalocean.com/v2/account' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/account' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.digitalocean.com/v2/account",
                 "request_method": "GET"
             },
             "droplets": {
                 "label": "Droplets",
-                "curl": "curl -X GET 'https://api.digitalocean.com/v2/droplets' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/droplets' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.digitalocean.com/v2/droplets",
                 "request_method": "GET"
             },
             "SSH_keys": {
                 "label": "SSH Keys",
-                "curl": "curl -X GET 'https://api.digitalocean.com/v2/account/keys' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/account/keys' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.digitalocean.com/v2/account/keys",
                 "request_method": "GET"
             },
             "database_clusters": {
                 "label": "Database Clusters",
-                "curl": "curl -X GET 'https://api.digitalocean.com/v2/databases' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/databases' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.digitalocean.com/v2/databases",
                 "request_method": "GET"
             },
             "domains": {
                 "label": "Domains",
-                "curl": "curl -X GET 'https://api.digitalocean.com/v2/domains' -H 'Authorization: Bearer dop_v1_xxxxx'",
+                "curl": "curl -X GET 'https://api.digitalocean.com/v2/domains' -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.digitalocean.com/v2/domains",
                 "request_method": "GET"
             }
@@ -865,25 +865,25 @@
         "endpoints": {
             "auth": {
                 "label": "Auth",
-                "curl": "curl -X GET 'https://api.honeycomb.io/1/auth' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/auth' -H 'X-Honeycomb-Team: <api_key>'",
                 "request_url": "https://api.honeycomb.io/1/auth",
                 "request_method": "GET"
             },
             "boards": {
                 "label": "Boards",
-                "curl": "curl -X GET 'https://api.honeycomb.io/1/boards' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/boards' -H 'X-Honeycomb-Team: <api_key>'",
                 "request_url": "https://api.honeycomb.io/1/boards",
                 "request_method": "GET"
             },
             "datasets": {
                 "label": "Datasets",
-                "curl": "curl -X GET 'https://api.honeycomb.io/1/datasets' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/datasets' -H 'X-Honeycomb-Team: <api_key>'",
                 "request_url": "https://api.honeycomb.io/1/datasets",
                 "request_method": "GET"
             },
             "recipients": {
                 "label": "Recipients",
-                "curl": "curl -X GET 'https://api.honeycomb.io/1/recipients' -H 'X-Honeycomb-Team: xxxxxxxxxx'",
+                "curl": "curl -X GET 'https://api.honeycomb.io/1/recipients' -H 'X-Honeycomb-Team: <api_key>'",
                 "request_url": "https://api.honeycomb.io/1/recipients",
                 "request_method": "GET"
             }
@@ -901,7 +901,7 @@
         "endpoints": {
             "account_metadata": {
                 "label": "Account Metadata",
-                "curl": "curl -X GET 'https://www.eventbriteapi.com/v3/users/me/?token=xxxxx'",
+                "curl": "curl -X GET 'https://www.eventbriteapi.com/v3/users/me/?token=<token>'",
                 "request_url": "https://www.eventbriteapi.com/v3/users/me/",
                 "request_method": "GET"
             }
@@ -919,13 +919,13 @@
         "endpoints": {
             "templates": {
                 "label": "Templates",
-                "curl": "curl -X GET https://api.sendgrid.com/v3/templates -H 'Authorization: Bearer SG.xxxxx'",
+                "curl": "curl -X GET https://api.sendgrid.com/v3/templates -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.sendgrid.com/v3/templates",
                 "request_method": "GET"
             },
             "customer_accounts": {
                 "label": "Customer Accounts",
-                "curl": "curl -X GET https://api.sendgrid.com/v3/partners/accounts -H 'Authorization: Bearer SG.xxxxx'",
+                "curl": "curl -X GET https://api.sendgrid.com/v3/partners/accounts -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.sendgrid.com/v3/partners/accounts",
                 "request_method": "GET"
             }
@@ -994,13 +994,13 @@
         "endpoints": {
             "server": {
                 "label": "Server",
-                "curl": "curl -X GET https://api.postmarkapp.com/server -H 'X-Postmark-Server-Token: xxx-xxxx-xxxx-xxxx-xxxx'",
+                "curl": "curl -X GET https://api.postmarkapp.com/server -H 'X-Postmark-Server-Token: <server_token>'",
                 "request_url": "https://api.postmarkapp.com/server",
                 "request_method": "GET"
             },
             "deliverystats": {
                 "label": "Delivery Stats",
-                "curl": "curl -X GET https://api.postmarkapp.com/deliverystats -H 'X-Postmark-Server-Token: xxx-xxxx-xxxx-xxxx-xxxx'",
+                "curl": "curl -X GET https://api.postmarkapp.com/deliverystats -H 'X-Postmark-Server-Token: <server_token>'",
                 "request_url": "https://api.postmarkapp.com/deliverystats",
                 "request_method": "GET"
             }
@@ -1022,13 +1022,13 @@
         "endpoints": {
             "addresses": {
                 "label": "Addresses",
-                "curl": "curl -X GET https://api.telnyx.com/v2/addresses -H 'Authorization: Bearer key'",
+                "curl": "curl -X GET https://api.telnyx.com/v2/addresses -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.telnyx.com/v2/addresses",
                 "request_method": "GET"
             },
             "notification_events": {
                 "label": "Notification Events",
-                "curl": "curl -X GET https://api.telnyx.com/v2/notification_events -H 'Authorization: Bearer key'",
+                "curl": "curl -X GET https://api.telnyx.com/v2/notification_events -H 'Authorization: Bearer <api_key>'",
                 "request_url": "https://api.telnyx.com/v2/notification_events",
                 "request_method": "GET"
             }
@@ -1046,37 +1046,37 @@
         "endpoints": {
             "deals": {
                 "label": "Deals",
-                "curl": "curl -X GET 'https://api.pipedrive.com/v1/deals?api_token=xxxxx'",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/deals?api_token=<api_key>'",
                 "request_url": "https://api.pipedrive.com/v1/deals",
                 "request_method": "GET"
             },
             "persons": {
                 "label": "Persons",
-                "curl": "curl -X GET 'https://api.pipedrive.com/v1/persons?api_token=xxxxx'",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/persons?api_token=<api_key>'",
                 "request_url": "https://api.pipedrive.com/v1/persons",
                 "request_method": "GET"
             },
             "organizations": {
                 "label": "Organizations",
-                "curl": "curl -X GET 'https://api.pipedrive.com/v1/organizations?api_token=xxxxx'",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/organizations?api_token=<api_key>'",
                 "request_url": "https://api.pipedrive.com/v1/organizations",
                 "request_method": "GET"
             },
             "activities": {
                 "label": "Activities",
-                "curl": "curl -X GET 'https://api.pipedrive.com/v1/activities?api_token=xxxxx'",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/activities?api_token=<api_key>'",
                 "request_url": "https://api.pipedrive.com/v1/activities",
                 "request_method": "GET"
             },
             "notes": {
                 "label": "Notes",
-                "curl": "curl -X GET 'https://api.pipedrive.com/v1/notes?api_token=xxxxx'",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/notes?api_token=<api_key>'",
                 "request_url": "https://api.pipedrive.com/v1/notes",
                 "request_method": "GET"
             },
             "users": {
                 "label": "Users",
-                "curl": "curl -X GET 'https://api.pipedrive.com/v1/users?api_token=xxxxx'",
+                "curl": "curl -X GET 'https://api.pipedrive.com/v1/users?api_token=<api_key>'",
                 "request_url": "https://api.pipedrive.com/v1/users",
                 "request_method": "GET"
             }
@@ -1094,7 +1094,7 @@
         "endpoints": {
             "user": {
                 "label": "User",
-                "curl": "curl -X GET 'https://api.vercel.com/www/user' -H 'Authorization: Brearer xxxx'",
+                "curl": "curl -X GET 'https://api.vercel.com/www/user' -H 'Authorization: Brearer <api_token>'",
                 "request_url": "https://api.vercel.com/www/user",
                 "request_method": "GET"
             }
