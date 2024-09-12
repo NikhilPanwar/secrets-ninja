@@ -5,8 +5,6 @@ import RequestWindow from "../components/request_window";
 import { HiInformationCircle } from 'react-icons/hi';
 import makeUniversalRequest from "../components/requests";
 import { AiOutlineLoading } from 'react-icons/ai';
-import { ImNewTab } from "react-icons/im";
-import { FaHandPointLeft } from "react-icons/fa";
 
 
 
