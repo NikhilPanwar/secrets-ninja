@@ -1,6 +1,9 @@
 import React from "react";
 import MainPageTable from "./table";
 import { Alert, Button } from 'flowbite-react';
+import { ImNewTab } from "react-icons/im";
+import { FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Dashboard({ servicesConfig }) {
     return (
@@ -11,11 +14,25 @@ export default function Dashboard({ servicesConfig }) {
                         <span className="font-medium">Found API Keys, Credentials while Pentesting!</span> Test them using Secrets Ninja ...
                     </li>
                     <li>
-                        <span className="font-medium">Note:</span> This webapp checks secrets from frontend using JS in your browser.
+                        <span className="font-medium">Note:</span> Secrets Ninja is an{" "}
+                        <a href="https://github.com/NikhilPanwar/secrets-ninja" target="_blank" rel="noopener noreferrer" className="font-bold">
+                            open source
+                        </a>
+                        <ImNewTab className="inline-block ml-1" /> project for validating secrets from the frontend using JS in your browser.
                     </li>
                     <li>
-                        <span className="font-medium">By:</span> <a href="https://twitter.com/cybersecdawg">@cybersecdawg</a>
+                        <span className="font-medium">By:</span> <a href="https://x.com/cybersecdawg" target="_blank" rel="noopener noreferrer" className="font-bold">@cybersecdawg </a>
                     </li>
+                    <li>
+                        <span className="font-medium">Links:</span>{" "}
+                        <a href="https://github.com/NikhilPanwar/secrets-ninja" target="_blank" rel="noopener noreferrer" className="font-bold">
+                            <FaGithub className="inline-block mr-1" />
+                        </a>
+                        <a href="https://x.com/cybersecdawg" target="_blank" rel="noopener noreferrer" className="font-bold">
+                            <FaXTwitter className="inline-block mr-1" />
+                        </a>
+                    </li>
+
                 </ul>
             </Alert>
             <div>
