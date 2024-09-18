@@ -1773,5 +1773,35 @@
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
             "color": "failure"
         }
+    },
+    "Buildkite": {
+        "endpoints": {
+            "access_scope": {
+                "label": "Access Scope",
+                "curl": "curl -X GET 'https://api.buildkite.com/v2/access-token' -H 'Authorization: Bearer <api_key>'",
+                "request_url": "https://api.buildkite.com/v2/access-token",
+                "request_method": "GET"
+            },
+            "user": {
+                "label": "User",
+                "curl": "curl -X GET 'https://api.buildkite.com/v2/user' -H 'Authorization: Bearer <api_key>'",
+                "request_url": "https://api.buildkite.com/v2/user",
+                "request_method": "GET"
+            },
+            "organizations": {
+                "label": "Organizations",
+                "curl": "curl -X GET 'https://api.buildkite.com/v2/organizations' -H 'Authorization: Bearer <api_key>'",
+                "request_url": "https://api.buildkite.com/v2/organizations",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Buildkite API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://buildkite.com/docs/apis/rest-api"
     }
 }
