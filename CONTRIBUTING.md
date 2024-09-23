@@ -58,11 +58,11 @@ let serviceIcons = {
 
 4. **CORS Error Workarounds**
 
-If the api can't be accessed from browser due to CORS, add the following to the `src/data/detectors.json`. This will auto enable the corsproxy.io checkbox
+If the api can't be accessed from browser due to CORS, add the following to the `src/data/detectors.json`. This will auto enable the thingproxy.freeboard.io checkbox
 
 ```json
 "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
 ```

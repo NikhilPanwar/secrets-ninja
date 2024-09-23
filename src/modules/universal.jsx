@@ -33,7 +33,7 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
     const handleTestEndpoint = async () => {
         setLoading(true);
         try {
-            const updatedRequestURL = isChecked ? `https://corsproxy.io/?` + encodeURIComponent(requestURL) : requestURL;
+            const updatedRequestURL = isChecked ? `https://thingproxy.freeboard.io/fetch/` + encodeURIComponent(requestURL) : requestURL;
             const { status, data } = await makeUniversalRequest(serviceType, inputValues, updatedRequestURL, requestMethod);
             setStatusCode(status);
             setOutputStr(JSON.stringify(data, null, 2));
@@ -153,12 +153,12 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
                     {serviceConfig?.alert?.color === 'failure' && (
                         <div className="flex items-center space-x-4">
                             <Checkbox
-                                id="corsProxyCheckbox"
-                                label="Use corsproxy.io to bypass CORS"
+                                id="thingsProxyCheckbox"
+                                label="Use Thingsproxy to bypass CORS"
                                 checked={isChecked}
                                 onChange={handleCheckboxChange}
                             />
-                            <Label htmlFor="corsProxyCheckbox">Use corsproxy.io to bypass CORS</Label>
+                            <Label htmlFor="thingsProxyCheckbox">Use Thingsproxy to bypass CORS</Label>
                         </div>
                     )}
 

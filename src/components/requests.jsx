@@ -3,7 +3,7 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
     let response, data;
 
     // endpointURL = 'http://localhost:8000?endpoint=' + encodeURIComponent(endpointURL) + '&method=' + requestMethod;
-    // endpointURL = 'https://corsproxy.io/?' + endpointURL ;
+    // endpointURL = 'https://thingproxy.freeboard.io/?' + endpointURL ;
     switch (serviceType) {
         case 'Stripe':
             response = await fetch(endpointURL, {
