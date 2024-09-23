@@ -317,7 +317,7 @@
         },
         "api_documentation_page": "https://shopify.dev/docs/api/admin-rest",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -376,7 +376,7 @@
         },
         "api_documentation_page": "https://clearbit.com/docs",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -440,7 +440,7 @@
         },
         "api_documentation_page": "https://developer.rechargepayments.com/",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -474,7 +474,7 @@
         },
         "api_documentation_page": "https://developers.mailerlite.com/docs/#mailerlite-api",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -578,7 +578,7 @@
         },
         "api_documentation_page": "https://razorpay.com/docs/api/",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -737,7 +737,7 @@
         },
         "api_documentation_page": "https://docs.npmjs.com/cli/v7/commands/npm-token",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -815,7 +815,7 @@
         },
         "api_documentation_page": "https://developers.klaviyo.com/en/reference/api_overview",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -986,7 +986,7 @@
         },
         "api_documentation_page": "https://mailchimp.com/developer/marketing/api/",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -1014,7 +1014,7 @@
         },
         "api_documentation_page": "https://postmarkapp.com/developer/api/email-api",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -1223,7 +1223,7 @@
         },
         "api_documentation_page": "https://posthog.com/docs/api",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -1251,7 +1251,7 @@
         },
         "api_documentation_page": "https://docs.opsgenie.com/docs/service-api",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -1309,7 +1309,7 @@
         },
         "api_documentation_page": "https://www.typeform.com/developers/create",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -1355,7 +1355,7 @@
         },
         "api_documentation_page": "https://apidocs.getresponse.com/v3",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -1407,7 +1407,7 @@
         },
         "api_documentation_page": "https://developers.notion.com/reference/",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -1435,7 +1435,7 @@
         },
         "api_documentation_page": "https://developers.madkudu.com/",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -1518,7 +1518,7 @@
         },
         "api_documentation_page": "https://api.slack.com/",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -1624,7 +1624,7 @@
         },
         "api_documentation_page": "https://developer.hashicorp.com/terraform/cloud-docs/api-docs",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -1738,7 +1738,7 @@
         },
         "api_documentation_page": "https://docs.doppler.com/docs/start",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
@@ -1770,7 +1770,7 @@
         },
         "api_documentation_page": "https://jfrog.com/help/r/jfrog-rest-apis/artifactory-rest-apis",
         "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or Check the corsproxy.io box to use proxy, at your own risk. We dont control corsproxy.io",
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
     },
