@@ -21,14 +21,14 @@ export default function Dashboard({ servicesConfig }) {
                         <ImNewTab className="inline-block ml-1" /> project for validating secrets from the frontend using JS in your browser.
                     </li>
                     <li>
-                        <span className="font-medium">By:</span> <a href="https://x.com/cybersecdawg" target="_blank" rel="noopener noreferrer" className="font-bold">@cybersecdawg </a>
+                        <span className="font-medium">By:</span> <a href="https://x.com/cyb3rs3cd4wg" target="_blank" rel="noopener noreferrer" className="font-bold">@cyb3rs3cd4wg </a>
                     </li>
                     <li>
                         <span className="font-medium">Links:</span>{" "}
                         <a href="https://github.com/NikhilPanwar/secrets-ninja" target="_blank" rel="noopener noreferrer" className="font-bold">
                             <FaGithub className="inline-block mr-1" />
                         </a>
-                        <a href="https://x.com/cybersecdawg" target="_blank" rel="noopener noreferrer" className="font-bold">
+                        <a href="https://x.com/cyb3rs3cd4wg" target="_blank" rel="noopener noreferrer" className="font-bold">
                             <FaXTwitter className="inline-block mr-1" />
                         </a>
                     </li>
