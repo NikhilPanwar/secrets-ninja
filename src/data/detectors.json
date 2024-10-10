@@ -1803,5 +1803,42 @@
             }
         },
         "api_documentation_page": "https://buildkite.com/docs/apis/rest-api"
+    },
+    "Pulumi": {
+        "endpoints": {
+            "stacks": {
+                "label": "Stacks",
+                "curl": "curl -X GET 'https://api.pulumi.com/api/user/stacks' -H 'Authorization: token <api_key>'",
+                "request_url": "https://api.pulumi.com/api/user/stacks",
+                "request_method": "GET"
+            },
+            "list_users": {
+                "label": "List Users",
+                "curl": "curl -X GET 'https://api.pulumi.com/api/orgs/<org_id>/members?type=backend' -H 'Authorization: token <api_key>'",
+                "request_url": "https://api.pulumi.com/api/orgs/<org_id>/members?type=backend",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "api_key": {
+                        "type": "text",
+                        "label": "Enter Pulumi API Key",
+                        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "org_id": {
+                        "type": "text",
+                        "label": "Enter Organization ID, fetched from stacks endpoint",
+                        "placeholder": "xxxx"
+                    }
+                }
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Pulumi API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://www.pulumi.com/docs/pulumi-cloud/reference/cloud-rest-api"
     }
 }
