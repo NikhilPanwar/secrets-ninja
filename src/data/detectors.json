@@ -1830,6 +1830,12 @@
                         "placeholder": "xxxx"
                     }
                 }
+            },
+            "list_tokens": {
+                "label": "List Tokens",
+                "curl": "curl -X GET 'https://api.pulumi.com/api/user/tokens' -H 'Authorization: token <api_key>'",
+                "request_url": "https://api.pulumi.com/api/user/tokens",
+                "request_method": "GET"
             }
         },
         "input_fields": {
