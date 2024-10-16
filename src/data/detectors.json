@@ -721,11 +721,36 @@
     },
     "NpmToken": {
         "endpoints": {
-            "whoami": {
+            "user" : {
                 "label": "User",
+                "curl": "curl -X GET https://registry.npmjs.org/-/npm/v1/user -H 'Authorization: Bearer <token>'",
+                "request_url": "https://registry.npmjs.org/-/npm/v1/user",
+                "request_method": "GET"
+            },
+            "whoami": {
+                "label": "WhoAmI",
                 "curl": "curl -X GET https://registry.npmjs.org/-/whoami -H 'Authorization: Bearer <token>'",
                 "request_url": "https://registry.npmjs.org/-/whoami",
                 "request_method": "GET"
+            },
+            "list_packages": {
+                "label": "List Packages",
+                "curl": "curl -X GET https://registry.npmjs.org/-/org/<org>/package -H 'Authorization: Bearer <token>'",
+                "request_url": "https://registry.npmjs.org/-/org/<org>/package",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "token": {
+                        "type": "text",
+                        "label": "Enter NPM Token",
+                        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+                    },
+                    "org": {
+                        "type": "text",
+                        "label": "Enter Organization",
+                        "placeholder": "npm"
+                    }
+                }
             }
         },
         "input_fields": {
