@@ -416,6 +416,14 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'Snyk':
+            response = await fetch(endpointURL, {
+                method: requestMethod,
+                headers: {
+                    'Authorization': `token ${inputData.api_key}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }

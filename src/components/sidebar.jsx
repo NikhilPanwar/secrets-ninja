@@ -38,6 +38,7 @@ import { SiTerraform } from "react-icons/si";
 import { SiJfrog } from "react-icons/si";
 import { SiBuildkite } from "react-icons/si";
 import { SiPulumi } from "react-icons/si";
+import { SiSnyk } from "react-icons/si";
 
 
 function SB({ visible, servicesConfig }) { // Accept visible as a prop
@@ -81,6 +82,7 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     Jfrog: SiJfrog,
     Buildkite: SiBuildkite,
     Pulumi: SiPulumi,
+    Snyk: SiSnyk,
   };
 
   return (
