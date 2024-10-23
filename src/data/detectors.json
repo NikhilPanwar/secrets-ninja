@@ -721,7 +721,7 @@
     },
     "NpmToken": {
         "endpoints": {
-            "user" : {
+            "user": {
                 "label": "User",
                 "curl": "curl -X GET https://registry.npmjs.org/-/npm/v1/user -H 'Authorization: Bearer <token>'",
                 "request_url": "https://registry.npmjs.org/-/npm/v1/user",
@@ -1871,5 +1871,27 @@
             }
         },
         "api_documentation_page": "https://www.pulumi.com/docs/pulumi-cloud/reference/cloud-rest-api"
+    },
+    "Snyk": {
+        "endpoints": {
+            "user": {
+                "label": "User",
+                "curl": "curl -X GET 'https://snyk.io/api/v1/user/me' -H 'Authorization: token <api_key>'",
+                "request_url": "https://snyk.io/api/v1/user/me",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Snyk API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://snyk.io/docs/api",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
+            "color": "failure"
+        }
     }
 }
