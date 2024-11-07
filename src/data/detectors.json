@@ -181,6 +181,12 @@
                 "curl": "curl -X GET 'https://api.github.com/notifications' -H 'Authorization token <access_token>'",
                 "request_url": "https://api.github.com/notifications",
                 "request_method": "GET"
+            },
+            "events": {
+                "label": "Events",
+                "curl": "curl -X GET 'https://api.github.com/events?per_page=100&page=1' -H 'Authorization: token <access_token>'",
+                "request_url": "https://api.github.com/events?per_page=100&page=1",
+                "request_method": "GET"
             }
         },
         "input_fields": {
