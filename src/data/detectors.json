@@ -208,8 +208,8 @@
             },
             "projects": {
                 "label": "Projects",
-                "curl": "curl -X GET 'https://gitlab.com/api/v4/projects?membership=true' -H 'Authorization: Bearer <access_token>'",
-                "request_url": "https://gitlab.com/api/v4/projects?membership=true",
+                "curl": "curl -X GET 'https://gitlab.com/api/v4/projects?membership=true&per_page=100' -H 'Authorization: Bearer <access_token>'",
+                "request_url": "https://gitlab.com/api/v4/projects?membership=true&per_page=100",
                 "request_method": "GET"
             },
             "groups": {
