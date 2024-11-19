@@ -1899,5 +1899,28 @@
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
+    },
+    "EvolutionAPI": {
+        "endpoints": {
+            "fetch_instances": {
+                "label": "Fetch Instances",
+                "curl": "curl --request GET --url https://<instance_url>/instance/fetchInstances --header 'apikey: <api_key>'",
+                "request_url": "https://<instance_url>/instance/fetchInstances",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter Evolution API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            },
+            "instance_url": {
+                "type": "text",
+                "label": "Enter Instance URL",
+                "placeholder": "https://example.com"
+            }
+        },
+        "api_documentation_page": "https://doc.evolution-api.com/v2/api-reference"
     }
 }
