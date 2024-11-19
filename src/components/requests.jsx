@@ -424,6 +424,14 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
                 }
             });
             break;
+        case 'EvolutionAPI':
+            response = await fetch(endpointURL.replace('<instance_url>', inputData.instance_url), {
+                method: requestMethod,
+                headers: {
+                    'apikey': `${inputData.api_key}`,
+                }
+            });
+            break;
         default:
             return { status: 400, data: { message: 'Unsupported service type' } };
     }
