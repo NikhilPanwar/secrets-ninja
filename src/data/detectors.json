@@ -1922,5 +1922,39 @@
             }
         },
         "api_documentation_page": "https://doc.evolution-api.com/v2/api-reference"
+    },
+    "PushBullet": {
+        "endpoints": {
+            "me": {
+                "label": "Me",
+                "curl": "curl -X GET 'https://api.pushbullet.com/v2/users/me' -H 'Access-Token: <api_key>'",
+                "request_url": "https://api.pushbullet.com/v2/users/me",
+                "request_method": "GET"
+            },
+            "devices": {
+                "label": "Devices",
+                "curl": "curl -X GET 'https://api.pushbullet.com/v2/devices' -H 'Access-Token: <api_key>'",
+                "request_url": "https://api.pushbullet.com/v2/devices",
+                "request_method": "GET"
+            },
+            "chats": {
+                "label": "Chats",
+                "curl": "curl -X GET 'https://api.pushbullet.com/v2/chats' -H 'Access-Token: <api_key>'",
+                "request_url": "https://api.pushbullet.com/v2/chats",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "api_key": {
+                "type": "text",
+                "label": "Enter PushBullet API Key",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://docs.pushbullet.com/",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
+            "color": "failure"
+        }
     }
 }
