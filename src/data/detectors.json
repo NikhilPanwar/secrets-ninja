@@ -187,7 +187,51 @@
                 "curl": "curl -X GET 'https://api.github.com/events?per_page=100&page=1' -H 'Authorization: token <access_token>'",
                 "request_url": "https://api.github.com/events?per_page=100&page=1",
                 "request_method": "GET"
+            },
+            "user_packages": {
+                "label": "Packages",
+                "curl": "curl -X GET 'https://api.github.com/user/packages?package_type=<package_type>' -H 'Authorization: token <access_token>'",
+                "request_url": "https://api.github.com/user/packages?package_type=<package_type>",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "access_token": {
+                        "type": "text",
+                        "label": "Enter Github Access Token",
+                        "placeholder": "ghp_xxxxx"
+                    },
+                    "package_type": {
+                        "type": "text",
+                        "label": "Enter Package Type (npm, gem, mvn, gradle, dotnet, docker)",
+                        "placeholder": "npm"
+                    }
+                }
+            },
+            "org_packages": {
+                "label": "Organization Packages",
+                "curl": "curl -X GET 'https://api.github.com/orgs/<org_name>/packages?package_type=<package_type>' -H 'Authorization: token <access_token>'",
+                "request_url": "https://api.github.com/orgs/<org_name>/packages?package_type=<package_type>",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "access_token": {
+                        "type": "text",
+                        "label": "Enter Github Access Token",
+                        "placeholder": "ghp_xxxxx"
+                    },
+                    "org_name": {
+                        "type": "text",
+                        "label": "Enter Organization Name",
+                        "placeholder": "github"
+                    },
+                    "package_type": {
+                        "type": "text",
+                        "label": "Enter Package Type (npm, gem, mvn, gradle, dotnet, docker)",
+                        "placeholder": "npm"
+                    }
+                }
             }
+        
         },
         "input_fields": {
             "access_token": {
