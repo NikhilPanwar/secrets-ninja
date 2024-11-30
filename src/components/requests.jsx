@@ -57,7 +57,7 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
             });
             break;
         case 'Github':
-            response = await fetch(endpointURL, {
+            response = await fetch(endpointURL.replace('<org_name>', inputData.org_name).replace('<package_type>', inputData.package_type), {
                 method: requestMethod,
                 headers: {
                     'Authorization': `token ${inputData.access_token}`,
