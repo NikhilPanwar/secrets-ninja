@@ -2000,5 +2000,27 @@
             "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
             "color": "failure"
         }
+    },
+    "SquareAccessToken" : {
+        "endpoints" : {
+            "payouts": {
+                "label": "Payouts",
+                "curl": "curl -X GET 'https://connect.squareupsandbox.com/v2/payouts' -H 'Authorization: Bearer <access_token>'",
+                "request_url": "https://connect.squareupsandbox.com/v2/payouts",
+                "request_method": "GET"
+            }
+        },
+        "input_fields": {
+            "access_token": {
+                "type": "text",
+                "label": "Enter Square Access Token",
+                "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+            }
+        },
+        "api_documentation_page": "https://developer.squareup.com/docs/",
+        "alert": {
+            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
+            "color": "failure"
+        }
     }
 }
