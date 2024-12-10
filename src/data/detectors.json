@@ -231,7 +231,6 @@
                     }
                 }
             }
-        
         },
         "input_fields": {
             "access_token": {
@@ -267,6 +266,69 @@
                 "curl": "curl -X GET 'https://gitlab.com/api/v4/issues' -H 'Authorization: Bearer <access_token>'",
                 "request_url": "https://gitlab.com/api/v4/issues",
                 "request_method": "GET"
+            },
+            "events": {
+                "label": "Events",
+                "curl": "curl -X GET 'https://gitlab.com/api/v4/events' -H 'Authorization: Bearer <access_token>'",
+                "request_url": "https://gitlab.com/api/v4/issues",
+                "request_method": "GET"
+            },
+            "project_members": {
+                "label": "Project Members",
+                "curl": "curl -X GET 'https://gitlab.com/api/v4/projects/<project_id>/members/all' -H 'Authorization: Bearer <access_token>'",
+                "request_url": "https://gitlab.com/api/v4/projects/<project_id>/members/all",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "access_token": {
+                        "type": "text",
+                        "label": "Enter Gitlab Access Token",
+                        "placeholder": "glpat_xxxxx"
+                    },
+                    "project_id": {
+                        "type": "text",
+                        "label": "Enter Project ID (fetched from projects endpoint)",
+                        "placeholder": "123456"
+                    }
+                }
+            },
+            "project_events": {
+                "label": "Project Events",
+                "curl": "curl -X GET 'https://gitlab.com/api/v4/projects/<project_id>/events' -H 'Authorization: Bearer <access_token>'",
+                "request_url": "https://gitlab.com/api/v4/projects/<project_id>/events",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "access_token": {
+                        "type": "text",
+                        "label": "Enter Gitlab Access Token",
+                        "placeholder": "glpat_xxxxx"
+                    },
+                    "project_id": {
+                        "type": "text",
+                        "label": "Enter Project ID (fetched from projects endpoint)",
+                        "placeholder": "123456"
+                    }
+                }
+            },
+            "user_events": {
+                "label": "User Events",
+                "curl": "curl -X GET 'https://gitlab.com/api/v4/users/<user_id>/events' -H 'Authorization: Bearer <access_token>'",
+                "request_url": "https://gitlab.com/api/v4/users/<user_id>/events",
+                "request_method": "GET",
+                "override_default_input_field": true,
+                "input_fields": {
+                    "access_token": {
+                        "type": "text",
+                        "label": "Enter Gitlab Access Token",
+                        "placeholder": "glpat_xxxxx"
+                    },
+                    "user_id": {
+                        "type": "text",
+                        "label": "Enter User ID (fetched from User endpoint)",
+                        "placeholder": "123456"
+                    }
+                }
             }
         },
         "input_fields": {
@@ -2001,8 +2063,8 @@
             "color": "failure"
         }
     },
-    "SquareAccessToken" : {
-        "endpoints" : {
+    "SquareAccessToken": {
+        "endpoints": {
             "payouts": {
                 "label": "Payouts",
                 "curl": "curl -X GET 'https://connect.squareupsandbox.com/v2/payouts' -H 'Authorization: Bearer <access_token>'",

@@ -331,7 +331,7 @@ async function makeUniversalRequest(serviceType, inputData, endpointURL, request
             });
             break;
         case 'Gitlab':
-            response = await fetch(endpointURL, {
+            response = await fetch(endpointURL.replace('<project_id>', inputData.project_id).replace('<user_id>', inputData.user_id), {
                 method: requestMethod,
                 headers: {
                     'Authorization': `Bearer ${inputData.access_token}`,
