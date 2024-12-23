@@ -26,3 +26,4 @@ dist-ssr
 .firebase/hosting.ZGlzdA.cache
 firebase.json
 .firebaserc
+secrets-ninja.code-workspace
