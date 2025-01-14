@@ -4,7 +4,6 @@ import CopyButton from './copy_button';
 import '../css/json_theme.css';
 
 function RequestWindow({ curl = '' }) {
-
   return (
     <Card className="w-full">
       <div className="flex justify-between items-center flex-wrap">

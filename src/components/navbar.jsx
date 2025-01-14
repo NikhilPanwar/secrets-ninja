@@ -14,24 +14,31 @@ function FlowbiteNavbar({ toggleSidebar }) {
   };
 
   const toggleStyle = {
-    fontSize: "0.8rem",
-    padding: "10px",
+    fontSize: '0.8rem',
+    padding: '10px',
   };
 
   return (
     <Navbar fluid>
       <div className="flex items-center">
-        <Hamburger toggled={!isOpen} toggle={handleToggle} className="mr-3" size={20} direction="left" color='#9CA3AF' hideOutline={false} distance="lg" />
+        <Hamburger
+          toggled={!isOpen}
+          toggle={handleToggle}
+          className="mr-3"
+          size={20}
+          direction="left"
+          color="#9CA3AF"
+          hideOutline={false}
+          distance="lg"
+        />
         <Navbar.Brand href="/">
           <img src={logo} className="h-10 sm:h-10" alt="Secrets Ninja Logo" />
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Secrets Ninja</span>
+          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+            Secrets Ninja
+          </span>
         </Navbar.Brand>
-
-
       </div>
-      <div className="flex md:order-2">
-        {/* <Navbar.Toggle /> */}
-      </div>
+      <div className="flex md:order-2">{/* <Navbar.Toggle /> */}</div>
       {/* <Navbar.Collapse> */}
       {/* <Navbar.Link href="/" active>
           Keys Checker

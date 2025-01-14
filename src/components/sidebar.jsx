@@ -1,48 +1,48 @@
 'use client';
 
 import { Sidebar } from 'flowbite-react';
-import { LiaStripeS } from "react-icons/lia";
-import { RiOpenaiFill } from "react-icons/ri";
-import { HiOutlineRocketLaunch } from "react-icons/hi2";
-import { SlPaypal } from "react-icons/sl";
-import { FaGithub, FaShopify, FaTelegramPlane } from "react-icons/fa";
-import { CiCircleInfo } from "react-icons/ci";
-import { SiSendinblue } from "react-icons/si";
-import { FaTrello } from "react-icons/fa";
-import { IoMdArrowDroprightCircle } from "react-icons/io";
-import { SiRazorpay } from "react-icons/si";
-import { SiTwilio } from "react-icons/si";
-import { RiNpmjsLine } from "react-icons/ri";
-import { SiMailgun } from "react-icons/si";
-import { FaDigitalOcean } from "react-icons/fa";
-import { GiHoneycomb } from "react-icons/gi";
-import { SiEventbrite } from "react-icons/si";
-import { FaMailchimp } from "react-icons/fa";
-import { TbSquareLetterP } from "react-icons/tb";
-import { SiRavelry } from "react-icons/si";
-import { GrTextAlignFull } from "react-icons/gr";
-import { RiFlag2Line } from "react-icons/ri";
-import { TbCircleLetterP } from "react-icons/tb";
-import { IoLogoVercel } from "react-icons/io5";
-import { SiBitly } from "react-icons/si";
-import { SiAlgolia } from "react-icons/si";
-import { SiPosthog } from "react-icons/si";
-import { SiOpsgenie } from "react-icons/si";
-import { SiHelpscout } from "react-icons/si";
-import { SiTypeform } from "react-icons/si";
-import { SiNotion } from "react-icons/si";
-import { FaSlack } from "react-icons/fa";
-import { FaSquareGitlab } from "react-icons/fa6";
-import { SiPostman } from "react-icons/si";
-import { SiTerraform } from "react-icons/si";
-import { SiJfrog } from "react-icons/si";
-import { SiBuildkite } from "react-icons/si";
-import { SiPulumi } from "react-icons/si";
-import { SiSnyk } from "react-icons/si";
-import { CgSquare } from "react-icons/cg";
+import { LiaStripeS } from 'react-icons/lia';
+import { RiOpenaiFill } from 'react-icons/ri';
+import { HiOutlineRocketLaunch } from 'react-icons/hi2';
+import { SlPaypal } from 'react-icons/sl';
+import { FaGithub, FaShopify, FaTelegramPlane } from 'react-icons/fa';
+import { CiCircleInfo } from 'react-icons/ci';
+import { SiSendinblue } from 'react-icons/si';
+import { FaTrello } from 'react-icons/fa';
+import { IoMdArrowDroprightCircle } from 'react-icons/io';
+import { SiRazorpay } from 'react-icons/si';
+import { SiTwilio } from 'react-icons/si';
+import { RiNpmjsLine } from 'react-icons/ri';
+import { SiMailgun } from 'react-icons/si';
+import { FaDigitalOcean } from 'react-icons/fa';
+import { GiHoneycomb } from 'react-icons/gi';
+import { SiEventbrite } from 'react-icons/si';
+import { FaMailchimp } from 'react-icons/fa';
+import { TbSquareLetterP } from 'react-icons/tb';
+import { SiRavelry } from 'react-icons/si';
+import { GrTextAlignFull } from 'react-icons/gr';
+import { RiFlag2Line } from 'react-icons/ri';
+import { TbCircleLetterP } from 'react-icons/tb';
+import { IoLogoVercel } from 'react-icons/io5';
+import { SiBitly } from 'react-icons/si';
+import { SiAlgolia } from 'react-icons/si';
+import { SiPosthog } from 'react-icons/si';
+import { SiOpsgenie } from 'react-icons/si';
+import { SiHelpscout } from 'react-icons/si';
+import { SiTypeform } from 'react-icons/si';
+import { SiNotion } from 'react-icons/si';
+import { FaSlack } from 'react-icons/fa';
+import { FaSquareGitlab } from 'react-icons/fa6';
+import { SiPostman } from 'react-icons/si';
+import { SiTerraform } from 'react-icons/si';
+import { SiJfrog } from 'react-icons/si';
+import { SiBuildkite } from 'react-icons/si';
+import { SiPulumi } from 'react-icons/si';
+import { SiSnyk } from 'react-icons/si';
+import { CgSquare } from 'react-icons/cg';
 
-
-function SB({ visible, servicesConfig }) { // Accept visible as a prop
+function SB({ visible, servicesConfig }) {
+  // Accept visible as a prop
   if (!visible) return null; // Do not render if not visible
 
   let serviceIcons = {
@@ -91,7 +91,9 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
     <Sidebar>
       <Sidebar.Items>
         <Sidebar.ItemGroup>
-          <h2 className="text-lg font-semibold text-gray-800 dark:text-white">Modules</h2>
+          <h2 className="text-lg font-semibold text-gray-800 dark:text-white">
+            Modules
+          </h2>
           {/* <Sidebar.Item href="/" icon={CiCircleInfo}>
             About
           </Sidebar.Item> */}
@@ -99,7 +101,11 @@ function SB({ visible, servicesConfig }) { // Accept visible as a prop
             <Sidebar.Item
               key={service}
               href={`/${service.toLowerCase()}`}
-              icon={serviceIcons[service] ? serviceIcons[service] : IoMdArrowDroprightCircle}
+              icon={
+                serviceIcons[service]
+                  ? serviceIcons[service]
+                  : IoMdArrowDroprightCircle
+              }
             >
               {service}
             </Sidebar.Item>

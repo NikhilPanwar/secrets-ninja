@@ -6,25 +6,25 @@
 
 ```json
 {
-    "OpenAI": {
-        "endpoints": {
-            "organizations": {
-                "label": "Get Organizations",
-                "curl": "curl -X GET 'https://api.openai.com/v1/organizations' -H 'Authorization: Bearer sk-xxxx'",
-                "request_url": "https://api.openai.com/v1/organizations",
-                "request_method": "GET"
-            },
-            "additional_endpoints" : {}
-        },
-        "input_fields": {
-            "api_key": {
-                "type": "text",
-                "label": "Enter OpenAI API Key",
-                "placeholder": "sk-xxxxx-xxxxx-xxxxx-xxxxx"
-            },
-            "additional_input_fields" : {}
-        }
+  "OpenAI": {
+    "endpoints": {
+      "organizations": {
+        "label": "Get Organizations",
+        "curl": "curl -X GET 'https://api.openai.com/v1/organizations' -H 'Authorization: Bearer sk-xxxx'",
+        "request_url": "https://api.openai.com/v1/organizations",
+        "request_method": "GET"
+      },
+      "additional_endpoints": {}
+    },
+    "input_fields": {
+      "api_key": {
+        "type": "text",
+        "label": "Enter OpenAI API Key",
+        "placeholder": "sk-xxxxx-xxxxx-xxxxx-xxxxx"
+      },
+      "additional_input_fields": {}
     }
+  }
 }
 ```
 
@@ -67,8 +67,7 @@ If the api can't be accessed from browser due to CORS, add the following to the 
         }
 ```
 
-
 ## Note
-- I understand that the size of `src/data/detectors.json` is getting big, in future will be moving it to database or having individual JSON for each service.
-- I understand that creating a different switch case of each service is redundant, and a universal function can be created for most of these, but I wanted the code to be easily contributable as it can be. 
 
+- I understand that the size of `src/data/detectors.json` is getting big, in future will be moving it to database or having individual JSON for each service.
+- I understand that creating a different switch case of each service is redundant, and a universal function can be created for most of these, but I wanted the code to be easily contributable as it can be.
