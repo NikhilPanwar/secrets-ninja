@@ -2,15 +2,15 @@
 
   <img src='https://github.com/NikhilPanwar/secrets-ninja/blob/master/src/assets/logo-t.png' height="160">
 
-  [![Repo Size](https://img.shields.io/github/languages/code-size/NikhilPanwar/secrets-ninja.svg)](https://github.com/NikhilPanwar/secrets-ninja)
-  [![LICENSE](https://img.shields.io/github/license/NikhilPanwar/secrets-ninja.svg)](https://github.com/NikhilPanwar/secrets-ninja/blob/master/LICENSE)
-  [![Contributors](https://img.shields.io/github/contributors/NikhilPanwar/secrets-ninja.svg)](https://github.com/NikhilPanwar/secrets-ninja/graphs/contributors)
-  [![Last Commit](https://img.shields.io/github/last-commit/NikhilPanwar/secrets-ninja.svg)](https://github.com/NikhilPanwar/secrets-ninja)
+[![Repo Size](https://img.shields.io/github/languages/code-size/NikhilPanwar/secrets-ninja.svg)](https://github.com/NikhilPanwar/secrets-ninja)
+[![LICENSE](https://img.shields.io/github/license/NikhilPanwar/secrets-ninja.svg)](https://github.com/NikhilPanwar/secrets-ninja/blob/master/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/NikhilPanwar/secrets-ninja.svg)](https://github.com/NikhilPanwar/secrets-ninja/graphs/contributors)
+[![Last Commit](https://img.shields.io/github/last-commit/NikhilPanwar/secrets-ninja.svg)](https://github.com/NikhilPanwar/secrets-ninja)
 
   <h1>Secrets Ninja</h1>
 
-  [secrets.ninja](https://secrets.ninja) is a tool for validating API keys and credentials discovered during pentesting. 
-  <br>It proivdes a unified interface for testing these keys across services
+[secrets.ninja](https://secrets.ninja) is a tool for validating API keys and credentials discovered during pentesting.
+<br>It proivdes a unified interface for testing these keys across services
 
 </div>
 
@@ -21,10 +21,9 @@
 - **User-Friendly Interface:** A simple and intuitive interface for inputting API keys and making requests.
 - **Clear Feedback:** Provides clear feedback on the validity of the keys and any information retrieved from the API calls.
 
-
 ## Getting Started
 
-To get started with Secrets Ninja, install the dependencies and run the development server. 
+To get started with Secrets Ninja, install the dependencies and run the development server.
 
 - Install dependencies using below command
 
@@ -48,4 +47,3 @@ This tool is intended for ethical use only. It is the user's responsibility to c
 ## License
 
 Secrets Ninja is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-

@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import FlowbiteNavbar from './components/navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SB from './components/sidebar';
-import FT from './components/footer';
 import { Flowbite } from 'flowbite-react';
 import UniversalComponent from './modules/universal';
 import Dashboard from './components/dashboard';
@@ -41,12 +40,21 @@ export default function MyPage() {
 
   // Adjusted styles to ensure footer is always visible and not overlaid
   const containerStyle = `flex flex-col h-screen`;
-  const contentContainerStyle = isLargeScreen ? 'flex flex-1 overflow-hidden' : 'flex flex-1 overflow-hidden';
-  const sidebarStyle = isLargeScreen ?
-    { maxHeight: 'calc(100vh - 60px)', overflowY: 'auto' } : // Adjust for navbar height
-    { zIndex: 30, position: 'fixed', width: '100%', height: 'calc(100vh - 60px)', overflowY: 'auto' };
-  const contentStyle = isLargeScreen ? 'flex-1 bg-gray-100 dark:bg-gray-700 overflow-auto' : `flex-1 bg-gray-100 dark:bg-gray-700 overflow-auto ${sidebarVisible ? 'sidebar-overlay' : ''}`;
-  const footerStyle = { zIndex: 50, position: 'relative' }; // Ensure the footer has a higher zIndex
+  const contentContainerStyle = isLargeScreen
+    ? 'flex flex-1 overflow-hidden'
+    : 'flex flex-1 overflow-hidden';
+  const sidebarStyle = isLargeScreen
+    ? { maxHeight: 'calc(100vh - 60px)', overflowY: 'auto' } // Adjust for navbar height
+    : {
+        zIndex: 30,
+        position: 'fixed',
+        width: '100%',
+        height: 'calc(100vh - 60px)',
+        overflowY: 'auto',
+      };
+  const contentStyle = isLargeScreen
+    ? 'flex-1 bg-gray-100 dark:bg-gray-700 overflow-auto'
+    : `flex-1 bg-gray-100 dark:bg-gray-700 overflow-auto ${sidebarVisible ? 'sidebar-overlay' : ''}`;
 
   return (
     <Flowbite>
@@ -55,24 +63,39 @@ export default function MyPage() {
           <div className="sticky top-0 z-50">
             <FlowbiteNavbar toggleSidebar={toggleSidebar} />
           </div>
-          <div className={contentContainerStyle} onClick={() => {
-            if (!isLargeScreen && sidebarVisible) {
-              toggleSidebar();
-            }
-          }}>
+          <div
+            className={contentContainerStyle}
+            onClick={() => {
+              if (!isLargeScreen && sidebarVisible) {
+                toggleSidebar();
+              }
+            }}
+          >
             {sidebarVisible && (
               <div style={sidebarStyle}>
-                <SB visible={sidebarVisible} servicesConfig={sortedServicesConfig} className="dark:bg-slate-700" />
+                <SB
+                  visible={sidebarVisible}
+                  servicesConfig={sortedServicesConfig}
+                  className="dark:bg-slate-700"
+                />
               </div>
             )}
-            <div className={contentStyle} >
+            <div className={contentStyle}>
               <Routes>
-                <Route path="/" element={<Dashboard servicesConfig={sortedServicesConfig} />} />
+                <Route
+                  path="/"
+                  element={<Dashboard servicesConfig={sortedServicesConfig} />}
+                />
                 {Object.keys(sortedServicesConfig).map((service) => (
                   <Route
                     key={service}
                     path={`/${service.toLowerCase()}`}
-                    element={<UniversalComponent serviceType={service} servicesConfig={sortedServicesConfig} />}
+                    element={
+                      <UniversalComponent
+                        serviceType={service}
+                        servicesConfig={sortedServicesConfig}
+                      />
+                    }
                   />
                 ))}
               </Routes>

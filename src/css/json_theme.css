@@ -1,27 +1,27 @@
 .__json-pretty__ {
-    line-height: 1.3;
-    color: #9ca3af;
-    overflow: auto;
+  line-height: 1.3;
+  color: #9ca3af;
+  overflow: auto;
 }
 
 .__json-pretty__ .__json-key__ {
-    color: #ff5e5e
+  color: #ff5e5e;
 }
 
 .__json-pretty__ .__json-value__ {
-    color: #fdb082
+  color: #fdb082;
 }
 
 .__json-pretty__ .__json-string__ {
-    color: #168f46
+  color: #168f46;
 }
 
 .__json-pretty__ .__json-boolean__ {
-    color: #69c
+  color: #69c;
 }
 
 .__json-pretty-error__ {
-    line-height: 1.3;
-    color: #9ca3af;
-    overflow: auto
+  line-height: 1.3;
+  color: #9ca3af;
+  overflow: auto;
 }
