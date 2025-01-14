@@ -1,8 +1,13 @@
-
 'use client';
 
 import { Footer } from 'flowbite-react';
-import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
+import {
+  BsDribbble,
+  BsFacebook,
+  BsGithub,
+  BsInstagram,
+  BsTwitter,
+} from 'react-icons/bs';
 import logo from '../assets/logo-t.png';
 
 function FT() {
