@@ -40,6 +40,7 @@ import { SiBuildkite } from 'react-icons/si';
 import { SiPulumi } from 'react-icons/si';
 import { SiSnyk } from 'react-icons/si';
 import { CgSquare } from 'react-icons/cg';
+import { SiSentry } from "react-icons/si";
 
 function SB({ visible, servicesConfig }) {
   // Accept visible as a prop
@@ -85,6 +86,7 @@ function SB({ visible, servicesConfig }) {
     Pulumi: SiPulumi,
     Snyk: SiSnyk,
     SquareAccessToken: CgSquare,
+    Sentry: SiSentry,
   };
 
   return (

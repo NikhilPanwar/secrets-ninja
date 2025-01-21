@@ -1060,7 +1060,7 @@
         "request_url": "https://api.sendgrid.com/v3/scopes",
         "request_method": "GET"
       },
-      "domains" : {
+      "domains": {
         "label": "Domains",
         "curl": "curl -X GET https://api.sendgrid.com/v3/whitelabel/domains -H 'Authorization: Bearer <api_key>'",
         "request_url": "https://api.sendgrid.com/v3/whitelabel/domains",
@@ -2110,6 +2110,28 @@
       }
     },
     "api_documentation_page": "https://developer.squareup.com/docs/",
+    "alert": {
+      "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
+      "color": "failure"
+    }
+  },
+  "Sentry": {
+    "endpoints": {
+      "scopes": {
+        "label": "Scopes",
+        "curl": "curl -X GET 'https://sentry.io/api/0/' -H 'Authorization: Bearer <auth_token>'",
+        "request_url": "https://sentry.io/api/0/",
+        "request_method": "GET"
+      }
+    },
+    "input_fields": {
+      "auth_token": {
+        "type": "text",
+        "label": "Enter Sentry Auth Token",
+        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+      }
+    },
+    "api_documentation_page": "https://docs.sentry.io/api/",
     "alert": {
       "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
       "color": "failure"
