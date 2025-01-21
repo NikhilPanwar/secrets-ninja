@@ -1054,6 +1054,18 @@
   },
   "SendGrid": {
     "endpoints": {
+      "scopes": {
+        "label": "Scopes",
+        "curl": "curl -X GET https://api.sendgrid.com/v3/scopes -H 'Authorization: Bearer <api_key>'",
+        "request_url": "https://api.sendgrid.com/v3/scopes",
+        "request_method": "GET"
+      },
+      "domains" : {
+        "label": "Domains",
+        "curl": "curl -X GET https://api.sendgrid.com/v3/whitelabel/domains -H 'Authorization: Bearer <api_key>'",
+        "request_url": "https://api.sendgrid.com/v3/whitelabel/domains",
+        "request_method": "GET"
+      },
       "templates": {
         "label": "Templates",
         "curl": "curl -X GET https://api.sendgrid.com/v3/templates -H 'Authorization: Bearer <api_key>'",
