@@ -517,6 +517,14 @@ async function makeUniversalRequest(
         },
       });
       break;
+    case 'Bitbucket':
+      response = await fetch(endpointURL.replace('<org>', inputData.org), {
+        method: requestMethod,
+        headers: {
+          Authorization: `Basic ${btoa(inputData.username + ':' + inputData.password)}`,
+        },
+      });
+      break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
   }
