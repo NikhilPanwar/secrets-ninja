@@ -1261,25 +1261,25 @@
     "endpoints": {
       "user": {
         "label": "User",
-        "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/user' -H 'Authorization: Bearer xxxx'",
+        "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/user' -H 'Authorization: Bearer <api_token>'",
         "request_url": "https://api-ssl.bitly.com/v4/user",
         "request_method": "GET"
       },
       "organizations": {
         "label": "Organizations",
-        "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/organizations' -H 'Authorization: Bearer xxxx'",
+        "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/organizations' -H 'Authorization: Bearer <api_token>'",
         "request_url": "https://api-ssl.bitly.com/v4/organizations",
         "request_method": "GET"
       },
       "groups": {
         "label": "Groups",
-        "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/groups' -H 'Authorization: Bearer xxxx'",
+        "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/groups' -H 'Authorization: Bearer <api_token>'",
         "request_url": "https://api-ssl.bitly.com/v4/groups",
         "request_method": "GET"
       },
       "get_campaigns": {
         "label": "Get Campaigns",
-        "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/campaigns?group_guid=<group_guid>' -H 'Authorization: Bearer xxxx'",
+        "curl": "curl -X GET 'https://api-ssl.bitly.com/v4/campaigns?group_guid=<group_guid>' -H 'Authorization: Bearer <api_token>'",
         "request_url": "https://api-ssl.bitly.com/v4/campaigns?group_guid=<group_guid>",
         "request_method": "GET",
         "override_default_input_field": true,
