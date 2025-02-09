@@ -2163,5 +2163,49 @@
         "placeholder": "org"
       }
     }
+  },
+  "Jira": {
+    "endpoints": {
+      "authentication": {
+        "label": "Check Authentication",
+        "curl": "curl -X GET '<app_domain>/rest/api/3/myself' -u '<email>:<api_token>'",
+        "request_url": "<app_domain>/rest/api/3/myself",
+        "request_method": "GET"
+      },
+      "projects": {
+        "label": "List All Projects",
+        "curl": "curl -X GET '<app_domain>/rest/api/3/project/search' -u '<email>:<api_token>'",
+        "request_url": "<app_domain>/rest/api/3/project/search",
+        "request_method": "GET"
+      },
+      "users": {
+        "label": "Get All Users",
+        "curl": "curl -X GET '<app_domain>/rest/api/3/users/search' -u '<email>:<api_token>'",
+        "request_url": "<app_domain>/rest/api/3/users/search",
+        "request_method": "GET"
+      }
+    },
+    "input_fields": {
+      "app_domain": {
+        "type": "text",
+        "label": "Enter JIRA App Domain",
+        "placeholder": "https://yourcompany.atlassian.net"
+      },
+      "email": {
+        "type": "text",
+        "label": "Enter JIRA Account Email",
+        "placeholder": "your_email@example.com"
+      },
+      "api_token": {
+        "type": "text",
+        "label": "Enter JIRA API Token",
+        "placeholder": "your_api_token_here"
+      }
+    },
+    "api_documentation_page": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/",
+    "alert": {
+      "alert_message": "Can't work from hosted site because of CORS. Use the curl on your local machine to test it. Or run the project locally & check the proxy box to use a thingproxy.freeboard.io proxy to bypass CORS.",
+      "color": "failure"
+    }
   }
 }
