@@ -42,6 +42,7 @@ import { SiSnyk } from 'react-icons/si';
 import { CgSquare } from 'react-icons/cg';
 import { SiSentry } from "react-icons/si";
 import { FaBitbucket } from "react-icons/fa";
+import { SiJira } from "react-icons/si";
 
 function SB({ visible, servicesConfig }) {
   // Accept visible as a prop
@@ -89,6 +90,7 @@ function SB({ visible, servicesConfig }) {
     SquareAccessToken: CgSquare,
     Sentry: SiSentry,
     Bitbucket: FaBitbucket,
+    Jira: SiJira,
   };
 
   return (

@@ -525,6 +525,15 @@ async function makeUniversalRequest(
         },
       });
       break;
+    case 'Jira':
+      response = await fetch(endpointURL.replace(encodeURIComponent('<app_domain>'), inputData.app_domain), {
+        method: requestMethod,
+        headers: {
+          Authorization: `Basic ${btoa(inputData.email + ':' + inputData.api_token)}`,
+          Accept: 'application/json',
+        },
+      });
+      break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
   }
