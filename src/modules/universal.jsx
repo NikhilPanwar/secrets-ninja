@@ -48,8 +48,8 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
     setLoading(true);
     try {
       const updatedRequestURL = isChecked
-        ? `https://thingproxy.freeboard.io/fetch/` +
-          encodeURIComponent(requestURL)
+        ? `https://proxy.secrets.ninja/fetch/` +
+        encodeURIComponent(requestURL)
         : requestURL;
       const { status, data } = await makeUniversalRequest(
         serviceType,
@@ -193,12 +193,12 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
             <div className="flex items-center space-x-4">
               <Checkbox
                 id="thingsProxyCheckbox"
-                label="Use Thingsproxy to bypass CORS"
+                label="Use SecretsNinja Proxy to bypass CORS"
                 checked={isChecked}
                 onChange={handleCheckboxChange}
               />
               <Label htmlFor="thingsProxyCheckbox">
-                Use Thingsproxy to bypass CORS
+                Use SecretsNinja Proxy to bypass CORS
               </Label>
             </div>
           )}
