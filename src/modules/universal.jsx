@@ -49,7 +49,7 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
     try {
       const updatedRequestURL = isChecked
         ? `https://proxy.secrets.ninja/fetch/` +
-        encodeURIComponent(requestURL)
+        requestURL
         : requestURL;
       const { status, data } = await makeUniversalRequest(
         serviceType,
