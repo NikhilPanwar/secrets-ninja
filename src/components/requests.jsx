@@ -393,7 +393,7 @@ async function makeUniversalRequest(
       });
       break;
     case 'HuggingFace':
-      response = await fetch(endpointURL, {
+      response = await fetch(endpointURL.replace('<org>', inputData.org), {
         method: requestMethod,
         headers: {
           authorization: `Bearer ${inputData.api_token}`,

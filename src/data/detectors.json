@@ -1696,6 +1696,63 @@
         "curl": "curl -X GET https://huggingface.co/api/whoami-v2 -H 'authorization: Bearer <api_token>'",
         "request_url": "https://huggingface.co/api/whoami-v2",
         "request_method": "GET"
+      },
+      "models": {
+        "label": "Models",
+        "curl": "curl -X GET https://huggingface.co/api/models?author=<org>&full=true -H 'authorization: Bearer <api_token>'",
+        "request_url": "https://huggingface.co/api/models?author=<org>&full=true",
+        "request_method": "GET",
+        "override_default_input_field": true,
+        "input_fields": {
+          "api_token": {
+            "type": "text",
+            "label": "Enter Hugging Face API Token",
+            "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+          },
+          "org": {
+            "type": "text",
+            "label": "Enter Organization Name",
+            "placeholder": "xxxx"
+          }
+        }
+      },
+      "Spaces": {
+        "label": "Spaces",
+        "curl": "curl -X GET https://huggingface.co/api/spaces?author=<org>&full=true -H 'authorization: Bearer <api_token>'",
+        "request_url": "https://huggingface.co/api/spaces?author=<org>&full=true",
+        "request_method": "GET",
+        "override_default_input_field": true,
+        "input_fields": {
+          "api_token": {
+            "type": "text",
+            "label": "Enter Hugging Face API Token",
+            "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+          },
+          "org": {
+            "type": "text",
+            "label": "Enter Organization Name",
+            "placeholder": "xxxx"
+          }
+        }
+      },
+      "datasets": {
+        "label": "Datasets",
+        "curl": "curl -X GET https://huggingface.co/api/datasets?author=<org>&full=true -H 'authorization: Bearer <api_token>'",
+        "request_url": "https://huggingface.co/api/datasets?author=<org>&full=true",
+        "request_method": "GET",
+        "override_default_input_field": true,
+        "input_fields": {
+          "api_token": {
+            "type": "text",
+            "label": "Enter Hugging Face API Token",
+            "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+          },
+          "org": {
+            "type": "text",
+            "label": "Enter Organization Name",
+            "placeholder": "xxxx"
+          }
+        }
       }
     },
     "input_fields": {
