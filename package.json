@@ -11,10 +11,12 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@floating-ui/core": "^1.6.9",
+    "@floating-ui/dom": "^1.6.13",
     "autoprefixer": "^10.4.17",
     "flowbite-react": "^0.7.2",
     "hamburger-react": "^2.5.0",
-    "postcss": "^8.4.35",
+    "postcss": "^8.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
