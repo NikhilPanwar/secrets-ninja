@@ -7,7 +7,7 @@ import { HiOutlineRocketLaunch } from 'react-icons/hi2';
 import { SlPaypal } from 'react-icons/sl';
 import { FaGithub, FaShopify, FaTelegramPlane } from 'react-icons/fa';
 import { CiCircleInfo } from 'react-icons/ci';
-import { SiSendinblue } from 'react-icons/si';
+import { SiBrevo } from "react-icons/si";
 import { FaTrello } from 'react-icons/fa';
 import { IoMdArrowDroprightCircle } from 'react-icons/io';
 import { SiRazorpay } from 'react-icons/si';
@@ -43,6 +43,8 @@ import { CgSquare } from 'react-icons/cg';
 import { SiSentry } from "react-icons/si";
 import { FaBitbucket } from "react-icons/fa";
 import { SiJira } from "react-icons/si";
+import { SiHuggingface } from "react-icons/si";
+import { SiSendgrid } from "react-icons/si";
 
 function SB({ visible, servicesConfig }) {
   // Accept visible as a prop
@@ -56,7 +58,7 @@ function SB({ visible, servicesConfig }) {
     Github: FaGithub,
     Shopify: FaShopify,
     Telegram: FaTelegramPlane,
-    SendInBlue: SiSendinblue,
+    SendInBlue: SiBrevo,
     Trello: FaTrello,
     RazorPay: SiRazorpay,
     Twilio: SiTwilio,
@@ -91,6 +93,8 @@ function SB({ visible, servicesConfig }) {
     Sentry: SiSentry,
     Bitbucket: FaBitbucket,
     Jira: SiJira,
+    HuggingFace: SiHuggingface,
+    SendGrid: SiSendgrid,
   };
 
   return (
