@@ -2264,5 +2264,41 @@
       "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
+  },
+  "Pandadoc" : {
+    "endpoints": {
+      "users": {
+        "label": "Members",
+        "curl": "curl -X GET 'https://api.pandadoc.com/public/v1/members' -H 'Authorization: API-Key <api_key>'",
+        "request_url": "https://api.pandadoc.com/public/v1/members",
+        "request_method": "GET"
+      },
+      "documents": {
+        "label": "Documents",
+        "curl": "curl -X GET 'https://api.pandadoc.com/public/v1/documents' -H 'Authorization: API-Key <api_key>'",
+        "request_url": "https://api.pandadoc.com/public/v1/documents",
+        "request_method": "GET"
+      },
+      "apilogs": {
+        "label": "API Logs",
+        "curl": "curl -X GET 'https://api.pandadoc.com/public/v1/logs' -H 'Authorization: API-Key <api_key>'",
+        "request_url": "https://api.pandadoc.com/public/v1/logs",
+        "request_method": "GET"
+      },
+      "contacts": {
+        "label": "Contacts",
+        "curl": "curl -X GET 'https://api.pandadoc.com/public/v1/contacts' -H 'Authorization: API-Key <api_key>'",
+        "request_url": "https://api.pandadoc.com/public/v1/contacts",
+        "request_method": "GET"
+      }
+    },
+    "input_fields": {
+      "api_key": {
+        "type": "text",
+        "label": "Enter PandaDoc API Key",
+        "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+      }
+    },
+    "api_documentation_page": "https://developers.pandadoc.com/reference"
   }
 }

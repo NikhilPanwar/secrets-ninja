@@ -534,6 +534,14 @@ async function makeUniversalRequest(
         },
       });
       break;
+    case 'Pandadoc':
+      response = await fetch(endpointURL, {
+        method: requestMethod,
+        headers: {
+          Authorization: `API-Key ${inputData.api_key}`,
+        },
+      });
+      break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
   }
