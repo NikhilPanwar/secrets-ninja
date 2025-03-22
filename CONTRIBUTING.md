@@ -62,12 +62,15 @@ If the api can't be accessed from browser due to CORS, add the following to the 
 
 ```json
 "alert": {
-            "alert_message": "Can't work from frontend because of CORS. Use the curl on your local machine to test it. Or check the proxy box to use a 3rd party proxy to bypass CORS. This will route your request through thingproxy.freeboard.io.",
-            "color": "failure"
-        }
+      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "color": "failure"
+    }
 ```
 
 ## Note
+The following [GPT bot](https://chatgpt.com/g/g-67d9165cb410819191d7b463e4f0a9a2-secrets-ninja-contribution-bot) can be used to generate somewhat functional modules for secrets.ninja
+- Output Modules generated using GPT may not be 100% correct and may require testing
+
 
 - I understand that the size of `src/data/detectors.json` is getting big, in future will be moving it to database or having individual JSON for each service.
 - I understand that creating a different switch case of each service is redundant, and a universal function can be created for most of these, but I wanted the code to be easily contributable as it can be.
