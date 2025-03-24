@@ -45,6 +45,7 @@ import { FaBitbucket } from "react-icons/fa";
 import { SiJira } from "react-icons/si";
 import { SiHuggingface } from "react-icons/si";
 import { SiSendgrid } from "react-icons/si";
+import { FaHubspot } from "react-icons/fa";
 
 function SB({ visible, servicesConfig }) {
   // Accept visible as a prop
@@ -95,6 +96,7 @@ function SB({ visible, servicesConfig }) {
     Jira: SiJira,
     HuggingFace: SiHuggingface,
     SendGrid: SiSendgrid,
+    HubSpot: FaHubspot,
   };
 
   return (

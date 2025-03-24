@@ -542,6 +542,15 @@ async function makeUniversalRequest(
         },
       });
       break;
+    case 'HubSpot':
+      response = await fetch(endpointURL, {
+        method: requestMethod,
+        headers: {
+          Authorization: `Bearer ${inputData.access_token}`,
+          'Content-Type': 'application/json'
+        },
+      });
+      break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
   }
