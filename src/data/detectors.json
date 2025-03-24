@@ -2265,7 +2265,7 @@
       "color": "failure"
     }
   },
-  "Pandadoc" : {
+  "Pandadoc": {
     "endpoints": {
       "users": {
         "label": "Members",
@@ -2300,5 +2300,45 @@
       }
     },
     "api_documentation_page": "https://developers.pandadoc.com/reference"
+  },
+  "HubSpot": {
+    "endpoints": {
+      "get_contacts": {
+        "label": "Get All Contacts",
+        "curl": "curl -X GET 'https://api.hubapi.com/crm/v3/objects/contacts' -H 'Authorization: Bearer <access_token>'",
+        "request_url": "https://api.hubapi.com/crm/v3/objects/contacts",
+        "request_method": "GET"
+      },
+      "get_companies": {
+        "label": "Get All Companies",
+        "curl": "curl -X GET 'https://api.hubapi.com/crm/v3/objects/companies' -H 'Authorization: Bearer <access_token>'",
+        "request_url": "https://api.hubapi.com/crm/v3/objects/companies",
+        "request_method": "GET"
+      },
+      "get_deals": {
+        "label": "Get All Deals",
+        "curl": "curl -X GET 'https://api.hubapi.com/crm/v3/objects/deals' -H 'Authorization: Bearer <access_token>'",
+        "request_url": "https://api.hubapi.com/crm/v3/objects/deals",
+        "request_method": "GET"
+      },
+      "get_owners": {
+        "label": "Get All Owners",
+        "curl": "curl -X GET 'https://api.hubapi.com/crm/v3/owners' -H 'Authorization: Bearer <access_token>'",
+        "request_url": "https://api.hubapi.com/crm/v3/owners",
+        "request_method": "GET"
+      }
+    },
+    "input_fields": {
+      "access_token": {
+        "type": "text",
+        "label": "Enter HubSpot Access Token",
+        "placeholder": "pat-na1-xxx"
+      }
+    },
+    "api_documentation_page": "https://developers.hubspot.com/docs/api/overview",
+    "alert": {
+      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "color": "failure"
+    }
   }
 }
