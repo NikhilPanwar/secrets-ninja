@@ -47,14 +47,11 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
   const handleTestEndpoint = async () => {
     setLoading(true);
     try {
-      const updatedRequestURL = isChecked
-        ? `https://proxy.secrets.ninja/fetch/` +
-        requestURL
-        : requestURL;
       const { status, data } = await makeUniversalRequest(
+        isChecked,
         serviceType,
         inputValues,
-        updatedRequestURL,
+        requestURL,
         requestMethod
       );
       setStatusCode(status);
