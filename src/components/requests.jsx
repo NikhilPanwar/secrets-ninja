@@ -167,7 +167,7 @@ async function makeUniversalRequest(
       );
       break;
     case 'NpmToken':
-      response = await fetch(endpointURL.replace('%3Corg%3E', inputData.org), {
+      response = await fetch(endpointURL.replace('<org>', inputData.org), {
         method: requestMethod,
         headers: {
           Authorization: `Bearer ${inputData.token}`,
