@@ -1,5 +1,6 @@
 /* eslint-disable no-case-declarations */
 async function makeUniversalRequest(
+  isProxyEnabled,
   serviceType,
   inputData,
   endpointURL,
@@ -7,8 +8,11 @@ async function makeUniversalRequest(
 ) {
   let response, data;
 
-  // endpointURL = 'http://localhost:8000?endpoint=' + encodeURIComponent(endpointURL) + '&method=' + requestMethod;
-  // endpointURL = 'https://thingproxy.freeboard.io/?' + endpointURL ;
+  endpointURL = isProxyEnabled
+    ? `https://proxy.secrets.ninja/fetch/` +
+    endpointURL
+    : endpointURL;
+
   switch (serviceType) {
     case 'Stripe':
       response = await fetch(endpointURL, {
@@ -223,7 +227,7 @@ async function makeUniversalRequest(
       response = await fetch(endpointURL.replace('<dc>', inputData.dc), {
         method: requestMethod,
         headers: {
-          Authorization: `Basic ${btoa('anystring:' + inputData.auth_token)}`,
+          Authorization: `Basic ${btoa('anystring:' + inputData.api_key)}`,
         },
       });
       break;
