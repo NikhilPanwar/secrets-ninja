@@ -2433,5 +2433,46 @@
       "alert_message": "These creds can't be tested using frontend JS. It's using secrets-ninja-proxy to get pass through those limitations.",
       "color": "info"
     }
+  },
+  "RabbitMQ" : {
+    "endpoints" : {
+      "get_queues" : {
+        "label" : "Get Queues",
+        "curl" : "curl -X POST <secrets_ninja_proxy>/rabbitmq/get_queues -d \"{\\\"connection_string\\\":\\\"<connection_string>\\\"}\"",
+        "request_url" : "<secrets_ninja_proxy>/rabbitmq/get_queues",
+        "request_method" : "POST"
+      },
+      "get_queue_data" : {
+        "label" : "Get Queue Data",
+        "curl" : "curl -X POST <secrets_ninja_proxy>/rabbitmq/get_queue_data -d \"{\\\"connection_string\\\":\\\"<connection_string>\\\", \\\"queue_name\\\":\\\"<queue_name>\\\"}\"",
+        "request_url" : "<secrets_ninja_proxy>/rabbitmq/get_queue_data",
+        "request_method" : "POST",
+        "override_default_input_field": true,
+        "input_fields": {
+          "connection_string" : {
+            "type" : "text",
+            "label" : "Enter RabbitMQ connection_string",
+            "placeholder" : "<connection_string>"
+          },
+          "queue_name" : {
+            "type" : "text",
+            "label" : "Enter Queue Name",
+            "placeholder" : "<queue_name>"
+          }
+        }
+      }
+    },
+    "input_fields" : {
+      "connection_string" : {
+        "type" : "text",
+        "label" : "Enter RabbitMQ connection_string",
+        "placeholder" : "<connection_string>"
+      }
+    },
+    "api_documentation_page" : "https://www.rabbitmq.com/management.html",
+    "alert": {
+      "alert_message": "These creds can't be tested using frontend JS. It's using secrets-ninja-proxy to get pass through those limitations.",
+      "color": "info"
+    }
   }
 }
