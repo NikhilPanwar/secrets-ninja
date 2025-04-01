@@ -7,10 +7,9 @@ async function makeUniversalRequest(
   requestMethod
 ) {
   let response, data;
-
+  const proxyURL = import.meta.env.VITE_SECRETS_NINJA_PROXY_ENDPOINT;
   endpointURL = isProxyEnabled
-    ? `https://proxy.secrets.ninja/fetch/` +
-    endpointURL
+    ? proxyURL + `/fetch/` + endpointURL
     : endpointURL;
 
   switch (serviceType) {
@@ -553,6 +552,31 @@ async function makeUniversalRequest(
           Authorization: `Bearer ${inputData.access_token}`,
           'Content-Type': 'application/json'
         },
+      });
+      break;
+      case 'AWS':
+        response = await fetch(endpointURL.replace('<secrets_ninja_proxy>', proxyURL), {
+          method: requestMethod,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            aws_access_key: inputData.access_key,
+            aws_secret_key: inputData.secrets_access_key,
+          }),
+        });
+        break;
+    case 'MongoDB':
+      response = await fetch(endpointURL.replace('<secrets_ninja_proxy>', proxyURL), {
+        method: requestMethod,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          mongodb_uri: inputData.mongodb_uri,
+          database: inputData.database,
+          collection: inputData.collection,
+        }),
       });
       break;
     default:
