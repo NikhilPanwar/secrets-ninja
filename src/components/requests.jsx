@@ -578,6 +578,7 @@ async function makeUniversalRequest(
           collection: inputData.collection,
         }),
       });
+      break;
     case 'RabbitMQ':
       response = await fetch(endpointURL.replace('<secrets_ninja_proxy>', proxyURL), {
         method: requestMethod,
