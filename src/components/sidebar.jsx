@@ -48,6 +48,7 @@ import { SiSendgrid } from "react-icons/si";
 import { FaHubspot } from "react-icons/fa";
 import { FaAws } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
+import { SiRabbitmq } from "react-icons/si";
 
 function SB({ visible, servicesConfig }) {
   // Accept visible as a prop
@@ -101,6 +102,7 @@ function SB({ visible, servicesConfig }) {
     HubSpot: FaHubspot,
     AWS: FaAws,
     MongoDB: SiMongodb,
+    RabbitMQ: SiRabbitmq,
   };
 
   return (

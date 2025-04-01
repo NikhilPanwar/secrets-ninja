@@ -578,6 +578,17 @@ async function makeUniversalRequest(
           collection: inputData.collection,
         }),
       });
+    case 'RabbitMQ':
+      response = await fetch(endpointURL.replace('<secrets_ninja_proxy>', proxyURL), {
+        method: requestMethod,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          connection_string: inputData.connection_string,
+          queue_name: inputData.queue_name,
+        }),
+      });
       break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
