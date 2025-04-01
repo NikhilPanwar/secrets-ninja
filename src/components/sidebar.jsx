@@ -46,6 +46,8 @@ import { SiJira } from "react-icons/si";
 import { SiHuggingface } from "react-icons/si";
 import { SiSendgrid } from "react-icons/si";
 import { FaHubspot } from "react-icons/fa";
+import { FaAws } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
 
 function SB({ visible, servicesConfig }) {
   // Accept visible as a prop
@@ -97,6 +99,8 @@ function SB({ visible, servicesConfig }) {
     HuggingFace: SiHuggingface,
     SendGrid: SiSendgrid,
     HubSpot: FaHubspot,
+    AWS: FaAws,
+    MongoDB: SiMongodb,
   };
 
   return (
