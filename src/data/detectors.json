@@ -2219,7 +2219,8 @@
         "label": "Enter Bitbucket Org",
         "placeholder": "org"
       }
-    }
+    },
+    "api_documentation_page": "https://developer.atlassian.com/server/bitbucket/rest/intro/"
   },
   "Jira": {
     "endpoints": {
