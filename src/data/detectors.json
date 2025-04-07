@@ -2343,14 +2343,50 @@
     }
   },
   "AWS" : {
-    "endpoints" : {
-      "list_buckets" : {
-        "label" : "List Buckets",
-        "curl" : "curl -X POST \"<secrets_ninja_proxy>/aws/list_buckets\" -H \"Content-Type: application/json\" -d '{\"aws_access_key\": \"<access_key>\", \"aws_secret_key\": \"<secrets_access_key>\"}'",
-        "request_url" : "<secrets_ninja_proxy>/aws/list_buckets",
-        "request_method" : "POST"
+    "endpoints": {
+      "get_caller_identity": {
+        "label": "Get Caller Identity",
+        "curl": "curl -X POST \"<secrets_ninja_proxy>/aws/get_caller_identity\" -H \"Content-Type: application/json\" -d '{\"aws_access_key\": \"<access_key>\", \"aws_secret_key\": \"<secrets_access_key>\"}'",
+        "request_url": "<secrets_ninja_proxy>/aws/get_caller_identity",
+        "request_method": "POST"
+      },
+      "list_buckets": {
+        "label": "List Buckets",
+        "curl": "curl -X POST \"<secrets_ninja_proxy>/aws/list_buckets\" -H \"Content-Type: application/json\" -d '{\"aws_access_key\": \"<access_key>\", \"aws_secret_key\": \"<secrets_access_key>\"}'",
+        "request_url": "<secrets_ninja_proxy>/aws/list_buckets",
+        "request_method": "POST"
+      },
+      "list_ec2_instances": {
+        "label": "List EC2 Instances",
+        "curl": "curl -X POST \"<secrets_ninja_proxy>/aws/list_ec2_instances\" -H \"Content-Type: application/json\" -d '{\"aws_access_key\": \"<access_key>\", \"aws_secret_key\": \"<secrets_access_key>\"}'",
+        "request_url": "<secrets_ninja_proxy>/aws/list_ec2_instances",
+        "request_method": "POST"
+      },
+      "get_cost_and_usage": {
+        "label": "Get Cost and Usage",
+        "curl": "curl -X POST \"<secrets_ninja_proxy>/aws/get_cost_and_usage\" -H \"Content-Type: application/json\" -d '{\"aws_access_key\": \"<access_key>\", \"aws_secret_key\": \"<secrets_access_key>\"}'",
+        "request_url": "<secrets_ninja_proxy>/aws/get_cost_and_usage",
+        "request_method": "POST"
+      },
+      "list_account_aliases": {
+        "label": "List Account Aliases",
+        "curl": "curl -X POST \"<secrets_ninja_proxy>/aws/list_account_aliases\" -H \"Content-Type: application/json\" -d '{\"aws_access_key\": \"<access_key>\", \"aws_secret_key\": \"<secrets_access_key>\"}'",
+        "request_url": "<secrets_ninja_proxy>/aws/list_account_aliases",
+        "request_method": "POST"
+      },
+      "list_hosted_zones": {
+        "label": "List Hosted Zones",
+        "curl": "curl -X POST \"<secrets_ninja_proxy>/aws/list_hosted_zones\" -H \"Content-Type: application/json\" -d '{\"aws_access_key\": \"<access_key>\", \"aws_secret_key\": \"<secrets_access_key>\"}'",
+        "request_url": "<secrets_ninja_proxy>/aws/list_hosted_zones",
+        "request_method": "POST"
+      },
+      "list_roles": {
+        "label": "List IAM Roles",
+        "curl": "curl -X POST \"<secrets_ninja_proxy>/aws/list_roles\" -H \"Content-Type: application/json\" -d '{\"aws_access_key\": \"<access_key>\", \"aws_secret_key\": \"<secrets_access_key>\"}'",
+        "request_url": "<secrets_ninja_proxy>/aws/list_roles",
+        "request_method": "POST"
       }
-    },
+  },
     "input_fields" : {
       "access_key" : {
         "type" : "text",
