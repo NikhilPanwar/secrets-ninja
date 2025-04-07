@@ -32,6 +32,11 @@ $ npm install
 $ npm run dev
 ```
 
+Or Run Using Docker, Including the Secrets Ninja Proxy for testing AWS, MongoDB creds privately
+```
+docker run -p 5173:5173 -p 8001:8001 secretsninja/secrets-ninja:latest
+```
+
 Access the development server at [http://localhost:5173/](http://localhost:5173/)
 
 ## Contributing
