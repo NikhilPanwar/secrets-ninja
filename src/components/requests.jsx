@@ -563,6 +563,7 @@ async function makeUniversalRequest(
           body: JSON.stringify({
             aws_access_key: inputData.access_key,
             aws_secret_key: inputData.secrets_access_key,
+            region: inputData.region,
           }),
         });
         break;
