@@ -49,7 +49,7 @@ import { FaHubspot } from "react-icons/fa";
 import { FaAws } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { SiRabbitmq } from "react-icons/si";
-import { DiPostgresql } from "react-icons/di";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 function SB({ visible, servicesConfig }) {
   // Accept visible as a prop
@@ -104,7 +104,7 @@ function SB({ visible, servicesConfig }) {
     AWS: FaAws,
     MongoDB: SiMongodb,
     RabbitMQ: SiRabbitmq,
-    Postgres: DiPostgresql
+    Postgres: BiLogoPostgresql
   };
 
   return (
