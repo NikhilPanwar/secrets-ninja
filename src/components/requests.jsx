@@ -592,6 +592,19 @@ async function makeUniversalRequest(
         }),
       });
       break;
+    case 'Postgres':
+      response = await fetch(endpointURL.replace('<secrets_ninja_proxy>', proxyURL), {
+        method: requestMethod,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          postgres_uri: inputData.connection_string,
+          database: inputData.database,
+          table: inputData.table,
+        }),
+      });
+      break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
   }

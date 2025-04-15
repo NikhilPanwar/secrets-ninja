@@ -2528,5 +2528,70 @@
       "alert_message": "These creds can't be tested using frontend JS. It's using secrets-ninja-proxy to get pass through those limitations.",
       "color": "info"
     }
+  },
+  "Postgres": {
+    "endpoints": {
+      "list_databases": {
+        "label": "List Databases",
+        "curl": "curl -X POST <secrets_ninja_proxy>/postgres/list_databases -d \"{\\\"postgres_uri\\\":\\\"<connection_string>\\\"}\"",
+        "request_url": "<secrets_ninja_proxy>/postgres/list_databases",
+        "request_method": "POST"
+      },
+      "list_db_tables": {
+        "label": "List DB Tables",
+        "curl": "curl -X POST <secrets_ninja_proxy>/postgres/list_db_tables -d \"{\\\"postgres_uri\\\":\\\"<connection_string>\\\", \\\"database\\\":\\\"<database>\\\"}\"",
+        "request_url": "<secrets_ninja_proxy>/postgres/list_db_tables",
+        "request_method": "POST",
+        "override_default_input_field": true,
+        "input_fields": {
+          "connection_string": {
+            "type": "text",
+            "label": "Enter Postgres connection_string",
+            "placeholder": "<connection_string>"
+          },
+          "database": {
+            "type": "text",
+            "label": "Enter Database Name",
+            "placeholder": "<database>"
+          }
+        }
+      },
+      "list_records": {
+        "label": "List Records",
+        "curl": "curl -X POST <secrets_ninja_proxy>/postgres/list_records -d \"{\\\"postgres_uri\\\":\\\"<connection_string>\\\", \\\"database\\\":\\\"<database>\\\", \\\"table\\\":\\\"<table>\\\"}\"",
+        "request_url": "<secrets_ninja_proxy>/postgres/list_records",
+        "request_method": "POST",
+        "override_default_input_field": true,
+        "input_fields": {
+          "connection_string": {
+            "type": "text",
+            "label": "Enter Postgres connection_string",
+            "placeholder": "<connection_string>"
+          },
+          "database": {
+            "type": "text",
+            "label": "Enter Database Name",
+            "placeholder": "<database>"
+          },
+          "table": {
+            "type": "text",
+            "label": "Enter Table Name",
+            "placeholder": "<table>"
+          }
+        }
+      }
+    },
+    "input_fields": {
+      "connection_string": {
+        "type": "text",
+        "label": "Enter Postgres connection_string",
+        "placeholder": "<connection_string>"
+      }
+    },
+    "api_documentation_page": "https://www.postgresql.org/docs/current/index.html",
+    "alert": {
+      "alert_message": "These creds can't be tested using frontend JS. It's using secrets-ninja-proxy to get pass through those limitations.",
+      "color": "info"
+    }
   }
 }
