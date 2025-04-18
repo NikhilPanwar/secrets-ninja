@@ -104,6 +104,12 @@
   },
   "OpenAI": {
     "endpoints": {
+      "me": {
+        "label": "Account Metadata",
+        "curl": "curl -X GET 'https://api.openai.com/v1/me' -H 'Authorization: Bearer <api_key>'",
+        "request_url": "https://api.openai.com/v1/me",
+        "request_method": "GET"
+      },
       "organizations": {
         "label": "Organizations",
         "curl": "curl -X GET 'https://api.openai.com/v1/organizations' -H 'Authorization: Bearer <api_key>'",
