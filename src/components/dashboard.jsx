@@ -32,12 +32,12 @@ export default function Dashboard({ servicesConfig }) {
           <li>
             <span className="font-medium">By:</span>{' '}
             <a
-              href="https://x.com/cyb3rs3cd4wg"
+              href="https://x.com/SecretsN1nja"
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold"
             >
-              @cyb3rs3cd4wg{' '}
+              @SecretsN1nja{' '}
             </a>
           </li>
           <li>
@@ -51,7 +51,7 @@ export default function Dashboard({ servicesConfig }) {
               <FaGithub className="inline-block mr-1" />
             </a>
             <a
-              href="https://x.com/cyb3rs3cd4wg"
+              href="https://x.com/SecretsN1nja"
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold"
