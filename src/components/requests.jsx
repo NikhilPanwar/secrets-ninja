@@ -554,19 +554,19 @@ async function makeUniversalRequest(
         },
       });
       break;
-      case 'AWS':
-        response = await fetch(endpointURL.replace('<secrets_ninja_proxy>', proxyURL), {
-          method: requestMethod,
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            aws_access_key: inputData.access_key,
-            aws_secret_key: inputData.secrets_access_key,
-            region: inputData.region,
-          }),
-        });
-        break;
+    case 'AWS':
+      response = await fetch(endpointURL.replace('<secrets_ninja_proxy>', proxyURL), {
+        method: requestMethod,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          aws_access_key: inputData.access_key,
+          aws_secret_key: inputData.secrets_access_key,
+          region: inputData.region,
+        }),
+      });
+      break;
     case 'MongoDB':
       response = await fetch(endpointURL.replace('<secrets_ninja_proxy>', proxyURL), {
         method: requestMethod,
@@ -603,6 +603,14 @@ async function makeUniversalRequest(
           database: inputData.database,
           table: inputData.table,
         }),
+      });
+      break;
+    case 'Zendesk':
+      response = await fetch(endpointURL.replace('<subdomain>', inputData.subdomain), {
+        method: requestMethod,
+        headers: {
+          Authorization: `Basic ${btoa(inputData.email + '/token:' + inputData.api_token)}`,
+        },
       });
       break;
     default:
