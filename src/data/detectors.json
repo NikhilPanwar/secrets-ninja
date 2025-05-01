@@ -2599,5 +2599,49 @@
       "alert_message": "These creds can't be tested using frontend JS. It's using secrets-ninja-proxy to get pass through those limitations.",
       "color": "info"
     }
+  },
+  "Zendesk": {
+    "endpoints": {
+      "current_user": {
+        "label": "Current User Info",
+        "curl": "curl https://<subdomain>.zendesk.com/api/v2/users/me.json -u <email>/token:<api_token>",
+        "request_url": "https://<subdomain>.zendesk.com/api/v2/users/me.json",
+        "request_method": "GET"
+      },
+      "tickets": {
+        "label": "Tickets",
+        "curl": "curl https://<subdomain>.zendesk.com/api/v2/tickets.json -u <email>/token:<api_token>",
+        "request_url": "https://<subdomain>.zendesk.com/api/v2/tickets.json",
+        "request_method": "GET"
+      },
+      "users": {
+        "label": "All Users",
+        "curl": "curl https://<subdomain>.zendesk.com/api/v2/users.json -u <email>/token:<api_token>",
+        "request_url": "https://<subdomain>.zendesk.com/api/v2/users.json",
+        "request_method": "GET"
+      }
+    },
+    "input_fields": {
+      "subdomain": {
+        "type": "text",
+        "label": "Zendesk Subdomain",
+        "placeholder": "yourcompany"
+      },
+      "email": {
+        "type": "text",
+        "label": "Zendesk Account Email",
+        "placeholder": "you@company.com"
+      },
+      "api_token": {
+        "type": "text",
+        "label": "Zendesk API Token",
+        "placeholder": "your_api_token"
+      }
+    },
+    "api_documentation_page": "https://developer.zendesk.com/api-reference/",
+    "alert": {
+      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "color": "failure"
+    }
   }
 }
