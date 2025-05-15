@@ -2419,7 +2419,7 @@
       "describe_organization": {
         "label": "Describe Organization",
         "curl": "curl -X POST \"<secrets_ninja_proxy>/aws/describe_organization\" -H \"Content-Type: application/json\" -d '{\"aws_access_key\": \"<access_key>\", \"aws_secret_key\": \"<secrets_access_key>\"}'",
-        "request_url": "<secrets_ninja_proxy>/aws/get_contact_information",
+        "request_url": "<secrets_ninja_proxy>/aws/describe_organization",
         "request_method": "POST"
       },
       "get_contact_information": {
