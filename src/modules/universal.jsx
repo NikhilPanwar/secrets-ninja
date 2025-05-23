@@ -158,15 +158,16 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
         const hashString = hash.substring(1); // Remove the # character
         if (!hashString) return;
         const hashParamsUrl = new URLSearchParams(hashString);
-        
+        var _inputFields = inputFields;
         // First handle the endpoint if it exists
         const endpointKey = hashParamsUrl.get('endpoint');
         if (endpointKey && endpoints[endpointKey]) {
           handleDropdownChange(endpointKey, true); // Pass true to preserve hash
+          _inputFields = endpoints[endpointKey].input_fields;
         }
 
         // Then handle the input fields
-        Object.keys(inputFields).forEach((key) => {
+        Object.keys(_inputFields).forEach((key) => {
           const value = hashParamsUrl.get(key);
           if (value) {
             setInputValues((prev) => ({ ...prev, [key]: value }));
