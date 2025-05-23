@@ -51,6 +51,7 @@ import { SiMongodb } from "react-icons/si";
 import { SiRabbitmq } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiZendesk } from "react-icons/si";
+import { useMatch } from 'react-router-dom';
 
 function SB({ visible, servicesConfig }) {
   // Accept visible as a prop
@@ -119,19 +120,25 @@ function SB({ visible, servicesConfig }) {
           {/* <Sidebar.Item href="/" icon={CiCircleInfo}>
             About
           </Sidebar.Item> */}
-          {Object.keys(servicesConfig).map((service) => (
-            <Sidebar.Item
-              key={service}
-              href={`/${service.toLowerCase()}`}
-              icon={
-                serviceIcons[service]
-                  ? serviceIcons[service]
-                  : IoMdArrowDroprightCircle
-              }
-            >
-              {service}
-            </Sidebar.Item>
-          ))}
+          {Object.keys(servicesConfig).map((service) => {
+            const path = `/${service.toLowerCase()}`;
+            const isActive = useMatch(path);
+            
+            return (
+              <Sidebar.Item
+                key={service}
+                href={path}
+                icon={
+                  serviceIcons[service]
+                    ? serviceIcons[service]
+                    : IoMdArrowDroprightCircle
+                }
+                active={isActive}
+              >
+                {service}
+              </Sidebar.Item>
+            );
+          })}
         </Sidebar.ItemGroup>
       </Sidebar.Items>
     </Sidebar>
