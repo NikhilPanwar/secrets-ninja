@@ -2,11 +2,36 @@ import React, { useState } from 'react';
 import { Card } from 'flowbite-react';
 import CopyButton from './copy_button';
 import '../css/json_theme.css';
-import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import bash from 'react-syntax-highlighter/dist/esm/languages/hljs/bash';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 SyntaxHighlighter.registerLanguage('bash', bash);
+
+const customStyle = {
+  ...github,
+  'hljs': {
+    ...github['hljs'],
+    background: 'transparent',
+    color: '#333'
+  },
+  'hljs-string': {
+    ...github['hljs-string'],
+    color: '#ff5e5e' // softened red
+  },
+  'hljs-literal': {
+    ...github['hljs-literal'],
+    color: '#ff5e5e'
+  },
+  'hljs-number': {
+    ...github['hljs-number'],
+    color: '#ff5e5e'
+  },
+  'hljs-built_in': {
+    ...github['hljs-built_in'],
+    color: '#ff5e5e'
+  }
+};
 
 function RequestWindow({ curl = '' }) {
   return (
@@ -16,7 +41,12 @@ function RequestWindow({ curl = '' }) {
         <CopyButton textToCopy={curl} />
       </div>
       <div className="overflow-auto" style={{ maxHeight: '58vh' }}>
-        <SyntaxHighlighter customStyle={{ backgroundColor: 'transparent' }} codeTagProps={{ className: 'text-xs md:text-sm font-mono dark:text-white' }} wrapLongLines={true} language="bash" style={github}>
+        <SyntaxHighlighter
+          codeTagProps={{ className: 'text-xs md:text-sm font-mono dark:text-white' }}
+          wrapLongLines={true}
+          language="bash"
+          style={customStyle}
+        >
           {curl}
         </SyntaxHighlighter>
       </div>
