@@ -16,7 +16,7 @@ function RequestWindow({ curl = '' }) {
         <CopyButton textToCopy={curl} />
       </div>
       <div className="overflow-auto" style={{ maxHeight: '58vh' }}>
-        <SyntaxHighlighter codeTagProps={{ className: 'text-xs md:text-sm font-mono dark:text-white' }} wrapLongLines={true} language="bash" style={github}>
+        <SyntaxHighlighter customStyle={{ backgroundColor: 'transparent' }} codeTagProps={{ className: 'text-xs md:text-sm font-mono dark:text-white' }} wrapLongLines={true} language="bash" style={github}>
           {curl}
         </SyntaxHighlighter>
       </div>
