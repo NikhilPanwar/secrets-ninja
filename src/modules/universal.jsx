@@ -73,7 +73,7 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
     return dynamicCurl;
   };
 
-  const handleDropdownChange = (endpointKey) => {
+  const handleDropdownChange = (endpointKey, preserveHash = false) => {
     const endpointConfig = endpoints[endpointKey];
     setSelectedEndpoint(endpointConfig.label);
     const updatedCurl = generateDynamicCurl(endpointConfig.curl, inputValues);
@@ -86,6 +86,12 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
     } else {
       setInputFields(defaultInputFields);
     }
+
+    // Only update hash if we're not preserving it
+    if (!preserveHash) {
+      const updatedInputs = { ...inputValues, endpoint: endpointKey };
+      setHash(new URLSearchParams(updatedInputs).toString());
+    }
   };
 
   const handleInputChange = (key, value) => {
@@ -93,7 +99,9 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
       const updatedInputs = { ...prev, [key]: value };
       const updatedCurl = generateDynamicCurl(curlCommand, updatedInputs);
       setCurlCommand(updatedCurl);
-      setHash(new URLSearchParams(updatedInputs).toString());
+      // Include the current endpoint in the hash
+      const hashInputs = { ...updatedInputs, endpoint: Object.keys(endpoints).find(key => endpoints[key].label === selectedEndpoint) };
+      setHash(new URLSearchParams(hashInputs).toString());
       return updatedInputs;
     });
   };
@@ -150,7 +158,16 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
         const hashString = hash.substring(1); // Remove the # character
         if (!hashString) return;
         const hashParamsUrl = new URLSearchParams(hashString);
-        Object.keys(inputFields).forEach((key) => {
+        var _inputFields = inputFields;
+        // First handle the endpoint if it exists
+        const endpointKey = hashParamsUrl.get('endpoint');
+        if (endpointKey && endpoints[endpointKey]) {
+          handleDropdownChange(endpointKey, true); // Pass true to preserve hash
+          _inputFields = endpoints[endpointKey].input_fields ?? inputFields;
+        }
+
+        // Then handle the input fields
+        Object.keys(_inputFields).forEach((key) => {
           const value = hashParamsUrl.get(key);
           if (value) {
             setInputValues((prev) => ({ ...prev, [key]: value }));
