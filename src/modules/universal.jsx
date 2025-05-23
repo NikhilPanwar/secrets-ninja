@@ -163,7 +163,7 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
         const endpointKey = hashParamsUrl.get('endpoint');
         if (endpointKey && endpoints[endpointKey]) {
           handleDropdownChange(endpointKey, true); // Pass true to preserve hash
-          _inputFields = endpoints[endpointKey].input_fields;
+          _inputFields = endpoints[endpointKey].input_fields ?? inputFields;
         }
 
         // Then handle the input fields
