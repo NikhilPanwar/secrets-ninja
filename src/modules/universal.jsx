@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useHash } from 'react-use';
 import {
   Button,
   Dropdown,
@@ -15,6 +16,7 @@ import makeUniversalRequest from '../components/requests';
 import { AiOutlineLoading } from 'react-icons/ai';
 
 export default function UniversalComponent({ serviceType, servicesConfig }) {
+  const [hash, setHash] = useHash();
   const serviceConfig = servicesConfig[serviceType] || {};
   const apiDocumentationPage = serviceConfig.api_documentation_page;
   const endpoints = serviceConfig.endpoints || {};
@@ -91,6 +93,7 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
       const updatedInputs = { ...prev, [key]: value };
       const updatedCurl = generateDynamicCurl(curlCommand, updatedInputs);
       setCurlCommand(updatedCurl);
+      setHash(new URLSearchParams(updatedInputs).toString());
       return updatedInputs;
     });
   };
@@ -141,6 +144,24 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
     setCurlCommand(updatedCurl);
   }, [inputValues, selectedEndpoint, serviceType]); // Depend on inputValues, selectedEndpoint, and serviceType
 
+  useEffect(() => {
+    if (hash) {
+      try {
+        const hashString = hash.substring(1); // Remove the # character
+        if (!hashString) return;
+        const hashParamsUrl = new URLSearchParams(hashString);
+        Object.keys(inputFields).forEach((key) => {
+          const value = hashParamsUrl.get(key);
+          if (value) {
+            setInputValues((prev) => ({ ...prev, [key]: value }));
+          }
+        });
+      } catch (error) {
+        console.error('Error parsing hash:', error);
+      }
+    }
+  }, [hash]);
+
   return (
     <div className="p-4">
       {apiDocumentationPage ? (
@@ -172,6 +193,7 @@ export default function UniversalComponent({ serviceType, servicesConfig }) {
               id={key}
               type={inputFields[key].type}
               placeholder={inputFields[key].placeholder}
+              value={inputValues[key] || ''}
               onChange={(e) => handleInputChange(key, e.target.value)}
               required
             />
