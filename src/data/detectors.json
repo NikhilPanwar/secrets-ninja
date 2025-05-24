@@ -851,8 +851,8 @@
         "request_url": "https://registry.npmjs.org/-/whoami",
         "request_method": "GET"
       },
-      "list_packages": {
-        "label": "List Packages",
+      "list_org_packages": {
+        "label": "List Org Packages",
         "curl": "curl -X GET https://registry.npmjs.org/-/org/<org>/package -H 'Authorization: Bearer <token>'",
         "request_url": "https://registry.npmjs.org/-/org/<org>/package",
         "request_method": "GET",
@@ -866,6 +866,25 @@
           "org": {
             "type": "text",
             "label": "Enter Organization",
+            "placeholder": "npm"
+          }
+        }
+      },
+      "list_user_packages": {
+        "label": "List User Packages",
+        "curl": "curl -X GET https://registry.npmjs.org/-/user/<user>/package -H 'Authorization: Bearer <token>'",
+        "request_url": "https://registry.npmjs.org/-/user/<user>/package",
+        "request_method": "GET",
+        "override_default_input_field": true,
+        "input_fields": {
+          "token": {
+            "type": "text",
+            "label": "Enter NPM Token",
+            "placeholder": "xxxx-xxxx-xxxx-xxxx-xxxx"
+          },
+          "user": {
+            "type": "text",
+            "label": "Enter User ID",
             "placeholder": "npm"
           }
         }
