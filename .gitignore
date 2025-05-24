@@ -27,3 +27,5 @@ dist-ssr
 firebase.json
 .firebaserc
 secrets-ninja.code-workspace
+.env
+.env.development
