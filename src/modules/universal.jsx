@@ -9,7 +9,7 @@ import {
   Tooltip,
   Checkbox,
 } from 'flowbite-react';
-import OutputWindow from '../components/output_window';
+import OutputWindow from '../components/response_window';
 import RequestWindow from '../components/request_window';
 import { HiInformationCircle } from 'react-icons/hi';
 import makeUniversalRequest from '../components/requests';
