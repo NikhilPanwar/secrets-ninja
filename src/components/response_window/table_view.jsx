@@ -1,15 +1,9 @@
 import { useMemo } from 'react';
 import {
   useTable,
-  useSortBy,
-  useGlobalFilter
+  useSortBy
 } from 'react-table';
-import { TextInput } from 'flowbite-react';
-import {
-  HiSelector,
-  HiArrowSmUp,
-  HiArrowSmDown
-} from 'react-icons/hi';
+import { HiSelector, HiArrowSmUp, HiArrowSmDown } from 'react-icons/hi';
 
 function flattenJSON(obj, prefix = '', res = {}) {
   for (const key in obj) {
@@ -21,18 +15,6 @@ function flattenJSON(obj, prefix = '', res = {}) {
     }
   }
   return res;
-}
-
-function GlobalFilter({ globalFilter, setGlobalFilter }) {
-  return (
-    <TextInput
-      sizing="md"
-      value={globalFilter || ''}
-      onChange={e => setGlobalFilter(e.target.value || undefined)}
-      placeholder="Search..."
-      className="mb-2"
-    />
-  );
 }
 
 function TableRenderer({ data }) {
@@ -66,21 +48,14 @@ function TableRenderer({ data }) {
     getTableBodyProps,
     headerGroups,
     rows,
-    prepareRow,
-    state,
-    setGlobalFilter
+    prepareRow
   } = useTable(
     { columns, data, sortTypes },
-    useGlobalFilter,
     useSortBy
   );
 
   return (
     <div className="space-y-2">
-      <GlobalFilter
-        globalFilter={state.globalFilter}
-        setGlobalFilter={setGlobalFilter}
-      />
       <table {...getTableProps()} className="min-w-full text-xs md:text-sm text-left font-mono text-black dark:text-white border">
         <thead className="bg-gray-200 dark:bg-gray-700 sticky top-0">
           {headerGroups.map(headerGroup => (
