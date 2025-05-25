@@ -36,12 +36,29 @@ function GlobalFilter({ globalFilter, setGlobalFilter }) {
 }
 
 function TableRenderer({ data }) {
+  const sortTypes = useMemo(() => ({
+    alphanumeric: (rowA, rowB, columnId) => {
+      const a = String(rowA.values[columnId] ?? '').toLowerCase();
+      const b = String(rowB.values[columnId] ?? '').toLowerCase();
+      return a > b ? 1 : a < b ? -1 : 0;
+    },
+    bool: (rowA, rowB, columnId) => {
+      const a = rowA.values[columnId] === true ? 1 : 0;
+      const b = rowB.values[columnId] === true ? 1 : 0;
+      return a - b;
+    }
+  }), []);
+
   const columns = useMemo(() => {
     const keys = [...new Set(data.flatMap(Object.keys))];
-    return keys.map(key => ({
-      Header: key,
-      accessor: key
-    }));
+    return keys.map(key => {
+      const isBool = data.every(row => typeof row[key] === 'boolean');
+      return {
+        Header: key,
+        accessor: key,
+        sortType: isBool ? 'bool' : 'alphanumeric'
+      };
+    });
   }, [data]);
 
   const {
@@ -53,7 +70,7 @@ function TableRenderer({ data }) {
     state,
     setGlobalFilter
   } = useTable(
-    { columns, data },
+    { columns, data, sortTypes },
     useGlobalFilter,
     useSortBy
   );
