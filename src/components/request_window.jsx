@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card } from 'flowbite-react';
 import CopyButton from './copy_button';
 import '../css/json_theme.css';
@@ -17,7 +17,7 @@ const customStyle = {
   },
   'hljs-string': {
     ...github['hljs-string'],
-    color: '#ff5e5e' // softened red
+    color: '#ff5e5e'
   },
   'hljs-literal': {
     ...github['hljs-literal'],
@@ -40,10 +40,13 @@ function RequestWindow({ curl = '' }) {
         <h2 className="text-lg font-semibold dark:text-white">Request</h2>
         <CopyButton textToCopy={curl} />
       </div>
-      <div className="overflow-auto" style={{ maxHeight: '58vh' }}>
+      <div className="overflow-x-auto" style={{ maxHeight: '58vh' }}>
         <SyntaxHighlighter
-          codeTagProps={{ className: 'text-xs md:text-sm font-mono dark:text-white' }}
-          wrapLongLines={true}
+          codeTagProps={{
+            className: 'text-xs md:text-sm font-mono dark:text-white',
+            style: { whiteSpace: 'pre' }
+          }}
+          wrapLongLines={false}
           language="bash"
           style={customStyle}
         >
