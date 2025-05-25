@@ -1,5 +1,15 @@
 import { useMemo } from 'react';
-import { useTable, useSortBy } from 'react-table';
+import {
+  useTable,
+  useSortBy,
+  useGlobalFilter
+} from 'react-table';
+import { TextInput } from 'flowbite-react';
+import {
+  HiSelector,
+  HiArrowSmUp,
+  HiArrowSmDown
+} from 'react-icons/hi';
 
 function flattenJSON(obj, prefix = '', res = {}) {
   for (const key in obj) {
@@ -11,6 +21,18 @@ function flattenJSON(obj, prefix = '', res = {}) {
     }
   }
   return res;
+}
+
+function GlobalFilter({ globalFilter, setGlobalFilter }) {
+  return (
+    <TextInput
+      sizing="md"
+      value={globalFilter || ''}
+      onChange={e => setGlobalFilter(e.target.value || undefined)}
+      placeholder="Search..."
+      className="mb-2"
+    />
+  );
 }
 
 function TableRenderer({ data }) {
@@ -27,43 +49,63 @@ function TableRenderer({ data }) {
     getTableBodyProps,
     headerGroups,
     rows,
-    prepareRow
-  } = useTable({ columns, data }, useSortBy);
+    prepareRow,
+    state,
+    setGlobalFilter
+  } = useTable(
+    { columns, data },
+    useGlobalFilter,
+    useSortBy
+  );
 
   return (
-    <table {...getTableProps()} className="min-w-full text-xs md:text-sm text-left font-mono text-black dark:text-white border">
-      <thead className="bg-gray-200 dark:bg-gray-700 sticky top-0">
-        {headerGroups.map(headerGroup => (
-          <tr {...headerGroup.getHeaderGroupProps()}>
-            {headerGroup.headers.map(column => (
-              <th
-                {...column.getHeaderProps(column.getSortByToggleProps())}
-                className="px-4 py-2 border border-gray-300 dark:border-gray-600 cursor-pointer select-none"
-              >
-                {column.render('Header')}
-                <span className="ml-1">
-                  {column.isSorted ? (column.isSortedDesc ? ' 🔽' : ' 🔼') : ''}
-                </span>
-              </th>
-            ))}
-          </tr>
-        ))}
-      </thead>
-      <tbody {...getTableBodyProps()}>
-        {rows.map(row => {
-          prepareRow(row);
-          return (
-            <tr {...row.getRowProps()} className="border-t border-gray-300 dark:border-gray-600">
-              {row.cells.map(cell => (
-                <td {...cell.getCellProps()} className="px-4 py-2 border border-gray-300 dark:border-gray-600 break-words">
-                  {String(cell.value ?? '')}
-                </td>
+    <div className="space-y-2">
+      <GlobalFilter
+        globalFilter={state.globalFilter}
+        setGlobalFilter={setGlobalFilter}
+      />
+      <table {...getTableProps()} className="min-w-full text-xs md:text-sm text-left font-mono text-black dark:text-white border">
+        <thead className="bg-gray-200 dark:bg-gray-700 sticky top-0">
+          {headerGroups.map(headerGroup => (
+            <tr {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map(column => (
+                <th
+                  {...column.getHeaderProps(column.getSortByToggleProps())}
+                  className="px-4 py-2 border border-gray-300 dark:border-gray-600 cursor-pointer select-none"
+                >
+                  <div className="flex items-center space-x-1">
+                    <span>{column.render('Header')}</span>
+                    {column.isSorted ? (
+                      column.isSortedDesc ? (
+                        <HiArrowSmDown className="w-4 h-4" />
+                      ) : (
+                        <HiArrowSmUp className="w-4 h-4" />
+                      )
+                    ) : (
+                      <HiSelector className="w-4 h-4 text-gray-400" />
+                    )}
+                  </div>
+                </th>
               ))}
             </tr>
-          );
-        })}
-      </tbody>
-    </table>
+          ))}
+        </thead>
+        <tbody {...getTableBodyProps()}>
+          {rows.map(row => {
+            prepareRow(row);
+            return (
+              <tr {...row.getRowProps()} className="border-t border-gray-300 dark:border-gray-600">
+                {row.cells.map(cell => (
+                  <td {...cell.getCellProps()} className="px-4 py-2 border border-gray-300 dark:border-gray-600 break-words">
+                    {String(cell.value ?? '')}
+                  </td>
+                ))}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
