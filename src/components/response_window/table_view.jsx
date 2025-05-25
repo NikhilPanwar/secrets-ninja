@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { useTable } from 'react-table';
+import { useTable, useSortBy } from 'react-table';
 
 function flattenJSON(obj, prefix = '', res = {}) {
   for (const key in obj) {
@@ -28,7 +28,7 @@ function TableRenderer({ data }) {
     headerGroups,
     rows,
     prepareRow
-  } = useTable({ columns, data });
+  } = useTable({ columns, data }, useSortBy);
 
   return (
     <table {...getTableProps()} className="min-w-full text-xs md:text-sm text-left font-mono text-black dark:text-white border">
@@ -36,8 +36,14 @@ function TableRenderer({ data }) {
         {headerGroups.map(headerGroup => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map(column => (
-              <th {...column.getHeaderProps()} className="px-4 py-2 border border-gray-300 dark:border-gray-600">
+              <th
+                {...column.getHeaderProps(column.getSortByToggleProps())}
+                className="px-4 py-2 border border-gray-300 dark:border-gray-600 cursor-pointer select-none"
+              >
                 {column.render('Header')}
+                <span className="ml-1">
+                  {column.isSorted ? (column.isSortedDesc ? ' 🔽' : ' 🔼') : ''}
+                </span>
               </th>
             ))}
           </tr>
