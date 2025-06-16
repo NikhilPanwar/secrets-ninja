@@ -613,6 +613,17 @@ async function makeUniversalRequest(
         },
       });
       break;
+    case 'GCP':
+      response = await fetch(endpointURL.replace('<secrets_ninja_proxy>', proxyURL), {
+        method: requestMethod,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          gcp_creds: inputData.gcp_creds
+        }),
+      });
+      break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
   }

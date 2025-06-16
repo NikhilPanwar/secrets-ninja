@@ -2680,5 +2680,27 @@
       "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
+  },
+  "GCP": {
+    "endpoints": {
+      "list_projects": {
+        "label": "List Projects",
+        "curl": "curl -X POST \"<secrets_ninja_proxy>/gcp/list_projects\" -H \"Content-Type: application/json\" -d '{\"gcp_creds\": <gcp_creds>}'",
+        "request_url": "<secrets_ninja_proxy>/gcp/list_projects",
+        "request_method": "POST"
+      }
+    },
+    "input_fields": {
+      "gcp_creds": {
+        "type": "text",
+        "label": "Enter GCP Service Account JSON",
+        "placeholder": "{\n  \"type\": \"service_account\",\n  \"project_id\": \"...\",\n  ...\n}"
+      }
+    },
+    "api_documentation_page": "https://cloud.google.com/resource-manager/docs/reference/rest/v1/projects/list",
+    "alert": {
+      "alert_message": "These creds can't be tested using frontend JS. It's using secrets-ninja-proxy to get pass through those limitations.",
+      "color": "info"
+    }
   }
 }
