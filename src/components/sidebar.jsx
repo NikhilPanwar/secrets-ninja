@@ -51,7 +51,10 @@ import { SiMongodb } from "react-icons/si";
 import { SiRabbitmq } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiZendesk } from "react-icons/si";
+import { SiGooglecloud } from "react-icons/si";
+import { useRef, useEffect } from 'react';
 import { useMatch } from 'react-router-dom';
+
 
 function SB({ visible, servicesConfig }) {
   // Accept visible as a prop
@@ -107,7 +110,8 @@ function SB({ visible, servicesConfig }) {
     MongoDB: SiMongodb,
     RabbitMQ: SiRabbitmq,
     Postgres: BiLogoPostgresql,
-    Zendesk: SiZendesk
+    Zendesk: SiZendesk,
+    GCP: SiGooglecloud
   };
 
   return (
@@ -123,22 +127,27 @@ function SB({ visible, servicesConfig }) {
           {Object.keys(servicesConfig).map((service) => {
             const path = `/${service.toLowerCase()}`;
             const isActive = useMatch(path);
-            
+            const itemRef = useRef(null);
+
+            useEffect(() => {
+              if (isActive && itemRef.current) {
+                itemRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            }, [isActive]);
+
             return (
-              <Sidebar.Item
-                key={service}
-                href={path}
-                icon={
-                  serviceIcons[service]
-                    ? serviceIcons[service]
-                    : IoMdArrowDroprightCircle
-                }
-                active={isActive}
-              >
-                {service}
-              </Sidebar.Item>
+              <div key={service} ref={itemRef}>
+                <Sidebar.Item
+                  href={path}
+                  icon={serviceIcons[service] || IoMdArrowDroprightCircle}
+                  active={isActive}
+                >
+                  {service}
+                </Sidebar.Item>
+              </div>
             );
           })}
+
         </Sidebar.ItemGroup>
       </Sidebar.Items>
     </Sidebar>
