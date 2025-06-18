@@ -141,6 +141,7 @@ function SB({ visible, servicesConfig }) {
                   href={path}
                   icon={serviceIcons[service] || IoMdArrowDroprightCircle}
                   active={isActive}
+                  className={isActive ? 'font-bold' : ''}
                 >
                   {service}
                 </Sidebar.Item>
