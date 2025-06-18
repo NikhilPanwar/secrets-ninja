@@ -131,7 +131,7 @@ function SB({ visible, servicesConfig }) {
 
             useEffect(() => {
               if (isActive && itemRef.current) {
-                itemRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                itemRef.current.scrollIntoView({ block: 'center' });
               }
             }, [isActive]);
 
