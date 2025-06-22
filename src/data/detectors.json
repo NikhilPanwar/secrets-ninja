@@ -2702,5 +2702,27 @@
       "alert_message": "These creds can't be tested using frontend JS. It's using secrets-ninja-proxy to get pass through those limitations.",
       "color": "info"
     }
+  },
+  "NVIDIA": {
+    "endpoints": {
+      "caller_info": {
+        "label": "Caller Info",
+        "curl": "curl -X POST 'https://api.ngc.nvidia.com/v3/keys/get-caller-info' -d 'credentials=<api_key>'",
+        "request_url": "https://api.ngc.nvidia.com/v3/keys/get-caller-info",
+        "request_method": "POST"
+      }
+    },
+    "input_fields": {
+      "api_key": {
+        "type": "text",
+        "label": "Enter NGC API Key",
+        "placeholder": "nvapi-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      }
+    },
+    "api_documentation_page": "https://docs.nvidia.com/ngc/index.html",
+    "alert": {
+      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "color": "failure"
+    }
   }
 }
