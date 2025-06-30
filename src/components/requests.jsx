@@ -367,7 +367,7 @@ async function makeUniversalRequest(
       });
       break;
     case 'Slack':
-      response = await fetch(endpointURL, {
+      response = await fetch(endpointURL.replace('<channel_id>', inputData.channel_id), {
         method: requestMethod,
         headers: {
           Authorization: `Bearer ${inputData.api_token}`,
@@ -622,6 +622,15 @@ async function makeUniversalRequest(
         body: JSON.stringify({
           gcp_creds: inputData.gcp_creds
         }),
+      });
+      break;
+    case 'NVIDIA':
+      response = await fetch(endpointURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `credentials=${inputData.api_key}`,
       });
       break;
     default:
