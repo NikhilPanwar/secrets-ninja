@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+boto3
+requests
+pymongo
+pika
+psycopg2
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+google-cloud-storage
+google-cloud-iam
