@@ -52,6 +52,7 @@ import { SiRabbitmq } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiZendesk } from "react-icons/si";
 import { SiGooglecloud } from "react-icons/si";
+import { BsNvidia } from "react-icons/bs";
 import { useRef, useEffect } from 'react';
 import { useMatch } from 'react-router-dom';
 
@@ -111,7 +112,8 @@ function SB({ visible, servicesConfig }) {
     RabbitMQ: SiRabbitmq,
     Postgres: BiLogoPostgresql,
     Zendesk: SiZendesk,
-    GCP: SiGooglecloud
+    GCP: SiGooglecloud,
+    NVIDIA: BsNvidia
   };
 
   return (
