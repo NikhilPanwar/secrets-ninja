@@ -633,6 +633,14 @@ async function makeUniversalRequest(
         body: `credentials=${inputData.api_key}`,
       });
       break;
+    case 'SonarCloud':
+      response = await fetch(endpointURL, {
+        method: requestMethod,
+        headers: {
+          Authorization: `Basic ${btoa(inputData.token + ':')}`,
+        },
+      });
+      break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
   }
