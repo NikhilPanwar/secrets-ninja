@@ -7,3 +7,10 @@ dist
 *.log
 Dockerfile
 .dockerignore
+**/venv/
+venv/
+**/.firebase/
+.firebase/
+dist/
+public/
+.DS_Store
