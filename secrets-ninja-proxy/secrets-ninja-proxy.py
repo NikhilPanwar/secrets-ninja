@@ -62,7 +62,8 @@ async def fetch_handler(request: Request, rest_of_path: str):
     headers = json_body.get("proxied_data", {}).get("headers", {})
     real_headers = dict(request.headers)
     headers = clean_headers(real_headers)
-    response, status_code = make_request(rest_of_path, headers, method, json_body)
+    full_url = str(request.url).replace(str(request.base_url) + "fetch/", "")
+    response, status_code = make_request(full_url, headers, method, json_body)
     return JSONResponse(status_code=status_code, content=response)
 
 if __name__ == "__main__":
