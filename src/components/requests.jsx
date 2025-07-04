@@ -627,10 +627,12 @@ async function makeUniversalRequest(
     case 'NVIDIA':
       response = await fetch(endpointURL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: `credentials=${inputData.api_key}`,
+        body: JSON.stringify({
+          credentials: inputData.api_key,
+          proxied_data: {
+            method: 'POST'
+          }
+        })
       });
       break;
     case 'SonarCloud':
