@@ -1,0 +1,9 @@
+node_modules
+__pycache__
+*.pyc
+.git
+dist
+.env
+*.log
+Dockerfile
+.dockerignore
