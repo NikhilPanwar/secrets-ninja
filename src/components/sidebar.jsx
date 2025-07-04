@@ -53,6 +53,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { SiZendesk } from "react-icons/si";
 import { SiGooglecloud } from "react-icons/si";
 import { BsNvidia } from "react-icons/bs";
+import { SiSonar } from "react-icons/si";
 import { useRef, useEffect } from 'react';
 import { useMatch } from 'react-router-dom';
 
@@ -113,7 +114,8 @@ function SB({ visible, servicesConfig }) {
     Postgres: BiLogoPostgresql,
     Zendesk: SiZendesk,
     GCP: SiGooglecloud,
-    NVIDIA: BsNvidia
+    NVIDIA: BsNvidia,
+    SonarCloud: SiSonar 
   };
 
   return (

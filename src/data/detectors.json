@@ -2724,5 +2724,27 @@
       "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
+  },
+  "SonarCloud": {
+    "endpoints": {
+      "organizations": {
+        "label": "Organizations",
+        "curl": "curl -u <token>: 'https://sonarcloud.io/api/organizations/search?member=true'",
+        "request_url": "https://sonarcloud.io/api/organizations/search?member=true",
+        "request_method": "GET"
+      }
+    },
+    "input_fields": {
+      "token": {
+        "type": "text",
+        "label": "Enter SonarCloud API Token",
+        "placeholder": "sonarcloud_token"
+      }
+    },
+    "api_documentation_page": "https://sonarcloud.io/web_api",
+    "alert": {
+      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "color": "failure"
+    }
   }
 }
