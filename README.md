@@ -41,7 +41,8 @@ Access the development server at [http://localhost:5173/](http://localhost:5173/
 
 ## Contributing
 
-Contributions are welcome, particularly new modules for validating API keys on additional services. Please note that due to CORS restrictions, some APIs may not be accessible from the browser. In such cases, the project provides workarounds and clear instructions on how to proceed.
+Contributions are welcome, particularly new modules for validating API keys on additional services. 
+Please note that due to CORS restrictions or in case of Cloud Creds which requires SDK, CLI tools, some APIs can't be accessed using frontend JS only. In such cases, the project provides workaround using secrets-ninja-proxy module.
 
 Interested in contributing to the project? [Here's](CONTRIBUTING.md) how you can get started.
 
