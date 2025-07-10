@@ -170,6 +170,12 @@
         "request_url": "https://api.github.com/user/repos?per_page=100&page=1",
         "request_method": "GET"
       },
+      "private-repos": {
+        "label": "Private Repos",
+        "curl": "curl -X GET 'https://api.github.com/user/repos?visibility=private&per_page=100&page=1' -H 'Authorization: token <access_token>'",
+        "request_url": "https://api.github.com/user/repos?visibility=private&per_page=100&page=1",
+        "request_method": "GET"
+      },
       "organizations": {
         "label": "Organizations",
         "curl": "curl -X GET 'https://api.github.com/user/orgs' -H 'Authorization: token <access_token>'",
