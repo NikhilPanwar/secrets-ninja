@@ -28,6 +28,7 @@ async def list_projects(request: Request):
 async def list_compute_instances(request: Request):
     data = await request.json()
     gcp_creds = data.get("gcp_creds")
+    gcp_creds = json.loads(gcp_creds)
     project_id = data.get("project_id")
     zone = data.get("zone")
     if not gcp_creds or not project_id or not zone:
@@ -46,6 +47,7 @@ async def list_compute_instances(request: Request):
 async def list_buckets(request: Request):
     data = await request.json()
     gcp_creds = data.get("gcp_creds")
+    gcp_creds = json.loads(gcp_creds)
     if not gcp_creds:
         raise HTTPException(status_code=400, detail="Missing GCP credentials")
     try:
@@ -61,6 +63,7 @@ async def list_buckets(request: Request):
 async def list_iam_users(request: Request):
     data = await request.json()
     gcp_creds = data.get("gcp_creds")
+    gcp_creds = json.loads(gcp_creds)
     if not gcp_creds:
         raise HTTPException(status_code=400, detail="Missing GCP credentials")
     try:
