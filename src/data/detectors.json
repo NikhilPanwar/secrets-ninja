@@ -2718,6 +2718,12 @@
         "curl": "curl -X POST \"<secrets_ninja_proxy>/gcp/list_projects\" -H \"Content-Type: application/json\" -d '{\"gcp_creds\": <gcp_creds>}'",
         "request_url": "<secrets_ninja_proxy>/gcp/list_projects",
         "request_method": "POST"
+      },
+      "list_buckets": {
+        "label": "List Buckets",
+        "curl": "curl -X POST \"<secrets_ninja_proxy>/gcp/list_buckets\" -H \"Content-Type: application/json\" -d '{\"gcp_creds\": <gcp_creds>}'",
+        "request_url": "<secrets_ninja_proxy>/gcp/list_buckets",
+        "request_method": "POST"
       }
     },
     "input_fields": {
