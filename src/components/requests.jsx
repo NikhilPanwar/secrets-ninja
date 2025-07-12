@@ -71,7 +71,8 @@ async function makeUniversalRequest(
       response = await fetch(
         endpointURL
           .replace('<org_name>', inputData.org_name)
-          .replace('<package_type>', inputData.package_type),
+          .replace('<package_type>', inputData.package_type)
+          .replace('<query>', inputData.query),
         {
           method: requestMethod,
           headers: {
