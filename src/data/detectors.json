@@ -182,6 +182,30 @@
         "request_url": "https://api.github.com/user/orgs",
         "request_method": "GET"
       },
+      "search_org_repos": {
+        "label": "Search Org Repos",
+        "curl": "curl -X GET 'https://api.github.com/search/code?q=<query>+org:<org_name>' -H 'Authorization: token <access_token>'",
+        "request_url": "https://api.github.com/search/code?q=<query>+org:<org_name>",
+        "request_method": "GET",
+        "override_default_input_field" : true,
+        "input_fields": {
+          "access_token": {
+            "type": "text",
+            "label": "Enter Github Access Token",
+            "placeholder": "ghp_xxxxx"
+          },
+          "org_name": {
+            "type": "text",
+            "label": "Enter Organization Name",
+            "placeholder": "github"
+          },
+          "query": {
+            "type": "text",
+            "label": "Enter Query",
+            "placeholder": "AKIA, ghp_, password, api_key"
+          }
+        }
+      },
       "gists": {
         "label": "Gists",
         "curl": "curl -X GET 'https://api.github.com/gists' -H 'Authorization: token <access_token>'",
