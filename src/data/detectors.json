@@ -2207,6 +2207,12 @@
   },
   "SquareAccessToken": {
     "endpoints": {
+      "me": {
+        "label": "Me",
+        "curl": "curl -X GET 'https://connect.squareupsandbox.com/v2/merchants/me' -H 'Authorization: Bearer <access_token>'",
+        "request_url": "https://connect.squareupsandbox.com/v2/merchants/me",
+        "request_method": "GET"
+      },
       "payouts": {
         "label": "Payouts",
         "curl": "curl -X GET 'https://connect.squareupsandbox.com/v2/payouts' -H 'Authorization: Bearer <access_token>'",
