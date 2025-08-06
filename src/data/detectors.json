@@ -1695,8 +1695,8 @@
       },
       "users": {
         "label": "Users",
-        "curl": "curl -X GET 'https://slack.com/api/users.list' -H 'Authorization: Bearer <api_token>'",
-        "request_url": "https://slack.com/api/users.list",
+        "curl": "curl -X GET 'https://slack.com/api/users.list?limit=100' -H 'Authorization: Bearer <api_token>'",
+        "request_url": "https://slack.com/api/users.list?limit=100",
         "request_method": "GET"
       },
       "channels": {
