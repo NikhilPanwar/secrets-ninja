@@ -644,6 +644,14 @@ async function makeUniversalRequest(
         },
       });
       break;
+    case 'Clerk':
+      response = await fetch(endpointURL, {
+        method: requestMethod,
+        headers: {
+          Authorization: `Bearer ${inputData.secret_key}`,
+        },
+      });
+      break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
   }

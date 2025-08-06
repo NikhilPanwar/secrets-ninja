@@ -187,7 +187,7 @@
         "curl": "curl -X GET 'https://api.github.com/search/code?q=<query>+org:<org_name>' -H 'Authorization: token <access_token>'",
         "request_url": "https://api.github.com/search/code?q=<query>+org:<org_name>",
         "request_method": "GET",
-        "override_default_input_field" : true,
+        "override_default_input_field": true,
         "input_fields": {
           "access_token": {
             "type": "text",
@@ -2784,6 +2784,34 @@
       }
     },
     "api_documentation_page": "https://sonarcloud.io/web_api",
+    "alert": {
+      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "color": "failure"
+    }
+  },
+  "Clerk": {
+    "endpoints": {
+      "domains": {
+        "label": "Domains",
+        "curl": "curl -X GET 'https://api.clerk.com/v1/domains' -H 'Authorization Bearer <secret_key>'",
+        "request_url": "https://api.clerk.com/v1/domains",
+        "request_method": "GET"
+      },
+      "users": {
+        "label": "List Users",
+        "curl": "curl -X GET 'https://api.clerk.com/v1/users' -H 'Authorization Bearer <secret_key>'",
+        "request_url": "https://api.clerk.com/v1/users",
+        "request_method": "GET"
+      }
+    },
+    "input_fields": {
+      "secret_key": {
+        "type": "text",
+        "label": "Enter Clerk Secret Key",
+        "placeholder": "sk_live_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      }
+    },
+    "api_documentation_page": "https://clerk.com/docs/reference/backend-api/description/introduction",
     "alert": {
       "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
