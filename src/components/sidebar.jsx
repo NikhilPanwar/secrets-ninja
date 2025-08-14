@@ -55,6 +55,7 @@ import { SiGooglecloud } from "react-icons/si";
 import { BsNvidia } from "react-icons/bs";
 import { SiSonar } from "react-icons/si";
 import { SiClerk } from "react-icons/si";
+import { FaXTwitter } from "react-icons/fa6";
 import { useRef, useEffect } from 'react';
 import { useMatch } from 'react-router-dom';
 
@@ -117,7 +118,8 @@ function SB({ visible, servicesConfig }) {
     GCP: SiGooglecloud,
     NVIDIA: BsNvidia,
     SonarCloud: SiSonar,
-    Clerk: SiClerk
+    Clerk: SiClerk,
+    Twitter: FaXTwitter 
   };
 
   return (

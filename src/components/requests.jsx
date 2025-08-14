@@ -121,6 +121,17 @@ async function makeUniversalRequest(
         },
       });
       break;
+    case 'Twitter':
+      response = await fetch(endpointURL, {
+        method: 'POST',
+        headers: {
+          Authorization:
+            'Basic ' + btoa(`${inputData.api_key}:${inputData.api_secret_key}`),
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+        },
+        body: 'grant_type=client_credentials',
+      });
+      break;
     case 'RechargePayments':
       response = await fetch(endpointURL, {
         method: requestMethod,

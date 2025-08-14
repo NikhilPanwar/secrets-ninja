@@ -156,6 +156,55 @@
     },
     "api_documentation_page": "https://paystack.com/docs/api/"
   },
+      "Twitter": {
+  "endpoints": {
+    "oauth_token": {
+      "label": "Get OAuth 2.0 Bearer Token(app-only)",
+      "curl": "curl -u '<api_key>:<api_secret_key>' --data 'grant_type=client_credentials' 'https://api.x.com/oauth2/token'",
+      "request_url": "https://api.x.com/oauth2/token",
+      "request_method": "POST",
+      "override_default_input_field": true,
+      "input_fields": {
+        "api_key": {
+          "type": "text",
+          "label": "Enter Twitter API Key",
+          "placeholder": "xxxxxxxxxxxxxxxxxxxxxxx"
+        },
+        "api_secret_key": {
+          "type": "text",
+          "label": "Enter Twitter API Secret Key",
+          "placeholder": "xxxxxxxxxxxxxxxxxxxxxxx"
+        }
+      }
+    },
+    "verify_credentials": {
+      "label": "Verify Credentials",
+      "curl": "curl -X GET 'https://api.x.com/1.1/statuses/user_timeline.json?count=100&screen_name=twitterapi' -H 'Authorization: Bearer <access_token>'",
+      "request_url": "https://api.x.com/1.1/statuses/user_timeline.json?count=100&screen_name=twitterapi",
+      "request_method": "GET",
+      "override_default_input_field": true,
+      "input_fields": {
+        "access_token": {
+          "type": "text",
+          "label": "Enter Twitter Bearer Token",
+          "placeholder": "AAAAAAAAAAAAAAAAAAAAA..."
+        }
+      }
+    }
+  },
+  "input_fields": {
+    "access_token": {
+      "type": "text",
+      "label": "Enter Twitter Bearer Token",
+      "placeholder": "AAAAAAAAAAAAAAAAAAAAA..."
+    }
+  },
+  "alert": {
+    "alert_message": "Use curl on your local machine to test creds privately.",
+    "color": "failure"
+  },
+  "api_documentation_page": "https://docs.x.com/fundamentals/authentication/oauth-2-0/overview"
+},
   "Github": {
     "endpoints": {
       "user": {
