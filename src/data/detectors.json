@@ -192,13 +192,6 @@
       }
     }
   },
-  "input_fields": {
-    "access_token": {
-      "type": "text",
-      "label": "Enter Twitter Bearer Token",
-      "placeholder": "AAAAAAAAAAAAAAAAAAAAA..."
-    }
-  },
   "alert": {
     "alert_message": "Use curl on your local machine to test creds privately.",
     "color": "failure"
