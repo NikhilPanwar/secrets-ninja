@@ -159,7 +159,7 @@
   "Twitter": {
     "endpoints": {
       "oauth_token": {
-        "label": "Get OAuth 2.0 Bearer Token(app-only)",
+        "label": "OAuth 2.0 Bearer Token(app-only)",
         "curl": "curl -u '<api_key>:<api_secret_key>' --data 'grant_type=client_credentials' 'https://api.x.com/oauth2/token'",
         "request_url": "https://api.x.com/oauth2/token",
         "request_method": "POST",
@@ -186,7 +186,7 @@
         "input_fields": {
           "access_token": {
             "type": "text",
-            "label": "Enter Twitter Bearer Token",
+            "label": "Enter Twitter Bearer Token (Fetched from OAuth Token endpoint)",
             "placeholder": "AAAAAAAAAAAAAAAAAAAAA..."
           }
         }
