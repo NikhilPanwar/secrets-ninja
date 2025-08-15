@@ -654,9 +654,14 @@ async function makeUniversalRequest(
       response = await fetch(endpointURL, {
         method: 'POST',
         body: JSON.stringify({
-          credentials: inputData.api_key,
           proxied_data: {
-            method: 'POST'
+            method: 'POST',
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded"
+            }
+          },
+          body: {
+            "credentials": inputData.api_key,
           }
         })
       });
