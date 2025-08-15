@@ -23,7 +23,7 @@ app.add_middleware(
 
 def clean_headers(browser_headers):
     values_to_delete = [
-        "host", "Host", "content-length", "Content-Length", "content-type", "content-type", "connection",
+        "host", "Host", "content-length", "Content-Length", "Content-Type", "content-type", "connection",
         "Connection", "accept-encoding", "Accept-Encoding", "accept",
         "Accept", "origin", "Origin", "referer", "Referer", "user-agent", "User-Agent",
         "sec-ch-ua-platform", "sec-ch-ua-mobile", "sec-fetch-dest", "sec-fetch-mode",
