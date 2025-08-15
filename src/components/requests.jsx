@@ -121,6 +121,31 @@ async function makeUniversalRequest(
         },
       });
       break;
+    case 'Twitter':
+      const isTokenEndpoint = endpointURL.includes('oauth2/token');
+      const options = isTokenEndpoint
+        ? {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            proxied_data: {
+              headers: {
+                Authorization:
+                  'Basic ' + btoa(`${inputData.api_key}:${inputData.api_secret_key}`),
+                'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+              },
+            },
+            body: 'grant_type=client_credentials',
+          }),
+        }
+        : {
+          method: requestMethod,
+          headers: {
+            Authorization: 'Bearer ' + inputData.access_token,
+          },
+        };
+      response = await fetch(endpointURL, options);
+      break;
     case 'RechargePayments':
       response = await fetch(endpointURL, {
         method: requestMethod,
