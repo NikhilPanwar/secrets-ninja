@@ -1141,7 +1141,11 @@
         "placeholder": "SG.xxxxx"
       }
     },
-    "api_documentation_page": "https://docs.sendgrid.com/api-reference"
+    "api_documentation_page": "https://docs.sendgrid.com/api-reference",
+    "alert": {
+      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "color": "failure"
+    }
   },
   "MailChimp": {
     "endpoints": {
