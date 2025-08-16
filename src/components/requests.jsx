@@ -682,6 +682,14 @@ async function makeUniversalRequest(
         },
       });
       break;
+    case 'Okta':
+      response = await fetch(endpointURL.replace('<your_okta_domain>', inputData.your_okta_domain), {
+        method: requestMethod,
+        headers: {
+          Authorization: `SSWS ${inputData.api_token}`
+        }
+      });
+      break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
   }
