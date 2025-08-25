@@ -2,9 +2,8 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 import requests
-from urllib.parse import unquote
+from urllib.parse import unquote, parse_qsl
 import json
-
 from services import aws, mongodb, rabbitmq, postgres, gcp
 
 app = FastAPI()
@@ -28,7 +27,7 @@ def clean_headers(browser_headers):
         "Connection", "accept-encoding", "Accept-Encoding", "accept",
         "Accept", "origin", "Origin", "referer", "Referer", "user-agent", "User-Agent",
         "sec-ch-ua-platform", "sec-ch-ua-mobile", "sec-fetch-dest", "sec-fetch-mode",
-        "accept-language", "sec-fetch-site", "sec-fetch-user", "sec-ch-ua", "sec-ch-ua-arch",
+        "accept-language", "sec-fetch-site", "sec-fetch-user", "sec-ch-ua", "sec-ch-ua-arch", "sec-gpc",
     ]
     for value in values_to_delete:
         browser_headers.pop(value, None)
@@ -44,8 +43,10 @@ def make_request(url, headers, method, json_body=None):
         except:
             return {"response": response.text}, response.status_code
     elif method == "POST":
-        print("Making POST request to", url)
-        response = requests.post(url, headers=headers, json=json_body)
+        if 'x-www-form-urlencoded' in json.dumps(headers):
+            response = requests.post(url, headers=headers, data=json_body)
+        else:
+            response = requests.post(url, headers=headers, json=json_body)
         return response.json(), response.status_code
 
 @app.options("/{full_path:path}")
@@ -58,12 +59,19 @@ async def fetch_handler(request: Request, rest_of_path: str):
         json_body = await request.json()
     except:
         json_body = {}
-    method = json_body.get("proxied_data", {}).get("method", "GET")
+    method = request.method
     headers = json_body.get("proxied_data", {}).get("headers", {})
-    real_headers = dict(request.headers)
-    headers = clean_headers(real_headers)
+    if headers == {}:
+        real_headers = dict(request.headers)
+        headers = clean_headers(real_headers)
     full_url = str(request.url).replace(str(request.base_url) + "fetch/", "")
-    response, status_code = make_request(full_url, headers, method, json_body)
+    body = json_body.get("body", None)
+    if body:
+        parsed_body = dict(parse_qsl(body)) if isinstance(body, str) else body
+    else:
+        parsed_body = {}
+
+    response, status_code = make_request(full_url, headers, method, parsed_body)
     return JSONResponse(status_code=status_code, content=response)
 
 if __name__ == "__main__":
