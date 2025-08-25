@@ -194,7 +194,7 @@
     },
     "api_documentation_page": "https://docs.x.com/fundamentals/authentication/oauth-2-0/overview",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -507,7 +507,7 @@
     },
     "api_documentation_page": "https://shopify.dev/docs/api/admin-rest",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -566,7 +566,7 @@
     },
     "api_documentation_page": "https://clearbit.com/docs",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -630,7 +630,7 @@
     },
     "api_documentation_page": "https://developer.rechargepayments.com/",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -664,7 +664,7 @@
     },
     "api_documentation_page": "https://developers.mailerlite.com/docs/#mailerlite-api",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -768,7 +768,7 @@
     },
     "api_documentation_page": "https://razorpay.com/docs/api/",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -971,7 +971,7 @@
     },
     "api_documentation_page": "https://docs.npmjs.com/cli/v7/commands/npm-token",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -1049,7 +1049,7 @@
     },
     "api_documentation_page": "https://developers.klaviyo.com/en/reference/api_overview",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -1185,7 +1185,7 @@
     },
     "api_documentation_page": "https://docs.sendgrid.com/api-reference",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -1236,7 +1236,7 @@
     },
     "api_documentation_page": "https://mailchimp.com/developer/marketing/api/",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -1264,7 +1264,7 @@
     },
     "api_documentation_page": "https://postmarkapp.com/developer/api/email-api",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -1473,7 +1473,7 @@
     },
     "api_documentation_page": "https://posthog.com/docs/api",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -1519,7 +1519,7 @@
     },
     "api_documentation_page": "https://docs.opsgenie.com/docs/service-api",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -1577,7 +1577,7 @@
     },
     "api_documentation_page": "https://www.typeform.com/developers/create",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -1623,7 +1623,7 @@
     },
     "api_documentation_page": "https://apidocs.getresponse.com/v3",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -1675,7 +1675,7 @@
     },
     "api_documentation_page": "https://developers.notion.com/reference/",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -1703,7 +1703,7 @@
     },
     "api_documentation_page": "https://developers.madkudu.com/",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -1786,7 +1786,7 @@
     },
     "api_documentation_page": "https://api.slack.com/",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -1949,7 +1949,7 @@
     },
     "api_documentation_page": "https://developer.hashicorp.com/terraform/cloud-docs/api-docs",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -2063,7 +2063,7 @@
     },
     "api_documentation_page": "https://docs.doppler.com/docs/start",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -2095,7 +2095,7 @@
     },
     "api_documentation_page": "https://jfrog.com/help/r/jfrog-rest-apis/artifactory-rest-apis",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -2190,7 +2190,7 @@
     },
     "api_documentation_page": "https://snyk.io/docs/api",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -2247,7 +2247,7 @@
     },
     "api_documentation_page": "https://docs.pushbullet.com/",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -2275,7 +2275,7 @@
     },
     "api_documentation_page": "https://developer.squareup.com/docs/",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -2297,7 +2297,7 @@
     },
     "api_documentation_page": "https://docs.sentry.io/api/",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -2369,7 +2369,7 @@
     },
     "api_documentation_page": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -2445,7 +2445,7 @@
     },
     "api_documentation_page": "https://developers.hubspot.com/docs/api/overview",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -2759,7 +2759,7 @@
     },
     "api_documentation_page": "https://developer.zendesk.com/api-reference/",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -2809,7 +2809,7 @@
     },
     "api_documentation_page": "https://docs.ngc.nvidia.com/api/",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -2831,7 +2831,7 @@
     },
     "api_documentation_page": "https://sonarcloud.io/web_api",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -2859,7 +2859,7 @@
     },
     "api_documentation_page": "https://clerk.com/docs/reference/backend-api/description/introduction",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   },
@@ -2898,7 +2898,7 @@
     },
     "api_documentation_page": "https://developer.okta.com/docs/api/",
     "alert": {
-      "alert_message": "Use the curl on your local machine to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
   }
