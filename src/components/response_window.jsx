@@ -4,7 +4,7 @@ import { BsTable } from "react-icons/bs";
 import { VscJson } from "react-icons/vsc";
 import CopyButton from './copy_button';
 import RawJsonTab from './response_window/json_view';
-import FlattenedJsonTableTab from './response_window/table_view';
+import JsonGridView from './response_window/json_grid_view';
 import '../css/json_theme.css';
 
 function OutputWindow({ status_code = 0, output_str = '{}' }) {
@@ -33,8 +33,8 @@ function OutputWindow({ status_code = 0, output_str = '{}' }) {
         <Tabs.Item active title="Raw JSON" icon={VscJson}>
           <RawJsonTab parsedData={parsedData} />
         </Tabs.Item>
-        <Tabs.Item title="Flattened Table (WIP)" icon={BsTable}>
-          <FlattenedJsonTableTab parsedData={parsedData} />
+        <Tabs.Item title="JSON Grid" icon={BsTable}>
+          <JsonGridView parsedData={parsedData} />
         </Tabs.Item>
       </Tabs>
     </Card>
