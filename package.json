@@ -13,6 +13,7 @@
   "dependencies": {
     "@floating-ui/core": "^1.6.9",
     "@floating-ui/dom": "^1.6.13",
+    "@redheadphone/react-json-grid": "^0.9.4",
     "autoprefixer": "^10.4.17",
     "flowbite-react": "^0.7.2",
     "hamburger-react": "^2.5.0",
