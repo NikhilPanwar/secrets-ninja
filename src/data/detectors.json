@@ -2305,8 +2305,8 @@
     "endpoints": {
       "repos": {
         "label": "Repos",
-        "curl": "curl -X GET -u <username>:<password> https://api.bitbucket.org/2.0/repositories/<org>",
-        "request_url": "https://api.bitbucket.org/2.0/repositories/<org>",
+        "curl": "curl -X GET -u <username>:<password> https://api.bitbucket.org/2.0/repositories/<org>?pagelen=100",
+        "request_url": "https://api.bitbucket.org/2.0/repositories/<org>?pagelen=100",
         "request_method": "GET"
       }
     },
