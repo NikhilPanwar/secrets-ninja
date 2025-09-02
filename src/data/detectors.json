@@ -2901,5 +2901,33 @@
       "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
+  },
+  "CircleCI": {
+    "endpoints": {
+      "me": {
+        "label": "User Information",
+        "curl": "curl -s -H 'Circle-Token: <api_key>' https://circleci.com/api/v2/me",
+        "request_url": "https://circleci.com/api/v2/me",
+        "request_method": "GET"
+      },
+      "projects": {
+        "label": "Projects",
+        "curl": "curl -s -H 'Circle-Token: <api_key>' https://circleci.com/api/v2/projects",
+        "request_url": "https://circleci.com/api/v2/projects",
+        "request_method": "GET"
+      }
+    },
+    "input_fields": {
+      "api_key": {
+        "type": "text",
+        "label": "Enter CircleCI API Token",
+        "placeholder": "xxxx"
+      }
+    },
+    "api_documentation_page": "https://circleci.com/docs/api/v2/index.html",
+    "alert": {
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "color": "failure"
+    }
   }
 }
