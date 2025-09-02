@@ -690,6 +690,14 @@ async function makeUniversalRequest(
         }
       });
       break;
+    case 'CircleCI':
+      response = await fetch(endpointURL, {
+        method: requestMethod,
+        headers: {
+          'Circle-Token': inputData.api_key,
+        },
+      });
+      break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
   }

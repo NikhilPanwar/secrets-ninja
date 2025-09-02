@@ -57,6 +57,7 @@ import { SiSonar } from "react-icons/si";
 import { SiClerk } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiOkta } from "react-icons/si";
+import { SiCircleci } from "react-icons/si";
 import { useRef, useEffect } from 'react';
 import { useMatch } from 'react-router-dom';
 
@@ -121,7 +122,8 @@ function SB({ visible, servicesConfig }) {
     SonarCloud: SiSonar,
     Clerk: SiClerk,
     Twitter: FaXTwitter,
-    Okta: SiOkta
+    Okta: SiOkta,
+    CircleCI: SiCircleci
   };
 
   return (
