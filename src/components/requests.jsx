@@ -698,6 +698,22 @@ async function makeUniversalRequest(
         },
       });
       break;
+    case 'WeightsAndBiases':
+  response = await fetch(endpointURL, {
+    method: 'POST',
+    body: JSON.stringify({
+      proxied_data: {
+        method: 'POST',
+        headers: {
+          Authorization: 'Basic ' + btoa(`api:${inputData.api_key}`),
+        },
+        body: JSON.stringify({
+          query: "query Viewer { viewer { id username email admin } }",
+        }),
+      },
+    }),
+  });
+  break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
   }

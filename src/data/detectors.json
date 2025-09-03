@@ -2929,5 +2929,27 @@
       "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
+  },
+  "WeightsAndBiases": {
+    "endpoints": {
+      "viewer": {
+        "label": "Viewer Info",
+        "curl": "curl -X POST \"https://api.wandb.ai/graphql\" -H \"Authorization: Basic $(echo -n \"api:<api_key>\" | base64)\" -d '{\"query\": \"query Viewer { viewer { id username email admin } }\"}'",
+        "request_url": "https://api.wandb.ai/graphql",
+        "request_method": "POST"
+      }
+    },
+    "input_fields": {
+      "api_key": {
+        "type": "text",
+        "label": "Enter W&B API Key",
+        "placeholder": "xxxxx"
+      }
+    },
+    "api_documentation_page": "https://docs.wandb.ai/ref/python/public-api/api/",
+    "alert": {
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "color": "failure"
+    }
   }
 }
