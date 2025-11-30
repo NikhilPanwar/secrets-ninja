@@ -10,7 +10,7 @@
   <h1>Secrets Ninja</h1>
 
 [secrets.ninja](https://secrets.ninja) is a tool for validating API keys and credentials discovered during pentesting & bug bounty hunting.
-<br>It proivdes a unified interface for testing these keys across SaaS, Databases, Cloud Providers & services
+<br>It provides a unified interface for testing these keys across SaaS, Databases, Cloud Providers & services
 
 </div>
 
