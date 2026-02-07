@@ -714,6 +714,14 @@ async function makeUniversalRequest(
     }),
   });
   break;
+    case 'VirusTotal':
+      response = await fetch(endpointURL, {
+        method: requestMethod,
+        headers: {
+          'x-apikey': `${inputData.api_key}`,
+        },
+      });
+      break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
   }
