@@ -721,6 +721,16 @@ async function makeUniversalRequest(
           'x-apikey': `${inputData.api_key}`,
         },
       });
+    case 'Confluent':
+      response = await fetch(
+        endpointURL.replace(/<api_key>/g, inputData.api_key),
+        {
+          method: requestMethod,
+          headers: {
+            Authorization: `Basic ${btoa(inputData.api_key + ':' + inputData.api_secret)}`,
+          },
+        }
+      );
       break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
