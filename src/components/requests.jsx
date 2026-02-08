@@ -733,6 +733,14 @@ async function makeUniversalRequest(
         }
       );
       break;
+    case 'Netlify':
+      response = await fetch(endpointURL, {
+        method: requestMethod,
+        headers: {
+          Authorization: `Bearer ${inputData.api_token}`,
+        },
+      });
+      break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
   }
