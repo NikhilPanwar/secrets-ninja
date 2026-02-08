@@ -61,6 +61,7 @@ import { SiCircleci } from "react-icons/si";
 import { SiWeightsandbiases } from "react-icons/si";
 import { SiVirustotal } from "react-icons/si";
 import { SiApachekafka } from "react-icons/si";
+import { SiNetlify } from "react-icons/si";
 import { useRef, useEffect } from 'react';
 import { useMatch } from 'react-router-dom';
 
@@ -129,7 +130,8 @@ function SB({ visible, servicesConfig }) {
     CircleCI: SiCircleci,
     WeightsAndBiases: SiWeightsandbiases,
     VirusTotal: SiVirustotal,
-    Confluent: SiApachekafka
+    Confluent: SiApachekafka,
+    Netlify: SiNetlify
   };
 
   return (

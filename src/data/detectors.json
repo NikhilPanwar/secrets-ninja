@@ -2996,5 +2996,23 @@
       "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
+  },
+  "Netlify": {
+    "endpoints": {
+      "sites": {
+        "label": "Sites",
+        "curl": "curl -s https://api.netlify.com/api/v1/sites -H \"Authorization: Bearer <api_token>\"",
+        "request_url": "https://api.netlify.com/api/v1/sites",
+        "request_method": "GET"
+      }
+    },
+    "input_fields": {
+      "api_token": {
+        "type": "text",
+        "label": "Enter Netlify Personal Access Token",
+        "placeholder": "xxxxx"
+      }
+    },
+    "api_documentation_page": "https://docs.netlify.com/api/get-started/"
   }
 }
