@@ -59,6 +59,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { SiOkta } from "react-icons/si";
 import { SiCircleci } from "react-icons/si";
 import { SiWeightsandbiases } from "react-icons/si";
+import { SiVirustotal } from "react-icons/si";
 import { useRef, useEffect } from 'react';
 import { useMatch } from 'react-router-dom';
 
@@ -125,7 +126,8 @@ function SB({ visible, servicesConfig }) {
     Twitter: FaXTwitter,
     Okta: SiOkta,
     CircleCI: SiCircleci,
-    WeightsAndBiases: SiWeightsandbiases
+    WeightsAndBiases: SiWeightsandbiases,
+    VirusTotal: SiVirustotal
   };
 
   return (
