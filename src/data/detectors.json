@@ -2958,6 +2958,18 @@
         "label": "Current User",
         "curl": "curl -H \"x-apikey: <api_key>\" \"https://www.virustotal.com/api/v3/me\"",
         "request_url": "https://www.virustotal.com/api/v3/me",
+        "request_method": "GET"
+      }
+    },
+    "input_fields": {
+      "api_key": {
+        "type": "text",
+        "label": "Enter VirusTotal API Key",
+        "placeholder": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      }
+    },
+    "api_documentation_page": "https://docs.virustotal.com/reference/overview"
+  },
   "Confluent": {
     "endpoints": {
       "api_key_info": {
@@ -2970,11 +2982,6 @@
     "input_fields": {
       "api_key": {
         "type": "text",
-        "label": "Enter VirusTotal API Key",
-        "placeholder": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-      }
-    },
-    "api_documentation_page": "https://docs.virustotal.com/reference/overview",
         "label": "Enter Confluent API Key",
         "placeholder": "ABCDEFGHIJKLMNOP"
       },
@@ -2990,3 +2997,4 @@
       "color": "failure"
     }
   }
+}

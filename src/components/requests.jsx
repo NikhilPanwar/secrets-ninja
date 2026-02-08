@@ -699,21 +699,21 @@ async function makeUniversalRequest(
       });
       break;
     case 'WeightsAndBiases':
-  response = await fetch(endpointURL, {
-    method: 'POST',
-    body: JSON.stringify({
-      proxied_data: {
+      response = await fetch(endpointURL, {
         method: 'POST',
-        headers: {
-          Authorization: 'Basic ' + btoa(`api:${inputData.api_key}`),
-        },
         body: JSON.stringify({
-          query: "query Viewer { viewer { id username email admin } }",
+          proxied_data: {
+            method: 'POST',
+            headers: {
+              Authorization: 'Basic ' + btoa(`api:${inputData.api_key}`),
+            },
+            body: JSON.stringify({
+              query: "query Viewer { viewer { id username email admin } }",
+            }),
+          },
         }),
-      },
-    }),
-  });
-  break;
+      });
+      break;
     case 'VirusTotal':
       response = await fetch(endpointURL, {
         method: requestMethod,
@@ -721,6 +721,7 @@ async function makeUniversalRequest(
           'x-apikey': `${inputData.api_key}`,
         },
       });
+      break;
     case 'Confluent':
       response = await fetch(
         endpointURL.replace(/<api_key>/g, inputData.api_key),

@@ -128,7 +128,7 @@ function SB({ visible, servicesConfig }) {
     Okta: SiOkta,
     CircleCI: SiCircleci,
     WeightsAndBiases: SiWeightsandbiases,
-    VirusTotal: SiVirustotal
+    VirusTotal: SiVirustotal,
     Confluent: SiApachekafka
   };
 
