@@ -2968,10 +2968,51 @@
         "placeholder": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       }
     },
-    "api_documentation_page": "https://docs.virustotal.com/reference/overview",
+    "api_documentation_page": "https://docs.virustotal.com/reference/overview"
+  },
+  "Confluent": {
+    "endpoints": {
+      "api_key_info": {
+        "label": "API Key Info",
+        "curl": "curl -X GET \"https://api.confluent.cloud/iam/v2/api-keys/<api_key>\" -H \"Authorization: Basic $(echo -n '<api_key>:<api_secret>' | base64)\"",
+        "request_url": "https://api.confluent.cloud/iam/v2/api-keys/<api_key>",
+        "request_method": "GET"
+      }
+    },
+    "input_fields": {
+      "api_key": {
+        "type": "text",
+        "label": "Enter Confluent API Key",
+        "placeholder": "ABCDEFGHIJKLMNOP"
+      },
+      "api_secret": {
+        "type": "password",
+        "label": "Enter Confluent API Secret",
+        "placeholder": "xxxxx"
+      }
+    },
+    "api_documentation_page": "https://docs.confluent.io/cloud/current/api.html",
     "alert": {
       "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
       "color": "failure"
     }
+  },
+  "Netlify": {
+    "endpoints": {
+      "sites": {
+        "label": "Sites",
+        "curl": "curl -s https://api.netlify.com/api/v1/sites -H \"Authorization: Bearer <api_token>\"",
+        "request_url": "https://api.netlify.com/api/v1/sites",
+        "request_method": "GET"
+      }
+    },
+    "input_fields": {
+      "api_token": {
+        "type": "text",
+        "label": "Enter Netlify Personal Access Token",
+        "placeholder": "xxxxx"
+      }
+    },
+    "api_documentation_page": "https://docs.netlify.com/api/get-started/"
   }
 }
