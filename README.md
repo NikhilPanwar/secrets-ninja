@@ -32,7 +32,20 @@ $ npm install
 $ npm run dev
 ```
 
-Or Run Using Docker, Including the Secrets Ninja Proxy for testing AWS, MongoDB creds privately
+### Run secrets-ninja-proxy
+Proxy Server for secrets ninja, use it for bypassing CORS, verifying complex keys like AWS, DB creds
+
+- Install Dependencies
+```
+python3 -m pip install -r requirements.txt
+```
+
+- Run
+```
+python3 -m uvicorn secrets-ninja-proxy:app --reload --host 0.0.0.0 --port 8001 --reload
+```
+
+### Or Run Using Docker, Including the Secrets Ninja Proxy for testing AWS, MongoDB creds privately
 ```
 docker run -p 5173:5173 -p 8001:8001 secretsninja/secrets-ninja:latest
 ```
