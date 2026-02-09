@@ -2968,7 +2968,11 @@
         "placeholder": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       }
     },
-    "api_documentation_page": "https://docs.virustotal.com/reference/overview"
+    "api_documentation_page": "https://docs.virustotal.com/reference/overview",
+    "alert": {
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "color": "failure"
+    }
   },
   "Confluent": {
     "endpoints": {
