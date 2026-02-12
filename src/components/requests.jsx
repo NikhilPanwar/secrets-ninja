@@ -741,6 +741,14 @@ async function makeUniversalRequest(
         },
       });
       break;
+    case 'Contentful':
+      response = await fetch(endpointURL, {
+        method: requestMethod,
+        headers: {
+          Authorization: `Bearer ${inputData.access_token}`,
+        },
+      });
+      break;
     default:
       return { status: 400, data: { message: 'Unsupported service type' } };
   }

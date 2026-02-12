@@ -3018,5 +3018,35 @@
       }
     },
     "api_documentation_page": "https://docs.netlify.com/api/get-started/"
+  },
+  "Contentful": {
+    "endpoints": {
+      "current_user": {
+        "label": "Current User",
+        "curl": "curl -H \"Authorization: Bearer <access_token>\" https://api.contentful.com/users/me",
+        "request_url": "https://api.contentful.com/users/me",
+        "request_method": "GET"
+      },
+      "organizations": {
+        "label": "Organizations",
+        "curl": "curl -H \"Authorization: Bearer <access_token>\" https://api.contentful.com/organizations",
+        "request_url": "https://api.contentful.com/organizations",
+        "request_method": "GET"
+      },
+      "spaces": {
+        "label": "Spaces",
+        "curl": "curl -H \"Authorization: Bearer <access_token>\" https://api.contentful.com/spaces",
+        "request_url": "https://api.contentful.com/spaces",
+        "request_method": "GET"
+      }
+    },
+    "input_fields": {
+      "access_token": {
+        "type": "text",
+        "label": "Enter Contentful Access Token",
+        "placeholder": "CFPAT-xxxxxxxxxxxxxxxxxxxx"
+      }
+    },
+    "api_documentation_page": "https://www.contentful.com/developers/docs/references/content-management-api/"
   }
 }
