@@ -476,14 +476,22 @@ async function makeUniversalRequest(
       );
       break;
     case 'Jfrog':
+      const jfrogHeaders = {
+        'Content-Type': 'application/json',
+      };
+      
+      // Use token authentication if token is provided, otherwise use username/password
+      if (inputData.token) {
+        jfrogHeaders.Authorization = `Bearer ${inputData.token}`;
+      } else {
+        jfrogHeaders.Authorization = `Basic ${btoa(`${inputData.username}:${inputData.password}`)}`;
+      }
+      
       response = await fetch(
         endpointURL.replace(encodeURIComponent('<domain>'), inputData.domain),
         {
           method: requestMethod,
-          headers: {
-            Authorization: `Basic ${btoa(`${inputData.username}:${inputData.password}`)}`,
-            'Content-Type': 'application/json',
-          },
+          headers: jfrogHeaders,
         }
       );
       break;

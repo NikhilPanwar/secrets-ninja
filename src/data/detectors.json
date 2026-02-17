@@ -2071,7 +2071,7 @@
     "endpoints": {
       "repositories": {
         "label": "Repositories",
-        "curl": "curl -u <username>:<password> https://<domain>/artifactory/api/repositories",
+        "curl": "curl -H 'Authorization: Bearer <token>' https://<domain>/artifactory/api/repositories OR curl -u <username>:<password> https://<domain>/artifactory/api/repositories",
         "request_url": "https://<domain>/artifactory/api/repositories",
         "request_method": "GET"
       }
@@ -2082,20 +2082,25 @@
         "label": "Enter Jfrog Domain",
         "placeholder": "domain"
       },
+      "token": {
+        "type": "text",
+        "label": "Enter Jfrog Access Token (optional if using username/password)",
+        "placeholder": "token"
+      },
       "username": {
         "type": "text",
-        "label": "Enter Jfrog Username",
+        "label": "Enter Jfrog Username (optional if using token)",
         "placeholder": "username"
       },
       "password": {
         "type": "text",
-        "label": "Enter Jfrog Password",
+        "label": "Enter Jfrog Password (optional if using token)",
         "placeholder": "password"
       }
     },
     "api_documentation_page": "https://jfrog.com/help/r/jfrog-rest-apis/artifactory-rest-apis",
     "alert": {
-      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS.",
+      "alert_message": "Use the curl on your machine or self host project to test creds privately. Or check the proxy box to use secrets-ninja-proxy to bypass CORS. You can authenticate using either a token OR username/password.",
       "color": "failure"
     }
   },
