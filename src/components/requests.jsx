@@ -483,10 +483,8 @@ async function makeUniversalRequest(
       // Use token authentication if token is provided, otherwise use username/password
       if (inputData.token && inputData.token.trim()) {
         jfrogHeaders.Authorization = `Bearer ${inputData.token}`;
-      } else if (inputData.username && inputData.password) {
-        jfrogHeaders.Authorization = `Basic ${btoa(`${inputData.username}:${inputData.password}`)}`;
       } else {
-        // If neither authentication method is provided, proceed anyway to let the API return an error
+        // Use Basic auth with username/password (even if empty - let the API return an error)
         jfrogHeaders.Authorization = `Basic ${btoa(`${inputData.username || ''}:${inputData.password || ''}`)}`;
       }
       
